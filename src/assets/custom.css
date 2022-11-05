@@ -1,7 +1,3 @@
 body.overflow-hidden {
   overflow: unset !important;
 }
-
-a {
-  text-decoration: none !important;
-}
