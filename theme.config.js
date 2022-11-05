@@ -34,7 +34,6 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: false,
-  darkMode: false,
   floatTOC: true,
   footerEditLink: '',
   footerText: `Copyright © ${new Date().getFullYear()} HR Community. All Rights Reserved.`,
