@@ -1,7 +1,7 @@
 {
-  "index": "Introduction",
-  "get-started": "Get Started",
-  "features": "Features",
-  "themes": "Themes",
+  "index": "Giới thiệu",
+  "fe": "Front End",
+  "be": "Back End",
+  "linux": "Linux",
   "advanced": "Advanced"
 }

@@ -11,17 +11,28 @@
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "^12.1.0",
+    "next": "12.3.2",
     "nextra": "^1.1.0",
-    "nextra-theme-docs": "^1.2.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "nextra-theme-docs": "1.2.6",
+    "preact": "^10.11.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.7.1"
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "arrowParens": "avoid"
+  },
+  "alias": {
+    "react/jsx.runtime.js": "preact/compat/jsx-runtime",
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
   }
 }
