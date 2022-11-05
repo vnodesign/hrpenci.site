@@ -1,7 +1,7 @@
 export default {
   github: '',
   docsRepositoryBase: '',
-  titleSuffix: ' | HR Community',
+  titleSuffix: '',
   logo: <span className="inline mr-2 font-extrabold">HR Community</span>,
   head: (
     <>

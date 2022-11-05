@@ -6,33 +6,24 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build",
-    "analyze": "ANALYZE=true next build",
-    "analyze:server": "BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+    "build": "next build"
   },
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "12.3.2",
-    "nextra": "1.1.0",
-    "nextra-theme-docs": "1.2.6",
-    "preact": "10.11.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^12.1.0",
+    "nextra": "^1.1.0",
+    "nextra-theme-docs": "^1.2.2",
+    "preact": "^10.11.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.0.2",
-    "prettier": "^2.7.1",
-    "webpack-bundle-analyzer": "4.7.0"
+    "prettier": "^2.0.5"
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true,
-    "printWidth": 100,
-    "tabWidth": 2,
-    "trailingComma": "all",
-    "arrowParens": "avoid"
+    "singleQuote": true
   },
   "alias": {
     "react/jsx.runtime.js": "preact/compat/jsx-runtime",
