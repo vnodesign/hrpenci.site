@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "analyze": "ANALYZE=true next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
   },
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "12.3.2",
+    "next": "^12.3.2",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "1.2.6",
     "preact": "^10.11.2",
@@ -19,7 +22,9 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "@next/bundle-analyzer": "^13.0.2",
+    "prettier": "^2.7.1",
+    "webpack-bundle-analyzer": "^4.7.0"
   },
   "prettier": {
     "semi": false,
