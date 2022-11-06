@@ -9,12 +9,12 @@ sections:
   label: Root
   create: all
   match: "**/*"
-  new_doc_ext: ".mdxx"
 - type: directory
   path: pages
   label: Content
   create: all
   match: "**/*"
+  new_doc_ext: ".mdx"
 upload_dir: public
 public_path: "/public"
 front_matter_path: ''
