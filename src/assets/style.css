@@ -1050,17 +1050,13 @@ a code {
 .sidebar li.active>a,
 .sidebar a:hover,
 .sidebar button:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(56 182 255/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255/var(--tw-text-opacity));
+  color: rgb(56 182 255/var(--tw-text-opacity));
 }
 
 .dark .sidebar li.active>a,
 .dark .sidebar a:hover,
 .dark .sidebar button:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(45, 55, 72, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
@@ -1531,9 +1527,12 @@ pre .prism-code .token.tag:not(.script) {
 }
 
 @media (min-width:1280px) {
-  .docs-container {
-    padding-left: unset;
-    padding-right: unset;
+  .nextra-container:not(.rtl):not(.page) article.docs-container {
+    padding-right: 2rem
+  }
+
+  .nextra-container.rtl:not(.page) .docs-container {
+    padding-left: 2rem
   }
 }
 
