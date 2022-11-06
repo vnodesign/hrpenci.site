@@ -28,6 +28,7 @@ export default {
       <meta name="twitter:url" content="https://hr.penci.me" />
       <meta name="twitter:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
       <link rel="icon" href="/favicon.png" type="image/x-icon" />
+      <meta name="google-site-verification" content="google-site-verification=BGCohtYlfSW0Z_SMIRh194FsyPktQ-csDwYnZTE3aHQ" />
     </>
   ),
   search: true,

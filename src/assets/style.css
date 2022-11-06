@@ -1531,12 +1531,9 @@ pre .prism-code .token.tag:not(.script) {
 }
 
 @media (min-width:1280px) {
-  .nextra-container:not(.rtl):not(.page) article.docs-container {
-    padding-right: 2rem
-  }
-
-  .nextra-container.rtl:not(.page) .docs-container {
-    padding-left: 2rem
+  .docs-container {
+    padding-left: unset;
+    padding-right: unset;
   }
 }
 
