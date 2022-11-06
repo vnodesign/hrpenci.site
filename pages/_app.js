@@ -1,6 +1,5 @@
 import Script from 'next/script'
-import 'nextra-theme-docs/style.css'
-import '../src/assets/custom.css'
+import '../src/assets/style.css'
 
 export default function Nextra({ Component, pageProps }) {
   return (
