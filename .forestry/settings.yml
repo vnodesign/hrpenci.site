@@ -5,16 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: ''
-  label: Root
-  create: all
-  match: "**/*"
-- type: directory
   path: pages
   label: Content
   create: all
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
 upload_dir: public
 public_path: "/public"
 front_matter_path: ''
