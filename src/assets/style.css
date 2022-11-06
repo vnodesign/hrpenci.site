@@ -401,15 +401,6 @@ h2 {
   line-height: 2.25rem;
   font-weight: 600;
   letter-spacing: -.015em;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235/var(--tw-border-opacity));
-  border-bottom-width: 1px;
-  padding-bottom: 1rem
-}
-
-.dark h2 {
-  --tw-border-opacity: 1;
-  border-color: rgba(26, 32, 44, var(--tw-border-opacity))
 }
 
 h3 {
