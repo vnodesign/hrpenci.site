@@ -377,6 +377,7 @@ html {
 body {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
   color: rgb(76 82 103/var(--tw-text-opacity));
 }
 
@@ -389,21 +390,13 @@ body {
 
 h1 {
   margin-top: .5rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
   letter-spacing: -.015em
 }
 
 h2 {
-  margin-top: 2.5rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  letter-spacing: -.015em;
-}
-
-h3 {
   margin-top: 2rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -411,20 +404,21 @@ h3 {
   letter-spacing: -.015em
 }
 
+h3,
 h4 {
-  font-size: 1.25rem
-}
-
-h4,
-h5 {
   margin-top: 2rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
   letter-spacing: -.015em
 }
 
 h5 {
-  font-size: 1.125rem
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -.015em
 }
 
 h6 {
@@ -449,7 +443,8 @@ a:hover {
 }
 
 p {
-  line-height: 1.75rem
+  line-height: 1.5rem;
+  font-size: 1rem;
 }
 
 .table-container:not(:first-child),
@@ -1144,14 +1139,10 @@ article blockquote {
   color: rgba(56 182 255/var(--tw-text-opacity))
 }
 
-.anchor-icon:hover {
-  --tw-text-opacity: 1;
-  color: rgb(51 186 238/var(--tw-text-opacity));
-}
-
+.anchor-icon:hover,
 .dark .anchor-icon {
   --tw-text-opacity: 1;
-  color: rgba(74, 85, 104, var(--tw-text-opacity))
+  color: rgb(51 186 238/var(--tw-text-opacity));
 }
 
 h2 a,
@@ -1159,9 +1150,17 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  text-decoration: none;
   --tw-text-opacity: 1;
   color: rgb(76 82 103/var(--tw-text-opacity)) !important;
+}
+
+.dark h2 a,
+.dark h3 a,
+.dark h4 a,
+.dark h5 a,
+.dark h6 a {
+  --tw-text-opacity: 1;
+  color: rgba(247, 250, 252, var(--tw-text-opacity)) !important;
 }
 
 .nextra-container nav a:focus,

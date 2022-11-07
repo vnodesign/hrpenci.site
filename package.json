@@ -11,15 +11,16 @@
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "^13.0.0",
+    "next": "12.3.2",
     "nextra": "^1.1.0",
-    "nextra-theme-docs": "^1.2.2",
+    "nextra-theme-docs": "1.2.6",
     "preact": "^10.11.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-ga": "^3.3.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.7.1"
   },
   "prettier": {
     "semi": false,
