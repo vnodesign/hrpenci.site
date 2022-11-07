@@ -132,11 +132,6 @@
     tslib "^2.0.0"
     warning "^4.0.3"
 
-"@researchgate/react-intersection-observer@^1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@researchgate/react-intersection-observer/-/react-intersection-observer-1.3.5.tgz#0321d2dd609aaacdb9bace8004d99c72824fb142"
-  integrity sha512-aYlsex5Dd6BAHMJvJrUoFp8gzgMSL27xFvrxkVYW0bV1RMAapVsO+QeYLtTaSF/QCflktODodvv+wJm49oMnnQ==
-
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -1693,14 +1688,13 @@ next@12.3.2:
     "@next/swc-win32-ia32-msvc" "12.3.2"
     "@next/swc-win32-x64-msvc" "12.3.2"
 
-nextra-theme-docs@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/nextra-theme-docs/-/nextra-theme-docs-1.2.2.tgz#b45181d428000ee65946426a1c0c5464906b2824"
-  integrity sha512-NS/2OzHHAtAlbbMZyyWkRCPWY38MT2RP6YVviZGWhDXXuklmaNBRRfhS7TFFAIhShoWw9YHuAkG5EropaNoKmg==
+nextra-theme-docs@1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs/-/nextra-theme-docs-1.2.6.tgz#e6d5d8788534ae62d589db96df65f1a6e8b60bcc"
+  integrity sha512-6tSq74EEw/lfZXfrN9TXr8UFov1mddW+yXnwQB57XRF9hBVq3WtVl6lJT7Xe9q0S0s9lkEeGviHtq+NRpONcQQ==
   dependencies:
     "@mdx-js/react" "^1.6.16"
     "@reach/skip-nav" "^0.11.2"
-    "@researchgate/react-intersection-observer" "^1.3.5"
     classnames "^2.2.6"
     focus-visible "^5.1.0"
     github-slugger "^1.3.0"
