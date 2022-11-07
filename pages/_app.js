@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import 'nextra-theme-docs/style.css'
 import '../src/assets/style.css'
 
 const jsonOrganization = {
