@@ -3,23 +3,19 @@ lockfileVersion: 5.4
 specifiers:
   next: 12.3.2
   nextra: ^1.1.0
-  nextra-theme-docs: 1.2.6
+  nextra-theme-docs: 1.2.2
   preact: ^10.11.2
   prettier: ^2.7.1
-  prop-types: ^15.6.0
   react: 17.0.2
   react-dom: 17.0.2
-  react-ga: ^3.3.1
 
 dependencies:
   next: 12.3.2_sfoxds7t5ydpegc3knd667wn6m
   nextra: 1.1.0_z3yk7izmwsoahwplgcmcxkn2yu
-  nextra-theme-docs: 1.2.6_px4qsibf5drvtninwskbj374ua
+  nextra-theme-docs: 1.2.2_px4qsibf5drvtninwskbj374ua
   preact: 10.11.2
-  prop-types: 15.8.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-ga: 3.3.1_at7mkepldmzoo6silmqc5bca74
 
 devDependencies:
   prettier: 2.7.1
@@ -258,6 +254,17 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       tslib: 2.4.1
       warning: 4.0.3
+    dev: false
+
+  /@researchgate/react-intersection-observer/1.3.5_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-aYlsex5Dd6BAHMJvJrUoFp8gzgMSL27xFvrxkVYW0bV1RMAapVsO+QeYLtTaSF/QCflktODodvv+wJm49oMnnQ==}
+    engines: {node: '>=10.18.1'}
+    peerDependencies:
+      react: ^16.3.2
+      react-dom: ^16.3.2
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /@sindresorhus/is/0.7.0:
@@ -2064,8 +2071,8 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /nextra-theme-docs/1.2.6_px4qsibf5drvtninwskbj374ua:
-    resolution: {integrity: sha512-6tSq74EEw/lfZXfrN9TXr8UFov1mddW+yXnwQB57XRF9hBVq3WtVl6lJT7Xe9q0S0s9lkEeGviHtq+NRpONcQQ==}
+  /nextra-theme-docs/1.2.2_px4qsibf5drvtninwskbj374ua:
+    resolution: {integrity: sha512-NS/2OzHHAtAlbbMZyyWkRCPWY38MT2RP6YVviZGWhDXXuklmaNBRRfhS7TFFAIhShoWw9YHuAkG5EropaNoKmg==}
     peerDependencies:
       next: '>=9.5.3'
       react: '>=16.13.1'
@@ -2073,6 +2080,7 @@ packages:
     dependencies:
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@reach/skip-nav': 0.11.2_sfoxds7t5ydpegc3knd667wn6m
+      '@researchgate/react-intersection-observer': 1.3.5_sfoxds7t5ydpegc3knd667wn6m
       classnames: 2.3.2
       focus-visible: 5.2.0
       github-slugger: 1.5.0
@@ -2282,14 +2290,6 @@ packages:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: false
 
-  /prop-types/15.8.1:
-    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react-is: 16.13.1
-    dev: false
-
   /property-information/6.1.1:
     resolution: {integrity: sha512-hrzC564QIl0r0vy4l6MvRLhafmUowhO/O3KgVSoXIbbA2Sz4j8HGpJc6T2cubRVwMwpdiG/vKGfhT4IixmKN9w==}
     dev: false
@@ -2336,16 +2336,6 @@ packages:
       scheduler: 0.20.2
     dev: false
 
-  /react-ga/3.3.1_at7mkepldmzoo6silmqc5bca74:
-    resolution: {integrity: sha512-4Vc0W5EvXAXUN/wWyxvsAKDLLgtJ3oLmhYYssx+YzphJpejtOst6cbIHCIyF50Fdxuf5DDKqRYny24yJ2y7GFQ==}
-    peerDependencies:
-      prop-types: ^15.6.0
-      react: ^15.6.2 || ^16.0 || ^17 || ^18
-    dependencies:
-      prop-types: 15.8.1
-      react: 17.0.2
-    dev: false
-
   /react-innertext/1.1.5_qnxonbsml5syl42mqdnwkqq4yu:
     resolution: {integrity: sha512-PWAqdqhxhHIv80dT9znP2KvS+hfkbRovFp4zFYHFFlOoQLRiawIic81gKb3U1wEyJZgMwgs3JoLtwryASRWP3Q==}
     peerDependencies:
@@ -2354,10 +2344,6 @@ packages:
     dependencies:
       '@types/react': 18.0.25
       react: 17.0.2
-    dev: false
-
-  /react-is/16.13.1:
-    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
   /react/17.0.2:
