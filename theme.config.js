@@ -1,11 +1,15 @@
 export default {
   github: 'https://github.com/vnodesign',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master'
+  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/content'
   titleSuffix: ' | HR Documentation',
   logo: <span className="inline font-extrabold">HR Documentation</span>,
   head: (
     <>
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="vi" />
+      <link rel="canonical" href="https://hr.penci.me" />
       <meta
         name="description"
         content="Chào mừng bạn đến với HR Documentation, nơi chia sẻ các khái niệm trong ngành IT và ngành Design."
@@ -27,8 +31,19 @@ export default {
       />
       <meta name="twitter:url" content="https://hr.penci.me" />
       <meta name="twitter:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
-      <link rel="icon" href="/favicon.png" type="image/x-icon" />
+      <meta name="apple-mobile-web-app-title" content="HR Documentation" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
       <meta name="google-site-verification" content="google-site-verification=BGCohtYlfSW0Z_SMIRh194FsyPktQ-csDwYnZTE3aHQ" />
+      <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144.png" />
     </>
   ),
   search: true,
@@ -36,6 +51,6 @@ export default {
   nextLinks: true,
   footer: true,
   floatTOC: true,
-  footerEditLink: '',
+  footerEditLink: 'Đóng góp nội dung trên Github',
   footerText: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
 }
