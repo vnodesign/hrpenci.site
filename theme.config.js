@@ -1,6 +1,6 @@
 export default {
   github: 'https://github.com/vnodesign',
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/content',
+  docsRepositoryBase: '',
   titleSuffix: ' | HR Documentation',
   logo: <span className="inline font-extrabold">HR Documentation</span>,
   head: (
@@ -32,7 +32,7 @@ export default {
       <meta name="twitter:url" content="https://hr.penci.me" />
       <meta name="twitter:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -51,6 +51,6 @@ export default {
   nextLinks: true,
   footer: true,
   floatTOC: true,
-  footerEditLink: 'Đóng góp nội dung trên Github',
+  footerEditLink: '',
   footerText: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
 }
