@@ -42,7 +42,6 @@ export default {
       <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
       <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-      <meta name="google-site-verification" content="google-site-verification=BGCohtYlfSW0Z_SMIRh194FsyPktQ-csDwYnZTE3aHQ" />
       <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144.png" />
     </>
   ),
@@ -50,6 +49,7 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
+  font: false,
   floatTOC: true,
   footerEditLink: '',
   footerText: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
