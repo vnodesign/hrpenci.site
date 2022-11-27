@@ -1,4 +1,4 @@
-import '../src/assets/style.css'
+import 'nextra-theme-docs/style.css'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
 import ReactGA from 'react-ga4'
 
