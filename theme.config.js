@@ -1,6 +1,6 @@
 export default {
-  projectLink: 'https://github.com/vnodesign',
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document',
+  projectLink: 'https://github.com/vnodesign/hr-document',
+  docsRepositoryBase: '',
   titleSuffix: ' | HR Documentation',
   logo: <span className="inline font-extrabold">HR Documentation</span>,
   head: (
@@ -48,10 +48,10 @@ export default {
   search: true,
   prevLinks: true,
   nextLinks: true,
-  darkMode: false,
+  darkMode: true,
   footer: true,
   font: false,
   floatTOC: false,
-  footerEditLink: 'Đóng góp nội dung tài liệu này trên Github',
+  footerEditLink: '',
   footerText: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
 }
