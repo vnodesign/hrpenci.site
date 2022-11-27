@@ -1,5 +1,5 @@
 export default {
-  projectLink: 'https://github.com/vnodesign/hr-document',
+  github: 'https://github.com/vnodesign/hr-document',
   docsRepositoryBase: '',
   titleSuffix: ' | HR Documentation',
   logo: <span className="inline font-extrabold">HR Documentation</span>,
