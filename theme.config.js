@@ -1,6 +1,6 @@
 export default {
   github: 'https://github.com/vnodesign',
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs'
+  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs',
   titleSuffix: ' | HR Documentation',
   logo: <span className="inline font-extrabold">HR Documentation</span>,
   head: (
