@@ -48,6 +48,7 @@ export default {
   search: true,
   prevLinks: true,
   nextLinks: true,
+  darkMode: true,
   footer: true,
   font: false,
   floatTOC: true,
