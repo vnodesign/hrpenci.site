@@ -51,6 +51,6 @@ export default {
   footer: true,
   font: false,
   floatTOC: true,
-  footerEditLink: '',
+  footerEditLink: 'Đóng góp nội dung trên Github',
   footerText: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
 }
