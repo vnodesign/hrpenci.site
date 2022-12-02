@@ -14,7 +14,7 @@
     "next": "12.3.4",
     "next-seo": "^5.14.0",
     "nextra": "^1.1.0",
-    "nextra-theme-docs": "^1.2.6",
+    "nextra-theme-docs": "^2.0.0",
     "preact": "^10.11.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
