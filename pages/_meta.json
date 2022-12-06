@@ -3,7 +3,8 @@
     "title": "Trang chủ",
     "type": "page",
     "theme": {
-      "layout": "raw"
+      "layout": "raw",
+      "timestamp": false
     }
   },
   "fe": {

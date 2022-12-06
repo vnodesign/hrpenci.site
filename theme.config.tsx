@@ -72,7 +72,13 @@ export default {
   feedback: {
     content: 'Đặt câu hỏi cho tài liệu này',
   },
-  gitTimestamp: false,
+  notFound: {
+    content: 'Gửi vấn đề về liên kết bị hỏng \u2192'
+  },
+  serverSideError: {
+    content: 'Gửi vấn đề về lỗi trong url \u2192'
+  },
+  gitTimestamp: ({ timestamp }) => <>Cập nhật lần cuối vào lúc {timestamp.toString()}</>,
   darkMode: true,
   footer: {
     text: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
