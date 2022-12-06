@@ -7,5 +7,14 @@ const withNextra = nextra({
 })
 
 export default withNextra({
-  reactStrictMode: true
+   redirects: () => {
+    return [
+      {
+        source: "/start",
+        destination: "/fe",
+        statusCode: 301,
+      },
+    ];
+  },
+  reactStrictMode: true,
 })
