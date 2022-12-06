@@ -1,5 +1,4 @@
 import nextra from 'nextra'
-import withPWA from 'next-pwa'
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
@@ -7,12 +6,6 @@ const withNextra = nextra({
   staticImage: true,
 })
 
-export default withNextra(withPWA({
+export default withNextra({
   reactStrictMode: true,
-  pwa: {
-    dest: "public",
-    register: true,
-    skipWaiting: true,
-    disable:process.env.NODE_ENV === 'development'
-  },
-}))
+})

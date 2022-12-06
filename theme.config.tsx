@@ -46,7 +46,6 @@ export default {
       <meta name="twitter:url" content={asPath} />
       <meta name="twitter:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
-      <link rel="manifest" href="/manifest.json" />
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -79,7 +78,6 @@ export default {
   serverSideError: {
     content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
-  gitTimestamp: ({ timestamp }) => <>Cập nhật lần cuối vào lúc {timestamp.toString()}</>,
   darkMode: true,
   footer: {
     text: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,

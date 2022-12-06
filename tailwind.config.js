@@ -21,13 +21,9 @@ const makeSecondaryColor =
 
 module.exports = {
   prefix: 'nx-',
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './theme.config.tsx'
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     screens: {
