@@ -33,16 +33,16 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="vi" />
       <link rel="canonical" href={asPath} />
-      <meta name="description" content={frontMatter.description || 'Chào mừng bạn đến với HR Documentation, nơi chia sẻ các tài liệu trong ngành IT và ngành Design.'} />
+      <meta name="description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
       <meta property="og:site_name" content="HR Documentation" />
       <meta property="og:type" content={asPath === '/' ? 'website' : 'article'} />
       <meta property="og:url" content={asPath} />
       <meta property="og:title" content={frontMatter.title || 'HR Documentation'} />
-      <meta property="og:description" content={frontMatter.description || 'Chào mừng bạn đến với HR Documentation, nơi chia sẻ các tài liệu trong ngành IT và ngành Design.'} />
+      <meta property="og:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
       <meta property="og:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={frontMatter.title || 'HR Documentation'} />
-      <meta name="twitter:description" content={frontMatter.description || 'Chào mừng bạn đến với HR Documentation, nơi chia sẻ các tài liệu trong ngành IT và ngành Design.'} />
+      <meta name="twitter:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
       <meta name="twitter:url" content={asPath} />
       <meta name="twitter:image" content="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
