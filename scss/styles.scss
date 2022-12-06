@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './variables.scss';
+@import './code-block.scss';
+@import './subheading-anchor.scss';
+@import './hamburger.scss';
+@import './scrollbar.scss';
+@import './typesetting-article.scss';
+
+html {
+  @apply nx-antialiased nx-text-base;
+  font-feature-settings: 'rlig'1, 'calt'1, 'ss01'1, 'ss06'1;
+}
+
+body {
+  @apply nx-w-full nx-bg-white nx-text-[var(--color-base)] dark:nx-bg-dark dark:nx-text-gray-100;
+  font-feature-settings: 'rlig'1, 'calt'1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+a,
+summary,
+button,
+input,
+[tabindex]:not([tabindex='-1']) {
+  @apply nx-outline-none;
+
+  &:focus-visible {
+    @apply nx-ring-2 nx-ring-primary-200 nx-ring-offset-1 nx-ring-offset-primary-300 dark:nx-ring-primary-800 dark:nx-ring-offset-primary-700;
+  }
+}
+
+.dark img {
+  filter: brightness(70%);
+}
+
+a,
+summary {
+  @apply nx-rounded;
+}
+
+@media (max-width: 767px) {
+  .nextra-sidebar-container {
+    @apply nx-fixed nx-pt-[calc(var(--nextra-navbar-height))] nx-top-0 nx-w-full nx-bottom-0 nx-z-[15] nx-overscroll-contain nx-bg-white dark:nx-bg-dark;
+    transition: transform 0.8s cubic-bezier(0.52, 0.16, 0.04, 1);
+    will-change: transform, opacity;
+    contain: layout style;
+    backface-visibility: hidden;
+
+    &>.nextra-scrollbar {
+      mask-image: linear-gradient(to bottom, transparent, #000 20px),
+        linear-gradient(to left, #000 10px, transparent 10px);
+    }
+  }
+
+  .nextra-banner-container~div {
+    .nextra-sidebar-container {
+      @apply nx-pt-[6.5rem];
+    }
+
+    &.nextra-nav-container {
+      @apply nx-top-10 md:nx-top-0;
+    }
+  }
+
+  .nextra-banner-hidden {
+    .nextra-banner-container~div .nextra-sidebar-container {
+      @apply nx-pt-16;
+    }
+
+    .nextra-nav-container {
+      @apply nx-top-0;
+    }
+  }
+
+  .nextra-search .excerpt {
+    @apply nx-overflow-hidden nx-text-ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+
+  article:before,
+  .nextra-sidebar-container,
+  .nextra-sidebar-container.open,
+  body.resizing .nextra-sidebar-container {
+    @apply nx-transition-none;
+  }
+}
+
+/* Content Typography */
+article details>summary {
+  &::-webkit-details-marker {
+    @apply nx-hidden;
+  }
+
+  &::before {
+    @apply nx-h-[1.2em] nx-w-[1.2em] nx-align-[-4px];
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  }
+}
+
+@media (min-width: 768px) {
+
+  .nextra-toc>.div,
+  .nextra-sidebar-container {
+    mask-image: linear-gradient(to bottom, transparent, #000 20px),
+      linear-gradient(to left, #000 10px, transparent 10px);
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .nextra-search ul {
+    @apply nx-backdrop-blur-lg nx-bg-white/70 dark:nx-bg-dark/80;
+  }
+
+  .nextra-nav-container-blur {
+    @apply nx-backdrop-blur-md nx-bg-white/[.85] dark:nx-bg-dark/80;
+  }
+}
+
+input[type='search'] {
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+.contains-task-list {
+  @apply nx-ml-0 nx-list-none;
+
+  input[type='checkbox'] {
+    @apply nx-mr-1;
+  }
+}
+
+.nextra-banner-hidden .nextra-banner-container {
+  @apply nx-hidden;
+}
+
+.home-content {
+  p {
+    @apply nx-mt-6 nx-leading-7 dark:nx-text-neutral-300;
+    @media screen and (max-width: 720px) {
+      @apply nx-text-[0.9rem];
+    }
+  }
+  a {
+    --tw-ring-color: var(--color-primary);
+    text-underline-position: under;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    color: var(--color-primary);
+  }
+  .button-start {
+    a {
+      @apply nx-bg-[var(--color-primary)] focus:nx-outline-none focus:nx-ring-2 focus:nx-ring-primary-400 focus:nx-ring-offset-2 focus:nx-ring-offset-primary-50 nx-text-white nx-font-semibold nx-h-12 nx-px-4 nx-py-2 nx-rounded-lg nx-items-center nx-justify-center sm:nx-w-auto nx-no-underline;
+    }
+  }
+  .button-readmore {
+    a {
+      @apply nx-inline-flex nx-items-center nx-h-9 nx-rounded-full nx-text-sm nx-font-semibold nx-whitespace-nowrap nx-px-3 focus:nx-outline-none focus:nx-ring-2 nx-bg-[var(--color-primary)] nx-text-white focus:nx-ring-primary-500 nx-no-underline;
+    }
+  }
+  strong {
+    @apply nx-text-current nx-no-underline nx-font-bold;
+  }
+  @media screen and (max-width: 1200px) {
+    .hide-medium {
+      @apply nx-hidden;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .hide-small {
+      display: none;
+    }
+  }
+}
+
+figcaption {
+  @apply nx-text-[0.85rem] nx-leading-6 nx-block nx-text-center nx-mt-2;
+}
+
+code {
+  &.text-\[\.9em\] {
+    font-size: 14px;
+  }
+}
+
+.content-container {
+  max-width: 90rem;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
+  padding-right: max(env(safe-area-inset-right), 1.5rem);
+  margin: 0 auto;
+}
+
+.features-container {
+  margin: 4rem 0 0;
+  padding: 4rem 0;
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.headline {
+  font-size: 3.125rem;
+  font-size: min(4.375rem, max(8vw, 2.5rem));
+  font-weight: 700;
+  font-feature-settings: initial;
+  letter-spacing: -0.12rem;
+  margin-left: -0.2rem;
+  margin-top: 3.4rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-size: min(1.3rem, max(3.5vw, 1.2rem));
+  font-feature-settings: initial;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1200px) {
+  .headline {
+    letter-spacing: -0.08rem;
+  }
+}

@@ -1,8 +1,16 @@
-import 'nextra-theme-docs/style.css'
+import type { AppProps } from 'next/app'
+import type { ReactNode } from 'react'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
 import ReactGA from 'react-ga4'
+import '../scss/styles.scss'
 
-export default function Nextra({ Component, pageProps }) {
+type NextraAppProps = AppProps & {
+  Component: AppProps['Component'] & {
+    getLayout: (page: ReactNode) => ReactNode;
+  };
+};
+
+export default function Nextra({ Component, pageProps }: NextraAppProps) {
   ReactGA.initialize('G-RCV263F7H7')
   ReactGA.send('pageview')
 
@@ -23,15 +31,15 @@ export default function Nextra({ Component, pageProps }) {
       <SocialProfileJsonLd
         type="Person"
         name="HR Documentation"
-        url="https://hr.penci.me"
+        url="/"
         sameAs={[
           'https://www.facebook.com/groups/xomhr',
           'https://github.com/vnodesign',
         ]}
       />
       <LogoJsonLd
-        logo="https://hr.penci.me/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
-        url="https://hr.penci.me"
+        logo="/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
+        url="/"
       />
       <Component {...pageProps} />
     </>
