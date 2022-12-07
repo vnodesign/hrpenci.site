@@ -82,7 +82,7 @@ export default {
   gitTimestamp({ timestamp }) {
     return (
       <>
-        Cập nhật lần cuối lúc{' '}
+        Cập nhật lần cuối{' '}
         {timestamp.toLocaleDateString()}
       </>
     )

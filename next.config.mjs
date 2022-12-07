@@ -5,6 +5,9 @@ const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
   staticImage: true,
+  flexsearch: {
+    codeblock: false
+  }
 })
 
 export default withNextra(withBundleAnalyzer({

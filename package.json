@@ -16,12 +16,12 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "framer-motion": "^7.6.19",
-    "next": "^13.0.6",
+    "next": "latest",
     "next-seo": "^5.14.0",
     "nextra": "2.0.1",
     "nextra-theme-docs": "2.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "*",
+    "react-dom": "*",
     "react-ga4": "^1.4.1"
   },
   "devDependencies": {
