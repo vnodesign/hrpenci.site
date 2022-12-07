@@ -1,16 +1,17 @@
+import Link from 'next/link'
 import { Features, Feature } from '@components/features'
 import { FadeIn } from '@components/FadeIn'
 
 <div className="home-content">
   <div className="content-container">
     <FadeIn delay={0.1}>
-      <h1 className="headline">Chào mừng bạn đến với <span className="nx-inline nx-bg-gradient-to-r nx-from-[var(--color-primary)] nx-via-[var(--color-secondary)] nx-to-[var(--color-complementary)] nx-bg-clip-text nx-text-transparent">HR Documentation</span></h1>
+      <h1 className="headline">Chào mừng bạn đến với <br className="sm:block hidden" /> <span className="nx-inline nx-bg-gradient-to-r nx-from-[var(--color-primary)] nx-via-[var(--color-secondary)] nx-to-[var(--color-complementary)] nx-bg-clip-text nx-text-transparent">HR Documentation</span></h1>
     </FadeIn>
     <FadeIn delay={0.2}>
-      <p className="subtitle">Nền tảng chia sẻ các kiến thức và tài liệu về <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho HR.</p>
+      <p className="subtitle">Nền tảng chia sẻ các kiến thức và tài liệu về <br className="sm:block hidden" /> <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho HR.</p>
     </FadeIn>
     <FadeIn delay={0.3}>
-      <p className="subtitle"><span className="button-start">[Bắt đầu →](/start)</span></p>
+      <p className="subtitle"><span className="button-start"><Link href="/start">Bắt đầu →</Link></span></p>
     </FadeIn>
   </div>
 
@@ -28,30 +29,9 @@ import { FadeIn } from '@components/FadeIn'
   :global(.dark #docs-card) {
     filter: brightness(70%);
   }
-  :global(#highlighting-card) {
-    min-height: 300px;
-    background-image: url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxncmFkaWVudHxlbnwwfHx8fDE2NTMxOTA4NjY&ixlib=rb-1.2.1&q=80&w=2000);
-    background-size: 634px;
-    background-position: -6px calc(100% + 4px);
-    background-repeat: no-repeat;
-    color: #fff;
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  }
-  :global(#highlighting-card a) {
-    color: #fff;
-    font-weight: 700;
-  }
-  @media screen and (max-width: 1200px) {
-    :global(#highlighting-card) {
-      aspect-ratio: auto;
-    }
-  }
   @media screen and (max-width: 1024px) {
     :global(#docs-card) {
       aspect-ratio: 135/86;
-    }
-    :global(#highlighting-card) {
-      background-size: 136%;
     }
   }
   @media screen and (max-width: 768px) {
@@ -71,45 +51,43 @@ import { FadeIn } from '@components/FadeIn'
         <Feature large centered id="docs-card">
           <h3>Tài liệu chi tiết và dễ hiểu, Dễ tiếp cận với những bạn HR mới vào nghề.</h3>
         </Feature>
-        <Feature>
-          <h3>Giới thiệu về HR Community</h3>
-          <p>Qua quá trình tìm kiếm các job về ngành IT và ngành Design, thì mình có nhận thấy rằng. Có rất ít bạn hiểu về các khái niệm trong ngành này, nên vì thế mình sẽ chia sẻ thêm một số kinh nghiệm giúp các bạn hiểu rõ về ngành IT và ngành Design này nhé, trước là để các bạn lấy kinh nghiệm, sau là để các bạn hiểu rõ hơn về bạn ứng viên đó, khi mà các bạn đã không hiểu về các khái niệm trong ngành mà mình đang tuyển, thì rất khó tìm được ứng viên, thậm chí còn làm mất thời gian của bạn ứng viên đó nữa.</p>
+        <Feature centered>
+          <div className="h-full flex flex-col justify-between">
+            <h3>Giới thiệu về HR Community</h3>
+            <p>Qua quá trình tìm kiếm các job về ngành IT và ngành Design, thì mình có nhận thấy rằng. Có rất ít bạn hiểu về các khái niệm trong ngành này, nên vì thế mình sẽ chia sẻ thêm một số kinh nghiệm giúp các bạn hiểu rõ về ngành IT và ngành Design này nhé, trước là để các bạn lấy kinh nghiệm, sau là để các bạn hiểu rõ hơn về bạn ứng viên đó, khi mà các bạn đã không hiểu về các khái niệm trong ngành mà mình đang tuyển, thì rất khó tìm được ứng viên, thậm chí còn làm mất thời gian của bạn ứng viên đó nữa.</p>
+          </div>
         </Feature>
-        <Feature large>
+        <Feature>
           <h3>Tại sao bạn nên tham gia vào group HR Community?</h3>
           <p>Khi đến với group HR Community các bạn sẽ hiểu thêm về các khái niệm trong ngành IT và ngành Design hơn, bạn không cần phải tốn nhiều thời gian để Search Google đọc hàng tá các khái niệm trong ngành mà mình đang tuyển nữa. Giúp bạn hiểu xem Front End với Back End là gì, và trong nó có những công nghệ và Framework nào. Ngoài ra, trong nhóm HR Community mình có kho bài hướng dẫn chi tiết nhất về ngành IT và ngành Design cho các bạn mới bước chân vào ngành tuyển dụng.</p>
         </Feature>
-        <Feature>
+        <Feature large>
           <h3>Đâu là lý do để mình tạo ra nhóm HR Community này?</h3>
           <p>Mình nhận thấy nhu cầu làm HR của mọi người cũng nhiều, mà trang bị các kiến thức về ngành mà mình đang tuyển thì khá là ít. Mình tạo ra group không phải chỉ là để chia sẻ với các bạn, mà còn là nơi để các bạn đặt ra các vấn đề liên quan đến ngành mà các bạn đang tuyển. Một bạn HR mới bước chân vào nghề tuyển dụng, không chỉ hiểu thêm về các khái niệm trong ngành mà mình đang tuyển, thì họ còn hiểu thêm về nhiều cái khác nữa. Ngành IT hay ngành Design, thì khá là rộng, có hàng trăm, hàng ngàn thuật ngữ, mà để hiểu hết thì khá là lâu, và đó là lý do vì sao mình lại xây dựng ra group này.</p>
         </Feature>
-        <Feature large>
+        <Feature>
           <h3>Front End là gì?</h3>
-          <p>Front End là cách gọi quy trình sử dụng các ngôn ngữ HTML, CSS và JavaScript.</p>
-          <p className="subtitle"><span className="button-readmore">[Xem thêm →](/fe)</span></p>
+          <p>Front End là cách gọi quy trình sử dụng các ngôn ngữ HTML, CSS và JavaScript. <Link href="/front-end">Xem thêm Front End là gì</Link></p>
         </Feature>
         <Feature>
           <h3>Back End là gì?</h3>
-          <p>Back End là tất cả những phần hỗ trợ hoạt động của website hoặc ứng dụng mà người dùng không thể nhìn thấy được.</p>
-          <p className="subtitle"><span className="button-readmore">[Xem thêm →](/be)</span></p>
+          <p>Back End là tất cả những phần hỗ trợ hoạt động của website hoặc ứng dụng mà người dùng không thể nhìn thấy được. <Link href="/back-end">Xem thêm Back End là gì</Link></p>
         </Feature>
-        <Feature large>
+        <Feature>
           <h3>Linux là gì?</h3>
-          <p><b>Linux</b> là một <b>hệ điều hành máy tính</b> được phát triển từ năm 1991, dựa trên hệ điều hành Unix và viết bằng ngôn ngữ C.</p>
-          <p className="subtitle"><span className="button-readmore">[Xem thêm →](/linux)</span></p>
+          <p><b>Linux</b> là một <b>hệ điều hành máy tính</b> được phát triển từ năm 1991, dựa trên hệ điều hành Unix và viết bằng ngôn ngữ C. <Link href="/linux">Xem thêm Linux là gì</Link></p>
         </Feature>
         <Feature>
           <h3>Server là gì?</h3>
-          <p><b>Server</b> còn được gọi là <b>máy chủ</b> là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập.</p>
-          <p className="subtitle"><span className="button-readmore">[Xem thêm →](/linux/server)</span></p>
+          <p><b>Server</b> còn được gọi là <b>máy chủ</b> là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập. <Link href="/linux/server">Xem thêm Server là gì</Link></p>
         </Feature>
-        <Feature large>
+        <Feature>
           <h3>Design là gì?</h3>
           <p>Design (Thiết kế) là một quá trình lâu dài và theo trình tự để hình thành một sản phẩm và sử dụng đa dạng những cách thức khác nhau để hình thành ý tưởng cho mỗi bản vẽ. Do đó, thành phẩm nghệ thuật cuối cùng cần được dành nhiều tâm sức và thời gian để có thể quảng bá đến đại chúng, mang tính thời đại và để lại dấu ấn rất lớn.</p>
         </Feature>
-        <Feature id="highlighting-card">
+        <Feature>
           <h3>Tham gia vào group</h3>
-          <p>Tham gia vào group ngay, để không bỏ lỡ các bài viết chia sẻ hữu ích về ngành IT và ngành Design các bạn nhé! [Tham gia ngay](https://www.facebook.com/groups/xomhr).</p>
+          <p>Tham gia vào group ngay, để không bỏ lỡ các bài viết chia sẻ hữu ích về ngành IT và ngành Design các bạn nhé! <a href="https://www.facebook.com/groups/xomhr" target="_blank">Tham gia ngay</a>.</p>
         </Feature>
       </Features>
     </div>

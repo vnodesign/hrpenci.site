@@ -78,6 +78,7 @@ export default {
   serverSideError: {
     content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
+  gitTimestamp: false,
   darkMode: true,
   footer: {
     text: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,

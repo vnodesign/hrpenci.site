@@ -23,7 +23,9 @@ module.exports = {
   prefix: 'nx-',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx}'
+    './nextra-theme-docs/**/*.{js,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './theme.config.tsx'
   ],
   theme: {
     screens: {
