@@ -10,10 +10,12 @@
 
 html {
   @apply nx-antialiased nx-text-base;
+  font-feature-settings: 'rlig'1, 'calt'1, 'ss01'1, 'ss06'1;
 }
 
 body {
   @apply nx-w-full nx-bg-white nx-text-[var(--color-base)] dark:nx-bg-dark dark:nx-text-gray-100;
+  font-feature-settings: 'rlig'1, 'calt'1;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
@@ -137,7 +139,7 @@ input[type='search'] {
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
   &::-webkit-search-results-decoration {
-    @apply nx-appearance-none;
+    -webkit-appearance: none;
   }
 }
 
