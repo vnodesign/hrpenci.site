@@ -1,4 +1,5 @@
 import nextra from 'nextra'
+import withBundleAnalyzer from '@next/bundle-analyzer'
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
@@ -6,19 +7,7 @@ const withNextra = nextra({
   staticImage: true,
 })
 
-export default withNextra({
+export default withNextra(withBundleAnalyzer({
   reactStrictMode: true,
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      // Replace React with Preact only in client production build
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      })
-    }
-
-    return config
-  },
-})
+  enabled: process.env.ANALYZE === 'true',
+}))

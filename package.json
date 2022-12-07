@@ -20,7 +20,6 @@
     "next-seo": "^5.14.0",
     "nextra": "2.0.1",
     "nextra-theme-docs": "2.0.1",
-    "preact": "^10.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^1.4.1"
