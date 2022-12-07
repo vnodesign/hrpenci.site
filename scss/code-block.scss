@@ -16,9 +16,7 @@ code {
       @apply nx-border-primary-600/60 nx-bg-primary-600/10;
     }
     .highlighted {
-      @apply nx-rounded-sm nx-shadow-[0_0_0_3px_rgba(0,0,0,.3)];
-      @apply nx-bg-primary-800/10 nx-shadow-primary-800/10;
-      @apply dark:nx-bg-primary-300/10 dark:nx-shadow-primary-300/10;
+      @apply nx-rounded-sm nx-shadow-[0_0_0_3px_rgba(0,0,0,.3)] nx-bg-primary-800/10 nx-shadow-primary-800/10 dark:nx-bg-primary-300/10 dark:nx-shadow-primary-300/10;
     }
   }
 }

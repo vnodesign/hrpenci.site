@@ -79,7 +79,14 @@ export default {
   serverSideError: {
     content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
-  gitTimestamp: false,
+  gitTimestamp({ timestamp }) {
+    return (
+      <>
+        Cập nhật lần cuối lúc{' '}
+        {timestamp.toLocaleDateString()}
+      </>
+    )
+  },
   darkMode: true,
   footer: {
     component: Footer,
