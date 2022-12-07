@@ -229,9 +229,21 @@ code {
 }
 
 .headline {
-  @apply nx-text-5xl nx-font-extrabold nx-leading-10 nx-tracking-tight nx-text-left md:nx-text-center sm:nx-leading-none md:nx-text-6xl nx-mt-[3.4rem] nx-ml-[-0.12rem];
+  @apply nx-font-extrabold nx-text-left md:nx-text-center nx-mt-[3.4rem] nx-ml-[-0.12rem];
+  font-size: 3.125rem;
+  font-size: min(4.375rem, max(8vw, 2.5rem));
+  font-feature-settings: initial;
+  letter-spacing: -0.12rem;
+  line-height: 1.1;
+  @media screen and (max-width: 1200px) {
+   letter-spacing: -0.08rem;
+  }
 }
 
 .subtitle {
   @apply nx-mx-auto nx-mt-5 md:nx-mt-12 md:nx-max-w-lg md:nx-text-center lg:nx-text-lg;
+  font-size: 1.3rem;
+  font-size: min(1.3rem, max(3.5vw, 1.2rem));
+  font-feature-settings: initial;
+  line-height: 1.6;
 }
