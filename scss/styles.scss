@@ -162,6 +162,7 @@ input[type='search'] {
       @apply nx-text-[0.9rem];
     }
   }
+
   a {
     --tw-ring-color: var(--color-primary);
     text-underline-position: under;
@@ -169,19 +170,33 @@ input[type='search'] {
     text-decoration-thickness: from-font;
     color: var(--color-primary);
   }
-  .button-start {
-    a {
-      @apply nx-bg-[var(--color-primary)] focus:nx-outline-none focus:nx-ring-2 focus:nx-ring-primary-400 focus:nx-ring-offset-2 focus:nx-ring-offset-primary-50 nx-text-white nx-font-semibold nx-h-12 nx-px-6 nx-py-[0.75rem] nx-rounded-lg nx-items-center nx-justify-center sm:nx-w-auto nx-no-underline;
+
+  .button-action {
+    @apply nx-flex nx-flex-col nx-items-center nx-mt-12 nx-text-center;
+    .button-start {
+      @apply nx-relative nx-inline-flex nx-w-full md:nx-w-auto;
+      a {
+        @apply nx-inline-flex nx-items-center nx-justify-center nx-w-full nx-px-8 nx-py-4 nx-text-base nx-font-bold nx-leading-6 nx-bg-[var(--color-primary)] nx-bg-gradient-to-r nx-from-[var(--color-primary)] nx-to-[var(--color-complementary)] nx-text-white nx-border nx-border-transparent nx-rounded-full md:nx-w-auto focus:nx-outline-none focus:nx-ring-2 focus:nx-ring-offset-2 focus:nx-ring-[var(--color-primary)] nx-no-underline;
+      }
+    }
+    .button-follow {
+      @apply nx-mt-3;
+      a {
+        @apply nx-text-sm nx-no-underline;
+      }
     }
   }
+
   strong {
     @apply nx-text-current nx-no-underline nx-font-bold;
   }
+
   @media screen and (max-width: 1200px) {
     .hide-medium {
       @apply nx-hidden;
     }
   }
+
   @media screen and (max-width: 720px) {
     .hide-small {
       display: none;
@@ -214,25 +229,9 @@ code {
 }
 
 .headline {
-  font-size: 3.125rem;
-  font-size: min(4.375rem, max(8vw, 2.5rem));
-  font-weight: 700;
-  font-feature-settings: initial;
-  letter-spacing: -0.12rem;
-  margin-left: -0.2rem;
-  margin-top: 3.4rem;
-  line-height: 1.1;
+  @apply nx-text-5xl nx-font-extrabold nx-leading-10 nx-tracking-tight nx-text-left md:nx-text-center sm:nx-leading-none md:nx-text-6xl nx-mt-[3.4rem] nx-ml-[-0.12rem];
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  font-size: min(1.3rem, max(3.5vw, 1.2rem));
-  font-feature-settings: initial;
-  line-height: 1.6;
-}
-
-@media screen and (max-width: 1200px) {
-  .headline {
-    letter-spacing: -0.08rem;
-  }
+  @apply nx-mx-auto nx-mt-5 md:nx-mt-12 md:nx-max-w-lg md:nx-text-center lg:nx-text-lg;
 }

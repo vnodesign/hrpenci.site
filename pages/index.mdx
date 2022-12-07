@@ -5,14 +5,23 @@ import { FadeIn } from '@components/FadeIn'
 <div className="home-content">
   <div className="content-container">
     <FadeIn delay={0.1}>
-      <h1 className="headline">Chào mừng bạn đến với <br className="sm:block hidden" /> <span className="nx-inline nx-bg-gradient-to-r nx-from-[var(--color-primary)] nx-via-[var(--color-secondary)] nx-to-[var(--color-complementary)] nx-bg-clip-text nx-text-transparent">HR Documentation</span></h1>
+      <h1 className="headline">Chào mừng bạn đến với <span className="nx-inline nx-bg-gradient-to-r nx-from-[var(--color-primary)] nx-via-[var(--color-secondary)] nx-to-[var(--color-complementary)] nx-bg-clip-text nx-text-transparent">HR Documentation</span></h1>
     </FadeIn>
     <FadeIn delay={0.2}>
-      <p className="subtitle">Nền tảng chia sẻ các kiến thức và tài liệu về <br className="sm:block hidden" /> <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho HR.</p>
+      <div className="subtitle">Nền tảng chia sẻ các kiến thức và tài liệu về <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho HR.</div>
     </FadeIn>
-    <FadeIn delay={0.3}>
-      <p className="subtitle"><span className="button-start"><Link href="/start">Bắt đầu →</Link></span></p>
-    </FadeIn>
+    <div className="button-action">
+      <FadeIn delay={0.3}>
+        <div className="button-start">
+          <Link href="/front-end">Bắt đầu →</Link>
+        </div>
+      </FadeIn>
+      <FadeIn delay={0.4}>
+        <div className="button-follow">
+          <a href="https://www.facebook.com/groups/xomhr" target="_blank">Tham gia vào group HR Community</a>
+        </div>
+      </FadeIn>
+    </div>
   </div>
 
 <style jsx>{`

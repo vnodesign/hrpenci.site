@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
+import { Footer } from "@components/Footer";
 
 export default {
   project: {
@@ -81,6 +82,6 @@ export default {
   gitTimestamp: false,
   darkMode: true,
   footer: {
-    text: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`,
-  }
+    component: Footer,
+  },
 }
