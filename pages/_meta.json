@@ -3,8 +3,7 @@
     "title": "Trang chủ",
     "type": "page",
     "theme": {
-      "layout": "raw",
-      "timestamp": false
+      "layout": "raw"
     }
   },
   "front-end": {
@@ -35,7 +34,9 @@
       "sidebar": false,
       "toc": false,
       "pagination": false,
-      "timestamp": false
+      "timestamp": false,
+      "typesetting": "article",
+      "layout": "full"
     }
   },
   "404": {
