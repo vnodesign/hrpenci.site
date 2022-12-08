@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import { Footer } from "@components/Footer";
@@ -81,12 +81,26 @@ export default {
     content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
   gitTimestamp({ timestamp }) {
-    return (
-      <>
-        Cập nhật lần cuối{' '}
-        {timestamp.toLocaleDateString()}
-      </>
-    )
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [dateString, setDateString] = useState(timestamp.toISOString());
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+      try {
+        setDateString(
+          timestamp.toLocaleDateString(navigator.language, {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        );
+      } catch (e) {
+        // Ignore errors here; they get the ISO string.
+        // At least one person out there has manually misconfigured navigator.language.
+      }
+    }, [timestamp]);
+
+    return <>Cập nhật lần cuối {dateString}</>;
   },
   darkMode: true,
   footer: {
