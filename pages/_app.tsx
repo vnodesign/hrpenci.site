@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
 import type { ReactNode } from 'react'
-import Script from 'next/script'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
 import ReactGA from 'react-ga4'
 import '../scss/styles.scss'
@@ -42,29 +41,6 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
         logo="https://hr.penci.me/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
         url="https://hr.penci.me"
       />
-      <div id="fb-root"></div>
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <Script strategy="lazyOnload" id="fb-customer-chat-script">
-        {`
-          var chatbox = document.getElementById('fb-customer-chat');
-          chatbox.setAttribute("page_id", "121349286117840");
-          chatbox.setAttribute("attribution", "biz_inbox");
-          window.fbAsyncInit = function() {
-            FB.init({
-              xfbml            : true,
-              version          : 'v15.0'
-            });
-          };
-
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-        `}
-      </Script>
       <Component {...pageProps} />
     </>
   );
