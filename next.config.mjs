@@ -13,4 +13,5 @@ const withNextra = nextra({
 export default withNextra(withBundleAnalyzer({
   reactStrictMode: true,
   enabled: process.env.ANALYZE === 'true',
+  swcMinify: true,
 }))
