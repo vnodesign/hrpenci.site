@@ -4,7 +4,7 @@ specifiers:
   '@next/bundle-analyzer': ^13.0.6
   '@tailwindcss/nesting': ^0.0.0-insiders.565cd3e
   '@tailwindcss/typography': ^0.5.4
-  '@types/node': 18.11.10
+  '@types/node': 18.11.11
   autoprefixer: ^10.4.8
   clsx: ^1.2.1
   framer-motion: ^7.6.19
@@ -39,7 +39,7 @@ devDependencies:
   '@next/bundle-analyzer': 13.0.6
   '@tailwindcss/nesting': 0.0.0-insiders.565cd3e_postcss@8.4.19
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
-  '@types/node': 18.11.10
+  '@types/node': 18.11.11
   autoprefixer: 10.4.13_postcss@8.4.19
   postcss: 8.4.19
   postcss-cli: 8.3.1_postcss@8.4.19
@@ -533,8 +533,8 @@ packages:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
 
-  /@types/node/18.11.10:
-    resolution: {integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==}
+  /@types/node/18.11.11:
+    resolution: {integrity: sha512-KJ021B1nlQUBLopzZmPBVuGU9un7WJd/W4ya7Ih02B4Uwky5Nja0yGYav2EfYIk0RR2Q9oVhf60S2XR1BCWJ2g==}
     dev: true
 
   /@types/prop-types/15.7.5:
