@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  @apply nx-w-full nx-bg-white nx-text-[var(--color-base)] dark:nx-bg-dark dark:nx-text-gray-100;
   font-feature-settings: 'rlig'1, 'calt'1;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -24,7 +25,6 @@ body {
 }
 
 html, body {
-  @apply nx-w-full nx-bg-white nx-text-[var(--color-base)] dark:nx-bg-dark dark:nx-text-gray-100;
   scroll-behavior: smooth;
 }
 
@@ -221,7 +221,7 @@ code {
 }
 
 .features-container {
-  @apply nx-mt-16 nx-mb-0 nx-mx-0 nx-py-16 nx-px-0 nx-bg-slate-300 nx-border-b nx-border-solid nx-border-b-gray-200 dark:nx-bg-[#000] dark:nx-border-b-neutral-800;
+  @apply nx-mt-16 nx-mb-0 nx-mx-0 nx-py-16 nx-px-0 nx-bg-gray-100 dark:nx-bg-[#000];
 }
 
 .headline {

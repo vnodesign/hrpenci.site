@@ -1,5 +1,6 @@
 import nextra from 'nextra'
 import withBundleAnalyzer from '@next/bundle-analyzer'
+import withPWA from 'next-pwa'
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
@@ -10,8 +11,14 @@ const withNextra = nextra({
   }
 })
 
-export default withNextra(withBundleAnalyzer({
+export default withNextra(withBundleAnalyzer(withPWA({
   reactStrictMode: true,
   enabled: process.env.ANALYZE === 'true',
   swcMinify: true,
-}))
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable:process.env.NODE_ENV === 'development'
+  }
+})))

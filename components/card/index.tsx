@@ -39,8 +39,7 @@ export function Card({
         <span
           className={cn(
             styles.title,
-            'nx-gap-2 nx-p-4 nx-text-gray-700',
-            'hover:nx-text-gray-900'
+            'nx-gap-2 nx-p-4'
           )}
         >
           {icon}
