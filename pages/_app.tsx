@@ -1,7 +1,6 @@
 import type { AppProps } from 'next/app'
 import type { ReactNode } from 'react'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
-import { FacebookProvider, CustomChat } from 'react-facebook'
 import ReactGA from 'react-ga4'
 import '../scss/styles.scss'
 
@@ -32,19 +31,16 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
       <SocialProfileJsonLd
         type="Person"
         name="HR Documentation"
-        url={process.env.BASE_URL ? process.env.BASE_URL : '/'}
+        url="https://hr.penci.me"
         sameAs={[
           'https://www.facebook.com/groups/xomhr',
           'https://github.com/vnodesign',
         ]}
       />
       <LogoJsonLd
-        logo={`${process.env.BASE_URL ? process.env.BASE_URL : '/'}EAEC120F-BD44-45FA-8F1A-E9052824DA98.png`}
-        url={process.env.BASE_URL ? process.env.BASE_URL : '/'}
+        logo="https://hr.penci.me/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
+        url="https://hr.penci.me"
       />
-      <FacebookProvider appId="294587991860787" chatSupport>
-        <CustomChat pageId="121349286117840" minimized={false}/>
-      </FacebookProvider>
       <Component {...pageProps} />
     </>
   );

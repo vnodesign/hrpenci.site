@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Features, Feature } from '@components/features'
 import { FadeIn } from '@components/FadeIn'
+import Image from 'next/image'
+import docsCard from '../public/documentation-card.png'
 
 <div className="home-content">
   <div className="content-container">
@@ -26,12 +28,23 @@ import { FadeIn } from '@components/FadeIn'
 
 <style jsx>{`
   :global(#docs-card) {
-    background-image: url(/documentation-card.png);
-    background-size: cover;
     color: #000;
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   }
-  :global(.dark #docs-card) {
+  :global(#docs-card img) {
+    object-fit: cover;
+    object-position: left;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+  :global(.dark #docs-card img) {
     filter: brightness(70%);
   }
   @media screen and (max-width: 1024px) {
@@ -41,8 +54,6 @@ import { FadeIn } from '@components/FadeIn'
   }
   @media screen and (max-width: 768px) {
     :global(#docs-card) {
-      background-position: -226px 0;
-      background-size: 250%;
       min-height: 348px;
       width: 100%;
       aspect-ratio: auto;
@@ -54,6 +65,7 @@ import { FadeIn } from '@components/FadeIn'
     <div className="content-container">
       <Features>
         <Feature large centered id="docs-card">
+          <Image src={docsCard} alt="Background" loading="eager" />
           <h3>Tài liệu chi tiết và dễ hiểu, Dễ tiếp cận với những bạn HR mới vào nghề.</h3>
         </Feature>
         <Feature centered>
