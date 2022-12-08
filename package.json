@@ -24,7 +24,9 @@
     "nextra-theme-docs": "2.0.1",
     "react": "*",
     "react-dom": "*",
-    "react-ga4": "^1.4.1"
+    "react-facebook": "^9.0.12",
+    "react-ga4": "^1.4.1",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.0.6",

@@ -19,7 +19,9 @@ specifiers:
   prettier: ^2.7.1
   react: '*'
   react-dom: '*'
+  react-facebook: ^9.0.12
   react-ga4: ^1.4.1
+  react-icons: ^4.7.1
   sass: ^1.56.1
   tailwindcss: ^3.1.8
   typescript: ^4.9.3
@@ -35,7 +37,9 @@ dependencies:
   nextra-theme-docs: 2.0.1_6jx7hpii6hgsrmhxgqrmo3277u
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-facebook: 9.0.12_react@18.2.0
   react-ga4: 1.4.1
+  react-icons: 4.7.1_react@18.2.0
 
 devDependencies:
   '@next/bundle-analyzer': 13.0.6
@@ -4360,8 +4364,26 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-facebook/9.0.12_react@18.2.0:
+    resolution: {integrity: sha512-u7L9wWEG8/UR1kj3JRvHR5SR/cBvZkC4ZCnIt4ZmXMpg4LGVJkihcYIb2/L3FOHUsNt6p9k6jpA+7Cz3zD34iA==}
+    engines: {node: '>= 6.0.0'}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      '@babel/runtime': 7.20.6
+      react: 18.2.0
+    dev: false
+
   /react-ga4/1.4.1:
     resolution: {integrity: sha512-ioBMEIxd4ePw4YtaloTUgqhQGqz5ebDdC4slEpLgy2sLx1LuZBC9iYCwDymTXzcntw6K1dHX183ulP32nNdG7w==}
+    dev: false
+
+  /react-icons/4.7.1_react@18.2.0:
+    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react/18.2.0:
