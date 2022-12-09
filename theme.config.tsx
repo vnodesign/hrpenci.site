@@ -40,12 +40,12 @@ export default {
       <meta property="og:url" content={`https://hr.penci.me${asPath}`} />
       <meta property="og:title" content={frontMatter.title || 'HR Documentation'} />
       <meta property="og:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
-      <meta property="og:image" content="https://hr.penci.me/D7858306-BC38-4E7B-B7FE-0767CA0E5025.png" />
+      <meta property="og:image" content="https://hr.penci.me/documentation-card.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={frontMatter.title || 'HR Documentation'} />
       <meta name="twitter:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
       <meta name="twitter:url" content={`https://hr.penci.me${asPath}`} />
-      <meta name="twitter:image" content="https://hr.penci.me/D7858306-BC38-4E7B-B7FE-0767CA0E5025.png" />
+      <meta name="twitter:image" content="https://hr.penci.me/documentation-card.png" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
