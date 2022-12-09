@@ -1,45 +1,34 @@
 {
-  "name": "nextra",
-  "version": "1.0.0",
+  "name": "hr-documention",
+  "version": "2.0.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
-    "build:analyze": "ANALYZE=true next build",
-    "analyze:server": "BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+    "build": "next build"
   },
-  "author": "Shu Ding",
+  "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
     "clsx": "^1.2.1",
     "framer-motion": "^7.6.19",
     "next": "latest",
     "next-pwa": "^5.6.0",
-    "next-seo": "^5.14.0",
     "nextra": "2.0.1",
     "nextra-theme-docs": "2.0.1",
     "react": "*",
     "react-dom": "*",
-    "react-ga4": "^1.4.1",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.0.6",
-    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-    "@tailwindcss/typography": "^0.5.4",
     "@types/node": "18.11.12",
+    "@types/react": "^18.0.26",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.14",
-    "postcss-cli": "^10.0.0",
-    "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.9.3",
-    "webpack-bundle-analyzer": "^4.7.0"
+    "typescript": "^4.9.3"
   },
   "prettier": {
     "semi": false,

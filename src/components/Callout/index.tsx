@@ -5,7 +5,7 @@ import { InformationCircleIcon } from 'nextra/icons'
 const TypeToEmoji = {
   default: '💡',
   error: '🚫',
-  info: <InformationCircleIcon className="nx-mt-1" />,
+  info: <InformationCircleIcon className="mt-1" />,
   warning: '⚠️'
 }
 
@@ -13,16 +13,16 @@ type CalloutType = keyof typeof TypeToEmoji
 
 const classes: Record<CalloutType, string> = {
   default: cn(
-    'nx-bg-orange-100 nx-border-orange-500 nx-text-orange-700  dark:nx-bg-orange-200 dark:nx-text-orange-800'
+    'bg-orange-100 border-orange-500 text-orange-700  dark:bg-orange-200 dark:text-orange-800'
   ),
   error: cn(
-    'nx-bg-red-100 nx-border-red-500 nx-text-red-700 dark:nx-bg-red-200 dark:nx-text-red-800'
+    'bg-red-100 border-red-500 text-red-700 dark:bg-red-200 dark:text-red-800'
   ),
   info: cn(
-    'nx-bg-blue-100 nx-border-blue-500 nx-text-blue-700 dark:nx-bg-blue-200 dark:nx-text-blue-800'
+    'bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-200 dark:text-blue-800'
   ),
   warning: cn(
-    'nx-bg-yellow-100 nx-border-yellow-500 nx-text-yellow-700 dark:nx-bg-yellow-200 dark:nx-text-yellow-800'
+    'bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800'
   )
 }
 
@@ -40,19 +40,19 @@ export function Callout({
   return (
     <div
       className={cn(
-        'nextra-callout nx-mt-6 nx-border-t-4 nx-flex nx-py-2 ltr:nx-pr-4 rtl:nx-pl-4',
+        'nextra-callout mt-6 border-t-4 flex py-2 ltr:pr-4 rtl:pl-4',
         classes[type]
       )}
     >
       <div
-        className="nx-select-none nx-text-xl ltr:nx-pl-3 ltr:nx-pr-2 rtl:nx-pr-3 rtl:nx-pl-2"
+        className="select-none text-xl ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"
         style={{
           fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
         }}
       >
         {emoji}
       </div>
-      <div className="nx-w-full nx-min-w-0 nx-leading-7">{children}</div>
+      <div className="w-full min-w-0 leading-7">{children}</div>
     </div>
   )
 }

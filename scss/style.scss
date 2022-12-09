@@ -1,0 +1,85 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: #38B6FF;
+  --color-secondary: #62C5FF;
+  --color-complementary: #33BAEE;
+  --color-base: #4c5267;
+}
+
+body {
+  @apply text-[var(--color-base)];
+  font-feature-settings: 'rlig'1, 'calt'1;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.dark img {
+  filter: brightness(70%);
+}
+
+.home-content {
+  p {
+    @apply mt-6 leading-7 dark:text-neutral-300;
+    @media screen and (max-width: 720px) {
+      @apply text-[0.9rem];
+    }
+  }
+
+  a {
+    --tw-ring-color: var(--color-primary);
+    text-underline-position: under;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    color: var(--color-primary);
+  }
+
+  .button-action {
+    @apply flex flex-col items-center text-center;
+    .button-start {
+      @apply relative inline-flex w-full md:w-auto;
+      a {
+        @apply inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 bg-[var(--color-primary)] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-complementary)] text-white border border-transparent rounded-full md:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)] no-underline;
+      }
+    }
+    .button-follow {
+      @apply my-6;
+      a {
+        @apply text-sm no-underline;
+      }
+    }
+  }
+
+  strong {
+    @apply text-current no-underline font-bold;
+  }
+}
+
+.content-container {
+  @apply max-w-[90rem] my-0 mx-auto;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
+  padding-right: max(env(safe-area-inset-right), 1.5rem);
+}
+
+.features-container {
+  @apply mt-16 mb-0 mx-0 py-16 px-0 bg-gray-100 dark:bg-[#000];
+}
+
+.headline {
+  @apply font-extrabold mt-[3.4rem] ml-[-0.12rem] leading-[1.1] text-center tracking-[-0.12rem];
+  font-size: 3.125rem;
+  font-size: min(4.375rem, max(8vw, 2.5rem));
+  @media screen and (max-width: 1200px) {
+    @apply tracking-[-0.08rem];
+  }
+}
+
+.subtitle {
+  @apply text-center my-5 md:my-12 leading-[1.6] dark:text-neutral-300;
+  font-size: 1.3rem;
+  font-size: min(1.3rem, max(3.5vw, 1.2rem));
+}

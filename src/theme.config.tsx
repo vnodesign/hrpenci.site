@@ -1,23 +1,45 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
-import { Footer } from "@components/Footer";
+import { FaGithub } from 'react-icons/fa'
 
 export default {
   project: {
     link: 'https://github.com/vnodesign/hr-document',
+    icon: <FaGithub className="w-6 h-6" />
   },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs/',
   useNextSeoProps() {
-    const { route } = useRouter()
-    if (route == '/') {
-      return {
-        titleTemplate: 'HR Documentation'
-      }
-    } else {
-      return {
-        titleTemplate: '%s – HR Documentation'
-      }
+    const { route, asPath } = useRouter()
+    const { frontMatter } = useConfig()
+    return {
+      titleTemplate: route == '/' ? 'HR Documentation' : '%s – HR Documentation',
+      description:
+        frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
+      canonical: `https://hr.penci.me${asPath}`,
+      openGraph: {
+        url: `https://hr.penci.me${asPath}`,
+        title: frontMatter.title == frontMatter.title ? `${frontMatter.title} - HR Documentation` : 'HR Documentation',
+        description:
+        frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
+        images: [
+          {
+            url: frontMatter.image || 'https://hr.penci.me/documentation-card.png',
+            alt: frontMatter.title || 'HR Documentation'
+          }
+        ],
+        siteName: 'HR Documentation',
+        type: asPath === '/' ? 'website' : 'article',
+        locale: 'vi_VN'
+      },
+      facebook: {
+        appId: '1031926270674334'
+      },
+      twitter: {
+        handle: '@tuanducdesigner',
+        site: '@tuanducdesigner',
+        cardType: 'summary_large_image',
+      },
     }
   },
   logo: <strong>HR Documentation</strong>,
@@ -26,28 +48,16 @@ export default {
     placeholder: 'Tìm kiếm tài liệu...',
   },
   head: () => {
-    const { asPath } = useRouter()
     const { frontMatter } = useConfig()
     return <>
+      <meta property="fb:admins" content="100005485267478" />
+      <meta name="twitter:image" content={frontMatter.image || 'https://hr.penci.me/documentation-card.png'} />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="vi" />
-       <link rel="canonical" href={`https://hr.penci.me${asPath}`} />
-      <meta name="description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
-      <meta property="og:site_name" content="HR Documentation" />
-      <meta property="og:type" content={asPath === '/' ? 'website' : 'article'} />
-      <meta property="og:url" content={`https://hr.penci.me${asPath}`} />
-      <meta property="og:title" content={frontMatter.title || 'HR Documentation'} />
-      <meta property="og:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
-      <meta property="og:image" content="https://hr.penci.me/documentation-card.png" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={frontMatter.title || 'HR Documentation'} />
-      <meta name="twitter:description" content={frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'} />
-      <meta name="twitter:url" content={`https://hr.penci.me${asPath}`} />
-      <meta name="twitter:image" content="https://hr.penci.me/documentation-card.png" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="manifest" href="/manifest.webmanifest" />
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -104,6 +114,6 @@ export default {
   },
   darkMode: true,
   footer: {
-    component: Footer,
+    text: `Copyright © ${new Date().getFullYear()} HR Documentation. All Rights Reserved.`
   },
 }
