@@ -12,7 +12,9 @@ const withNextra = nextra({
 
 export default withNextra(withPWA({
   reactStrictMode: true,
-  swcMinify: true,
+  experimental: {
+    legacyBrowsers: false,
+  },
   pwa: {
     dest: "public"
   }
