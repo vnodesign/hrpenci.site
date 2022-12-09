@@ -19,7 +19,7 @@ export default {
       canonical: `https://hr.penci.me${asPath}`,
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
-        title: frontMatter.title == frontMatter.title ? `${frontMatter.title} - HR Documentation` : 'HR Documentation',
+        title: frontMatter.title || 'HR Documentation',
         description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
         images: [
