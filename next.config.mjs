@@ -4,11 +4,8 @@ import withPWA from 'next-pwa'
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './src/theme.config.tsx',
-  staticImage: true,
-  flexsearch: {
-    codeblock: false
-  },
-  readingTime: true,
+  unstable_flexsearch: true,
+  unstable_staticImage: true,
 })
 
 export default withNextra(withPWA({
@@ -21,5 +18,23 @@ export default withNextra(withPWA({
     register: true,
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development'
-  }
+  },
+  webpack: (config, { dev, isServer }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+
+    if (!dev && !isServer) {
+      // Replace React with Preact only in client production build
+      Object.assign(config.resolve.alias, {
+        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat',
+      })
+    }
+
+    return config
+  },
 }))

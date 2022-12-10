@@ -18,6 +18,7 @@
     "next-pwa": "^5.6.0",
     "nextra": "2.0.1",
     "nextra-theme-docs": "2.0.1",
+    "preact": "^10.11.3",
     "react": "*",
     "react-dom": "*",
     "react-icons": "^4.7.1",
