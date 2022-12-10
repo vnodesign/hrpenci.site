@@ -75,8 +75,7 @@ export default {
   },
   head: (
     <>
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
+      
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="vi" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
@@ -121,7 +120,7 @@ export default {
     useEffect(() => {
       try {
         setDateString(
-          timestamp.toLocaleDateString(navigator.language, {
+          timestamp.toLocaleDateString('vi-VN', {
             day: "numeric",
             month: "long",
             year: "numeric",
