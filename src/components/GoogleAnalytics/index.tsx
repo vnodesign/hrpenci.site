@@ -4,20 +4,24 @@ export function GAScript({ id }) {
   return (
     <>
       <Script
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
       />
 
-      <Script strategy="lazyOnload" id="ga-script">
-        {`
+      <Script
+        id="ga-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${id}', {
               page_path: window.location.pathname,
             });
-        `}
-      </Script>
+          `,
+        }}
+        />
     </>
   )
 }

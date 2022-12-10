@@ -1,13 +1,40 @@
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
-import type { ReactElement } from 'react'
+import type { ReactNode } from 'react'
+import { SSRProvider } from '@react-aria/ssr';
+import { FAQPageJsonLd } from '@components/FAQPageJsonLd'
+import { PersonJsonLd } from '@components/PersonJsonLd'
+import * as gtag from '@lib/gtag'
 import { GAScript } from '@components/GoogleAnalytics'
 import '../../scss/style.scss'
 
-export default function Nextra({ Component, pageProps }: AppProps): ReactElement {
+type NextraAppProps = AppProps & {
+  Component: AppProps["Component"] & {
+    getLayout: (page: ReactNode) => ReactNode;
+  };
+};
+
+export default function Nextra({ Component, pageProps }: NextraAppProps) {
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('hashChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+      router.events.off('hashChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
-    <>
-      <GAScript id="G-RCV263F7H7" />
+    <SSRProvider>
+      <FAQPageJsonLd />
+      <PersonJsonLd />
       <Component {...pageProps} />
-    </>
+      <GAScript id="G-RCV263F7H7" />
+    </SSRProvider>
   );
 }

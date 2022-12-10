@@ -10,22 +10,41 @@ export default {
   },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs/',
   useNextSeoProps() {
-    const { route, asPath } = useRouter()
+    const router = useRouter()
     const { frontMatter } = useConfig()
+
+    const asPath = router.asPath
+
+    let ogUrl
+
+    if (asPath === '/') {
+      ogUrl = 'https://hr.penci.me/documentation-card.png'
+    } else if (frontMatter?.ogImage) {
+      ogUrl = `https://hr.penci.me${frontMatter.ogImage}`
+    } else {
+      const title = frontMatter.title
+        ? `${encodeURIComponent(frontMatter.title)}`
+        : 'HR Documentation';
+      ogUrl = `https://hr.penci.me/api/og?title=${title}`
+    }
+
     return {
-      titleTemplate: route == '/' ? 'HR Documentation' : '%s – HR Documentation',
+      titleTemplate: asPath === '/' ? 'HR Documentation' : '%s – HR Documentation',
       description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
       canonical: `https://hr.penci.me${asPath}`,
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
-        title: frontMatter.title || 'HR Documentation',
+        title: frontMatter.title
+        ? `${frontMatter.title} - HR Documentation` : 'HR Documentation',
         description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
         images: [
           {
-            url: frontMatter.image || 'https://hr.penci.me/documentation-card.png',
-            alt: frontMatter.title || 'HR Documentation'
+            url: ogUrl,
+            alt: frontMatter.title || 'HR Documentation',
+            width: '1200',
+            height: '630'
           }
         ],
         siteName: 'HR Documentation',
@@ -40,6 +59,10 @@ export default {
         site: '@tuanducdesigner',
         cardType: 'summary_large_image',
       },
+      additionalMetaTags: [
+        { content: '100005485267478', property: 'fb:admins' },
+        { content: ogUrl, name: 'twitter:image' }
+      ],
     }
   },
   logo: <strong>HR Documentation</strong>,
@@ -48,10 +71,7 @@ export default {
     placeholder: 'Tìm kiếm tài liệu...',
   },
   head: () => {
-    const { frontMatter } = useConfig()
     return <>
-      <meta property="fb:admins" content="100005485267478" />
-      <meta name="twitter:image" content={frontMatter.image || 'https://hr.penci.me/documentation-card.png'} />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />

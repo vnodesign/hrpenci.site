@@ -7,7 +7,8 @@ const withNextra = nextra({
   staticImage: true,
   flexsearch: {
     codeblock: false
-  }
+  },
+  readingTime: true,
 })
 
 export default withNextra(withPWA({
@@ -16,6 +17,9 @@ export default withNextra(withPWA({
     legacyBrowsers: false,
   },
   pwa: {
-    dest: "public"
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable: process.env.NODE_ENV === 'development'
   }
 }))
