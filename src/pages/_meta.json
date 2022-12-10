@@ -24,7 +24,8 @@
   },
   "design": {
     "title": "Design",
-    "type": "page"
+    "type": "page",
+    "href": "/design"
   },
   "start": {
     "display": "hidden",

@@ -7,173 +7,47 @@ title: 'Bắt đầu'
 </h1>
 
 import { Card, Cards } from '@components/card'
-import {
-  FaCode,
-  FaReact,
-  FaVuejs,
-  FaAngular,
-  FaFolder,
-  FaServer,
-  FaJava,
-  FaPhp,
-  FaPython,
-  FaLinux,
-  FaUbuntu,
-  FaFedora,
-  FaCentos,
-  FaAndroid,
-  FaFile,
-} from 'react-icons/fa'
-import {
-  SiSvelte,
-  SiNuxtdotjs,
-  SiMysql,
-  SiJavascript,
-  SiLinuxmint,
-  SiKalilinux,
-  SiNginx,
-  SiApache,
-  SiSpeedtest,
-} from 'react-icons/si'
+import { FaCode, FaFolder, FaServer, FaLinux, FaFile } from 'react-icons/fa'
 import { BsLayoutSidebarInsetReverse } from 'react-icons/bs'
 import { FadeIn } from '@components/FadeIn'
 
-<FadeIn delay={0.1}>
-  <Cards>
+<Cards>
+  <FadeIn delay={0.1}>
     <Card
       icon={<FaCode className="w-6 h-6" />}
-      title="Front End là gì"
+      title="Front End"
       href="/front-end"
     />
-    <Card
-      icon={<FaReact className="w-6 h-6" />}
-      title="ReactJS"
-      href="/front-end/reactjs"
-    />
-    <Card
-      icon={<FaVuejs className="w-6 h-6" />}
-      title="VueJS"
-      href="/front-end/vuejs"
-    />
-    <Card
-      icon={<SiSvelte className="w-6 h-6" />}
-      title="Svelte"
-      href="/front-end/svelte"
-    />
-    <Card
-      icon={<SiNuxtdotjs className="w-6 h-6" />}
-      title="NuxtJS"
-      href="/front-end/nuxtjs"
-    />
-    <Card
-      icon={<FaAngular className="w-6 h-6" />}
-      title="Angular"
-      href="/front-end/angular"
-    />
-    <Card
-      icon={<FaFolder className="w-6 h-6" />}
-      title="Tổng kết về Front End"
-      href="/front-end/tong-ket-ve-front-end"
-    />
+  </FadeIn>
+  <FadeIn delay={0.2}>
     <Card
       icon={<FaServer className="w-6 h-6" />}
-      title="Back End là gì"
+      title="Back End"
       href="/back-end"
     />
-    <Card
-      icon={<FaJava className="w-6 h-6" />}
-      title="Ngôn ngữ lập trình Java"
-      href="/back-end/java"
-    />
-    <Card
-      icon={<FaPhp className="w-6 h-6" />}
-      title="Ngôn ngữ lập trình PHP"
-      href="/back-end/php"
-    />
-    <Card
-      icon={<FaPython className="w-6 h-6" />}
-      title="Ngôn ngữ lập trình Python"
-      href="/front-end/python"
-    />
-    <Card
-      icon={<SiMysql className="w-6 h-6" />}
-      title="Ngôn ngữ dành cho truy vấn SQL"
-      href="/back-end/sql"
-    />
-    <Card
-      icon={<SiJavascript className="w-6 h-6" />}
-      title="Ngôn ngữ lập trình JavaScript"
-      href="/back-end/javascript"
-    />
-    <Card
-      icon={<FaLinux className="w-6 h-6" />}
-      title="Hệ điều hành Linux là gì"
-      href="/linux"
-    />
-    <Card
-      icon={<FaUbuntu className="w-6 h-6" />}
-      title="Hệ điều hành Ubuntu"
-      href="/linux/ubuntu"
-    />
-    <Card
-      icon={<FaFedora className="w-6 h-6" />}
-      title="Hệ điều hành Fedora (Red hat)"
-      href="/linux/fedora"
-    />
-    <Card
-      icon={<SiLinuxmint className="w-6 h-6" />}
-      title="Hệ điều hành Linux Mint"
-      href="/linux/linux-mint"
-    />
-    <Card
-      icon={<SiKalilinux className="w-6 h-6" />}
-      title="Hệ điều hành Kali Linux"
-      href="/linux/kali-linux"
-    />
-    <Card
-      icon={<FaCentos className="w-6 h-6" />}
-      title="Hệ điều hành CentOS"
-      href="/linux/centos"
-    />
-    <Card
-      icon={<FaAndroid className="w-6 h-6" />}
-      title="Hệ điều hành Android"
-      href="/linux/android"
-    />
+  </FadeIn>
+  <FadeIn delay={0.3}>
+    <Card icon={<FaLinux className="w-6 h-6" />} title="Linux" href="/linux" />
+  </FadeIn>
+  <FadeIn delay={0.4}>
     <Card
       icon={<FaServer className="w-6 h-6" />}
-      title="Server là gì"
+      title="Linux Server"
       href="/linux/server"
     />
-    <Card
-      icon={<FaServer className="w-6 h-6" />}
-      title="Web Server là gì"
-      href="/linux/server/web-server"
-    />
-    <Card
-      icon={<SiNginx className="w-6 h-6" />}
-      title="Nginx là gì"
-      href="/linux/server/nginx"
-    />
-    <Card
-      icon={<SiApache className="w-6 h-6" />}
-      title="Apache là gì"
-      href="/linux/server/apache"
-    />
-    <Card
-      icon={<SiSpeedtest className="w-6 h-6" />}
-      title="OpenLiteSpeed là gì"
-      href="/linux/open-lite-speed"
-    />
+  </FadeIn>
+  <FadeIn delay={0.5}>
     <Card
       icon={<FaFile className="w-6 h-6" />}
       title="Tài liệu nâng cao"
       href="/nang-cao"
     />
+  </FadeIn>
+  <FadeIn delay={0.6}>
     <Card
       icon={<BsLayoutSidebarInsetReverse className="w-6 h-6" />}
-      title="Design là gì"
+      title="Design"
       href="/design"
     />
-  </Cards>
-</FadeIn>
+  </FadeIn>
+</Cards>

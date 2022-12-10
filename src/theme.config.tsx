@@ -29,7 +29,7 @@ export default {
     }
 
     return {
-      titleTemplate: asPath === '/' ? 'HR Documentation' : '%s – HR Documentation',
+      titleTemplate: asPath === '/' ? 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design' : '%s – HR Documentation',
       description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
       canonical: `https://hr.penci.me${asPath}`,
@@ -66,12 +66,15 @@ export default {
     }
   },
   logo: <strong>HR Documentation</strong>,
+  sidebar: {
+    defaultMenuCollapseLevel: 0
+  },
   search: {
     emptyResult: 'Không tìm thấy kết quả cho từ khoá này',
     placeholder: 'Tìm kiếm tài liệu...',
   },
-  head: () => {
-    return <>
+  head: (
+    <>
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,7 +93,7 @@ export default {
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
       <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144.png" />
     </>
-  },
+  ),
   navigation: {
     prev: true,
     next: true,
