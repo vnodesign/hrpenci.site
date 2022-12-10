@@ -75,6 +75,7 @@ export default {
   },
   head: (
     <>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="Content-Language" content="vi" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
       <link rel="manifest" href="/manifest.webmanifest" />
