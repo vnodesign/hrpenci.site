@@ -12,8 +12,8 @@ export default function handler(req: NextRequest) {
     // ?title=<title>
     const hasTitle = searchParams.has('title');
     const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'My default title';
+      ? `${searchParams.get('title')?.slice(0, 100)} | HR Documentation`
+      : 'HR Documentation';
 
     return new ImageResponse(
       (
