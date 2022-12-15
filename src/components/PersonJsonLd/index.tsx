@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import Head from 'next/head'
 
 const schemaDataPerson =
 {
@@ -16,10 +16,12 @@ const schemaDataPerson =
 
 export function PersonJsonLd() {
   return (
-    <Script
+  <Head>
+    <script
       key="person-json"
       type="application/json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDataPerson) }}
     />
+   </Head>
   )
 }
