@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 const schemaDataFaq =
 {
   "@context": "https://schema.org",
@@ -35,7 +37,7 @@ const schemaDataFaq =
 
 export function FAQPageJsonLd() {
   return (
-    <script
+    <Script
       key="faq-page-json"
       type="application/json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDataFaq)} }
