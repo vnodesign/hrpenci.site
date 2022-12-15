@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import type { DocumentInitialProps, DocumentContext } from "next/document";
+import { FAQPageJsonLd } from '@components/FAQPageJsonLd'
+import { PersonJsonLd } from '@components/PersonJsonLd'
 
 class MyDocument extends Document {
   static async getInitialProps(
