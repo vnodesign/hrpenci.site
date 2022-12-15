@@ -1,7 +1,7 @@
-import Script from 'next/script'
-
-const schemaDataFaq =
-{
+export function FAQPageJsonLd() {
+  return (
+    <script type="application/ld+json">
+    {`{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{
@@ -33,14 +33,7 @@ const schemaDataFaq =
       "text": "HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho những bạn HR mới bước chân vào nghề tuyển dụng."
     }
   }]
-}
-
-export function FAQPageJsonLd() {
-  return (
-    <Script
-      key="faq-page-json"
-      type="application/json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDataFaq)} }
-    />
+}`}
+  </script>
   )
 }
