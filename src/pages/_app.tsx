@@ -3,8 +3,6 @@ import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import type { ReactNode } from 'react'
 import { SSRProvider } from '@react-aria/ssr';
-import { FAQPageJsonLd } from '@components/FAQPageJsonLd'
-import { PersonJsonLd } from '@components/PersonJsonLd'
 import * as gtag from '@lib/gtag'
 import { GAScript } from '@components/GoogleAnalytics'
 import '../../scss/style.scss'
@@ -46,8 +44,6 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
 
   return (
     <SSRProvider>
-      <FAQPageJsonLd />
-      <PersonJsonLd />
       <Component {...pageProps} />
       <GAScript id="G-RCV263F7H7" />
     </SSRProvider>
