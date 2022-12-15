@@ -15,7 +15,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head />
+        <Head>
+          <FAQPageJsonLd />
+          <PersonJsonLd />
+        </Head>
         <body>
           <Main />
           <NextScript />
