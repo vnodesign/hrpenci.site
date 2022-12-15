@@ -29,14 +29,14 @@ export default {
     }
 
     return {
-      titleTemplate: asPath === '/' ? 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design' : '%s – HR Documentation',
+      titleTemplate: asPath === '/' ? 'HR Documentation' : '%s – HR Documentation',
       description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
       canonical: `https://hr.penci.me${asPath}`,
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
         title: frontMatter.title
-        ? `${frontMatter.title} - HR Documentation` : 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design',
+        ? `${frontMatter.title} - HR Documentation` : 'HR Documentation',
         description:
         frontMatter.description || 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
         images: [
@@ -90,6 +90,10 @@ export default {
       <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
       <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144.png" />
+      <link rel="prefetch" href="/front-end" as="document" />
+      <link rel="prefetch" href="/back-end" as="document" />
+      <link rel="prefetch" href="/design" as="document" />
+      <link rel="prefetch" href="/start" as="document" />
     </>
   ),
   navigation: {
