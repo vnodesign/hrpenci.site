@@ -1,7 +1,7 @@
-export function FAQPageJsonLd() {
-  return (
-    <script type="application/ld+json">
-    {`{
+import Head from 'next/head'
+
+const schemaDataFaq =
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{
@@ -33,7 +33,16 @@ export function FAQPageJsonLd() {
       "text": "HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho những bạn HR mới bước chân vào nghề tuyển dụng."
     }
   }]
-}`}
-  </script>
+}
+
+export function FAQPageJsonLd() {
+  return (
+  <Head>
+    <script
+      key="faq-page-json"
+      type="application/json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDataFaq)} }
+    />
+   </Head>
   )
 }
