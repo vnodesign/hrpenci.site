@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 const schemaDataFaq =
 {
   "@context": "https://schema.org",
@@ -37,12 +35,10 @@ const schemaDataFaq =
 
 export function FAQPageJsonLd() {
   return (
-  <Head>
     <script
       key="faq-page-json"
       type="application/json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDataFaq)} }
     />
-   </Head>
   )
 }
