@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import type { DocumentInitialProps, DocumentContext } from "next/document";
-import { FAQPageJsonLd } from '@components/FAQPageJsonLd'
-import { PersonJsonLd } from '@components/PersonJsonLd'
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -15,10 +13,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head>
-          <FAQPageJsonLd />
-          <PersonJsonLd />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
