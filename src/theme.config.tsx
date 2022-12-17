@@ -4,6 +4,10 @@ import { useConfig } from 'nextra-theme-docs'
 import { FaGithub } from 'react-icons/fa'
 
 export default {
+  banner: {
+    key: 'it-recruiter',
+    text: <a href="https://hr.penci.me/IT-RECRUITER-TRAINING.pdf" target="_blank">Download tài liệu về IT Recruiter Training →</a>,
+  },
   project: {
     link: 'https://github.com/vnodesign/hr-document',
     icon: <FaGithub className="w-6 h-6" />
