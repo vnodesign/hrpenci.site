@@ -2,11 +2,16 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import { FaGithub } from 'react-icons/fa'
+import { BiGroup } from 'react-icons/bi'
 
 export default {
   project: {
     link: 'https://github.com/vnodesign/hr-document',
     icon: <FaGithub className="w-6 h-6" />
+  },
+  chat: {
+    link: 'https://www.facebook.com/groups/xomhr',
+    icon: <BiGroup className="w-6 h-6" />
   },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs/',
   useNextSeoProps() {
