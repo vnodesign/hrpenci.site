@@ -22,6 +22,10 @@ html, body {
   filter: brightness(70%);
 }
 
+article img {
+  @apply w-full aspect-video;
+}
+
 .home-content {
   p {
     @apply mt-6 leading-7 dark:text-neutral-300;
