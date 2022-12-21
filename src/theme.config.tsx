@@ -23,7 +23,7 @@ export default {
     let ogUrl
 
     if (asPath === '/') {
-      ogUrl = 'https://hr.penci.me/documentation-card.png'
+      ogUrl = 'https://hr.penci.me/static/documentation-card.png'
     } else if (frontMatter?.ogImage) {
       ogUrl = `https://hr.penci.me${frontMatter.ogImage}`
     } else {
@@ -75,7 +75,7 @@ export default {
     defaultMenuCollapseLevel: 0
   },
   search: {
-    emptyResult: 'Không tìm thấy kết quả cho từ khoá này',
+    emptyResult: <><span className="block select-none p-8 text-center text-sm text-gray-400">Không tìm thấy kết quả cho từ khoá này.</span></>,
     placeholder: 'Tìm kiếm tài liệu...',
   },
   head: (
@@ -83,18 +83,18 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="Content-Language" content="vi" />
       <meta name="apple-mobile-web-app-title" content="HR Documentation" />
-      <link rel="manifest" href="/manifest.webmanifest" />
-      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-      <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-      <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-      <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-      <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-      <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-      <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144.png" />
+      <link rel="manifest" href="/static/manifest.webmanifest" />
+      <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-touch-icon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="/static/apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="/static/apple-touch-icon-120x120.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="/static/apple-touch-icon-144x144.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
+      <meta name="msapplication-TileImage" content="/static/apple-touch-icon-144x144.png" />
       <link rel="prefetch" href="/front-end" as="document" />
       <link rel="prefetch" href="/back-end" as="document" />
       <link rel="prefetch" href="/design" as="document" />

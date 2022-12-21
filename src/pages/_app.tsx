@@ -67,7 +67,7 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
         ]}
       />
       <LogoJsonLd
-        logo="https://hr.penci.me/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
+        logo="https://hr.penci.me/static/EAEC120F-BD44-45FA-8F1A-E9052824DA98.png"
         url="https://hr.penci.me"
       />
       <Component {...pageProps} />

@@ -74,7 +74,7 @@ article img {
 }
 
 .headline {
-  @apply font-extrabold mt-[3.4rem] ml-[-0.12rem] leading-[1.1] text-center tracking-[-0.12rem];
+  @apply font-extrabold mt-[3.4rem] ml-[-0.12rem] leading-[1.1] text-center tracking-[-0.12rem] dark:text-neutral-300;
   font-size: 3.125rem;
   font-size: min(4.375rem, max(8vw, 2.5rem));
   @media screen and (max-width: 1200px) {

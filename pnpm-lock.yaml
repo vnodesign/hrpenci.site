@@ -14,7 +14,6 @@ specifiers:
   nextra: 2.0.1
   nextra-theme-docs: 2.0.1
   postcss: ^8.4.14
-  preact: ^10.11.3
   prettier: ^2.7.1
   react: '*'
   react-dom: '*'
@@ -34,7 +33,6 @@ dependencies:
   next-seo: 5.15.0_gvvct4imq5upoiloat43sswrza
   nextra: 2.0.1_gvvct4imq5upoiloat43sswrza
   nextra-theme-docs: 2.0.1_gvvct4imq5upoiloat43sswrza
-  preact: 10.11.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
@@ -4328,10 +4326,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
-
-  /preact/10.11.3:
-    resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
-    dev: false
 
   /prebuild-install/7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
