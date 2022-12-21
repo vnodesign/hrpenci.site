@@ -22,7 +22,7 @@
     "react": "*",
     "react-dom": "*",
     "react-icons": "^4.7.1",
-    "sharp": "0.31.1"
+    "sharp": "0.31.3"
   },
   "devDependencies": {
     "@types/node": "18.11.17",
