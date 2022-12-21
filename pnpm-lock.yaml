@@ -7,7 +7,7 @@ specifiers:
   '@vercel/og': ^0.0.21
   autoprefixer: ^10.4.8
   clsx: ^1.2.1
-  framer-motion: ^7.6.19
+  framer-motion: ^8.0.0
   next: latest
   next-pwa: ^5.6.0
   next-seo: ^5.14.0
@@ -28,7 +28,7 @@ dependencies:
   '@react-aria/ssr': 3.4.0_react@18.2.0
   '@vercel/og': 0.0.21
   clsx: 1.2.1
-  framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 8.0.0_biqbaboplfbrettd7655fr4n2y
   next: 13.0.7_m5sxuueb27gk6ddc5gums6vtgq
   next-pwa: 5.6.0_next@13.0.7
   next-seo: 5.15.0_gvvct4imq5upoiloat43sswrza
@@ -1322,8 +1322,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@motionone/dom/10.13.1:
-    resolution: {integrity: sha512-zjfX+AGMIt/fIqd/SL1Lj93S6AiJsEA3oc5M9VkUr+Gz+juRmYN1vfvZd6MvEkSqEjwPQgcjN7rGZHrDB9APfQ==}
+  /@motionone/dom/10.15.3:
+    resolution: {integrity: sha512-FQ7a2zMBXc1UeU8CG9G3yDpst55fbb0+C9A0VGfwOITitBCzigKZnXRgsRSWWR+FW57GSc13eGQxtYB0lKG0Ng==}
     dependencies:
       '@motionone/animation': 10.15.1
       '@motionone/generators': 10.15.1
@@ -2659,27 +2659,19 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/7.6.19_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-U+ogwGwNw6Y+pdq6GZB5xvnvLDlq3FTmcKaG5MCUjXuqRLrjKbKTqN4iwZISv3ajwUfgNHM6+tu31LRbYfF9YQ==}
+  /framer-motion/8.0.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-MH5oWf2kBxoMlo8apN/9rAV3GiVgPWOQTW2RES9LxayKUCbdsvcxIvR9AQOD6se8+glWKrnrOhNBvVtOSonFJw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
     dependencies:
-      '@motionone/dom': 10.13.1
-      framesync: 6.1.2
+      '@motionone/dom': 10.15.3
       hey-listen: 1.0.8
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      style-value-types: 5.1.2
       tslib: 2.4.0
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
-    dev: false
-
-  /framesync/6.1.2:
-    resolution: {integrity: sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==}
-    dependencies:
-      tslib: 2.4.0
     dev: false
 
   /fs-constants/1.0.0:
@@ -4933,13 +4925,6 @@ packages:
     resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
     dependencies:
       inline-style-parser: 0.1.1
-    dev: false
-
-  /style-value-types/5.1.2:
-    resolution: {integrity: sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==}
-    dependencies:
-      hey-listen: 1.0.8
-      tslib: 2.4.0
     dev: false
 
   /styled-jsx/5.1.0_react@18.2.0:
