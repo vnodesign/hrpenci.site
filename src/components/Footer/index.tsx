@@ -8,7 +8,7 @@ function FooterLink({ href, children }: { href: string; children: ReactNode }) {
     "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition font-normal";
   if (href.startsWith("http")) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} target="_blank">
         {children}
       </a>
     );
