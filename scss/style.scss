@@ -1,0 +1,91 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: #38B6FF;
+  --color-secondary: #62C5FF;
+  --color-complementary: #33BAEE;
+  --color-base: #4c5267;
+}
+
+body {
+  @apply text-[var(--color-base)] font-sans;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark img {
+  filter: brightness(70%);
+}
+
+article img {
+  @apply w-full aspect-video;
+}
+
+.home-content {
+  @apply mt-[3.4rem];
+  p {
+    @apply mt-6 leading-7 dark:text-neutral-300;
+    @media screen and (max-width: 720px) {
+      @apply text-[0.9rem];
+    }
+  }
+
+  a {
+    @apply focus:ring-[var(--color-primary)] text-[var(--color-primary)] dark:focus:ring-white dark:text-white;
+    text-underline-position: under;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    color: var(--color-primary);
+  }
+
+  .button-action {
+    @apply inline-flex items-center justify-center;
+    .button-start {
+      a {
+        @apply inline-flex items-center justify-center w-full px-5 py-3 text-base font-bold leading-6 bg-[var(--color-primary)] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-complementary)] text-white border border-transparent rounded-full md:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)] no-underline;
+      }
+    }
+  }
+
+  strong {
+    @apply text-current no-underline font-bold;
+  }
+}
+
+.content-container {
+  @apply max-w-[90rem] my-0 mx-auto;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
+  padding-right: max(env(safe-area-inset-right), 1.5rem);
+}
+
+.features-container {
+  @apply mt-16 mb-0 mx-0 py-16 px-0 bg-gray-100 dark:bg-[#000];
+}
+
+.hero-badge {
+  @apply text-base font-semibold leading-7 dark:text-[var(--color-primary)];
+}
+
+.hero-title {
+  @apply my-4 text-3xl font-bold leading-9 tracking-wide sm:text-4xl max-w-2xl dark:text-neutral-300;
+}
+
+.hero-subtitle {
+  @apply mb-6 max-w-2xl leading-[1.6] md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-300;
+}
+
+@supports (
+  (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+) {
+  .footer-container-blur {
+    @apply backdrop-blur-md;
+  }
+}
