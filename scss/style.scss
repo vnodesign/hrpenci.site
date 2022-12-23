@@ -9,6 +9,10 @@
   --color-base: #4c5267;
 }
 
+html {
+  font-feature-settings: unset !important;
+}
+
 body {
   @apply text-[var(--color-base)] font-sans;
   text-rendering: optimizeLegibility;
@@ -31,6 +35,7 @@ article img {
 
 .home-content {
   @apply mt-[3.4rem];
+
   p {
     @apply mt-6 leading-7 dark:text-neutral-300;
     @media screen and (max-width: 720px) {
@@ -48,16 +53,23 @@ article img {
 
   .button-action {
     @apply inline-flex items-center justify-center;
+
     .button-start {
       a {
-        @apply inline-flex items-center justify-center w-full px-5 py-3 text-base font-bold leading-6 bg-[var(--color-primary)] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-complementary)] text-white border border-transparent rounded-full md:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)] no-underline;
+        @apply inline-flex items-center justify-center w-full px-5 py-3 text-base font-bold leading-6 text-[var(--color-primary)] border border-[var(--color-primary)] rounded-lg md:w-auto no-underline transition-all duration-150 hover:bg-[var(--color-primary)] hover:text-white;
       }
     }
+
   }
 
   strong {
     @apply text-current no-underline font-bold;
   }
+
+  .features-container {
+    @apply mt-10;
+  }
+
 }
 
 .content-container {
@@ -67,7 +79,7 @@ article img {
 }
 
 .features-container {
-  @apply mt-16 mb-0 mx-0 py-16 px-0 bg-gray-100 dark:bg-[#000];
+  @apply py-10 bg-gray-100 dark:bg-[#000];
 }
 
 .hero-badge {

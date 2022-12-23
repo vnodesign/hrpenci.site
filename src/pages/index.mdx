@@ -6,58 +6,89 @@ import { FadeIn } from '@components/FadeIn'
   <div className="content-container place-self-center text-center lg:text-left">
     <FadeIn delay={0.1}>
       <h2 className="hero-badge">Chào mừng bạn đến với HR Documentation</h2>
-    </FadeIn>
-    <FadeIn delay={0.2}>
       <h1 className="hero-title">Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design</h1>
-    </FadeIn>
-    <FadeIn delay={0.3}>
       <p className="hero-subtitle">HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR mới bước chân vào nghề tuyển dụng.</p>
     </FadeIn>
-    <div className="button-action">
-      <FadeIn delay={0.4}>
+    <FadeIn delay={0.2}>
+      <div className="button-action">
         <div className="button-start">
-          <Link href="/start">Bắt đầu →</Link>
+          <a href="https://www.facebook.com/groups/xomhr" target="_blank">Tham gia vào group →</a>
         </div>
-      </FadeIn>
-    </div>
+      </div>
+    </FadeIn>
   </div>
 
   <div className="features-container">
     <div className="content-container">
-      <Features>
-        <Feature index={1} large centered>
-          <h3>Giới thiệu về group HR Community</h3>
-          <p>Qua quá trình tìm kiếm các job về ngành IT và ngành Design, thì mình có nhận thấy rằng. Có rất ít bạn hiểu về các khái niệm trong ngành này, nên vì thế mình sẽ chia sẻ thêm một số kinh nghiệm giúp các bạn hiểu rõ về ngành IT và ngành Design này nhé, trước là để các bạn lấy kinh nghiệm, sau là để các bạn hiểu rõ hơn về bạn ứng viên đó, khi mà các bạn đã không hiểu về các khái niệm trong ngành mà mình đang tuyển, thì rất khó tìm được ứng viên, thậm chí còn làm mất thời gian của bạn ứng viên đó nữa.</p>
-        </Feature>
-        <Feature index={2} centered>
-          <h3>Tại sao bạn nên tham gia vào group HR Community?</h3>
-          <p>Khi đến với group HR Community các bạn sẽ hiểu thêm về các khái niệm trong ngành IT và ngành Design hơn, bạn không cần phải tốn nhiều thời gian để Search Google đọc hàng tá các khái niệm trong ngành mà mình đang tuyển nữa. Giúp bạn hiểu xem Front End với Back End là gì, và trong nó có những công nghệ và Framework nào. Ngoài ra, trong nhóm HR Community mình có kho bài hướng dẫn chi tiết nhất về ngành IT và ngành Design cho các bạn mới bước chân vào ngành tuyển dụng.</p>
-        </Feature>
-        <Feature index={3} centered>
-          <h3>Đâu là lý do để mình tạo ra nhóm HR Community này?</h3>
-          <p>Mình nhận thấy nhu cầu làm HR của mọi người cũng nhiều, mà trang bị các kiến thức về ngành mà mình đang tuyển thì khá là ít. Mình tạo ra group không phải chỉ là để chia sẻ với các bạn, mà còn là nơi để các bạn đặt ra các vấn đề liên quan đến ngành mà các bạn đang tuyển. Một bạn HR mới bước chân vào nghề tuyển dụng, không chỉ hiểu thêm về các khái niệm trong ngành mà mình đang tuyển, thì họ còn hiểu thêm về nhiều cái khác nữa. Ngành IT hay ngành Design, thì khá là rộng, có hàng trăm, hàng ngàn thuật ngữ, mà để hiểu hết thì khá là lâu, và đó là lý do vì sao mình lại xây dựng ra group này.</p>
-        </Feature>
-        <Feature index={4} centered>
-          <h3>Front End là gì?</h3>
-          <p>Front End là cách gọi quy trình sử dụng các ngôn ngữ HTML, CSS và JavaScript. <Link href="/front-end">Xem thêm Front End là gì</Link></p>
-        </Feature>
-        <Feature index={5} centered>
-          <h3>Back End là gì?</h3>
-          <p>Back End là tất cả những phần hỗ trợ hoạt động của website hoặc ứng dụng mà người dùng không thể nhìn thấy được. <Link href="/back-end">Xem thêm Back End là gì</Link></p>
-        </Feature>
-        <Feature index={6} centered>
-          <h3>Linux là gì?</h3>
-          <p><b>Linux</b> là một <b>hệ điều hành máy tính</b> được phát triển từ năm 1991, dựa trên hệ điều hành Unix và viết bằng ngôn ngữ C. <Link href="/linux">Xem thêm Linux là gì</Link></p>
-        </Feature>
-        <Feature index={7} centered>
-          <h3>Server là gì?</h3>
-          <p><b>Server</b> còn được gọi là <b>máy chủ</b> là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập. <Link href="/linux/server">Xem thêm Server là gì</Link></p>
-        </Feature>
-        <Feature index={8} centered>
-          <h3>Design là gì?</h3>
-          <p>Design (Thiết kế) là một quá trình lâu dài và theo trình tự để hình thành một sản phẩm và sử dụng đa dạng những cách thức khác nhau để hình thành ý tưởng cho mỗi bản vẽ. Do đó, thành phẩm nghệ thuật cuối cùng cần được dành nhiều tâm sức và thời gian để có thể quảng bá đến đại chúng, mang tính thời đại và để lại dấu ấn rất lớn. <Link href="/design">Xem thêm Design là gì</Link></p>
-        </Feature>
-      </Features>
+      <section class="py-10 mx-auto">
+        <div className="text-center">
+          <FadeIn>
+            <h2 className="text-lg font-semibold text-[var(--color-primary)]">Thông tin</h2>
+          </FadeIn>
+          <FadeIn>
+            <div className="my-4 text-3xl font-bold leading-8 tracking-tight sm:text-4xl">Thông tin về group HR Community</div>
+          </FadeIn>
+        </div>
+        <div className="mt-10">
+          <div className="space-y-10 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10 md:space-y-0">
+            <Features>
+              <Feature index={1}>
+                <h3>Giới thiệu về group HR Community</h3>
+                <p>Qua quá trình tìm kiếm các job về ngành IT và ngành Design, thì mình có nhận thấy rằng. Có rất ít bạn hiểu về các khái niệm trong ngành này, nên vì thế mình sẽ chia sẻ thêm một số kinh nghiệm giúp các bạn hiểu rõ về ngành IT và ngành Design này nhé, trước là để các bạn lấy kinh nghiệm, sau là để các bạn hiểu rõ hơn về bạn ứng viên đó, khi mà các bạn đã không hiểu về các khái niệm trong ngành mà mình đang tuyển, thì rất khó tìm được ứng viên, thậm chí còn làm mất thời gian của bạn ứng viên đó nữa.</p>
+              </Feature>
+              <Feature index={2}>
+                <h3>Tại sao bạn nên tham gia vào group?</h3>
+                <p>Khi đến với group HR Community các bạn sẽ hiểu thêm về các khái niệm trong ngành IT và ngành Design hơn, bạn không cần phải tốn nhiều thời gian để Search Google đọc hàng tá các khái niệm trong ngành mà mình đang tuyển nữa. Giúp bạn hiểu xem Front End với Back End là gì, và trong nó có những công nghệ và Framework nào. Ngoài ra, trong nhóm HR Community mình có kho bài hướng dẫn chi tiết nhất về ngành IT và ngành Design cho các bạn mới bước chân vào ngành tuyển dụng.</p>
+              </Feature>
+              <Feature index={3}>
+                <h3>Đâu là lý do để mình tạo ra group này?</h3>
+                <p>Mình nhận thấy nhu cầu làm HR của mọi người cũng nhiều, mà trang bị các kiến thức về ngành mà mình đang tuyển thì khá là ít. Mình tạo ra group không phải chỉ là để chia sẻ với các bạn, mà còn là nơi để các bạn đặt ra các vấn đề liên quan đến ngành mà các bạn đang tuyển. Một bạn HR mới bước chân vào nghề tuyển dụng, không chỉ hiểu thêm về các khái niệm trong ngành mà mình đang tuyển, thì họ còn hiểu thêm về nhiều cái khác nữa. Ngành IT hay ngành Design, thì khá là rộng, có hàng trăm, hàng ngàn thuật ngữ, mà để hiểu hết thì khá là lâu, và đó là lý do vì sao mình lại xây dựng ra group này.</p>
+              </Feature>
+            </Features>
+          </div>
+        </div>
+      </section>
+      <section class="py-10 mx-auto">
+        <div className="text-center">
+          <FadeIn>
+            <h2 className="text-lg font-semibold text-[var(--color-primary)]">Tài liệu</h2>
+          </FadeIn>
+          <FadeIn>
+            <div className="my-4 text-3xl font-bold leading-8 tracking-tight sm:text-4xl">Danh sách các tài liệu</div>
+            <p className="text-xl mx-auto">Tài liệu chi tiết và dễ hiểu, dễ tiếp cận với những bạn HR mới vào nghề.</p>
+          </FadeIn>
+        </div>
+        <div className="mt-10">
+          <div className="space-y-10 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10 md:space-y-0">
+            <Features>
+              <Feature index={1}>
+                <h3>Front End là gì?</h3>
+                <p>Front End là cách gọi quy trình sử dụng các ngôn ngữ HTML, CSS và JavaScript.</p>
+              </Feature>
+              <Feature index={2}>
+                <h3>Back End là gì?</h3>
+                <p>Back End là tất cả những phần hỗ trợ hoạt động của website hoặc ứng dụng mà người dùng không thể nhìn thấy được.</p>
+              </Feature>
+              <Feature index={3}>
+                <h3>Linux là gì?</h3>
+                <p><b>Linux</b> là một <b>hệ điều hành máy tính</b> được phát triển từ năm 1991, dựa trên hệ điều hành Unix và viết bằng ngôn ngữ C.</p>
+              </Feature>
+              <Feature index={4}>
+                <h3>Server là gì?</h3>
+                <p><b>Server</b> còn được gọi là <b>máy chủ</b> là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập.</p>
+              </Feature>
+              <Feature index={5}>
+                <h3>Design là gì?</h3>
+                <p>Design (Thiết kế) là một quá trình lâu dài và theo trình tự để hình thành một sản phẩm và sử dụng đa dạng những cách thức khác nhau để hình thành ý tưởng cho mỗi bản vẽ. Do đó, thành phẩm nghệ thuật cuối cùng cần được dành nhiều tâm sức và thời gian để có thể quảng bá đến đại chúng, mang tính thời đại và để lại dấu ấn rất lớn.</p>
+              </Feature>
+              <Feature index={6}>
+                <h3>Tài liệu nâng cao là gì?</h3>
+                <p>Tài liệu nâng cao là nơi mà các bạn HR muốn tìm hiểu nâng cao hơn về ngành IT và ngành Design.</p>
+              </Feature>
+            </Features>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

@@ -4,10 +4,7 @@ import { motion } from 'framer-motion'
 import * as styles from './style.module.scss'
 
 export function Feature({
-  large,
-  centered,
   children,
-  lightOnly,
   className,
   index,
   ...props
@@ -20,9 +17,6 @@ export function Feature({
       transition={{ duration: Math.min(0.25 + index * 0.2, 0.8) }}
       className={cn(
         styles['feature'],
-        large && styles['feature__large'],
-        centered && styles['feature__centered'],
-        lightOnly && styles['light-only'],
         className
       )}
       {...props}
@@ -33,5 +27,5 @@ export function Feature({
 }
 
 export function Features({ children }) {
-  return <div className={styles['features']}>{children}</div>
+  return <>{children}</>
 }

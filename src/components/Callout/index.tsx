@@ -40,19 +40,14 @@ export function Callout({
   return (
     <div
       className={cn(
-        'nextra-callout mt-6 border-t-4 flex py-2 ltr:pr-4 rtl:pl-4',
+        'my-4 mx-0 border-l-[.5rem] pt-4 pb-2 px-6 rounded-lg',
         classes[type]
       )}
     >
-      <div
-        className="select-none text-xl ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"
-        style={{
-          fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-        }}
-      >
+      <div className="flex m-0 text-base font-semibold">
         {emoji}
       </div>
-      <div className="w-full min-w-0 leading-7">{children}</div>
+      <p>{children}</p>
     </div>
   )
 }

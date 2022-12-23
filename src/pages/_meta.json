@@ -87,19 +87,6 @@
       "typesetting": "article"
     }
   },
-  "start": {
-    "display": "hidden",
-    "theme": {
-      "breadcrumb": false,
-      "footer": true,
-      "sidebar": false,
-      "toc": false,
-      "pagination": false,
-      "timestamp": false,
-      "typesetting": "article",
-      "layout": "full"
-    }
-  },
   "404": {
     "type": "page",
     "theme": {
