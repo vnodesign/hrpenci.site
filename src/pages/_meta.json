@@ -29,6 +29,7 @@
   },
   "blog": {
     "title": "Blog",
+    "type": "page",
     "theme": {
       "breadcrumb": false,
       "footer": true,

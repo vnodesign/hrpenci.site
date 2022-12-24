@@ -20,6 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  @apply transition-all duration-[.3s];
+}
+
 html, body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -31,67 +35,6 @@ html, body {
 
 article img {
   @apply w-full aspect-video;
-}
-
-.home-content {
-  @apply mt-[3.4rem];
-
-  p {
-    @apply mt-6 leading-7 dark:text-neutral-300;
-    @media screen and (max-width: 720px) {
-      @apply text-[0.9rem];
-    }
-  }
-
-  a {
-    @apply focus:ring-[var(--color-primary)] text-[var(--color-primary)] dark:focus:ring-white dark:text-white;
-    text-underline-position: under;
-    text-decoration-line: underline;
-    text-decoration-thickness: from-font;
-    color: var(--color-primary);
-  }
-
-  .button-action {
-    @apply inline-flex items-center justify-center;
-
-    .button-start {
-      a {
-        @apply inline-flex items-center justify-center w-full px-5 py-3 text-base font-bold leading-6 text-[var(--color-primary)] border border-[var(--color-primary)] rounded-lg md:w-auto no-underline transition-all duration-150 hover:bg-[var(--color-primary)] hover:text-white;
-      }
-    }
-
-  }
-
-  strong {
-    @apply text-current no-underline font-bold;
-  }
-
-  .features-container {
-    @apply mt-10;
-  }
-
-}
-
-.content-container {
-  @apply max-w-[90rem] my-0 mx-auto;
-  padding-left: max(env(safe-area-inset-left), 1.5rem);
-  padding-right: max(env(safe-area-inset-right), 1.5rem);
-}
-
-.features-container {
-  @apply py-10 bg-gray-100 dark:bg-[#000];
-}
-
-.hero-badge {
-  @apply text-base font-semibold leading-7 dark:text-[var(--color-primary)];
-}
-
-.hero-title {
-  @apply my-4 text-3xl font-bold leading-9 tracking-wide sm:text-4xl max-w-2xl dark:text-neutral-300;
-}
-
-.hero-subtitle {
-  @apply mb-6 max-w-2xl leading-[1.6] md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-300;
 }
 
 @supports (

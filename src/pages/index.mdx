@@ -1,26 +1,29 @@
 import Link from 'next/link'
 import { Features, Feature } from '@components/features'
 import { FadeIn } from '@components/FadeIn'
+import * as styles from './index.module.scss'
 
-<div className="home-content">
-  <div className="content-container place-self-center text-center lg:text-left">
-    <FadeIn delay={0.1}>
-      <h2 className="hero-badge">Chào mừng bạn đến với HR Documentation</h2>
-      <h1 className="hero-title">Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design</h1>
-      <p className="hero-subtitle">HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR mới bước chân vào nghề tuyển dụng.</p>
-    </FadeIn>
-    <FadeIn delay={0.2}>
-      <div className="button-action">
-        <div className="button-start">
-          <a href="https://www.facebook.com/groups/xomhr" target="_blank">Tham gia vào group →</a>
+<div className={styles['home-content']}>
+  <div className={styles['home-content__content-container']}>
+    <div className="place-self-center text-center lg:text-left">
+      <FadeIn delay={0.1}>
+        <h2 className={styles['home-content__hero-badge']}>Chào mừng bạn đến với HR Documentation</h2>
+        <h1 className={styles['home-content__hero-title']}>Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design</h1>
+        <p className={styles['home-content__hero-subtitle']}>HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về <strong>Front End</strong>, <strong>Back End</strong>, <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR mới bước chân vào nghề tuyển dụng.</p>
+      </FadeIn>
+      <FadeIn delay={0.2}>
+        <div className={styles['home-content__button-action']}>
+          <div className={styles['home-content__button-action__button-start']}>
+            <a href="https://www.facebook.com/groups/xomhr" target="_blank">Tham gia vào group →</a>
+          </div>
         </div>
-      </div>
-    </FadeIn>
+      </FadeIn>
+    </div>
   </div>
 
-  <div className="features-container">
-    <div className="content-container">
-      <section class="py-10 mx-auto">
+  <div className={styles['home-content__features-container']}>
+    <div className={styles['home-content__content-container']}>
+      <section className="py-10 mx-auto">
         <div className="text-center">
           <FadeIn>
             <h2 className="text-lg font-semibold text-[var(--color-primary)]">Thông tin</h2>
@@ -48,7 +51,7 @@ import { FadeIn } from '@components/FadeIn'
           </div>
         </div>
       </section>
-      <section class="py-10 mx-auto">
+      <section className="py-10 mx-auto">
         <div className="text-center">
           <FadeIn>
             <h2 className="text-lg font-semibold text-[var(--color-primary)]">Tài liệu</h2>
