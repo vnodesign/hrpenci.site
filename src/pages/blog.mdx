@@ -1,0 +1,54 @@
+---
+title: 'Blog'
+type: posts
+---
+
+import { getPagesUnderRoute } from 'nextra/context'
+import Link from 'next/link'
+
+export function BlogHeader() {
+  return (
+    <div className="max-w-screen-lg mx-auto pt-4 pb-8 mb-16 border-b dark:border-neutral-800">
+      <h1>
+        <span className="font-bold leading-tight lg:text-5xl">Blog</span>
+      </h1>
+    </div>
+  )
+}
+
+export function BlogIndex() {
+  return getPagesUnderRoute('/blog').map((page) => {
+    return (
+      <article
+        key={page.route}
+        className="rounded-lg py-6 px-7 my-10 bg-gray-100 dark:bg-[#202020]"
+      >
+        {page.frontMatter?.date ? (
+          <p className="text-sm">{page.frontMatter.date}</p>
+        ) : null}
+        <Link
+          href={page.route}
+          className="block font-semibold text-2xl !no-underline"
+        >
+          {page.meta?.title || page.frontMatter?.title || page.name}
+        </Link>
+        {page.frontMatter?.tag ? (
+          <p className="text-sm">#{page.frontMatter.tag}</p>
+        ) : null}
+        {page.frontMatter?.description ? (
+          <p className="mt-[.5rem]">{page.frontMatter?.description}</p>
+        ) : null}
+        <p className="mt-[.5rem]">
+          <span className="inline-block">
+            <Link href={page.route} className="!no-underline">
+              {'Đọc thêm →'}
+            </Link>
+          </span>
+        </p>
+      </article>
+    )
+  })
+}
+
+<BlogHeader />
+<BlogIndex />

@@ -27,6 +27,18 @@
     "type": "page",
     "href": "/design"
   },
+  "blog": {
+    "title": "Blog",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
   "ban-quyen": {
     "display": "hidden",
     "theme": {
