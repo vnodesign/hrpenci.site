@@ -9,8 +9,8 @@ import Link from 'next/link'
 export function BlogHeader() {
   return (
     <div className="max-w-screen-lg mx-auto pt-4 pb-8 mb-16 border-b dark:border-neutral-800">
-      <h1>
-        <span className="font-bold leading-tight lg:text-5xl">Blog</span>
+      <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight">
+        Blog
       </h1>
     </div>
   )
@@ -21,30 +21,27 @@ export function BlogIndex() {
     return (
       <article
         key={page.route}
-        className="rounded-lg py-6 px-7 my-10 bg-gray-100 dark:bg-[#202020]"
+        className="flex flex-col gap-1 md:flex-row md:gap-9"
       >
         {page.frontMatter?.date ? (
-          <p className="text-sm">{page.frontMatter.date}</p>
+          <p className="shrink-0 md:w-28">{page.frontMatter.date}</p>
         ) : null}
-        <Link
-          href={page.route}
-          className="block font-semibold text-2xl !no-underline"
-        >
-          {page.meta?.title || page.frontMatter?.title || page.name}
-        </Link>
-        {page.frontMatter?.tag ? (
-          <p className="text-sm">#{page.frontMatter.tag}</p>
-        ) : null}
-        {page.frontMatter?.description ? (
-          <p className="mt-[.5rem]">{page.frontMatter?.description}</p>
-        ) : null}
-        <p className="mt-[.5rem]">
-          <span className="inline-block">
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-1">
             <Link href={page.route} className="!no-underline">
-              {'Đọc thêm →'}
+              {page.meta?.title || page.frontMatter?.title || page.name}
             </Link>
-          </span>
-        </p>
+            {page.frontMatter?.description ? (
+              <p>{page.frontMatter?.description}</p>
+            ) : null}
+            {page.frontMatter?.tag ? <p>#{page.frontMatter.tag}</p> : null}
+            <div className="my-12">
+              <Link href={page.route} className="!no-underline">
+                {'Đọc thêm →'}
+              </Link>
+            </div>
+          </div>
+        </div>
       </article>
     )
   })
