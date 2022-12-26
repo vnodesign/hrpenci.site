@@ -18,16 +18,20 @@ export function BlogIndex() {
         ) : null}
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-1">
-            <Link href={page.route}>
+            <Link href={page.route} className="!no-underline">
               {page.meta?.title || page.frontMatter?.title || page.name}
             </Link>
-            {page.frontMatter?.description ? (
-              <p>{page.frontMatter?.description}</p>
-            ) : null}
-            {page.frontMatter?.tag ? <p>#{page.frontMatter.tag}</p> : null}
-            <div className="my-12">
-              <Link href={page.route}>{'Đọc thêm →'}</Link>
-            </div>
+            <p>
+              {page.frontMatter?.description ? (
+                <>{page.frontMatter?.description}</>
+              ) : null}{' '}
+              <Link
+                href={page.route}
+                className="text-primary-500 dark:text-primary-600 !no-underline"
+              >
+                {'Đọc thêm →'}
+              </Link>
+            </p>
           </div>
         </div>
       </article>
