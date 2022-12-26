@@ -30,7 +30,7 @@
     "title": "Blog",
     "type": "page",
     "theme": {
-      "layout": "raw"
+      "typesetting": "article"
     }
   },
   "ban-quyen": {
