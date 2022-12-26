@@ -6,7 +6,6 @@ import { SSRProvider } from '@react-aria/ssr'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
 import * as gtag from '@lib/gtag'
 import { GAScript } from '@components/GoogleAnalytics'
-import Script from 'next/script'
 import '../../scss/style.scss'
 
 type NextraAppProps = AppProps & {
@@ -57,7 +56,6 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
         url="https://hr.penci.me"
       />
       <Component {...pageProps} />
-      <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4183134625750063" />
       <GAScript id="G-RCV263F7H7" />
     </SSRProvider>
   );
