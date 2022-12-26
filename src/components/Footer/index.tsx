@@ -122,7 +122,7 @@ export function Footer({ menu }: { menu?: boolean }): ReactElement {
     <footer className="bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900">
       <div
         className={cn(
-          "container max-w-7xl mx-auto py-2 px-4 flex gap-2",
+          "max-w-[90rem] mx-auto py-2 px-4 flex gap-2",
           menu ? "flex" : "hidden"
         )}
       >
@@ -131,7 +131,7 @@ export function Footer({ menu }: { menu?: boolean }): ReactElement {
       <hr className="dark:border-neutral-800" />
       <div
         className={cn(
-          'container max-w-7xl mx-auto flex justify-center py-12 text-gray-600 dark:text-gray-400 md:justify-start',
+          'max-w-[90rem] mx-auto flex justify-center py-12 text-gray-600 dark:text-gray-400 md:justify-start',
           'pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]'
         )}
       >

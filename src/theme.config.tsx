@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import { Footer } from '@components/Footer'
+import moment from 'moment'
+import 'moment/locale/vi'
+moment.locale('vi')
 
 export default {
   project: {
@@ -121,11 +124,7 @@ export default {
     useEffect(() => {
       try {
         setDateString(
-          timestamp.toLocaleDateString('vi-VN', {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })
+          moment(timestamp).fromNow()
         );
       } catch (e) {
         // Ignore errors here; they get the ISO string.
