@@ -8,7 +8,6 @@ specifiers:
   '@vercel/og': ^0.0.21
   autoprefixer: ^10.4.8
   clsx: ^1.2.1
-  moment: ^2.29.4
   next: latest
   next-pwa: ^5.6.0
   nextra: 2.0.1
@@ -28,7 +27,6 @@ dependencies:
   '@vercel/analytics': 0.1.6_react@18.2.0
   '@vercel/og': 0.0.21
   clsx: 1.2.1
-  moment: 2.29.4
   next: 13.1.1_m5sxuueb27gk6ddc5gums6vtgq
   next-pwa: 5.6.0_next@13.1.1
   nextra: 2.0.1_q76c2b4vyoegvsbrcwkfvimnai
@@ -3814,10 +3812,6 @@ packages:
 
   /mkdirp-classic/0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
-    dev: false
-
-  /moment/2.29.4:
-    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: false
 
   /mri/1.2.0:

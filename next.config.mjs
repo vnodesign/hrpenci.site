@@ -13,6 +13,7 @@ export default withNextra(withPWA({
   experimental: {
     legacyBrowsers: false,
   },
+  poweredByHeader: false,
   pwa: {
     dest: "public",
     register: true,

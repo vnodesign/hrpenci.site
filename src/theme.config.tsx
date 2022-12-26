@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import { Footer } from '@components/Footer'
-import moment from 'moment'
-import 'moment/locale/vi'
-moment.locale('vi')
 
 export default {
   project: {
@@ -119,12 +116,12 @@ export default {
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [dateString, setDateString] = useState(timestamp.toISOString());
-
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       try {
         setDateString(
-          moment(timestamp).fromNow()
+          timestamp.toLocaleDateString('vi-VN', options)
         );
       } catch (e) {
         // Ignore errors here; they get the ISO string.
@@ -132,7 +129,7 @@ export default {
       }
     }, [timestamp]);
 
-    return <>Cập nhật lần cuối {dateString}</>;
+    return <>Cập nhật lần cuối vào {dateString}</>;
   },
   darkMode: true,
   footer: {
