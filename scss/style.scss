@@ -44,3 +44,14 @@ article img {
     @apply backdrop-blur-md;
   }
 }
+
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}
+
+.content-container {
+  @apply container max-w-7xl p-5 mx-auto;
+  strong {
+    @apply text-current no-underline font-bold;
+  }
+}

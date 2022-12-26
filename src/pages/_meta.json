@@ -24,20 +24,13 @@
   },
   "design": {
     "title": "Design",
-    "type": "page",
-    "href": "/design"
+    "type": "page"
   },
   "blog": {
     "title": "Blog",
     "type": "page",
     "theme": {
-      "breadcrumb": false,
-      "footer": true,
-      "sidebar": false,
-      "toc": false,
-      "pagination": false,
-      "timestamp": false,
-      "typesetting": "article"
+      "layout": "raw"
     }
   },
   "ban-quyen": {

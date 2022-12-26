@@ -6,7 +6,17 @@ module.exports = {
     './src/theme.config.tsx'
   ],
   theme: {
-    extend: {}
+    extend: {
+      keyframes: {
+        in: {
+          '0%': { transform: 'translateY(18px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+      },
+      animation: {
+        in: 'in .6s both',
+      },
+    }
   },
   plugins: [],
   darkMode: ['class', 'html[class~="dark"]']
