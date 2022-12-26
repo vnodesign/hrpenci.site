@@ -6,7 +6,7 @@ import { SSRProvider } from '@react-aria/ssr'
 import { FAQPageJsonLd, SocialProfileJsonLd, LogoJsonLd } from 'next-seo'
 import * as gtag from '@lib/gtag'
 import { GAScript } from '@components/GoogleAnalytics'
-import Script from 'next/head'
+import Script from 'next/script'
 import '../../scss/style.scss'
 
 type NextraAppProps = AppProps & {
