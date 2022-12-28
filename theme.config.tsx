@@ -4,6 +4,9 @@ import { useMounted } from 'nextra/hooks'
 import { useTheme } from 'next-themes'
 import { useConfig } from 'nextra-theme-docs'
 import { Footer } from '@components/Footer'
+import moment from 'moment'
+import 'moment/locale/vi'
+moment.locale('vi')
 
 export default {
   project: {
@@ -138,12 +141,11 @@ export default {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [dateString, setDateString] = useState(timestamp.toISOString());
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       try {
         setDateString(
-          timestamp.toLocaleDateString('vi-VN', options)
+          moment(timestamp).fromNow()
         );
       } catch (e) {
         // Ignore errors here; they get the ISO string.
