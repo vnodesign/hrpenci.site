@@ -23,7 +23,7 @@ export default {
     if (frontMatter?.title) {
       ogTitle = `${frontMatter.title} - HR Documentation`
     } else {
-      ogTitle = 'HR Documentation'
+      ogTitle = 'HR Documentation - Nền tảng chia sẻ kiến thức và tài liệu'
     }
 
     let ogUrl
@@ -115,6 +115,7 @@ export default {
         ) : (
           <meta name="theme-color" content="#fff" />
         )}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4183134625750063"></script>
       </>
     )
   },

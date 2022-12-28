@@ -14,6 +14,10 @@ export default withNextra(withPWA({
     legacyBrowsers: false,
   },
   poweredByHeader: false,
+  i18n: {
+    locales: ['vi'],
+    defaultLocale: 'vi',
+  },
   pwa: {
     dest: "public",
     register: true,
