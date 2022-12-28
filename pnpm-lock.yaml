@@ -10,6 +10,7 @@ specifiers:
   clsx: ^1.2.1
   next: latest
   next-pwa: ^5.6.0
+  next-themes: ^0.2.1
   nextra: 2.0.1
   nextra-theme-docs: 2.0.1
   postcss: ^8.4.14
@@ -29,6 +30,7 @@ dependencies:
   clsx: 1.2.1
   next: 13.1.1_m5sxuueb27gk6ddc5gums6vtgq
   next-pwa: 5.6.0_next@13.1.1
+  next-themes: 0.2.1_q76c2b4vyoegvsbrcwkfvimnai
   nextra: 2.0.1_q76c2b4vyoegvsbrcwkfvimnai
   nextra-theme-docs: 2.0.1_q76c2b4vyoegvsbrcwkfvimnai
   react: 18.2.0
