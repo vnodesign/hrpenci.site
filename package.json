@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "NODE_ENV=development next dev",
     "start": "next start",
-    "build": "next build"
+    "build": "node scripts/generate-rss.js && next build"
   },
   "author": "Tuan Duc Design",
   "license": "MIT",
