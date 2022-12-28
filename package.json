@@ -12,16 +12,19 @@
   "dependencies": {
     "@react-aria/ssr": "^3.4.0",
     "@vercel/analytics": "^0.1.6",
-    "@vercel/og": "^0.0.21",
     "clsx": "^1.2.1",
+    "fs": "0.0.1-security",
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
     "nextra": "2.0.1",
     "nextra-theme-docs": "2.0.1",
+    "path": "^0.12.7",
     "react": "*",
     "react-dom": "*",
     "react-icons": "^4.7.1",
+    "rss": "^1.2.2",
     "sharp": "0.31.1"
   },
   "devDependencies": {

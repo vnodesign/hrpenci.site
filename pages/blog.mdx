@@ -1,0 +1,52 @@
+---
+title: 'Blog'
+---
+
+import { getPagesUnderRoute } from 'nextra/context'
+import Link from 'next/link'
+
+export function BlogIndex() {
+  return getPagesUnderRoute('/blog').map((page) => {
+    return (
+      <article
+        key={page.route}
+        className="flex flex-col gap-1 md:flex-row md:gap-9"
+      >
+        {page.frontMatter?.date ? (
+          <p className="shrink-0 md:w-28">{page.frontMatter.date}</p>
+        ) : null}
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-1">
+            <Link href={page.route} className="!no-underline">
+              {page.meta?.title || page.frontMatter?.title || page.name}
+            </Link>
+            <p>
+              {page.frontMatter?.description ? (
+                <>{page.frontMatter?.description}</>
+              ) : null}{' '}
+              <Link
+                href={page.route}
+                className="text-primary-500 dark:text-primary-600 !no-underline"
+              >
+                {'Đọc thêm →'}
+              </Link>
+            </p>
+          </div>
+        </div>
+      </article>
+    )
+  })
+}
+
+<div className="py-10 animate-in" style={{ '--index': 1 }}>
+  <div className="content-container">
+    <h1 className="mt-10 mb-4 text-3xl font-extrabold tracking-tight leading-tight md:text-4xl text-center">
+      Blog
+    </h1>
+    <p className="mb-16 text-lg font-normal lg:text-xl lg:mb-16 dark:text-neutral-300 text-center">
+      Tổng hợp các bài viết chia sẻ về các khái niệm trong ngành IT và ngành
+      Design.
+    </p>
+    <BlogIndex />
+  </div>
+</div>

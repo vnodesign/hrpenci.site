@@ -3,7 +3,7 @@ import withPWA from 'next-pwa'
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
-  themeConfig: './src/theme.config.tsx',
+  themeConfig: './theme.config.tsx',
   unstable_flexsearch: true,
   unstable_staticImage: true,
 })

@@ -11,9 +11,9 @@ const makePrimaryColor =
 
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/theme.config.tsx'
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './theme.config.tsx'
   ],
   theme: {
     extend: {

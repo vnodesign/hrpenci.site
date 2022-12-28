@@ -2,19 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-  --color-primary: #38B6FF;
-  --color-secondary: #62C5FF;
-  --color-complementary: #33BAEE;
-  --color-base: #4c5267;
-}
-
 html {
   font-feature-settings: unset !important;
 }
 
 body {
-  @apply text-[var(--color-base)] font-sans;
+  @apply text-[#4c5267] font-sans;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
