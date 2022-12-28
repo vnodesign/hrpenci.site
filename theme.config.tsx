@@ -23,7 +23,7 @@ export default {
     if (frontMatter?.title) {
       ogTitle = `${frontMatter.title} - HR Documentation`
     } else {
-      ogTitle = 'HR Documentation - Nền tảng chia sẻ kiến thức và tài liệu'
+      ogTitle = 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
     }
 
     let ogUrl
