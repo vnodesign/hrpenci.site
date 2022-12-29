@@ -1,12 +1,12 @@
 ---
-title: 'Blog'
+title: "Blog"
 ---
 
-import { getPagesUnderRoute } from 'nextra/context'
-import Link from 'next/link'
+import { getPagesUnderRoute } from "nextra/context";
+import Link from "next/link";
 
 export function BlogIndex() {
-  return getPagesUnderRoute('/blog').map((page) => {
+  return getPagesUnderRoute("/blog").map(page => {
     return (
       <article
         key={page.route}
@@ -23,22 +23,22 @@ export function BlogIndex() {
             <p>
               {page.frontMatter?.description ? (
                 <>{page.frontMatter?.description}</>
-              ) : null}{' '}
+              ) : null}{" "}
               <Link
                 href={page.route}
                 className="text-primary-500 dark:text-primary-600 !no-underline"
               >
-                {'Đọc thêm →'}
+                {"Đọc thêm →"}
               </Link>
             </p>
           </div>
         </div>
       </article>
-    )
-  })
+    );
+  });
 }
 
-<div className="py-10 animate-in" style={{ '--index': 1 }}>
+<div className="py-10 animate-in" style={{ "--index": 1 }}>
   <div className="content-container">
     <h1 className="mt-10 mb-4 text-3xl font-extrabold tracking-tight leading-tight md:text-4xl text-center">
       Blog

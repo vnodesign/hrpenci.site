@@ -1,14 +1,14 @@
-import Link from 'next/link'
-import { ReactNode, ReactElement } from 'react'
-import cn from 'clsx'
-import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
+import Link from "next/link";
+import React, { ReactNode, ReactElement } from "react";
+import cn from "clsx";
+import { ThemeSwitch, useConfig } from "nextra-theme-docs";
 
 function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   const classes =
     "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition font-normal";
   if (href.startsWith("http")) {
     return (
-      <a href={href} className={classes} target="_blank">
+      <a href={href} className={classes} target="_blank" rel="noreferrer">
         {children}
       </a>
     );
@@ -33,10 +33,16 @@ const navigation = {
   ],
   help: [
     { name: "Liên hệ", href: "/lien-he" },
-    { name: "GitHub issues", href: "https://github.com/vnodesign/hr-document/issues" },
+    {
+      name: "GitHub issues",
+      href: "https://github.com/vnodesign/hr-document/issues",
+    },
   ],
   interview: [
-    { name: "Front End Interview Handbook", href: "https://www.frontendinterviewhandbook.com/" },
+    {
+      name: "Front End Interview Handbook",
+      href: "https://www.frontendinterviewhandbook.com/",
+    },
   ],
   links: [
     { name: "Giới thiệu", href: "/gioi-thieu" },
@@ -52,19 +58,24 @@ export function FooterContent() {
       <div className="w-full py-3 mx-auto">
         <div className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-6 xl:gap-8">
           <div className="col-span-2">
-            <Link className="flex self-center mb-6 text-2xl font-semibold" title="HR Documention" href="/">
+            <Link
+              className="flex self-center mb-6 text-2xl font-semibold"
+              title="HR Documention"
+              href="/"
+            >
               HR Documention
             </Link>
             <div>
               <p>
-                Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.
+                Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back
+                End, Linux và Design dành cho HR.
               </p>
             </div>
           </div>
           <div>
             <FooterHeader>Tài liệu</FooterHeader>
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
-              {navigation.documention.map((item) => (
+              {navigation.documention.map(item => (
                 <li key={item.name}>
                   <FooterLink href={item.href}>{item.name}</FooterLink>
                 </li>
@@ -74,7 +85,7 @@ export function FooterContent() {
           <div>
             <FooterHeader>Giúp đỡ và hỗ trợ</FooterHeader>
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
-              {navigation.help.map((item) => (
+              {navigation.help.map(item => (
                 <li key={item.name}>
                   <FooterLink href={item.href}>{item.name}</FooterLink>
                 </li>
@@ -84,7 +95,7 @@ export function FooterContent() {
           <div>
             <FooterHeader>Front End Interview</FooterHeader>
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
-              {navigation.interview.map((item) => (
+              {navigation.interview.map(item => (
                 <li key={item.name}>
                   <FooterLink href={item.href}>{item.name}</FooterLink>
                 </li>
@@ -94,7 +105,7 @@ export function FooterContent() {
           <div>
             <FooterHeader>Liên kết</FooterHeader>
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
-              {navigation.links.map((item) => (
+              {navigation.links.map(item => (
                 <li key={item.name}>
                   <FooterLink href={item.href}>{item.name}</FooterLink>
                 </li>
@@ -115,15 +126,14 @@ export function FooterContent() {
 }
 
 export function Footer({ menu }: { menu?: boolean }): ReactElement {
-
-  const config = useConfig()
+  const config = useConfig();
 
   return (
     <footer className="bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900">
       <div
         className={cn(
           "max-w-[90rem] mx-auto py-2 px-4 flex gap-2",
-          menu ? "flex" : "hidden"
+          menu ? "flex" : "hidden",
         )}
       >
         {config.darkMode && <ThemeSwitch />}
@@ -131,8 +141,8 @@ export function Footer({ menu }: { menu?: boolean }): ReactElement {
       <hr className="dark:border-neutral-800" />
       <div
         className={cn(
-          'max-w-[90rem] mx-auto flex justify-center py-12 text-gray-600 dark:text-gray-400 md:justify-start',
-          'pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]'
+          "max-w-[90rem] mx-auto flex justify-center py-12 text-gray-600 dark:text-gray-400 md:justify-start",
+          "pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]",
         )}
       >
         <FooterContent />

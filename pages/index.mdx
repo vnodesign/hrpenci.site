@@ -1,15 +1,15 @@
-import Link from 'next/link'
-import { getPagesUnderRoute } from 'nextra/context'
-import { BsLayoutSplit, BsServer, BsPaletteFill } from 'react-icons/bs'
+import Link from "next/link";
+import { getPagesUnderRoute } from "nextra/context";
+import { BsLayoutSplit, BsServer, BsPaletteFill } from "react-icons/bs";
 
 export function DocsFrontEnd() {
-  const MAX_DISPLAY = 6
+  const MAX_DISPLAY = 6;
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/front-end')
+        {getPagesUnderRoute("/front-end")
           .slice(0, MAX_DISPLAY)
-          .map((page) => {
+          .map(page => {
             return (
               <Link
                 key={page.route}
@@ -20,21 +20,21 @@ export function DocsFrontEnd() {
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            )
+            );
           })}
       </div>
     </div>
-  )
+  );
 }
 
 export function DocsBackEnd() {
-  const MAX_DISPLAY = 6
+  const MAX_DISPLAY = 6;
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/back-end')
+        {getPagesUnderRoute("/back-end")
           .slice(0, MAX_DISPLAY)
-          .map((page) => {
+          .map(page => {
             return (
               <Link
                 key={page.route}
@@ -45,21 +45,21 @@ export function DocsBackEnd() {
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            )
+            );
           })}
       </div>
     </div>
-  )
+  );
 }
 
 export function DocsLinux() {
-  const MAX_DISPLAY = 6
+  const MAX_DISPLAY = 6;
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/linux')
+        {getPagesUnderRoute("/linux")
           .slice(0, MAX_DISPLAY)
-          .map((page) => {
+          .map(page => {
             return (
               <Link
                 key={page.route}
@@ -70,21 +70,21 @@ export function DocsLinux() {
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            )
+            );
           })}
       </div>
     </div>
-  )
+  );
 }
 
 export function DocsDesign() {
-  const MAX_DISPLAY = 6
+  const MAX_DISPLAY = 6;
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/design')
+        {getPagesUnderRoute("/design")
           .slice(0, MAX_DISPLAY)
-          .map((page) => {
+          .map(page => {
             return (
               <Link
                 key={page.route}
@@ -95,11 +95,11 @@ export function DocsDesign() {
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            )
+            );
           })}
       </div>
     </div>
-  )
+  );
 }
 
 <div className="py-5 lg:py-20 bg-gray-100 dark:bg-[#000]">
@@ -109,10 +109,10 @@ export function DocsDesign() {
     </h1>
     <div
       className="mb-10 text-lg font-normal dark:text-neutral-300 lg:text-xl animate-in"
-      style={{ '--index': 1 }}
+      style={{ "--index": 1 }}
     >
-      HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về{' '}
-      <strong>Front End</strong>, <strong>Back End</strong>,{' '}
+      HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về{" "}
+      <strong>Front End</strong>, <strong>Back End</strong>,{" "}
       <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR
       mới bước chân vào nghề tuyển dụng.
     </div>
@@ -127,7 +127,7 @@ export function DocsDesign() {
     </div>
   </div>
 </div>
-<div className="py-10 animate-in" style={{ '--index': 2 }}>
+<div className="py-10 animate-in" style={{ "--index": 2 }}>
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu
@@ -179,7 +179,7 @@ export function DocsDesign() {
 </div>
 <div
   className="py-10 animate-in bg-gray-100 dark:bg-[#000]"
-  style={{ '--index': 3 }}
+  style={{ "--index": 3 }}
 >
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
@@ -192,7 +192,7 @@ export function DocsDesign() {
     <DocsFrontEnd />
   </div>
 </div>
-<div className="py-10 animate-in" style={{ '--index': 4 }}>
+<div className="py-10 animate-in" style={{ "--index": 4 }}>
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Back End
@@ -206,7 +206,7 @@ export function DocsDesign() {
 </div>
 <div
   className="py-10 animate-in bg-gray-100 dark:bg-[#000]"
-  style={{ '--index': 5 }}
+  style={{ "--index": 5 }}
 >
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
@@ -219,7 +219,7 @@ export function DocsDesign() {
     <DocsLinux />
   </div>
 </div>
-<div className="py-10 animate-in" style={{ '--index': 6 }}>
+<div className="py-10 animate-in" style={{ "--index": 6 }}>
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Design

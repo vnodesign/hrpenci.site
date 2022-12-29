@@ -14,7 +14,8 @@ function dateSortDesc(a, b) {
 async function generate() {
   const feed = new RSS({
     title: "HR Blog",
-    description: "Tổng hợp các bài viết chia sẻ về các khái niệm trong ngành IT và ngành Design.",
+    description:
+      "Tổng hợp các bài viết chia sẻ về các khái niệm trong ngành IT và ngành Design.",
     site_url: "https://hr.penci.me",
     feed_url: "https://hr.penci.me/feed.xml",
     image_url: "https://hr.penci.me/static/documentation-card.png",
@@ -26,7 +27,7 @@ async function generate() {
   for (const post of posts) {
     if (post.startsWith("index.") || post.startsWith("_meta.json")) continue;
     const file = await fs.readFile(
-      path.join(__dirname, "..", "pages", "blog", post)
+      path.join(__dirname, "..", "pages", "blog", post),
     );
     sortedData.push({ ...matter(file), slug: post.replace(".mdx", "") });
   }
@@ -37,7 +38,7 @@ async function generate() {
   for (const frontmatter of sortedData) {
     // get the og image size
     const stat = statSync(
-      path.join(__dirname, "..", "public", frontmatter.data.image)
+      path.join(__dirname, "..", "public", frontmatter.data.image),
     );
     feed.item({
       title: frontmatter.data.title,

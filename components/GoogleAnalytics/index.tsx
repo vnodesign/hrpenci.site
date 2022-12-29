@@ -1,6 +1,10 @@
-import Script from 'next/script'
+import Script from "next/script";
 
-export function GAScript({ id }) {
+type GAProp = {
+  id: string;
+};
+
+export function GAScript({ id }: GAProp) {
   return (
     <>
       <Script
@@ -21,7 +25,7 @@ export function GAScript({ id }) {
             });
           `,
         }}
-        />
+      />
     </>
-  )
+  );
 }

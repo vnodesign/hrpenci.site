@@ -4,27 +4,27 @@ const makePrimaryColor =
   l =>
   ({ opacityValue }) => {
     if (opacityValue === undefined) {
-      return `hsl(var(--nextra-primary-hue) 100% ${l}%)`
+      return `hsl(var(--nextra-primary-hue) 100% ${l}%)`;
     }
-    return `hsl(var(--nextra-primary-hue) 100% ${l}% / ${opacityValue})`
-  }
+    return `hsl(var(--nextra-primary-hue) 100% ${l}% / ${opacityValue})`;
+  };
 
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './theme.config.tsx'
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./theme.config.tsx",
   ],
   theme: {
     extend: {
       keyframes: {
         in: {
-          '0%': { transform: 'translateY(18px)', opacity: 0 },
-          '100%': { transform: 'translateY(0)', opacity: 1 },
+          "0%": { transform: "translateY(18px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
       },
       animation: {
-        in: 'in .6s both',
+        in: "in .6s both",
       },
       colors: {
         primary: {
@@ -39,11 +39,11 @@ module.exports = {
           750: makePrimaryColor(35),
           800: makePrimaryColor(32),
           900: makePrimaryColor(24),
-          1000: makePrimaryColor(12)
-        }
+          1000: makePrimaryColor(12),
+        },
       },
-    }
+    },
   },
   plugins: [],
-  darkMode: ['class', 'html[class~="dark"]']
-}
+  darkMode: ["class", 'html[class~="dark"]'],
+};

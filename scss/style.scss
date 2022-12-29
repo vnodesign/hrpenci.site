@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   font-feature-settings: unset !important;
@@ -17,7 +17,8 @@ a {
   @apply transition-all duration-[.3s];
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
