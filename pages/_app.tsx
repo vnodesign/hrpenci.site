@@ -16,7 +16,7 @@ type NextraAppProps = AppProps & {
 export default function Nextra({ Component, pageProps }: NextraAppProps) {
   const router = useRouter();
   useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url: any) => {
       gtag.pageview(url);
     };
     router.events.on("routeChangeComplete", handleRouteChange);

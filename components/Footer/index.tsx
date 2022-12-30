@@ -1,20 +1,20 @@
 import Link from "next/link";
-import React, { ReactNode, ReactElement } from "react";
+import { ReactNode, ReactElement } from "react";
 import cn from "clsx";
 import { ThemeSwitch, useConfig } from "nextra-theme-docs";
 
-function FooterLink({ href, children }: { href: string; children: ReactNode }) {
+function FooterLink({ href, title, children }: { href: string; title: string; children: ReactNode }) {
   const classes =
     "text-sm text-[#666666] dark:text-[#888888] no-underline hover:text-gray-700 hover:dark:text-white transition font-normal";
   if (href.startsWith("http")) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noreferrer">
+      <a href={href} title={title} className={classes} target="_blank" rel="noreferrer">
         {children}
       </a>
     );
   }
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} title={title} className={classes}>
       {children}
     </Link>
   );
@@ -77,7 +77,7 @@ export function FooterContent() {
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
               {navigation.documention.map(item => (
                 <li key={item.name}>
-                  <FooterLink href={item.href}>{item.name}</FooterLink>
+                  <FooterLink href={item.href} title={item.name}>{item.name}</FooterLink>
                 </li>
               ))}
             </ul>
@@ -87,7 +87,7 @@ export function FooterContent() {
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
               {navigation.help.map(item => (
                 <li key={item.name}>
-                  <FooterLink href={item.href}>{item.name}</FooterLink>
+                  <FooterLink href={item.href} title={item.name}>{item.name}</FooterLink>
                 </li>
               ))}
             </ul>
@@ -97,7 +97,7 @@ export function FooterContent() {
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
               {navigation.interview.map(item => (
                 <li key={item.name}>
-                  <FooterLink href={item.href}>{item.name}</FooterLink>
+                  <FooterLink href={item.href} title={item.name}>{item.name}</FooterLink>
                 </li>
               ))}
             </ul>
@@ -107,7 +107,7 @@ export function FooterContent() {
             <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
               {navigation.links.map(item => (
                 <li key={item.name}>
-                  <FooterLink href={item.href}>{item.name}</FooterLink>
+                  <FooterLink href={item.href} title={item.name}>{item.name}</FooterLink>
                 </li>
               ))}
             </ul>
@@ -130,14 +130,15 @@ export function Footer({ menu }: { menu?: boolean }): ReactElement {
 
   return (
     <footer className="bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900">
-      <div
-        className={cn(
-          "max-w-[90rem] mx-auto py-2 px-4 flex gap-2",
-          menu ? "flex" : "hidden",
-        )}
-      >
-        {config.darkMode && <ThemeSwitch />}
-      </div>
+      {menu ? (
+        <div
+          className={cn(
+            "max-w-[90rem] mx-auto py-2 px-4 flex gap-2"
+          )}
+        >
+          {config.darkMode && <ThemeSwitch />}
+        </div>
+      ) : null}
       <hr className="dark:border-neutral-800" />
       <div
         className={cn(

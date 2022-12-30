@@ -31,18 +31,6 @@ article img {
   @apply w-full aspect-video;
 }
 
-@supports (
-  (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
-) {
-  .footer-container-blur {
-    @apply backdrop-blur-md;
-  }
-}
-
-.animate-in {
-  animation-delay: calc(var(--index) * 130ms);
-}
-
 .content-container {
   @apply container max-w-7xl p-5 mx-auto;
   strong {

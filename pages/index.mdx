@@ -14,6 +14,7 @@ export function DocsFrontEnd() {
               <Link
                 key={page.route}
                 href={page.route}
+                title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
               >
                 <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
@@ -39,6 +40,7 @@ export function DocsBackEnd() {
               <Link
                 key={page.route}
                 href={page.route}
+                title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
               >
                 <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
@@ -64,6 +66,7 @@ export function DocsLinux() {
               <Link
                 key={page.route}
                 href={page.route}
+                title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
               >
                 <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
@@ -89,6 +92,7 @@ export function DocsDesign() {
               <Link
                 key={page.route}
                 href={page.route}
+                title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
               >
                 <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
@@ -104,13 +108,10 @@ export function DocsDesign() {
 
 <div className="py-5 lg:py-20 bg-gray-100 dark:bg-[#000]">
   <div className="content-container place-self-center text-center lg:text-left">
-    <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:mb-7 animate-in">
+    <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:mb-7">
       Welcome to HR Documentation
     </h1>
-    <div
-      className="mb-10 text-lg font-normal dark:text-neutral-300 lg:text-xl animate-in"
-      style={{ "--index": 1 }}
-    >
+    <div className="mb-10 text-lg font-normal dark:text-neutral-300 lg:text-xl">
       HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về{" "}
       <strong>Front End</strong>, <strong>Back End</strong>,{" "}
       <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR
@@ -120,6 +121,7 @@ export function DocsDesign() {
       <a
         href="https://www.facebook.com/groups/xomhr"
         target="_blank"
+        title="Tham gia vào group HR Community"
         className="mb-3 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-2.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 md:mr-5 md:mb-0 transition-all duration-150"
       >
         Tham gia vào group HR Community
@@ -127,7 +129,7 @@ export function DocsDesign() {
     </div>
   </div>
 </div>
-<div className="py-10 animate-in" style={{ "--index": 2 }}>
+<div className="py-10">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu
@@ -139,6 +141,7 @@ export function DocsDesign() {
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 xl:gap-8 sm:space-y-0">
         <Link
           href="/front-end"
+          title="Tài liệu về Front End"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsLayoutSplit className="w-12 h-12 mx-auto" />
@@ -148,6 +151,7 @@ export function DocsDesign() {
         </Link>
         <Link
           href="/back-end"
+          title="Tài liệu về Back End"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsServer className="w-12 h-12 mx-auto" />
@@ -157,6 +161,7 @@ export function DocsDesign() {
         </Link>
         <Link
           href="/linux"
+          title="Tài liệu về Linux"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsServer className="w-12 h-12 mx-auto" />
@@ -166,6 +171,7 @@ export function DocsDesign() {
         </Link>
         <Link
           href="/design"
+          title="Tài liệu về Design"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsPaletteFill className="w-12 h-12 mx-auto" />
@@ -177,10 +183,7 @@ export function DocsDesign() {
     </div>
   </div>
 </div>
-<div
-  className="py-10 animate-in bg-gray-100 dark:bg-[#000]"
-  style={{ "--index": 3 }}
->
+<div className="py-10 bg-gray-100 dark:bg-[#000]">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Front End
@@ -192,7 +195,7 @@ export function DocsDesign() {
     <DocsFrontEnd />
   </div>
 </div>
-<div className="py-10 animate-in" style={{ "--index": 4 }}>
+<div className="py-10">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Back End
@@ -204,10 +207,7 @@ export function DocsDesign() {
     <DocsBackEnd />
   </div>
 </div>
-<div
-  className="py-10 animate-in bg-gray-100 dark:bg-[#000]"
-  style={{ "--index": 5 }}
->
+<div className="py-10 bg-gray-100 dark:bg-[#000]">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Linux
@@ -219,7 +219,7 @@ export function DocsDesign() {
     <DocsLinux />
   </div>
 </div>
-<div className="py-10 animate-in" style={{ "--index": 6 }}>
+<div className="py-10">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Design

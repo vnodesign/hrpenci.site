@@ -25,5 +25,8 @@ module.exports = withNextra(
     optimization: {
       mergeDuplicateChunks: true,
     },
+    images: {
+      unoptimized: true
+    }
   }),
 );
