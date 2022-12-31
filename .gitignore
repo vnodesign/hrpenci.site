@@ -1,7 +1,10 @@
 node_modules
 .next
+out
 .DS_Store
 yarn-error.log
+pnpm-lock.yaml
+package-lock.json
 dist
 examples
 packages
