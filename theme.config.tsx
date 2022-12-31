@@ -13,7 +13,7 @@ export default {
   project: {
     link: "https://github.com/vnodesign/hr.penci.me",
   },
-  docsRepositoryBase: "https://github.com/vnodesign/hr.penci.me/blob/docs/",
+  docsRepositoryBase: "https://github.com/vnodesign/hr.penci.me/blob/production/",
   useNextSeoProps() {
     const router = useRouter();
     const { frontMatter } = useConfig();
