@@ -11,9 +11,9 @@ moment.locale("vi");
 
 export default {
   project: {
-    link: "https://github.com/vnodesign/hr-document",
+    link: "https://github.com/vnodesign/hr.penci.me",
   },
-  docsRepositoryBase: "https://github.com/vnodesign/hr-document/blob/docs/",
+  docsRepositoryBase: "https://github.com/vnodesign/hr.penci.me/blob/docs/",
   useNextSeoProps() {
     const router = useRouter();
     const { frontMatter } = useConfig();
