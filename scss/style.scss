@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  font-feature-settings: unset !important;
+}
+
+body {
+  @apply text-[#4c5267] font-sans;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @apply transition-all duration-[.3s];
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark img {
+  filter: brightness(70%);
+}
+
+article img {
+  @apply w-full aspect-video;
+}
+
+.content-container {
+  @apply container max-w-7xl p-5 mx-auto;
+  strong {
+    @apply text-current no-underline font-bold;
+  }
+}

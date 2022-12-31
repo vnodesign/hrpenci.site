@@ -1,0 +1,116 @@
+{
+  "index": {
+    "title": "Trang chủ",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "front-end": {
+    "title": "Front End",
+    "type": "page"
+  },
+  "back-end": {
+    "title": "Back End",
+    "type": "page"
+  },
+  "linux": {
+    "title": "Linux",
+    "type": "page"
+  },
+  "design": {
+    "title": "Design",
+    "type": "page"
+  },
+  "nang-cao": {
+    "title": "Nâng cao",
+    "type": "page"
+  },
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "ban-quyen": {
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "chinh-sach-bao-mat": {
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "dieu-khoan": {
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "gioi-thieu": {
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "lien-he": {
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  },
+  "500": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  }
+}

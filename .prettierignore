@@ -1,0 +1,9 @@
+# next.js
+.next
+
+# dependencies
+node_modules
+pnpm-lock.yaml
+
+# assets
+public

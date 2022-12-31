@@ -1,0 +1,50 @@
+{
+  "name": "hr-documention",
+  "version": "2.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "NODE_ENV=development next dev",
+    "start": "next start",
+    "build": "node scripts/generate-rss.js && next build",
+    "export": "next build && next export && touch out/.nojekyll",
+    "lint": "next lint",
+    "prettier": "prettier --write ."
+  },
+  "author": "Tuan Duc Design",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^0.1.6",
+    "clsx": "^1.2.1",
+    "gray-matter": "^4.0.3",
+    "moment": "^2.29.4",
+    "next": "latest",
+    "next-pwa": "^5.6.0",
+    "next-themes": "^0.2.1",
+    "nextra": "*",
+    "nextra-theme-docs": "*",
+    "preact": "^10.11.3",
+    "react": "*",
+    "react-dom": "*",
+    "react-icons": "^4.7.1",
+    "rss": "^1.2.2",
+    "sharp": "0.31.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "^18.0.26",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.1.1",
+    "postcss": "^8.4.14",
+    "prettier": "^2.8.1",
+    "sass": "^1.56.1",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.9.3"
+  },
+  "alias": {
+    "react/jsx-runtime.js": "preact/compat/jsx-runtime",
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  }
+}
