@@ -5,7 +5,6 @@ import type { AppProps } from "next/app";
 import type { ReactNode } from "react";
 import * as gtag from "@lib/gtag";
 import { GAScript } from "@components/GoogleAnalytics";
-import { Analytics } from "@vercel/analytics/react";
 
 type NextraAppProps = AppProps & {
   Component: AppProps["Component"] & {
@@ -31,7 +30,6 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
     <>
       <Component {...pageProps} />
       <GAScript id="G-RCV263F7H7" />
-      <Analytics />
     </>
   );
 }
