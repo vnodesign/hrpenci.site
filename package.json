@@ -6,7 +6,6 @@
     "dev": "NODE_ENV=development next dev",
     "start": "next start",
     "build": "node scripts/generate-rss.js && next build",
-    "export": "next build && next export && touch out/.nojekyll",
     "lint": "next lint",
     "prettier": "prettier --write ."
   },

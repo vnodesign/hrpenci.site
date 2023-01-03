@@ -4,17 +4,15 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
-        script: cd ${{ secrets.DOCUMENT_ROOT }} && git pull https://github.com/vnodesign/hr.penci.me production && npm i && npm run export
-  
+      - uses: actions/checkout@v1
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: cd ${{ secrets.DOCUMENT_ROOT }} && git pull https://github.com/vnodesign/hr.penci.me production && npm run prettier && npm i && npm run build

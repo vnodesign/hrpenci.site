@@ -20,6 +20,6 @@
       "@lib/*": ["lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "next.config.mjs", "next.config.mjs"],
   "exclude": ["node_modules"]
 }

@@ -3,7 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 const allowedParams = ["allowed"];
 
 export const config = {
-  matcher: "/",
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - fbclid (Facebook Click Identifier)
+     */
+    '/(.*?)([?&]fbclid=[a-zA-Z0-9_-]+)',
+  ],
 };
 
 export function middleware(req: NextRequest) {

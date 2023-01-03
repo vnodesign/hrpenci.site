@@ -13,7 +13,7 @@ type CalloutType = keyof typeof TypeToEmoji;
 
 const classes: Record<CalloutType, string> = {
   default: cn(
-    "bg-orange-100 border-orange-500 text-orange-700  dark:bg-orange-200 dark:text-orange-800",
+    "bg-orange-100 border-orange-500 text-orange-700 dark:bg-orange-200 dark:text-orange-800",
   ),
   error: cn(
     "bg-red-100 border-red-500 text-red-700 dark:bg-red-200 dark:text-red-800",

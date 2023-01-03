@@ -5,6 +5,7 @@ out
 yarn-error.log
 pnpm-lock.yaml
 package-lock.json
+yarn.lock
 dist
 examples
 packages
@@ -16,3 +17,8 @@ cloudflared
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
+# Auto Generated from Server
+.htaccess
+.user.ini
+# Auto Generated when build production
+**/public/feed.xml
