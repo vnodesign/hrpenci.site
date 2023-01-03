@@ -35,7 +35,7 @@ const navigation = {
     { name: "Liên hệ", href: "/lien-he" },
     {
       name: "GitHub issues",
-      href: "https://github.com/vnodesign/hr-document/issues",
+      href: "https://github.com/vnodesign/hr.penci.me/issues",
     },
   ],
   interview: [
