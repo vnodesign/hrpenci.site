@@ -6,6 +6,12 @@
       "layout": "raw"
     }
   },
+  "*": {
+    "type": "page",
+    "theme": {
+      "timestamp": false
+    }
+  },
   "front-end": {
     "title": "Front End",
     "type": "page"
