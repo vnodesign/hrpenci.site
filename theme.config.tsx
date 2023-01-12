@@ -1,15 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { useRouter } from "next/router";
-import { useMounted } from "nextra/hooks";
-import { useTheme } from "next-themes";
 import { useConfig } from "nextra-theme-docs";
 import { Footer } from "@components/Footer";
 
 export default {
   project: {
-    link: "https://github.com/vnodesign/hr.penci.me",
+    link: "https://github.com/vnodesign/hr-document",
   },
-  docsRepositoryBase: "https://github.com/vnodesign/hr.penci.me/blob/production/",
+  docsRepositoryBase: "https://github.com/vnodesign/hr-document/blob/docs/",
   useNextSeoProps() {
     const router = useRouter();
     const { frontMatter } = useConfig();
@@ -18,7 +16,7 @@ export default {
     let ogTitle: string;
 
     if (frontMatter?.title) {
-      ogTitle = `${frontMatter.title} - HR Documentation`;
+      ogTitle = frontMatter.title;
     } else {
       ogTitle = "HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu";
     }
@@ -40,7 +38,7 @@ export default {
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
         title: frontMatter.title
-          ? `${frontMatter.title} - HR Documentation`
+          ? frontMatter.title
           : "HR Documentation",
         description:
           frontMatter.description ||
@@ -96,10 +94,6 @@ export default {
     placeholder: "Tìm kiếm tài liệu...",
   },
   head() {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { resolvedTheme } = useTheme();
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const mounted = useMounted();
     return (
       <>
         <meta
@@ -162,11 +156,6 @@ export default {
         <link rel="prefetch" href="/front-end" as="document" />
         <link rel="prefetch" href="/back-end" as="document" />
         <link rel="prefetch" href="/design" as="document" />
-        {mounted && resolvedTheme === "dark" ? (
-          <meta name="theme-color" content="#111" />
-        ) : (
-          <meta name="theme-color" content="#fff" />
-        )}
       </>
     );
   },
