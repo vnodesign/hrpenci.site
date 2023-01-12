@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
 import { GAScript } from "@components/GoogleAnalytics";
-import { FacebookProvider, CustomChat } from "react-facebook";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -13,20 +12,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head>
-          <link rel="precontent" href="https://pagead2.googlesyndication.com" />
-          <script
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4183134625750063"
-            async
-          ></script>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
           <GAScript id="G-RCV263F7H7" />
-          <FacebookProvider appId="1031926270674334" chatSupport>
-            <CustomChat pageId="102793352173146" minimized={false}/>
-          </FacebookProvider>
         </body>
       </Html>
     );
