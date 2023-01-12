@@ -25,6 +25,8 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <GAScript id="G-RCV263F7H7" />
+          <div id="fb-root"></div>
+          <div id="fb-customer-chat" className="fb-customerchat"></div>
           <FBChatScript />
         </body>
       </Html>
