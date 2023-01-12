@@ -22,6 +22,7 @@
     "nextra-theme-docs": "2.0.3",
     "react": "*",
     "react-dom": "*",
+    "react-facebook": "^9.0.12",
     "react-icons": "^4.7.1",
     "rss": "^1.2.2",
     "sharp": "0.31.1"
