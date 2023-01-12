@@ -1,7 +1,6 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
 import { GAScript } from "@components/GoogleAnalytics";
-import { FBChatScript } from "@components/Facebook/CustomizeChat";
-
+import { FacebookProvider, CustomChat } from "react-facebook";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -25,9 +24,9 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <GAScript id="G-RCV263F7H7" />
-          <div id="fb-root"></div>
-          <div id="fb-customer-chat" className="fb-customerchat"></div>
-          <FBChatScript />
+          <FacebookProvider appId="1031926270674334" chatSupport>
+            <CustomChat pageId="102793352173146" minimized={false}/>
+          </FacebookProvider>
         </body>
       </Html>
     );
