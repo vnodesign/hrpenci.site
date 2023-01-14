@@ -1,7 +1,7 @@
 import "../scss/style.scss";
 import type { ReactElement } from 'react'
 import type { AppProps } from 'next/app'
-import { FacebookProvider, CustomChat } from 'react-facebook'
+import { FBChatScript } from '@components/Facebook/CustomizeChat'
 
 export default function Nextra({
   Component,
@@ -10,9 +10,9 @@ export default function Nextra({
   return (
     <>
       <Component {...pageProps} />
-      <FacebookProvider appId="1031926270674334" chatSupport>
-        <CustomChat pageId="102793352173146" minimized={false}/>
-      </FacebookProvider>
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
+      <FBChatScript />
     </>
   )
 }
