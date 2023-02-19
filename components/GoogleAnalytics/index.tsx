@@ -7,14 +7,11 @@ type GAProp = {
 export function GAScript({ id }: GAProp) {
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
       />
 
       <Script
         id="ga-script"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
