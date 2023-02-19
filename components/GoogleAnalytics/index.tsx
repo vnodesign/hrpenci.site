@@ -10,19 +10,16 @@ export function GAScript({ id }: GAProp) {
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
       />
 
-      <Script
-        id="ga-script"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <Script id="gtag-script">
+      {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${id}', {
               page_path: window.location.pathname,
             });
-          `,
-        }}
-      />
+      `}
+    </Script>
     </>
   );
 }
