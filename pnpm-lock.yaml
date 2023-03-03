@@ -12,8 +12,8 @@ specifiers:
   next: latest
   next-pwa: ^5.6.0
   next-themes: ^0.2.1
-  nextra: 2.2.16
-  nextra-theme-docs: 2.2.16
+  nextra: 2.2.17
+  nextra-theme-docs: 2.2.17
   postcss: ^8.4.14
   prettier: ^2.8.1
   react: '*'
@@ -33,8 +33,8 @@ dependencies:
   next: 13.2.3_3duxcpitbtplz62feflag7fwby
   next-pwa: 5.6.0_next@13.2.3
   next-themes: 0.2.1_nvzgbose6yf6w7ijjprgspqefi
-  nextra: 2.2.16_nvzgbose6yf6w7ijjprgspqefi
-  nextra-theme-docs: 2.2.16_wiegl5vs7jjtynbfz6c5lbuan4
+  nextra: 2.2.17_nvzgbose6yf6w7ijjprgspqefi
+  nextra-theme-docs: 2.2.17_sk5zsfkxizvi3trle4mkuwucem
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-facebook: 9.0.12_react@18.2.0
@@ -4806,11 +4806,11 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /nextra-theme-docs/2.2.16_wiegl5vs7jjtynbfz6c5lbuan4:
-    resolution: {integrity: sha512-yVGYZCB1nB9eRhFmXL/rSw6ks1nj8xDNNCyWA6YGAwNgJqlfbwSKrRvVLkzAvCjBv9180mEZwNurub9+RH+F1A==}
+  /nextra-theme-docs/2.2.17_sk5zsfkxizvi3trle4mkuwucem:
+    resolution: {integrity: sha512-GTTie4YtTjiBdh3PqSYX5xtOQaCcLWoHWrubR2ikmBMq0GYxM2AX26J6O3gZ/xzzJje+vWmZGOilop/bG2RCog==}
     peerDependencies:
       next: '>=9.5.3'
-      nextra: 2.2.16
+      nextra: 2.2.17
       react: '>=16.13.1'
       react-dom: '>=16.13.1'
     dependencies:
@@ -4825,15 +4825,15 @@ packages:
       next: 13.2.3_3duxcpitbtplz62feflag7fwby
       next-seo: 5.15.0_nvzgbose6yf6w7ijjprgspqefi
       next-themes: 0.2.1_nvzgbose6yf6w7ijjprgspqefi
-      nextra: 2.2.16_nvzgbose6yf6w7ijjprgspqefi
+      nextra: 2.2.17_nvzgbose6yf6w7ijjprgspqefi
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       scroll-into-view-if-needed: 3.0.4
       zod: 3.20.2
     dev: false
 
-  /nextra/2.2.16_nvzgbose6yf6w7ijjprgspqefi:
-    resolution: {integrity: sha512-rGtCgurEDZ6afzb6gfug/9PZnEEfi981wK5e9XmKMT8sX2ECNJKb2rcg7FpUL4CC01507ibejn1r3WQ8x8M+zw==}
+  /nextra/2.2.17_nvzgbose6yf6w7ijjprgspqefi:
+    resolution: {integrity: sha512-IRfvDfUut6YgbivBVP8cG2DkxEBvODWQFiv7rqHD1tR9lBjiDKugyCi64zl1CiOlW5awc8xmbPDrzYak9l+A/w==}
     peerDependencies:
       next: '>=9.5.3'
       react: '>=16.13.1'
