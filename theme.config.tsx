@@ -80,9 +80,6 @@ export default {
     };
   },
   logo: <strong>HR Documentation</strong>,
-  sidebar: {
-    defaultMenuCollapseLevel: 0,
-  },
   search: {
     emptyResult: (
       <>

@@ -1,26 +1,49 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
-import { GAScript } from "@components/GoogleAnalytics";
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import * as fs from 'fs'
+import * as path from 'path'
+import { FBChatScript } from '@components/Facebook/CustomizeChat'
+import { GAScript } from '@components/GoogleAnalytics'
 
-class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx)
+class InlineStylesHead extends Head {
+  getCssLinks(files) {
+    return files.sharedFiles
+      .filter((file) => /\.css$/.test(file))
+      .filter((file) => fs.existsSync(path.join(process.cwd(), '.next', file)))
+      .map((file) => (
+        <style
+          key={file}
+          nonce={this.props.nonce}
+          data-href={`${this.context.assetPrefix}/_next/${file}`}
+          dangerouslySetInnerHTML={{
+            __html: fs.readFileSync(
+              path.join(process.cwd(), '.next', file),
+              'utf-8'
+            ),
+          }}
+        />
+      ))
+  }
+}
 
-    return initialProps
-  };
+export default class Document extends NextDocument {
+  static async getInitialProps(ctx) {
+    const initialProps = await NextDocument.getInitialProps(ctx)
+    return { ...initialProps }
+  }
+
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head />
+        <InlineStylesHead />
         <body>
           <Main />
           <NextScript />
-          <GAScript id="G-RCV263F7H7" />
+          <GAScript />
+          <div id="fb-root"></div>
+          <div id="fb-customer-chat" className="fb-customerchat"></div>
+          <FBChatScript />
         </body>
       </Html>
     );
   }
 }
-
-export default MyDocument;

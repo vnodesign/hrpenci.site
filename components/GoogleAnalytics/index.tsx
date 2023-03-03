@@ -1,21 +1,16 @@
-import Script from "next/script";
+import Script from 'next/script'
 
-type GAProp = {
-  id: string;
-};
-
-export function GAScript({ id }: GAProp) {
+export function GAScript() {
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-      />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-RCV263F7H7" />
 
       <Script id="gtag-script">
         {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${id}', {
+              gtag('config', 'G-RCV263F7H7', {
                 page_path: window.location.pathname,
               });
         `}

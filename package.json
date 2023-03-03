@@ -14,7 +14,6 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "gray-matter": "^4.0.3",
-    "moment": "^2.29.4",
     "next": "latest",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
@@ -22,10 +21,8 @@
     "nextra-theme-docs": "2.2.16",
     "react": "*",
     "react-dom": "*",
-    "react-facebook": "^9.0.12",
     "react-icons": "^4.7.1",
-    "rss": "^1.2.2",
-    "sharp": "0.31.1"
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "18.14.4",
