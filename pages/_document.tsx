@@ -1,7 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import * as fs from 'fs'
 import * as path from 'path'
-import { FBChatScript } from '@components/Facebook/CustomizeChat'
 import { GAScript } from '@components/GoogleAnalytics'
 
 class InlineStylesHead extends Head {
@@ -34,14 +33,12 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <InlineStylesHead />
+        <InlineStylesHead>
+          <GAScript />
+        </InlineStylesHead>
         <body>
           <Main />
           <NextScript />
-          <GAScript />
-          <div id="fb-root"></div>
-          <div id="fb-customer-chat" className="fb-customerchat"></div>
-          <FBChatScript />
         </body>
       </Html>
     );
