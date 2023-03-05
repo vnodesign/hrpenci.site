@@ -2,7 +2,7 @@ import nextra from 'nextra'
 import withPWA from 'next-pwa'
 
 const withNextra = nextra({
-  theme: "nextra-theme-docs",
+  theme: "vno-theme-docs",
   themeConfig: "./theme.config.tsx",
   staticImage: true,
   flexsearch: {
