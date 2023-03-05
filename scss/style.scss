@@ -8,10 +8,8 @@ html {
 }
 
 body {
-  @apply text-[#4c5267] font-sans;
+  @apply antialiased font-sans;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
