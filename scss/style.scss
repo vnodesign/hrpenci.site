@@ -12,10 +12,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
-  @apply transition-all duration-[.3s];
-}
-
 html,
 body {
   scroll-behavior: smooth;
@@ -26,8 +22,26 @@ body {
   filter: brightness(70%);
 }
 
-article img {
-  @apply w-full aspect-video;
+article {
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .nextra-body-typesetting-article {
+    line-height: 1.75 !important;
+
+    p {
+      line-height: 1.75 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.25 !important;
+    }
+  }
 }
 
 .content-container {
