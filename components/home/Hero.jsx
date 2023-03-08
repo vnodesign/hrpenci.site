@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="rounded-md bg-pink-600 py-1 px-1.5 text-xs font-semibold uppercase text-pink-50">
             Hot
           </div>
-          <Link href="/blog" title="Khái niệm giữa Back End và Front End">
+          <Link href="/blog/khai-niem-giua-back-end-va-front-end" title="Khái niệm giữa Back End và Front End">
             Bạn đang tuyển dụng về IT? Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa
             Back End và Front End, để các bạn HR có thể hiểu rõ hơn.
           </Link>
