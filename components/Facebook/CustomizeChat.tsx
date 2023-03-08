@@ -1,4 +1,4 @@
-import Script from "next/script";
+import Script from 'next/script'
 
 export function FBChatScript() {
   return (
@@ -28,5 +28,5 @@ export function FBChatScript() {
         }}
       />
     </>
-  );
+  )
 }

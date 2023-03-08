@@ -7,29 +7,43 @@
     "start": "next start",
     "build": "node scripts/generate-rss.js && next build",
     "lint": "next lint",
+    "prepare": "husky install",
     "prettier": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": [
+      "eslint --fix"
+    ],
+    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
+      "prettier --write"
+    ]
   },
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
     "clsx": "^1.2.1",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^13.2.1",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
-    "nextra": "2.2.17",
-    "nextra-theme-docs": "2.2.17",
-    "react": "*",
-    "react-dom": "*",
+    "nextra": "^2.2.17",
+    "nextra-theme-docs": "^2.2.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "sharp": "^0.30.5",
     "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "18.14.6",
     "@types/react": "^18.0.26",
     "autoprefixer": "^10.4.8",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.2.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "postcss": "^8.4.14",
     "prettier": "^2.8.1",
     "sass": "^1.56.1",

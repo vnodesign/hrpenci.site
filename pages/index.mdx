@@ -1,15 +1,16 @@
-import Link from "next/link";
-import { getPagesUnderRoute } from "nextra/context";
-import { BsLayoutSplit, BsServer, BsPaletteFill } from "react-icons/bs";
+import Link from '@components/Link'
+import Hero from '@components/home/Hero'
+import { getPagesUnderRoute } from 'nextra/context'
+import { BsLayoutSplit, BsServer, BsPaletteFill } from 'react-icons/bs'
 
 export function DocsFrontEnd() {
-  const MAX_DISPLAY = 6;
+  const MAX_DISPLAY = 6
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute("/front-end")
+        {getPagesUnderRoute('/docs/front-end')
           .slice(0, MAX_DISPLAY)
-          .map(page => {
+          .map((page) => {
             return (
               <Link
                 key={page.route}
@@ -17,25 +18,25 @@ export function DocsFrontEnd() {
                 title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
               >
-                <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
+                <h3 className="font-semibold text-xl">
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            );
+            )
           })}
       </div>
     </div>
-  );
+  )
 }
 
 export function DocsBackEnd() {
-  const MAX_DISPLAY = 6;
+  const MAX_DISPLAY = 6
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute("/back-end")
+        {getPagesUnderRoute('/docs/back-end')
           .slice(0, MAX_DISPLAY)
-          .map(page => {
+          .map((page) => {
             return (
               <Link
                 key={page.route}
@@ -43,25 +44,25 @@ export function DocsBackEnd() {
                 title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
               >
-                <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
+                <h3 className="font-semibold text-xl">
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            );
+            )
           })}
       </div>
     </div>
-  );
+  )
 }
 
 export function DocsLinux() {
-  const MAX_DISPLAY = 6;
+  const MAX_DISPLAY = 6
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute("/linux")
+        {getPagesUnderRoute('/docs/linux')
           .slice(0, MAX_DISPLAY)
-          .map(page => {
+          .map((page) => {
             return (
               <Link
                 key={page.route}
@@ -69,25 +70,25 @@ export function DocsLinux() {
                 title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
               >
-                <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
+                <h3 className="font-semibold text-xl">
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            );
+            )
           })}
       </div>
     </div>
-  );
+  )
 }
 
 export function DocsDesign() {
-  const MAX_DISPLAY = 6;
+  const MAX_DISPLAY = 6
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute("/design")
+        {getPagesUnderRoute('/docs/design')
           .slice(0, MAX_DISPLAY)
-          .map(page => {
+          .map((page) => {
             return (
               <Link
                 key={page.route}
@@ -95,40 +96,19 @@ export function DocsDesign() {
                 title={page.meta?.title || page.frontMatter?.title || page.name}
                 className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
               >
-                <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white">
+                <h3 className="font-semibold text-xl">
                   {page.meta?.title || page.frontMatter?.title || page.name}
                 </h3>
               </Link>
-            );
+            )
           })}
       </div>
     </div>
-  );
+  )
 }
 
-<div className="py-5 lg:py-20 bg-gray-100 dark:bg-[#000]">
-  <div className="content-container place-self-center text-center lg:text-left">
-    <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:mb-7">
-      Welcome to HR Documentation
-    </h1>
-    <div className="mb-10 text-lg font-normal dark:text-neutral-300 lg:text-xl">
-      HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về{" "}
-      <strong>Front End</strong>, <strong>Back End</strong>,{" "}
-      <strong>Linux</strong> và <strong>Design</strong> dành cho những bạn HR
-      mới bước chân vào nghề tuyển dụng.
-    </div>
-    <div className="inline-flex items-center justify-center mb-8">
-      <a
-        href="https://www.facebook.com/groups/xomhr"
-        target="_blank"
-        title="Tham gia vào group HR Community"
-        className="mb-3 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-2.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 md:mr-5 md:mb-0 transition-all duration-150"
-      >
-        Tham gia vào group HR Community
-      </a>
-    </div>
-  </div>
-</div>
+<Hero />
+
 <div className="py-10">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
@@ -145,9 +125,7 @@ export function DocsDesign() {
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsLayoutSplit className="w-12 h-12 mx-auto" />
-          <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white mt-3.5">
-            Front End
-          </h3>
+          <h3 className="font-semibold text-xl mt-3.5">Front End</h3>
         </Link>
         <Link
           href="/back-end"
@@ -155,9 +133,7 @@ export function DocsDesign() {
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsServer className="w-12 h-12 mx-auto" />
-          <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white mt-3.5">
-            Back End
-          </h3>
+          <h3 className="font-semibold text-xl mt-3.5">Back End</h3>
         </Link>
         <Link
           href="/linux"
@@ -165,9 +141,7 @@ export function DocsDesign() {
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsServer className="w-12 h-12 mx-auto" />
-          <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white mt-3.5">
-            Linux
-          </h3>
+          <h3 className="font-semibold text-xl mt-3.5">Linux</h3>
         </Link>
         <Link
           href="/design"
@@ -175,9 +149,7 @@ export function DocsDesign() {
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
           <BsPaletteFill className="w-12 h-12 mx-auto" />
-          <h3 className="font-semibold text-xl text-[var(--color-base)] dark:text-white mt-3.5">
-            Design
-          </h3>
+          <h3 className="font-semibold text-xl mt-3.5">Design</h3>
         </Link>
       </div>
     </div>
@@ -189,8 +161,7 @@ export function DocsDesign() {
       Tài liệu về Front End
     </h2>
     <div className="mb-10 text-lg font-normal text-center lg:text-xl lg:mb-16 dark:text-neutral-300">
-      Tổng hợp các tài liệu về Front End dành cho những bạn HR mới tuyển dụng về
-      ngành IT.
+      Tổng hợp các tài liệu về Front End dành cho những bạn HR mới tuyển dụng về ngành IT.
     </div>
     <DocsFrontEnd />
   </div>
@@ -201,8 +172,7 @@ export function DocsDesign() {
       Tài liệu về Back End
     </h2>
     <div className="mb-10 text-lg font-normal text-center lg:text-xl lg:mb-16 dark:text-neutral-300">
-      Tổng hợp các tài liệu về Back End dành cho những bạn HR mới tuyển dụng về
-      ngành IT.
+      Tổng hợp các tài liệu về Back End dành cho những bạn HR mới tuyển dụng về ngành IT.
     </div>
     <DocsBackEnd />
   </div>
@@ -213,8 +183,7 @@ export function DocsDesign() {
       Tài liệu về Linux
     </h2>
     <div className="mb-10 text-lg font-normal text-center lg:text-xl lg:mb-16 dark:text-neutral-300">
-      Tổng hợp các tài liệu về Linux dành cho những bạn HR mới tuyển dụng về
-      ngành IT.
+      Tổng hợp các tài liệu về Linux dành cho những bạn HR mới tuyển dụng về ngành IT.
     </div>
     <DocsLinux />
   </div>
@@ -225,8 +194,7 @@ export function DocsDesign() {
       Tài liệu về Design
     </h2>
     <div className="mb-10 text-lg font-normal text-center lg:text-xl lg:mb-16 dark:text-neutral-300">
-      Tổng hợp các tài liệu về Design dành cho những bạn HR mới tuyển dụng về
-      ngành Design.
+      Tổng hợp các tài liệu về Design dành cho những bạn HR mới tuyển dụng về ngành Design.
     </div>
     <DocsDesign />
   </div>

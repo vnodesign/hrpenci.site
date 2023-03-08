@@ -14,10 +14,7 @@ class InlineStylesHead extends Head {
           nonce={this.props.nonce}
           data-href={`${this.context.assetPrefix}/_next/${file}`}
           dangerouslySetInnerHTML={{
-            __html: fs.readFileSync(
-              path.join(process.cwd(), '.next', file),
-              'utf-8'
-            ),
+            __html: fs.readFileSync(path.join(process.cwd(), '.next', file), 'utf-8'),
           }}
         />
       ))
@@ -41,6 +38,6 @@ export default class Document extends NextDocument {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
