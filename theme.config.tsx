@@ -114,18 +114,18 @@ export default {
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [dateString, setDateString] = useState(timestamp.toISOString());
+    const [dateString, setDateString] = useState(timestamp.toISOString())
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       try {
         setDateString(
           timestamp.toLocaleDateString('vi-VN', {
-            day: "numeric",
-            month: "short",
-            year: "numeric",
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
           })
-        );
+        )
       } catch (e) {
         // Ignore errors here; they get the ISO string.
         // At least one person out there has manually misconfigured navigator.language.
@@ -139,9 +139,9 @@ export default {
       return {
         light: 'Sáng',
         dark: 'Tối',
-        system: 'Hệ thống'
+        system: 'Hệ thống',
       }
-    }
+    },
   },
   toc: {
     title: 'Mục lục tài liệu',
