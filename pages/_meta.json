@@ -27,6 +27,12 @@
     "title": "Bản quyền",
     "type": "page",
     "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
       "typesetting": "article"
     }
   },
@@ -34,6 +40,12 @@
     "title": "Liên hệ",
     "type": "page",
     "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "timestamp": false,
       "typesetting": "article"
     }
   },
