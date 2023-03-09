@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'

@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import { GAScript } from '@components/GoogleAnalytics'
 import { FBChatScript } from '@components/Facebook/CustomizeChat'
 
 export default function Nextra({ Component, pageProps }) {
@@ -8,6 +9,7 @@ export default function Nextra({ Component, pageProps }) {
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
       <FBChatScript />
+      <GAScript />
     </>
   )
 }
