@@ -3,12 +3,22 @@
 @import 'tailwindcss/utilities';
 
 html {
+  @apply antialiased font-sans;
   font-feature-settings: unset !important;
   color-scheme: unset !important;
 }
 
 body {
-  @apply antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.dark img {
+  filter: brightness(70%);
 }
 
 article {
