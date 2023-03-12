@@ -31,8 +31,8 @@
 @import 'tailwindcss/utilities';
 
 html {
-  font-feature-settings: unset;
-  color-scheme: unset;
+  font-feature-settings: unset !important;
+  color-scheme: unset !important;
 }
 
 body {
