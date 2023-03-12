@@ -13,38 +13,31 @@ export default {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
 
-    let ogTitle: string
+    const ogTitle =
+      frontMatter?.title || 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
 
-    if (frontMatter?.title) {
-      ogTitle = frontMatter.title
-    } else {
-      ogTitle = 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
-    }
+    const ogUrl = frontMatter?.image
+      ? `https://hr.penci.me${frontMatter.image}`
+      : 'https://hr.penci.me/static/documentation-card.png'
 
-    let ogUrl: string
+    const ogDescription =
+      frontMatter?.description ||
+      'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
 
-    if (frontMatter?.image) {
-      ogUrl = `https://hr.penci.me${frontMatter.image}`
-    } else {
-      ogUrl = 'https://hr.penci.me/static/documentation-card.png'
-    }
+    const title = frontMatter?.title || 'HR Documentation'
 
     return {
       titleTemplate: ogTitle,
-      description:
-        frontMatter.description ||
-        'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
+      description: ogDescription,
       canonical: `https://hr.penci.me${asPath}`,
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
-        title: frontMatter.title ? frontMatter.title : 'HR Documentation',
-        description:
-          frontMatter.description ||
-          'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
+        title: title,
+        description: ogDescription,
         images: [
           {
             url: ogUrl,
-            alt: frontMatter.title || 'HR Documentation',
+            alt: title,
             width: '1200',
             height: '630',
           },
@@ -64,13 +57,11 @@ export default {
       additionalMetaTags: [
         { content: '100005485267478', property: 'fb:admins' },
         {
-          content: frontMatter.title || 'HR Documentation',
+          content: title,
           name: 'twitter:title',
         },
         {
-          content:
-            frontMatter.description ||
-            'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
+          content: ogDescription,
           name: 'twitter:description',
         },
         { content: ogUrl, name: 'twitter:image' },

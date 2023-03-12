@@ -10,6 +10,10 @@
     "title": "Tài liệu",
     "type": "page"
   },
+  "interview": {
+    "title": "Câu hỏi phỏng vấn",
+    "type": "page"
+  },
   "blog": {
     "title": "Blog",
     "type": "page",
