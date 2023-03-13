@@ -1,3 +1,4 @@
+import React, { useMemo } from 'react'
 import Link from '@components/Link'
 import Hero from '@components/home/Hero'
 import { getPagesUnderRoute } from 'nextra/context'
@@ -5,25 +6,26 @@ import { BsLayoutSplit, BsServer, BsPaletteFill } from 'react-icons/bs'
 
 export function DocsFrontEnd() {
   const MAX_DISPLAY = 6
+  const pages = useMemo(() => {
+    return getPagesUnderRoute('/docs/front-end').filter((page, index) => index < MAX_DISPLAY)
+  }, [])
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/docs/front-end')
-          .slice(0, MAX_DISPLAY)
-          .map((page) => {
-            return (
-              <Link
-                key={page.route}
-                href={page.route}
-                title={page.meta?.title || page.frontMatter?.title || page.name}
-                className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
-              >
-                <h3 className="font-semibold text-xl">
-                  {page.meta?.title || page.frontMatter?.title || page.name}
-                </h3>
-              </Link>
-            )
-          })}
+        {pages.map((page) => {
+          return (
+            <Link
+              key={page.route}
+              href={page.route}
+              title={page.meta?.title || page.frontMatter?.title || page.name}
+              className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
+            >
+              <h3 className="font-semibold text-xl">
+                {page.meta?.title || page.frontMatter?.title || page.name}
+              </h3>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
@@ -31,25 +33,26 @@ export function DocsFrontEnd() {
 
 export function DocsBackEnd() {
   const MAX_DISPLAY = 6
+  const pages = useMemo(() => {
+    return getPagesUnderRoute('/docs/back-end').filter((page, index) => index < MAX_DISPLAY)
+  }, [])
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/docs/back-end')
-          .slice(0, MAX_DISPLAY)
-          .map((page) => {
-            return (
-              <Link
-                key={page.route}
-                href={page.route}
-                title={page.meta?.title || page.frontMatter?.title || page.name}
-                className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
-              >
-                <h3 className="font-semibold text-xl">
-                  {page.meta?.title || page.frontMatter?.title || page.name}
-                </h3>
-              </Link>
-            )
-          })}
+        {pages.map((page) => {
+          return (
+            <Link
+              key={page.route}
+              href={page.route}
+              title={page.meta?.title || page.frontMatter?.title || page.name}
+              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+            >
+              <h3 className="font-semibold text-xl">
+                {page.meta?.title || page.frontMatter?.title || page.name}
+              </h3>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
@@ -57,25 +60,26 @@ export function DocsBackEnd() {
 
 export function DocsLinux() {
   const MAX_DISPLAY = 6
+  const pages = useMemo(() => {
+    return getPagesUnderRoute('/docs/linux').filter((page, index) => index < MAX_DISPLAY)
+  }, [])
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/docs/linux')
-          .slice(0, MAX_DISPLAY)
-          .map((page) => {
-            return (
-              <Link
-                key={page.route}
-                href={page.route}
-                title={page.meta?.title || page.frontMatter?.title || page.name}
-                className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
-              >
-                <h3 className="font-semibold text-xl">
-                  {page.meta?.title || page.frontMatter?.title || page.name}
-                </h3>
-              </Link>
-            )
-          })}
+        {pages.map((page) => {
+          return (
+            <Link
+              key={page.route}
+              href={page.route}
+              title={page.meta?.title || page.frontMatter?.title || page.name}
+              className="block py-12 px-8 text-center rounded-lg bg-white dark:bg-[#202020]"
+            >
+              <h3 className="font-semibold text-xl">
+                {page.meta?.title || page.frontMatter?.title || page.name}
+              </h3>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
@@ -83,25 +87,26 @@ export function DocsLinux() {
 
 export function DocsDesign() {
   const MAX_DISPLAY = 6
+  const pages = useMemo(() => {
+    return getPagesUnderRoute('/docs/design').filter((page, index) => index < MAX_DISPLAY)
+  }, [])
   return (
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 xl:gap-8 sm:space-y-0">
-        {getPagesUnderRoute('/docs/design')
-          .slice(0, MAX_DISPLAY)
-          .map((page) => {
-            return (
-              <Link
-                key={page.route}
-                href={page.route}
-                title={page.meta?.title || page.frontMatter?.title || page.name}
-                className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
-              >
-                <h3 className="font-semibold text-xl">
-                  {page.meta?.title || page.frontMatter?.title || page.name}
-                </h3>
-              </Link>
-            )
-          })}
+        {pages.map((page) => {
+          return (
+            <Link
+              key={page.route}
+              href={page.route}
+              title={page.meta?.title || page.frontMatter?.title || page.name}
+              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+            >
+              <h3 className="font-semibold text-xl">
+                {page.meta?.title || page.frontMatter?.title || page.name}
+              </h3>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
@@ -120,7 +125,7 @@ export function DocsDesign() {
     <div className="mt-10">
       <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 xl:gap-8 sm:space-y-0">
         <Link
-          href="/front-end"
+          href="/docs/front-end"
           title="Tài liệu về Front End"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
@@ -128,7 +133,7 @@ export function DocsDesign() {
           <h3 className="font-semibold text-xl mt-3.5">Front End</h3>
         </Link>
         <Link
-          href="/back-end"
+          href="/docs/back-end"
           title="Tài liệu về Back End"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
@@ -136,7 +141,7 @@ export function DocsDesign() {
           <h3 className="font-semibold text-xl mt-3.5">Back End</h3>
         </Link>
         <Link
-          href="/linux"
+          href="/docs/linux"
           title="Tài liệu về Linux"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >
@@ -144,7 +149,7 @@ export function DocsDesign() {
           <h3 className="font-semibold text-xl mt-3.5">Linux</h3>
         </Link>
         <Link
-          href="/design"
+          href="/docs/design"
           title="Tài liệu về Design"
           className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
         >

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { useState, useEffect } from 'react'
+import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import { Footer } from '@components/Footer'
@@ -106,22 +106,10 @@ export default {
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [dateString, setDateString] = useState(timestamp.toISOString())
-
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-      try {
-        setDateString(
-          timestamp.toLocaleDateString('vi-VN', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-          })
-        )
-      } catch (e) {
-        // Ignore errors here; they get the ISO string.
-        // At least one person out there has manually misconfigured navigator.language.
-      }
+    const dateString = useMemo(() => {
+      const locale = navigator.language || 'vi-VN'
+      const options = { day: 'numeric', month: 'short', year: 'numeric' }
+      return timestamp.toLocaleDateString(locale, options)
     }, [timestamp])
 
     return <>Cập nhật lần cuối lúc: {dateString}</>
