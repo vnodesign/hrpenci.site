@@ -1,3 +1,5 @@
+@import 'tailwindcss/utilities';
+
 :root {
   --shiki-color-text: #24292f;
   --shiki-color-background: #ffffff;
@@ -25,10 +27,6 @@
   --shiki-token-punctuation: #c9d1d9;
   --shiki-token-link: #000012;
 }
-
-// @import "tailwindcss/base";
-// @import "tailwindcss/components";
-@import 'tailwindcss/utilities';
 
 html {
   font-feature-settings: unset !important;

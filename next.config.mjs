@@ -8,12 +8,15 @@ const withNextra = nextra({
   flexsearch: {
     codeblocks: false,
   },
+  defaultShowCopyCode: true,
+  readingTime: true,
 })
 
 export default withNextra(
   withPWA({
     reactStrictMode: true,
     swcMinify: true,
+    trailingSlash: true,
     pwa: {
       dest: 'public',
       register: true,
