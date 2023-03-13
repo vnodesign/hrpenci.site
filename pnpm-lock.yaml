@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@badrap/bar-of-progress': ^0.2.2
   '@types/node': 18.15.0
   '@types/react': ^18.0.26
   autoprefixer: ^10.4.8
@@ -28,6 +29,7 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
+  '@badrap/bar-of-progress': 0.2.2
   clsx: 1.2.1
   gray-matter: 4.0.3
   next: 13.2.3_wiv434v7erz4aedd5whhdwmpv4
@@ -1221,6 +1223,10 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@badrap/bar-of-progress/0.2.2:
+    resolution: {integrity: sha512-Ig7MdFQM3OA7Ror5UB1ZutXNZFwxh6YExZvcd6EZloOgcXUR8PKNLH2wUVoeh92NMPnPWr6J/l9Mp+f3z7O7MQ==}
     dev: false
 
   /@eslint/eslintrc/2.0.0:
