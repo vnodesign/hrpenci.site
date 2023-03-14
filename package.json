@@ -21,7 +21,6 @@
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2",
     "clsx": "^1.2.1",
     "gray-matter": "^4.0.3",
     "next": "^13.2.1",

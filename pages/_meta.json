@@ -28,7 +28,7 @@
     }
   },
   "ban-quyen": {
-    "title": "Bản quyền",
+    "display": "hidden",
     "type": "page",
     "theme": {
       "breadcrumb": false,
@@ -41,8 +41,7 @@
     }
   },
   "lien-he": {
-    "title": "Liên hệ",
-    "type": "page",
+    "display": "hidden",
     "theme": {
       "breadcrumb": false,
       "footer": true,

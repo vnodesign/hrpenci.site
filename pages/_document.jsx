@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import * as fs from 'fs'
-import * as path from 'path'
+import fs from 'fs'
+import path from 'path'
 
 class InlineStylesHead extends Head {
   getCssLinks(files) {

@@ -1,17 +1,17 @@
 import '../scss/style.scss'
-import ProgressBarHandler from '@lib/progressBar'
 import { GAScript } from '@components/GoogleAnalytics'
 import { FBChatScript } from '@components/Facebook/CustomizeChat'
+import CopyLink from '@components/CopyLink'
 
 export default function Nextra({ Component, pageProps }) {
   return (
     <>
-      <ProgressBarHandler />
       <Component {...pageProps} />
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
       <FBChatScript />
       <GAScript />
+      <CopyLink />
     </>
   )
 }
