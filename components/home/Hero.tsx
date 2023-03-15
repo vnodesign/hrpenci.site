@@ -59,7 +59,7 @@ export default function Hero() {
               className="flex items-center justify-center px-6 py-2 space-x-3 font-medium text-pink-800 bg-pink-100 border border-pink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 hover:bg-pink-50 dark:text-pink-300 dark:border-pink-500/30 dark:hover:bg-pink-500/30 dark:bg-pink-500/20"
               title="Giới thiệu về HR Documentation và HR Community"
             >
-              Giới thiệu về HR Documentation và HR Community
+              Giới thiệu
             </Link>
           </div>
         </div>
