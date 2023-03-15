@@ -22,8 +22,7 @@ export default function Hero() {
             href="/blog/khai-niem-giua-back-end-va-front-end"
             title="Khái niệm giữa Back End và Front End"
           >
-            Bạn đang tuyển dụng về IT? Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa
-            Back End và Front End, để các bạn HR có thể hiểu rõ hơn.
+            Khái niệm giữa Back End và Front End, dành cho các bạn HR mới tuyển dụng về IT.
           </Link>
         </div>
       </div>
