@@ -49,7 +49,7 @@ export default function Hero() {
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:flex-col md:space-y-4 md:space-x-0 lg:flex-row lg:space-y-0 lg:space-x-4">
             <Link
               href="/docs"
-              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium bg-pink-600 border border-pink-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 text-pink-50 hover:bg-pink-500 dark:bg-pink-600 dark:border-pink-700 dark:hover:bg-pink-500 dark:hover:border-pink-600"
+              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium bg-pink-600 border border-pink-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 text-pink-50 hover:bg-pink-500 dark:border-pink-700 dark:hover:border-pink-600"
               title="Bắt đầu đọc tài liệu về IT và Design"
             >
               Bắt đầu
