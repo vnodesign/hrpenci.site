@@ -2,6 +2,8 @@
 import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
+import Navigation from '@components/Navigation'
+// import Social from '@components/Navigation/Social'
 import { Footer } from '@components/Footer'
 
 export default {
@@ -157,6 +159,10 @@ export default {
     content: 'Gửi vấn đề về lỗi trong url \u2192',
   },
   darkMode: true,
+  navbar: {
+    component: Navigation,
+    // extraContent: <Social />,
+  },
   footer: {
     component: Footer,
   },
