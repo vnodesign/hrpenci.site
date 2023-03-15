@@ -1,5 +1,6 @@
 import Link from '../Link'
-import { ReactNode } from 'react'
+import { ReactNode, ReactElement } from 'react'
+import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 
 function FooterLink({
   href,
@@ -53,7 +54,8 @@ const navigation = {
   ],
 }
 
-export function FooterContent() {
+export function FooterContent({ menu }) {
+  const config = useConfig()
   return (
     <>
       <div className="grid gap-12 lg:grid-cols-6 lg:gap-24">
@@ -117,19 +119,22 @@ export function FooterContent() {
           </ul>
         </div>
       </div>
-      <hr className="my-8 lg:my-12 dark:border-neutral-800" />
-      <span className="block font-normal text-center">
-        © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
-      </span>
+      <hr className="my-6 lg:my-8 dark:border-neutral-800" />
+      <div className="flex flex-col items-center justify-between">
+        <span className="block mb-4">
+          © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
+        </span>
+        {menu ? <>{config.darkMode && <ThemeSwitch />}</> : null}
+      </div>
     </>
   )
 }
 
-export function Footer() {
+export function Footer({ menu }: { menu?: boolean }): ReactElement {
   return (
     <footer className="py-8 bg-gray-100 justify-self-end lg:py-10 dark:bg-neutral-900">
       <div className="max-w-[90rem] mx-auto px-4 text-gray-600 dark:text-gray-400">
-        <FooterContent />
+        <FooterContent menu={menu} />
       </div>
     </footer>
   )
