@@ -14,13 +14,14 @@ export default function Hero() {
   return (
     <div className="w-full py-8 space-y-12 md:space-y-20 md:py-16 lg:py-20 bg-gray-100 dark:bg-[#000]">
       <div className="flex justify-start w-full px-4 md:justify-center">
-        <div className="flex items-center space-x-2.5 rounded-md border border-gray-200 bg-white py-3 px-4 dark:border-gray-700 dark:bg-gray-900 font-medium">
-          <div className="rounded-md bg-pink-600 py-1 px-1.5 text-xs font-semibold uppercase text-pink-50">
+        <div className="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm bg-white rounded-full dark:bg-gray-900">
+          <div className="rounded-md bg-pink-600 py-1.5 px-4 mr-3 text-xs font-semibold uppercase text-pink-50">
             Hot
           </div>
           <Link
             href="/blog/khai-niem-giua-back-end-va-front-end"
             title="Khái niệm giữa Back End và Front End"
+            className="text-sm font-medium"
           >
             Khái niệm giữa Back End và Front End, dành cho các bạn HR mới tuyển dụng về IT.
           </Link>
