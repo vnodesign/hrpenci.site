@@ -14,16 +14,29 @@ export default function Hero() {
   return (
     <div className="w-full py-8 space-y-12 md:space-y-20 md:py-16 lg:py-20 bg-gray-100 dark:bg-[#000]">
       <div className="flex justify-start w-full px-4 md:justify-center">
-        <div className="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm bg-white rounded-full dark:bg-gray-900">
+        <Link
+          href="/blog/khai-niem-giua-back-end-va-front-end"
+          title="Khái niệm giữa Back End và Front End"
+          className="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm bg-white rounded-full dark:bg-gray-900"
+        >
           <div className="rounded-full bg-pink-600 py-1.5 px-4 mr-3 text-xs text-pink-50">New</div>
-          <Link
-            href="/blog/khai-niem-giua-back-end-va-front-end"
-            title="Khái niệm giữa Back End và Front End"
-            className="text-sm font-medium"
-          >
+          <span className="mr-2 text-sm font-medium">
             Khái niệm giữa Back End và Front End, dành cho các bạn HR mới tuyển dụng về IT.
-          </Link>
-        </div>
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            className="w-5 h-5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </Link>
       </div>
       <div className="grid w-full max-w-screen-xl grid-cols-1 gap-16 px-4 mx-auto md:grid-cols-2 md:px-8">
         <div className="space-y-8">
