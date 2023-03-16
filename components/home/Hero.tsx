@@ -19,7 +19,7 @@ export default function Hero() {
           title="Khái niệm giữa Back End và Front End"
           className="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm bg-white rounded-full dark:bg-gray-900"
         >
-          <div className="rounded-full bg-pink-600 py-1.5 px-4 mr-3 text-xs text-pink-50">New</div>
+          <div className="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">New</div>
           <span className="mr-2 text-sm font-medium">
             Khái niệm giữa Back End và Front End, dành cho các bạn HR mới tuyển dụng về IT.
           </span>
@@ -60,14 +60,14 @@ export default function Hero() {
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:flex-col md:space-y-4 md:space-x-0 lg:flex-row lg:space-y-0 lg:space-x-4">
             <Link
               href="/docs"
-              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium bg-pink-600 border border-pink-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 text-pink-50 hover:bg-pink-500 dark:border-pink-700 dark:hover:border-pink-600"
-              title="Bắt đầu đọc tài liệu về IT và Design"
+              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium text-white bg-blue-600 border border-blue-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 hover:bg-blue-500 dark:border-blue-700 dark:hover:border-blue-600"
+              title="Bắt đầu đọc tài liệu về IT và Design"
             >
-              Bắt đầu
+              Bắt đầu đọc tài liệu
             </Link>
             <Link
               href="/gioi-thieu"
-              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium text-pink-800 bg-pink-100 border border-pink-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 hover:bg-pink-50 dark:text-pink-300 dark:border-pink-500/30 dark:hover:bg-pink-500/30 dark:bg-pink-500/20"
+              className="flex items-center justify-center px-6 py-2 space-x-3 font-medium text-blue-800 bg-blue-100 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 dark:focus:ring-slate-900 hover:bg-blue-200 dark:text-blue-300 dark:border-blue-500/30 dark:hover:bg-blue-500/30 dark:bg-blue-500/20"
               title="Giới thiệu về HR Documentation và HR Community"
             >
               Giới thiệu
