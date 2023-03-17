@@ -14,16 +14,17 @@ export default {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
 
-    const ogTitle =
-      frontMatter?.title || 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
+    const ogTitle = frontMatter?.title
+      ? `${frontMatter.title} - HR Documentation`
+      : 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
 
-    const ogUrl = frontMatter?.image
+    const ogImage = frontMatter?.image
       ? `https://hr.penci.me${frontMatter.image}`
       : 'https://hr.penci.me/static/documentation-card.png'
 
-    const ogDescription =
-      frontMatter?.description ||
-      'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
+    const ogDescription = frontMatter?.description
+      ? frontMatter.description
+      : 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
 
     const title = frontMatter?.title || 'HR Documentation'
 
@@ -33,11 +34,11 @@ export default {
       canonical: `https://hr.penci.me${asPath}`,
       openGraph: {
         url: `https://hr.penci.me${asPath}`,
-        title: title,
+        title: ogTitle,
         description: ogDescription,
         images: [
           {
-            url: ogUrl,
+            url: ogImage,
             alt: title,
             width: '1200',
             height: '630',
@@ -65,7 +66,7 @@ export default {
           content: ogDescription,
           name: 'twitter:description',
         },
-        { content: ogUrl, name: 'twitter:image' },
+        { content: ogImage, name: 'twitter:image' },
       ],
     }
   },

@@ -4,7 +4,7 @@ export default function CopyLink() {
   function addLink(e) {
     const selection = window.getSelection().toString()
     if (selection) {
-      const pagelink = `\n\nNguồn: ${document.location.href}\n`
+      const pagelink = `\n\nNguồn: ${document.location.href}`
       e.clipboardData.setData('text/plain', selection + pagelink)
       e.preventDefault()
     }
