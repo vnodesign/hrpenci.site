@@ -43,7 +43,7 @@ export function Callout({
   return (
     <div className={cn('my-4 mx-0 border-l-[.5rem] pt-4 pb-2 px-6 rounded-lg', classByType[type])}>
       <div className="flex m-0 text-base font-semibold">{emoji}</div>
-      <p>{children}</p>
+      <div>{children}</div>
     </div>
   )
 }
