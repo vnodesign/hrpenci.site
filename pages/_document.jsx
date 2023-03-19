@@ -38,6 +38,7 @@ export default class Document extends NextDocument {
         <body>
           <Main />
           <NextScript />
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async />
         </body>
       </Html>
     )

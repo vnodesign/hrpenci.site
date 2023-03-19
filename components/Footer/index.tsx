@@ -2,6 +2,7 @@ import Link from '../Link'
 import cn from 'clsx'
 import { ReactNode, ReactElement } from 'react'
 import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
+import DMCABadge from '../DMCABadge'
 
 function FooterLink({
   href,
@@ -70,7 +71,7 @@ export function FooterContent({ menu }) {
               dành cho HR.
             </p>
           </div>
-          <ul className="flex mt-5 space-x-6">
+          <ul className="flex my-5 space-x-6">
             <li>
               <Link href="https://www.facebook.com/groups/xomhr" title="Facebook Group">
                 <svg
@@ -120,6 +121,7 @@ export function FooterContent({ menu }) {
               </Link>
             </li>
           </ul>
+          <DMCABadge />
         </div>
         <div>
           <FooterHeader>Tài liệu</FooterHeader>
