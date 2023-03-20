@@ -1,4 +1,24 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import * as fs from 'fs'
+import * as path from 'path'
+
+class InlineStylesHead extends Head {
+  getCssLinks(files) {
+    return files.sharedFiles
+      .filter((file) => /\.css$/.test(file))
+      .filter((file) => fs.existsSync(path.join(process.cwd(), '.next', file)))
+      .map((file) => (
+        <style
+          key={file}
+          nonce={this.props.nonce}
+          data-href={`${this.context.assetPrefix}/_next/${file}`}
+          dangerouslySetInnerHTML={{
+            __html: fs.readFileSync(path.join(process.cwd(), '.next', file), 'utf-8'),
+          }}
+        />
+      ))
+  }
+}
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx) {
@@ -9,7 +29,7 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head>
+        <InlineStylesHead>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -34,11 +54,10 @@ export default class Document extends NextDocument {
             }`,
             }}
           />
-        </Head>
+        </InlineStylesHead>
         <body>
           <Main />
           <NextScript />
-          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async />
         </body>
       </Html>
     )

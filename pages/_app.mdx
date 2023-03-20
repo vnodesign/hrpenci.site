@@ -1,6 +1,5 @@
 import '../scss/style.scss'
-import { GAScript } from '@components/GoogleAnalytics'
-import { UMScript } from '@components/UmamiAnalytics'
+import { Analytics } from '@components/Analytics'
 import { FBChatScript } from '@components/Facebook/CustomizeChat'
 import CopyLink from '@components/CopyLink'
 
@@ -11,9 +10,7 @@ export default function Nextra({ Component, pageProps }) {
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
       <FBChatScript />
-      <GAScript />
-      <UMScript />
-      <CopyLink />
+      <Analytics />
     </>
   )
 }
