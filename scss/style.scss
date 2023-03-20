@@ -49,6 +49,9 @@ body {
   img {
     @apply w-full aspect-video;
   }
+  .subheading-anchor {
+    @apply hidden;
+  }
 }
 
 .content-container {
