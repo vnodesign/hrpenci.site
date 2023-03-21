@@ -23,27 +23,27 @@ const nextConfig = {
       {
         source: '/front-end/:slug',
         destination: '/docs/front-end/:slug',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/back-end/:slug',
         destination: '/docs/back-end/:slug',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/linux/:slug',
         destination: '/docs/linux/:slug',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/design/:slug',
         destination: '/docs/design/:slug',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/nang-cao/:slug',
         destination: '/docs/nang-cao/:slug',
-        permanent: true,
+        permanent: false,
       },
     ]
   },

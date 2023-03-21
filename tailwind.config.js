@@ -8,5 +8,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  darkMode: ['class', 'html[class~="dark"]'],
+  darkMode: 'class',
 }
