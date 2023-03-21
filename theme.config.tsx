@@ -9,7 +9,7 @@ export default {
   project: {
     link: 'https://github.com/vnodesign/hr-document',
   },
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/docs/',
+  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/master/',
   useNextSeoProps() {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
