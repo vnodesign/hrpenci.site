@@ -2,13 +2,12 @@
 import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
+import Github from '@components/Social'
 import Navigation from '@components/Navigation'
+import HeaderLogo from '@components/HeaderLogo'
 import { Footer } from '@components/Footer'
 
 export default {
-  project: {
-    link: 'https://github.com/vnodesign/hr-document',
-  },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/master/',
   useNextSeoProps() {
     const { asPath } = useRouter()
@@ -70,7 +69,8 @@ export default {
       ],
     }
   },
-  logo: <strong>HR Documentation</strong>,
+  logo: HeaderLogo,
+  logoLink: false,
   search: {
     emptyResult: (
       <>
@@ -81,30 +81,20 @@ export default {
     ),
     placeholder: 'Tìm kiếm tài liệu...',
   },
-  head() {
+  head: function useHead() {
     return (
       <>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Language" content="vi" />
         <meta name="apple-mobile-web-app-title" content="HR Documentation" />
+        <meta name="application-name" content="HR Documentation" />
         <meta name="msapplication-TileImage" content="/static/apple-touch-icon-144x144.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/static/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/static/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/static/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
+        <link rel="shortcut icon" href="/static/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
       </>
     )
   },
   sidebar: {
     defaultMenuCollapseLevel: 1,
-    toggleButton: true,
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -143,6 +133,7 @@ export default {
   darkMode: true,
   navbar: {
     component: Navigation,
+    extraContent: Github,
   },
   footer: {
     component: Footer,

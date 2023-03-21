@@ -1,18 +1,18 @@
 import React from 'react'
 
-export default function CopyLink() {
-  function addLink(e) {
-    const selection = window.getSelection().toString()
-    if (selection) {
-      const pagelink = `\n\nNguồn: ${document.location.href}`
-      e.clipboardData.setData('text/plain', selection + pagelink)
-      e.preventDefault()
-    }
+function handleCopy(e) {
+  const selection = window.getSelection().toString()
+  if (selection && document) {
+    const pagelink = `\n\nNguồn: ${document.location.href}`
+    e.clipboardData.setData('text/plain', selection + pagelink)
+    e.preventDefault()
   }
+}
 
+export default function CopyLink() {
   React.useEffect(() => {
-    document.addEventListener('copy', addLink)
-    return () => document.removeEventListener('copy', addLink)
+    document.addEventListener('copy', handleCopy)
+    return () => document.removeEventListener('copy', handleCopy)
   }, [])
 
   return null

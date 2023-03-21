@@ -16,37 +16,37 @@ const withNextra = require('nextra')({
   readingTime: true,
 })
 
-const nextConfig = {
+const nextConfig = withNextra({
   reactStrictMode: true,
   async redirects() {
     return [
       {
-        source: '/front-end/:slug',
-        destination: '/docs/front-end/:slug',
-        permanent: false,
+        source: '/front-end/:path*',
+        destination: '/docs/front-end/:path*',
+        permanent: true,
       },
       {
-        source: '/back-end/:slug',
-        destination: '/docs/back-end/:slug',
-        permanent: false,
+        source: '/back-end/:path*',
+        destination: '/docs/back-end/:path*',
+        permanent: true,
       },
       {
-        source: '/linux/:slug',
-        destination: '/docs/linux/:slug',
-        permanent: false,
+        source: '/linux/:path*',
+        destination: '/docs/linux/:path*',
+        permanent: true,
       },
       {
-        source: '/design/:slug',
-        destination: '/docs/design/:slug',
-        permanent: false,
+        source: '/design/:path*',
+        destination: '/docs/design/:path*',
+        permanent: true,
       },
       {
-        source: '/nang-cao/:slug',
-        destination: '/docs/nang-cao/:slug',
-        permanent: false,
+        source: '/nang-cao/:path*',
+        destination: '/docs/nang-cao/:path*',
+        permanent: true,
       },
     ]
   },
-}
+})
 
-module.exports = withNextra(withPWA(nextConfig))
+module.exports = withPWA(nextConfig)

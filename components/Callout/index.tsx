@@ -1,23 +1,17 @@
 import { ReactElement, ReactNode } from 'react'
 import cn from 'clsx'
-import { InformationCircleIcon } from 'nextra/icons'
+import { MdLightbulb, MdError, MdInfo, MdWarning } from 'react-icons/md'
 
-const DEFAULT_CLASS = cn(
-  'bg-orange-100 border-orange-500 text-orange-700 dark:bg-orange-200 dark:text-orange-800'
-)
-const ERROR_CLASS = cn('bg-red-100 border-red-500 text-red-700 dark:bg-red-200 dark:text-red-800')
-const INFO_CLASS = cn(
-  'bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-200 dark:text-blue-800'
-)
-const WARNING_CLASS = cn(
-  'bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800'
-)
+const DEFAULT_CLASS = cn('bg-orange-100 text-orange-800 dark:text-orange-300 dark:bg-orange-200')
+const ERROR_CLASS = cn('bg-red-200 text-red-900 dark:text-red-200 dark:bg-red-600')
+const INFO_CLASS = cn('bg-blue-100 text-blue-800 dark:text-blue-300 dark:bg-blue-200')
+const WARNING_CLASS = cn('bg-yellow-100 text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800')
 
 const TypeToEmoji = {
-  default: '💡',
-  error: '🚫',
-  info: <InformationCircleIcon className="mt-1" />,
-  warning: '⚠️',
+  default: <MdLightbulb className="w-5 h-5 mt-1" />,
+  error: <MdError className="w-5 h-5 mt-1" />,
+  info: <MdInfo className="w-5 h-5 mt-1" />,
+  warning: <MdWarning className="w-5 h-5 mt-1" />,
 }
 
 type CalloutType = keyof typeof TypeToEmoji
@@ -41,9 +35,16 @@ export function Callout({
   }
 
   return (
-    <div className={cn('my-4 border-t-4 p-4', classByType[type])}>
-      <div className="flex m-0 text-base font-semibold">{emoji}</div>
-      <div>{children}</div>
+    <div className={cn('flex rounded-lg callout mt-6', classByType[type])}>
+      <div
+        className="py-2 pl-3 pr-2 text-xl select-none"
+        style={{
+          fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+        }}
+      >
+        {emoji}
+      </div>
+      <div className="py-2 pr-4 overflow-auto">{children}</div>
     </div>
   )
 }

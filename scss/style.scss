@@ -42,12 +42,20 @@ body {
   scroll-behavior: smooth;
 }
 
-.nextra-content {
-  .nextra-body-typesetting-article {
-    font-feature-settings: unset;
+.nextra-nav-container {
+  .nextra-nav-container-blur {
+    @apply backdrop-blur-[20px] backdrop-saturate-[180%]
   }
-  img {
-    @apply w-full aspect-video;
+}
+
+.nextra-content {
+  .nextra-body-typesetting-article,
+  .nextra-body-typesetting-article p,
+  .nextra-body-typesetting-article h1,
+  .nextra-body-typesetting-article h2,
+  .nextra-body-typesetting-article h3,
+  .nextra-body-typesetting-article h4 {
+    line-height: 1.75 !important;
   }
   .subheading-anchor {
     @apply hidden;
@@ -59,4 +67,8 @@ body {
   strong {
     @apply text-current no-underline font-bold;
   }
+}
+
+code {
+  @apply text-sm;
 }
