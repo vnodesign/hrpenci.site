@@ -45,7 +45,7 @@ function DocsSwitcher() {
           'indeterminate:after:hidden',
           {
             'after:hidden': !site,
-            'after:translate-x-[46px]': site === 'pack',
+            'after:translate-x-[46px]': site === 'blog',
           }
         )}
       />
