@@ -8,20 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: [`'Inter'`, 'sans-serif'],
-        'space-grotesk': ['Space Grotesk', 'monospace'],
-        mono: [
-          'Menlo',
-          'Monaco',
-          'Lucida Console',
-          'Liberation Mono',
-          'DejaVu Sans Mono',
-          'Bitstream Vera Sans Mono',
-          'Courier New',
-          'monospace',
-        ],
-      },
       colors: {
         dark: '#000',
         gray: colors.neutral,
