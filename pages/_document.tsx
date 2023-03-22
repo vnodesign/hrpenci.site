@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="vi" className="dark" prefix="og: https://ogp.me/ns#">
+      <Html lang="vi" prefix="og: https://ogp.me/ns#">
         <Head>
           <script
             type="application/ld+json"
