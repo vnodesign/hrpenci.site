@@ -2,7 +2,7 @@ import cn from 'clsx'
 import { useRouter } from 'next/router'
 import Link from './Link'
 
-export type DocSite = 'blog' | 'docs';
+export type DocSite = 'blog' | 'docs'
 
 export function useDocsSite(): DocSite | undefined {
   const { pathname } = useRouter()
@@ -15,22 +15,22 @@ export function useDocsSite(): DocSite | undefined {
     return 'blog'
   }
 
-  return undefined;
+  return undefined
 }
 
 function DocsSiteSwitcherLink({ href, text, isActive }) {
   const classes =
-    'py-1 transition-colors duration-300 inline-block w-[50px] cursor-pointer hover:text-black dark:hover:text-white';
+    'py-1 transition-colors duration-300 inline-block w-[50px] cursor-pointer hover:text-black dark:hover:text-white'
 
   const conditionalClasses = {
     'text-black dark:text-white': !!isActive,
-  };
+  }
 
   return (
     <Link href={href} className={cn(classes, conditionalClasses)}>
       {text}
     </Link>
-  );
+  )
 }
 
 function DocsSwitcher() {
@@ -60,7 +60,7 @@ function DocsSwitcher() {
         <DocsSiteSwitcherLink href='/blog' text='Blog' isActive={site === 'blog'} />
       </span>
     </div>
-  );
+  )
 }
 
 export default DocsSwitcher
