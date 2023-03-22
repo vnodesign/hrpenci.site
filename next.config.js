@@ -13,11 +13,10 @@ const withNextra = require('nextra')({
     codeblocks: false,
   },
   defaultShowCopyCode: true,
-  readingTime: true,
 })
 
 const nextConfig = withNextra({
-  reactStrictMode: true,
+  swcMinify: true,
   async redirects() {
     return [
       {
@@ -46,6 +45,14 @@ const nextConfig = withNextra({
         permanent: true,
       },
     ]
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+
+    return config
   },
 })
 

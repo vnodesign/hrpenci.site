@@ -20,10 +20,10 @@ export function useDocsSite(): DocSite | undefined {
 
 function DocsSiteSwitcherLink({ href, text, isActive }) {
   const classes =
-    'py-1 transition-colors duration-300 inline-block w-[50px] cursor-pointer hover:text-black dark:hover:text-white'
+    'py-1 font-semibold transition-colors duration-300 inline-block w-[50px] cursor-pointer'
 
   const conditionalClasses = {
-    'text-black dark:text-white': !!isActive,
+    'text-sky-600 dark:text-sky-400': !!isActive,
   }
 
   return (
@@ -34,30 +34,30 @@ function DocsSiteSwitcherLink({ href, text, isActive }) {
 }
 
 function DocsSwitcher() {
-  const site = useDocsSite()
+  const currentSite = useDocsSite()
 
   return (
     <div className="relative flex items-center justify-between p-2 text-xl group">
       <span
         className={cn(
-          'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-[8px] border border-[#dedfde] dark:border-[#333333] p-1 duration-300 ease-in-out',
-          'after:h-[24px] after:w-[44px] after:rounded-md dark:after:bg-[#333333] after:shadow-sm after:duration-300 after:border dark:after:border-[#333333] after:border-[#666666]/100 after:bg-gradient-to-b after:from-[#3286F1] after:to-[#C33AC3] after:opacity-20 dark:after:opacity-100 dark:after:bg-none',
+          'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-lg border border-neutral-200/70 dark:border-primary-100/10 p-1 duration-300 ease-in-out',
+          'after:h-[24px] after:w-[44px] after:rounded-md after:duration-300 after:bg-primary-50 after:dark:bg-primary-500/10',
           'indeterminate:after:hidden',
           {
-            'after:hidden': !site,
-            'after:translate-x-[46px]': site === 'blog',
+            'after:hidden': !currentSite,
+            'after:translate-x-[46px]': currentSite === 'blog',
           }
         )}
       />
 
       <span
         className={cn(
-          'z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-[#666666] dark:text-[#888888]',
-          { 'hover:text-black dark:hover:text-white': site }
+          'z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-gray-500 dark:text-gray-400',
+          { 'hover:text-gray-900 dark:hover:text-gray-300': currentSite }
         )}
       >
-        <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={site === 'docs'} />
-        <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={site === 'blog'} />
+        <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={currentSite === 'docs'} />
+        <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={currentSite === 'blog'} />
       </span>
     </div>
   )

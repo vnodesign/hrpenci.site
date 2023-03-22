@@ -1,11 +1,13 @@
 import Script from 'next/script'
 
-export function FBChatScript() {
+export function CustomizeChat() {
   return (
     <>
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
       <Script
         id="fb-chat"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             var chatbox = document.getElementById('fb-customer-chat');

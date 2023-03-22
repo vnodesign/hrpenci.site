@@ -21,6 +21,9 @@
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
+    "@juggle/resize-observer": "^3.4.0",
+    "@svgr/webpack": "^6.5.1",
     "clsx": "^1.2.1",
     "next": "^13.2.4",
     "next-pwa": "^5.6.0",
@@ -46,6 +49,6 @@
     "prettier": "^2.8.4",
     "sass": "^1.59.3",
     "tailwindcss": "^3.2.7",
-    "typescript": "^5.0.0"
+    "typescript": ">=3.3.1 || <5.0.0"
   }
 }

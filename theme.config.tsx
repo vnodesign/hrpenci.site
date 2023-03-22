@@ -1,15 +1,18 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
-import Github from '@components/Social'
 import Navigation from '@components/Navigation'
 import HeaderLogo from '@components/HeaderLogo'
 import { Footer } from '@components/Footer'
 
-export default {
+const siteUrl = 'https://hr.penci.me'
+
+const theme = {
+  project: {
+    link: 'https://github.com/vnodesign/hr-document',
+  },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/master/',
-  useNextSeoProps() {
+  useNextSeoProps: function SEO() {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
 
@@ -18,8 +21,8 @@ export default {
       : 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
 
     const ogImage = frontMatter?.image
-      ? `https://hr.penci.me${frontMatter.image}`
-      : 'https://hr.penci.me/static/documentation-card.png'
+      ? `${siteUrl}${frontMatter.image}`
+      : `${siteUrl}/static/documentation-card.png`
 
     const ogDescription = frontMatter?.description
       ? frontMatter.description
@@ -27,12 +30,14 @@ export default {
 
     const title = frontMatter?.title || 'HR Documentation'
 
+    const fullUrl = asPath === '/' ? siteUrl : `${siteUrl}${asPath}`
+
     return {
       titleTemplate: ogTitle,
       description: ogDescription,
-      canonical: `https://hr.penci.me${asPath}`,
+      canonical: `${fullUrl}`,
       openGraph: {
-        url: `https://hr.penci.me${asPath}`,
+        url: `${fullUrl}`,
         title: ogTitle,
         description: ogDescription,
         images: [
@@ -81,15 +86,19 @@ export default {
     ),
     placeholder: 'Tìm kiếm tài liệu...',
   },
-  head: function useHead() {
+  head: function Head() {
     return (
       <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="apple-mobile-web-app-title" content="HR Documentation" />
         <meta name="application-name" content="HR Documentation" />
         <meta name="msapplication-TileImage" content="/static/apple-touch-icon-144x144.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="shortcut icon" href="/static/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
+        <link rel="prefetch" href="/docs" as="document" />
+        <link rel="prefetch" href="/blog" as="document" />
+        <link rel="prefetch" href="/interview" as="document" />
       </>
     )
   },
@@ -130,12 +139,13 @@ export default {
   serverSideError: {
     content: 'Gửi vấn đề về lỗi trong url \u2192',
   },
-  darkMode: true,
   navbar: {
     component: Navigation,
-    extraContent: Github,
   },
   footer: {
     component: Footer,
   },
+  primaryHue: 200,
 }
+
+export default theme

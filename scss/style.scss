@@ -1,33 +1,5 @@
 @import 'tailwindcss/utilities';
 
-:root {
-  --shiki-color-text: #24292f;
-  --shiki-color-background: #ffffff;
-  --shiki-token-constant: #0550ae;
-  --shiki-token-string: #24292f;
-  --shiki-token-comment: #6e7781;
-  --shiki-token-keyword: #cf222e;
-  --shiki-token-parameter: #24292f;
-  --shiki-token-function: #8250df;
-  --shiki-token-string-expression: #0a3069;
-  --shiki-token-punctuation: #24292f;
-  --shiki-token-link: #000012;
-}
-
-.dark {
-  --shiki-color-text: #c9d1d9;
-  --shiki-color-background: #0d1117;
-  --shiki-token-constant: #79c0ff;
-  --shiki-token-string: #a5d6ff;
-  --shiki-token-comment: #8b949e;
-  --shiki-token-keyword: #ff7b72;
-  --shiki-token-parameter: #c9d1d9;
-  --shiki-token-function: #d2a8ff;
-  --shiki-token-string-expression: #a5d6ff;
-  --shiki-token-punctuation: #c9d1d9;
-  --shiki-token-link: #000012;
-}
-
 html {
   font-feature-settings: unset !important;
   color-scheme: unset !important;
@@ -71,4 +43,19 @@ body {
 
 code {
   @apply text-sm;
+}
+
+.dark .invert-on-dark {
+  filter: invert(1) brightness(1.8);
+}
+
+.bar-of-progress::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px currentColor, 0 0 5px currentColor;
+  transform: rotate(3deg) translate(0, -4px);
 }

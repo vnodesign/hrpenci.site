@@ -1,16 +1,3 @@
 import '../scss/style.scss'
-import { Analytics } from '@components/Analytics'
-import { FBChatScript } from '@components/Facebook/CustomizeChat'
-import CopyLink from '@components/CopyLink'
 
-export default function Nextra({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <div id="fb-root"></div>
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <FBChatScript />
-      <Analytics />
-    </>
-  )
-}
+export { default } from '@components/_app.tsx'
