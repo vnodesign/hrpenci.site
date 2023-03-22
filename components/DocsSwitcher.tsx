@@ -37,7 +37,7 @@ function DocsSwitcher() {
   const site = useDocsSite()
 
   return (
-    <div className='relative flex items-center justify-between p-2 text-xl group'>
+    <div className="relative flex items-center justify-between p-2 text-xl group">
       <span
         className={cn(
           'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-[8px] border border-[#dedfde] dark:border-[#333333] p-1 duration-300 ease-in-out',
@@ -56,8 +56,8 @@ function DocsSwitcher() {
           { 'hover:text-black dark:hover:text-white': site }
         )}
       >
-        <DocsSiteSwitcherLink href='/docs' text='Docs' isActive={site === 'docs'} />
-        <DocsSiteSwitcherLink href='/blog' text='Blog' isActive={site === 'blog'} />
+        <DocsSiteSwitcherLink href='/docs' text="Docs" isActive={site === 'docs'} />
+        <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={site === 'blog'} />
       </span>
     </div>
   )
