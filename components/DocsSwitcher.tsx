@@ -33,7 +33,7 @@ function DocsSiteSwitcherLink({ href, text, isActive }) {
   );
 }
 
-function DocsSiteSwitcher() {
+function DocsSwitcher() {
   const site = useDocsSite()
 
   return (
@@ -63,4 +63,4 @@ function DocsSiteSwitcher() {
   );
 }
 
-export default DocsSiteSwitcher
+export default DocsSwitcher
