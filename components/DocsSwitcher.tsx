@@ -56,7 +56,7 @@ function DocsSwitcher() {
           { 'hover:text-black dark:hover:text-white': site }
         )}
       >
-        <DocsSiteSwitcherLink href='/docs' text="Docs" isActive={site === 'docs'} />
+        <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={site === 'docs'} />
         <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={site === 'blog'} />
       </span>
     </div>
