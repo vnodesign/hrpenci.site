@@ -1,12 +1,43 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,tsx}',
+    './pages/**/*.{md,mdx,tsx}',
     './theme.config.tsx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [`'Inter'`, 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'monospace'],
+        mono: [
+          'Menlo',
+          'Monaco',
+          'Lucida Console',
+          'Liberation Mono',
+          'DejaVu Sans Mono',
+          'Bitstream Vera Sans Mono',
+          'Courier New',
+          'monospace',
+        ],
+      },
+      colors: {
+        dark: '#000',
+        gray: colors.neutral,
+        blue: colors.blue,
+        orange: colors.orange,
+        green: colors.green,
+        red: colors.red,
+        yellow: colors.yellow,
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        betterhover: { raw: '(hover: hover)' },
+      },
+    },
   },
-  plugins: [],
   darkMode: 'class',
 }
