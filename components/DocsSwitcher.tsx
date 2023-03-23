@@ -15,7 +15,7 @@ export function useDocsSite(): DocSite | undefined {
     return 'blog'
   }
 
-  return undefined
+  return null
 }
 
 function DocsSiteSwitcherLink({ href, text, isActive }) {
@@ -23,7 +23,7 @@ function DocsSiteSwitcherLink({ href, text, isActive }) {
     'py-1 font-semibold transition-colors duration-300 inline-block w-[50px] cursor-pointer'
 
   const conditionalClasses = {
-    'text-sky-600 dark:text-sky-400': !!isActive,
+    'text-primary-600': !!isActive,
   }
 
   return (

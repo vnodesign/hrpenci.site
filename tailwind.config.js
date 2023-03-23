@@ -36,11 +36,14 @@ module.exports = {
           900: makePrimaryColor(24),
         },
       },
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        betterhover: { raw: '(hover: hover)' },
+      keyframes: {
+        'nprogress-spinner': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        'nprogress-spinner': 'nprogress-spinner 400ms linear infinite',
       },
     },
   },

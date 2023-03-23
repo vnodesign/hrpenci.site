@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import Link from '@components/Link'
-import Hero from '@components/home/Hero'
+import Hero from '@components/Home/Hero'
 import { getPagesUnderRoute } from 'nextra/context'
 import { BsLayoutSplit, BsServer, BsPaletteFill } from 'react-icons/bs'
 
@@ -45,7 +45,7 @@ export function DocsBackEnd() {
               key={page.route}
               href={page.route}
               title={page.meta?.title || page.frontMatter?.title || page.name}
-              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
             >
               <h3 className="font-semibold text-xl">
                 {page.meta?.title || page.frontMatter?.title || page.name}
@@ -99,7 +99,7 @@ export function DocsDesign() {
               key={page.route}
               href={page.route}
               title={page.meta?.title || page.frontMatter?.title || page.name}
-              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+              className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
             >
               <h3 className="font-semibold text-xl">
                 {page.meta?.title || page.frontMatter?.title || page.name}
@@ -127,7 +127,7 @@ export function DocsDesign() {
         <Link
           href="/docs/front-end"
           title="Tài liệu về Front End"
-          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
         >
           <BsLayoutSplit className="w-12 h-12 mx-auto" />
           <h3 className="font-semibold text-xl mt-3.5">Front End</h3>
@@ -135,7 +135,7 @@ export function DocsDesign() {
         <Link
           href="/docs/back-end"
           title="Tài liệu về Back End"
-          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
         >
           <BsServer className="w-12 h-12 mx-auto" />
           <h3 className="font-semibold text-xl mt-3.5">Back End</h3>
@@ -143,7 +143,7 @@ export function DocsDesign() {
         <Link
           href="/docs/linux"
           title="Tài liệu về Linux"
-          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
         >
           <BsServer className="w-12 h-12 mx-auto" />
           <h3 className="font-semibold text-xl mt-3.5">Linux</h3>
@@ -151,7 +151,7 @@ export function DocsDesign() {
         <Link
           href="/docs/design"
           title="Tài liệu về Design"
-          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-[#000]"
+          className="block py-12 px-8 text-center rounded-lg bg-gray-100 dark:bg-black"
         >
           <BsPaletteFill className="w-12 h-12 mx-auto" />
           <h3 className="font-semibold text-xl mt-3.5">Design</h3>
@@ -160,7 +160,7 @@ export function DocsDesign() {
     </div>
   </div>
 </div>
-<div className="py-10 bg-gray-100 dark:bg-[#000]">
+<div className="py-10 bg-gray-100 dark:bg-black">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Front End
@@ -182,7 +182,7 @@ export function DocsDesign() {
     <DocsBackEnd />
   </div>
 </div>
-<div className="py-10 bg-gray-100 dark:bg-[#000]">
+<div className="py-10 bg-gray-100 dark:bg-black">
   <div className="content-container">
     <h2 className="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
       Tài liệu về Linux

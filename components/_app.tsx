@@ -1,34 +1,42 @@
-import { ReactElement } from 'react'
-import { AppProps } from 'next/app'
+import { SSRProvider } from '@react-aria/ssr'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import type { ReactNode } from 'react'
+import type { AppProps } from 'next/app'
+import NProgress from 'nprogress'
 import { Scripts } from './Scripts'
 import CopyLink from './CopyLink'
-import Router from 'next/router'
-import ProgressBar from '@badrap/bar-of-progress'
 
-const progress = new ProgressBar({
-  size: 2,
-  color: '#00aaff',
-  className: 'bar-of-progress',
-  delay: 100,
-})
-
-// this fixes safari jumping to the bottom of the page
-// when closing the search modal using the `esc` key
-if (typeof window !== 'undefined') {
-  progress.start()
-  progress.finish()
+type NextraAppProps = AppProps & {
+  Component: AppProps['Component'] & {
+    getLayout: (page: ReactNode) => ReactNode
+  }
 }
 
-Router.events.on('routeChangeStart', () => progress.start())
-Router.events.on('routeChangeComplete', () => progress.finish())
-Router.events.on('routeChangeError', () => progress.finish())
+export default function Nextra({ Component, pageProps }: NextraAppProps) {
+  const router = useRouter()
+  NProgress.configure({ showSpinner: false })
+  useEffect(() => {
+    const handleRouteStart = () => NProgress.start()
+    const handleRouteDone = () => NProgress.done()
 
-export default function Nextra({ Component, pageProps }: AppProps): ReactElement {
+    router.events.on('routeChangeStart', handleRouteStart)
+    router.events.on('routeChangeComplete', handleRouteDone)
+    router.events.on('routeChangeError', handleRouteDone)
+
+    return () => {
+      // Make sure to remove the event handler on unmount!
+      router.events.off('routeChangeStart', handleRouteStart)
+      router.events.off('routeChangeComplete', handleRouteDone)
+      router.events.off('routeChangeError', handleRouteDone)
+    }
+  }, [router.events])
+
   return (
-    <>
+    <SSRProvider>
       <Component {...pageProps} />
       <Scripts />
       <CopyLink />
-    </>
+    </SSRProvider>
   )
 }

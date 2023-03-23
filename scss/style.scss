@@ -2,7 +2,6 @@
 
 html {
   font-feature-settings: unset !important;
-  color-scheme: unset !important;
 }
 
 body {
@@ -12,12 +11,6 @@ body {
 html,
 body {
   scroll-behavior: smooth;
-}
-
-.nextra-nav-container {
-  .nextra-nav-container-blur {
-    @apply backdrop-blur-[20px] backdrop-saturate-[180%]
-  }
 }
 
 .nextra-content {
@@ -49,13 +42,30 @@ code {
   filter: invert(1) brightness(1.8);
 }
 
-.bar-of-progress::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px currentColor, 0 0 5px currentColor;
-  transform: rotate(3deg) translate(0, -4px);
+#nprogress {
+  @apply pointer-events-none;
+  .bar {
+    @apply bg-[#3f83f8] fixed z-[9999] top-0 left-0 w-full h-0.5
+  }
+
+  .peg {
+    @apply block absolute right-0 w-[100px] h-full shadow-[0_0_10px_rgb(63,131,248),0_0_5px_rgb(63,131,248)] opacity-[1] [transform:translate(0px,-4px)] rotate-3
+  }
+
+  .spinner {
+    @apply block fixed z-[1031] top-[15px] right-[15px]
+  }
+
+  .spinner-icon {
+    @apply w-[18px] h-[18px] box-border border-2 border-transparent border-t-[#3f83f8] border-l-[#3f83f8] rounded-[50%] animate-nprogress-spinner
+  }
+}
+
+.nprogress-custom-parent {
+  @apply overflow-hidden relative;
+  #nprogress {
+    .spinner, .bar {
+      @apply absolute
+    }
+  }
 }

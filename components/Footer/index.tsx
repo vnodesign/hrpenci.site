@@ -65,12 +65,18 @@ const navigation = {
     { name: 'Chính sách bảo mật', href: '/chinh-sach-bao-mat' },
     { name: 'Điều khoản', href: '/dieu-khoan' },
   ],
+  software: [
+    { name: '1Office', href: 'https://1office.vn' },
+    { name: 'MISA AMIS', href: 'https://amis.misa.vn' },
+    { name: 'HappyTime', href: 'https://happytime.vn' },
+    { name: 'CoffeeHR', href: 'https://coffeehr.com.vn' },
+  ],
 }
 
 export function FooterContent() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 lg:grid-cols-5 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 md:grid-cols-3">
         <div>
           <FooterHeader>Tài liệu IT</FooterHeader>
           <ul>
@@ -131,6 +137,18 @@ export function FooterContent() {
             ))}
           </ul>
         </div>
+        <div>
+          <FooterHeader>Phần mềm quản lý nhân sự</FooterHeader>
+          <ul>
+            {navigation.software.map((item) => (
+              <li key={item.name} className="mb-4">
+                <FooterLink href={item.href} title={item.name}>
+                  {item.name}
+                </FooterLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <hr className="my-6 lg:my-8 sm:mx-auto dark:border-neutral-800" />
       <div className="sm:flex sm:items-center sm:justify-between">
@@ -159,15 +177,13 @@ export function FooterContent() {
 export function Footer({ menu }: { menu?: boolean }): ReactElement {
   const config = useConfig()
   return (
-    <footer className="border-t justify-self-end border-t-gray-100 dark:border-t-neutral-900">
-      {menu ? (
-        <>
-          <div className="max-w-[90rem] mx-auto py-2 px-4 flex gap-2">
-            {config.darkMode && <ThemeSwitch />}
-          </div>
-          <hr className="dark:border-neutral-800" />
-        </>
-      ) : null}
+    <footer className="bg-gray-100 justify-self-end dark:bg-neutral-900">
+      {menu && (
+        <div className="max-w-[90rem] mx-auto py-2 px-4 flex gap-2">
+          {config.darkMode && <ThemeSwitch />}
+        </div>
+      )}
+      <hr className="dark:border-neutral-800" />
       <div className="max-w-[90rem] mx-auto py-6 md:py-8 lg:py-10 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400">
         <FooterContent />
       </div>

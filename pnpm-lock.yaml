@@ -1,8 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@badrap/bar-of-progress': ^0.2.2
-  '@juggle/resize-observer': ^3.4.0
+  '@react-aria/ssr': ^3.5.0
   '@svgr/webpack': ^6.5.1
   '@types/node': ^18.15.3
   '@types/react': ^18.0.28
@@ -19,6 +18,7 @@ specifiers:
   next-sitemap: ^4.0.5
   nextra: ^2.2.19
   nextra-theme-docs: ^2.2.19
+  nprogress: ^0.2.0
   postcss: ^8.4.21
   prettier: ^2.8.4
   react: ^18.2.0
@@ -30,8 +30,7 @@ specifiers:
   typescript: '>=3.3.1 || <5.0.0'
 
 dependencies:
-  '@badrap/bar-of-progress': 0.2.2
-  '@juggle/resize-observer': 3.4.0
+  '@react-aria/ssr': 3.5.0_react@18.2.0
   '@svgr/webpack': 6.5.1
   clsx: 1.2.1
   next: 13.2.4_dpxg4zawgzznnxdt7it3f5d76m
@@ -39,6 +38,7 @@ dependencies:
   next-sitemap: 4.0.5_next@13.2.4
   nextra: 2.2.19_ld2jel3hspngo3u5lti2kgl2sq
   nextra-theme-docs: 2.2.19_i765vautotixoofbdi6dinfkwe
+  nprogress: 0.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
@@ -1346,10 +1346,6 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@badrap/bar-of-progress/0.2.2:
-    resolution: {integrity: sha512-Ig7MdFQM3OA7Ror5UB1ZutXNZFwxh6YExZvcd6EZloOgcXUR8PKNLH2wUVoeh92NMPnPWr6J/l9Mp+f3z7O7MQ==}
-    dev: false
-
   /@corex/deepmerge/4.0.37:
     resolution: {integrity: sha512-PX90bEnrLdxd5e6rSFWsghExMuSw0Uov3fWJuuaoFuUQIS/446diu/4seExK5b+43L+SOBbd2uBGwYUkG1JfCw==}
     dev: false
@@ -1451,10 +1447,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-    dev: false
-
-  /@juggle/resize-observer/3.4.0:
-    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: false
 
   /@mdx-js/mdx/2.3.0:
@@ -1766,6 +1758,15 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@react-aria/ssr/3.5.0_react@18.2.0:
+    resolution: {integrity: sha512-h0MJdSWOd1qObLnJ8mprU31wI8tmKFJMuwT22MpWq6psisOOZaga6Ml4u6Ee6M6duWWISjXvqO4Sb/J0PBA+nQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+    dependencies:
+      '@swc/helpers': 0.4.14
+      react: 18.2.0
     dev: false
 
   /@rollup/plugin-babel/5.3.1_4tnfxcmsyr7y5qv3uwkivwqysm:
@@ -5542,6 +5543,10 @@ packages:
     dependencies:
       path-key: 4.0.0
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /nth-check/2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}

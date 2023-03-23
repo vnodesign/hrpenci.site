@@ -21,8 +21,7 @@
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2",
-    "@juggle/resize-observer": "^3.4.0",
+    "@react-aria/ssr": "^3.5.0",
     "@svgr/webpack": "^6.5.1",
     "clsx": "^1.2.1",
     "next": "^13.2.4",
@@ -30,6 +29,7 @@
     "next-sitemap": "^4.0.5",
     "nextra": "^2.2.19",
     "nextra-theme-docs": "^2.2.19",
+    "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",

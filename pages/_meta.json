@@ -89,17 +89,17 @@
     }
   },
   "404": {
-    "type": "page",
+    "title": "404",
+    "display": "hidden",
     "theme": {
-      "timestamp": false,
-      "typesetting": "article"
+      "layout": "raw"
     }
   },
   "500": {
-    "type": "page",
+    "title": "500",
+    "display": "hidden",
     "theme": {
-      "timestamp": false,
-      "typesetting": "article"
+      "layout": "raw"
     }
   }
 }
