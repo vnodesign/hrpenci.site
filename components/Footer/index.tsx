@@ -155,7 +155,7 @@ export function FooterContent() {
         <span className="text-sm sm:text-center">
           © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
         </span>
-        <div className="flex mt-4 space-x-6 vno-justify-center sm:mt-0">
+        <div className="flex mt-4 space-x-6 justify-center sm:mt-0">
           <Link href="https://www.facebook.com/groups/xomhr" title="Facebook Group">
             <FaFacebook className="w-5 h-5" />
           </Link>

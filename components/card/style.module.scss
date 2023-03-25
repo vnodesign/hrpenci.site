@@ -9,7 +9,7 @@
 
 .card {
   svg {
-    @apply w-6 text-[var(--color-primary)];
+    @apply w-6 text-primary-600;
     transition: color 0.3s ease;
   }
 

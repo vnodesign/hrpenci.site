@@ -79,7 +79,7 @@ function OldDocs() {
           <React.Fragment key={page.route}>
             <article>
               <div className="space-y-3">
-                <h2 className="text-2xl font-bold leading-5 tracking-tight text-slate-800 dark:text-slate-200">
+                <h2 className="leading-5 tracking-tight text-2xl font-bold text-slate-800 dark:text-slate-200">
                   <Link
                     href={page.route}
                     title={page.meta?.title || page.frontMatter?.title || page.name}

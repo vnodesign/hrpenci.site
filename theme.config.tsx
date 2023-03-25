@@ -25,9 +25,9 @@ const theme = {
       ? `${siteUrl}${frontMatter.image}`
       : `${siteUrl}/static/documentation-card.png`
 
-    const ogDescription = frontMatter?.description
-      ? frontMatter.description
-      : 'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
+    const ogDescription =
+      frontMatter?.description ||
+      'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
 
     const title = frontMatter?.title || 'HR Documentation'
 
@@ -155,7 +155,6 @@ const theme = {
           <Link
             href="/blog/khai-niem-giua-back-end-va-front-end"
             title="Khái niệm giữa Back End và Front End"
-            className="font-semibold underline"
           >
             Hãy đọc bài viết này nhé!
           </Link>{' '}

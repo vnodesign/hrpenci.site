@@ -9,7 +9,7 @@ export function Card({ children, title, icon, href, ...props }) {
       href={href}
       className={cn(
         styles['card'],
-        'group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 bg-transparent text-current no-underline shadow-sm shadow-gray-100 transition-all duration-200 dark:border-neutral-800 dark:shadow-none'
+        'flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 bg-transparent text-current no-underline shadow-sm shadow-gray-100 transition-all duration-200 dark:border-neutral-800 dark:shadow-none'
       )}
       {...props}
     >

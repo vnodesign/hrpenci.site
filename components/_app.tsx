@@ -34,7 +34,11 @@ export default function Nextra({ Component, pageProps }: NextraAppProps) {
 
   return (
     <SSRProvider>
-      <Component {...pageProps} />
+      <div className="flex flex-col min-h-screen">
+        <main className="grow">
+          <Component {...pageProps} />
+        </main>
+      </div>
       <Scripts />
       <CopyLink />
     </SSRProvider>

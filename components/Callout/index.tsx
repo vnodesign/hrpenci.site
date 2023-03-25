@@ -35,7 +35,7 @@ export function Callout({
   }
 
   return (
-    <div className={cn('flex rounded-lg callout mt-6', classByType[type])}>
+    <div className={cn('flex rounded-lg mt-6', classByType[type])}>
       <div
         className="py-2 pl-3 pr-2 text-xl select-none"
         style={{

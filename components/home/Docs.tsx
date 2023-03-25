@@ -7,7 +7,7 @@ export default function Docs() {
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu
         </h2>
-        <p className="mb-10 text-lg font-normal lg:text-center lg:text-xl lg:px-64 lg:mb-16 dark:text-neutral-300">
+        <p className="text-lg font-normal mb-10 lg:text-center lg:text-xl lg:px-64 lg:mb-16 dark:text-neutral-300">
           Tài liệu chi tiết và dễ hiểu, dễ tiếp cận với những bạn HR mới vào nghề.
         </p>
         <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">

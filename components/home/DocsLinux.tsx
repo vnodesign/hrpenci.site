@@ -34,7 +34,7 @@ function LatestDocs() {
         />
       </Link>
       <div className="mt-5 space-y-3">
-        <h2 className="text-2xl font-bold leading-5 tracking-tight">
+        <h2 className="text-2xl font-bold leading-5 tracking-tight text-slate-800 dark:text-slate-200">
           <Link
             href={latestPage.route}
             title={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
@@ -42,11 +42,13 @@ function LatestDocs() {
             {latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
           </Link>
         </h2>
-        <p className="text-base font-normal truncate">{latestPage.frontMatter?.description}</p>
+        <p className="text-base font-normal truncate text-slate-800 dark:text-slate-200">
+          {latestPage.frontMatter?.description}
+        </p>
         <Link
           href={latestPage.route}
           title={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
-          className="inline-flex items-center text-base font-semibold leading-5"
+          className="inline-flex items-center text-base font-semibold leading-5 text-slate-800 dark:text-slate-200"
         >
           Đọc thêm
           <svg
@@ -77,7 +79,7 @@ function OldDocs() {
           <React.Fragment key={page.route}>
             <article>
               <div className="space-y-3">
-                <h2 className="text-2xl font-bold leading-5 tracking-tight">
+                <h2 className="text-2xl font-bold leading-5 tracking-tight text-slate-800 dark:text-slate-200">
                   <Link
                     href={page.route}
                     title={page.meta?.title || page.frontMatter?.title || page.name}
@@ -85,11 +87,13 @@ function OldDocs() {
                     {page.meta?.title || page.frontMatter?.title || page.name}
                   </Link>
                 </h2>
-                <p className="text-base font-normal truncate">{page.frontMatter?.description}</p>
+                <p className="text-base font-normal truncate text-slate-800 dark:text-slate-200">
+                  {page.frontMatter?.description}
+                </p>
                 <Link
                   href={page.route}
                   title={page.meta?.title || page.frontMatter?.title || page.name}
-                  className="inline-flex items-center text-base font-semibold leading-5"
+                  className="inline-flex items-center text-base font-semibold leading-5 text-slate-800 dark:text-slate-200"
                 >
                   Đọc thêm
                   <svg
@@ -117,7 +121,7 @@ function OldDocs() {
 
 export default function DocsLinux() {
   return (
-    <section className="py-16 bg-gray-100 sm:py-24 dark:bg-black">
+    <section className="py-8 bg-gray-100 lg:py-24 dark:bg-black">
       <div className="px-4 mx-auto max-w-7xl">
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu về Linux
