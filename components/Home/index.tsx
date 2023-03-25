@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic'
-import Hero from './Hero'
-import Docs from './Docs'
-const DocsFrontEnd = dynamic(() => import('./DocsFrontEnd'))
-const DocsBackEnd = dynamic(() => import('./DocsBackEnd'))
-const DocsLinux = dynamic(() => import('./DocsLinux'))
-const DocsDesign = dynamic(() => import('./DocsDesign'))
+import Hero from '@components/home/Hero'
+import Docs from '@components/home/Docs'
+const DocsFrontEnd = dynamic(() => import('@components/home/DocsFrontEnd'))
+const DocsBackEnd = dynamic(() => import('@components/home/DocsBackEnd'))
+const DocsLinux = dynamic(() => import('@components/home/DocsLinux'))
+const DocsDesign = dynamic(() => import('@components/home/DocsDesign'))
 
 export default function Home() {
   return (
