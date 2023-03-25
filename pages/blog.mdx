@@ -15,28 +15,32 @@ export function BlogHeader() {
         Tổng hợp các bài viết chia sẻ về các khái niệm trong ngành IT và ngành Design.
       </p>
     </div>
-  );
+  )
 }
 
 export function BlogIndex() {
-  return getPagesUnderRoute("/blog").map((page) => {
+  return getPagesUnderRoute('/blog').map((page) => {
     return (
       <div key={page.route} className="mb-10">
-        <Link href={page.route} style={{ color: "inherit", textDecoration: "none" }} className="block font-semibold mt-8 text-2xl">
+        <Link
+          href={page.route}
+          style={{ color: 'inherit', textDecoration: 'none' }}
+          className="block font-semibold mt-8 text-2xl"
+        >
           {page.meta?.title || page.frontMatter?.title || page.name}
         </Link>
-        <p className="opacity-80" style={{ marginTop: ".5rem" }}>
-          {page.frontMatter?.description}{" "}
+        <p className="opacity-80" style={{ marginTop: '.5rem' }}>
+          {page.frontMatter?.description}{' '}
           <span className="inline-block">
-            <Link href={page.route}>{"Đọc tiếp →"}</Link>
+            <Link href={page.route}>{'Đọc tiếp →'}</Link>
           </span>
         </p>
         {page.frontMatter?.date ? (
           <p className="opacity-50 text-sm">{page.frontMatter.date}</p>
         ) : null}
       </div>
-    );
-  });
+    )
+  })
 }
 
 <BlogHeader />
