@@ -27,27 +27,26 @@ img {
   @apply text-white bg-primary-600;
 
   a {
-    @apply font-extrabold hover:underline
+    @apply font-extrabold hover:underline;
   }
 }
 
 .nextra-nav-container {
   .nextra-nav-container-blur {
     box-shadow: unset !important;
-    @apply backdrop-blur-lg border-b border-neutral-200/70 dark:border-primary-100/10
+    @apply backdrop-blur-lg border-b border-neutral-200/70 dark:border-primary-100/10;
   }
   a {
     &[aria-current] {
-      @apply text-sm leading-6 font-semibold hover:text-primary-600
+      @apply text-sm leading-6 font-semibold hover:text-primary-600;
     }
-    &[aria-current^="true"] {
-      @apply text-primary-600
+    &[aria-current^='true'] {
+      @apply text-primary-600;
     }
   }
 }
 
 .nextra-content {
-
   .nextra-body-typesetting-article,
   .nextra-body-typesetting-article p,
   .nextra-body-typesetting-article h1,
