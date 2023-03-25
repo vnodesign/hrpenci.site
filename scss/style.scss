@@ -34,7 +34,7 @@ img {
 .nextra-nav-container {
   .nextra-nav-container-blur {
     box-shadow: unset !important;
-    @apply backdrop-blur border-b border-neutral-200/70 dark:border-primary-100/10
+    @apply backdrop-blur-lg border-b border-neutral-200/70 dark:border-primary-100/10
   }
   a {
     &[aria-current] {
