@@ -1,4 +1,3 @@
-import '../scss/style.scss'
 import { SSRProvider } from '@react-aria/ssr'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
