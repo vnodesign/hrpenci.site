@@ -36,7 +36,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row">
               <Link
                 href="/docs"
-                className="flex items-center justify-center px-6 py-3 font-medium text-white rounded-full bg-sky-600"
+                className="flex items-center justify-center px-6 py-3 font-medium text-white rounded-full bg-primary-600"
                 title="Bắt đầu đọc tài liệu về IT và Design"
               >
                 Bắt đầu đọc tài liệu về IT và Design
