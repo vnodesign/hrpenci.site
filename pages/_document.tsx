@@ -1,4 +1,3 @@
-import '../scss/style.scss'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import type { DocumentInitialProps, DocumentContext } from 'next/document'
 
