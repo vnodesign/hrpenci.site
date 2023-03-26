@@ -31,6 +31,7 @@ function LatestDocs() {
           width={1200}
           height={600}
           alt={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
+          priority
         />
       </Link>
       <div className="mt-5 space-y-3">
@@ -85,7 +86,9 @@ function OldDocs() {
                     {page.meta?.title || page.frontMatter?.title || page.name}
                   </Link>
                 </h2>
-                <p className="text-base font-normal truncate">{page.frontMatter?.description}</p>
+                <p className="mb-4 text-base font-normal truncate">
+                  {page.frontMatter?.description}
+                </p>
                 <Link
                   href={page.route}
                   title={page.meta?.title || page.frontMatter?.title || page.name}

@@ -19,10 +19,10 @@ img {
 }
 
 .nextra-nav-container {
-  @apply bg-white dark:bg-dark;
+  @apply bg-white dark:bg-dark border-b border-neutral-200/70 dark:border-primary-100/10;
 
   .nextra-nav-container-blur {
-    @apply hidden
+    @apply hidden;
   }
 
   a {
@@ -30,7 +30,7 @@ img {
       @apply text-sm leading-6 font-semibold hover:text-primary-600;
     }
     &[aria-current^='true'] {
-      @apply text-primary-600;
+      @apply text-primary-600 antialiased;
     }
   }
 }
@@ -50,10 +50,23 @@ img {
   }
 
   img {
-    @apply rounded-md
+    @apply rounded-md;
   }
 }
 
 code {
   @apply text-sm;
+}
+
+.nextra-nav-container a,
+.nextra-sidebar-container a,
+.nextra-toc a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk Bold', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }

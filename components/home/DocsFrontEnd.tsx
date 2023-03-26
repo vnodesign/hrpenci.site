@@ -31,6 +31,7 @@ function LatestDocs() {
           width={1200}
           height={600}
           alt={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
+          priority
         />
       </Link>
       <div className="mt-5 space-y-3">
@@ -79,7 +80,7 @@ function OldDocs() {
           <React.Fragment key={page.route}>
             <article>
               <div className="space-y-3">
-                <h2 className="leading-5 tracking-tight text-2xl font-bold text-slate-800 dark:text-slate-200">
+                <h2 className="text-2xl font-bold leading-5 tracking-tight text-slate-800 dark:text-slate-200">
                   <Link
                     href={page.route}
                     title={page.meta?.title || page.frontMatter?.title || page.name}
@@ -87,7 +88,7 @@ function OldDocs() {
                     {page.meta?.title || page.frontMatter?.title || page.name}
                   </Link>
                 </h2>
-                <p className="text-base font-normal truncate text-slate-800 dark:text-slate-200">
+                <p className="mb-4 text-base font-normal truncate text-slate-800 dark:text-slate-200">
                   {page.frontMatter?.description}
                 </p>
                 <Link
