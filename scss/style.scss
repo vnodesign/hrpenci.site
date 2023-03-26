@@ -1,3 +1,4 @@
+@import 'nprogress/nprogress.css';
 @import 'tailwindcss/utilities';
 
 html {
@@ -17,25 +18,13 @@ img {
   content-visibility: auto;
 }
 
-.dark {
-  .nextra-banner-container {
-    background-image: unset !important;
-  }
-}
-
-.nextra-banner-container {
-  @apply text-white bg-primary-600;
-
-  a {
-    @apply font-extrabold hover:underline;
-  }
-}
-
 .nextra-nav-container {
+  @apply bg-white dark:bg-dark;
+
   .nextra-nav-container-blur {
-    box-shadow: unset !important;
-    @apply backdrop-blur-lg border-b border-neutral-200/70 dark:border-primary-100/10;
+    @apply hidden
   }
+
   a {
     &[aria-current] {
       @apply text-sm leading-6 font-semibold hover:text-primary-600;
@@ -57,39 +46,14 @@ img {
   }
 
   .subheading-anchor {
-    @apply hidden;
+    @apply sr-only;
+  }
+
+  img {
+    @apply rounded-md
   }
 }
 
 code {
   @apply text-sm;
-}
-
-#nprogress {
-  @apply pointer-events-none;
-  .bar {
-    @apply bg-[#3f83f8] fixed z-[9999] top-0 left-0 w-full h-0.5;
-  }
-
-  .peg {
-    @apply block absolute right-0 w-[100px] h-full shadow-[0_0_10px_rgb(63,131,248),0_0_5px_rgb(63,131,248)] opacity-[1] [transform:translate(0px,-4px)] rotate-3;
-  }
-
-  .spinner {
-    @apply block fixed z-[1031] top-[15px] right-[15px];
-  }
-
-  .spinner-icon {
-    @apply w-[18px] h-[18px] box-border border-2 border-transparent border-t-[#3f83f8] border-l-[#3f83f8] rounded-[50%] animate-nprogress-spinner;
-  }
-}
-
-.nprogress-custom-parent {
-  @apply overflow-hidden relative;
-  #nprogress {
-    .spinner,
-    .bar {
-      @apply absolute;
-    }
-  }
 }

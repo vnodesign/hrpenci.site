@@ -16,6 +16,7 @@ module.exports = {
         transparent: 'transparent',
         white: '#ffffff',
         black: '#000000',
+        dark: '#111111',
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',
@@ -149,15 +150,6 @@ module.exports = {
           800: makePrimaryColor(32),
           900: makePrimaryColor(24),
         },
-      },
-      keyframes: {
-        'nprogress-spinner': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-      },
-      animation: {
-        'nprogress-spinner': 'nprogress-spinner 400ms linear infinite',
       },
     },
   },

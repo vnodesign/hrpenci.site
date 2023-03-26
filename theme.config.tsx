@@ -4,7 +4,7 @@ import { useConfig } from 'nextra-theme-docs'
 import Navigation from '@components/Navigation'
 import HeaderLogo from '@components/HeaderLogo'
 import { Footer } from '@components/Footer'
-import Link from '@components/Link'
+import { MDXComponents } from '@components/MDXComponents'
 
 const siteUrl = 'https://hr.penci.me'
 
@@ -147,22 +147,9 @@ const theme = {
     component: Footer,
   },
   primaryHue: 200,
-  banner: {
-    text: () => {
-      return (
-        <>
-          Chào bạn, bạn mới tuyển dụng về IT?{' '}
-          <Link
-            href="/blog/khai-niem-giua-back-end-va-front-end"
-            title="Khái niệm giữa Back End và Front End"
-          >
-            Hãy đọc bài viết này nhé!
-          </Link>{' '}
-          (Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa Back End và Front End).
-        </>
-      )
-    },
-    key: 'backend-frontend',
+  components: MDXComponents,
+  nextThemes: {
+    defaultTheme: 'light',
   },
 }
 

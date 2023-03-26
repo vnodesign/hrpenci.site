@@ -18,11 +18,11 @@ function HeaderLogo() {
         strokeLinejoin="round"
         strokeWidth="1.5"
         viewBox="0 0 24 24"
-        className="mx-2 text-gray-500 dark:text-gray-400"
+        className="ml-2 text-gray-500 dark:text-gray-400"
       >
         <path d="M16.88 3.549L7.12 20.451" />
       </svg>
-      <div className="relative">
+      <div className="absolute left-1/2 [transform:translateX(-50%)] md:ml-3 md:relative md:left-0 md:[transform:none]">
         <DocsSwitcher />
       </div>
     </>

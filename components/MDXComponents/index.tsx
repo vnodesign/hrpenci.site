@@ -1,5 +1,5 @@
+import { Callout } from '../Callout'
+
 export const MDXComponents = {
-  ul: (props) => <ul {...props} />,
-  li: (props) => <li {...props} />,
-  hr: (props) => <hr {...props} />,
+  Callout: (props) => <Callout {...props} />,
 }
