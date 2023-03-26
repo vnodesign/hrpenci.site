@@ -122,7 +122,7 @@ function OldDocs() {
 
 export default function DocsFrontEnd() {
   return (
-    <section className="py-8 bg-gray-100 lg:pb-24 lg:py-16 dark:bg-black">
+    <section className="py-16 bg-gray-100 lg:pt-24 lg:pb-28 dark:bg-black">
       <div className="px-4 mx-auto max-w-7xl">
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu về Front End

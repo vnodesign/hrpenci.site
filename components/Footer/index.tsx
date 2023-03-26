@@ -155,17 +155,33 @@ export function FooterContent() {
         <span className="text-sm sm:text-center">
           © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
         </span>
-        <div className="flex mt-4 space-x-6 justify-center sm:mt-0">
-          <Link href="https://www.facebook.com/groups/xomhr" title="Facebook Group">
+        <div className="flex justify-center mt-4 space-x-6 sm:mt-0">
+          <Link
+            href="https://www.facebook.com/groups/xomhr"
+            title="Facebook Group"
+            className="hover:text-gray-700 hover:dark:text-white"
+          >
             <FaFacebook className="w-5 h-5" />
           </Link>
-          <Link href="https://twitter.com/tuanducdesigner" title="Twitter Profile">
+          <Link
+            href="https://twitter.com/tuanducdesigner"
+            title="Twitter Profile"
+            className="hover:text-gray-700 hover:dark:text-white"
+          >
             <FaTwitter className="w-5 h-5" />
           </Link>
-          <Link href="https://github.com/vnodesign/hr-document" title="GitHub Repository">
+          <Link
+            href="https://github.com/vnodesign/hr-document"
+            title="GitHub Repository"
+            className="hover:text-gray-700 hover:dark:text-white"
+          >
             <FaGithub className="w-5 h-5" />
           </Link>
-          <Link href="https://linkedin.com/in/tuanductran" title="Linkedin Profile">
+          <Link
+            href="https://linkedin.com/in/tuanductran"
+            title="Linkedin Profile"
+            className="hover:text-gray-700 hover:dark:text-white"
+          >
             <FaLinkedin className="w-5 h-5" />
           </Link>
         </div>

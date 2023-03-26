@@ -120,7 +120,7 @@ function OldDocs() {
 
 export default function DocsDesign() {
   return (
-    <section className="py-8 lg:py-24">
+    <section className="py-16 lg:pt-24 lg:pb-28">
       <div className="px-4 mx-auto max-w-7xl">
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu về Design

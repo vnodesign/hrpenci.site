@@ -148,9 +148,6 @@ const theme = {
   },
   primaryHue: 200,
   components: MDXComponents,
-  nextThemes: {
-    defaultTheme: 'light',
-  },
 }
 
 export default theme

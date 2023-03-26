@@ -2,7 +2,7 @@ import Link from '../Link'
 
 export default function Docs() {
   return (
-    <section className="py-8 sm:py-16">
+    <section className="py-16 lg:pt-24 lg:pb-28">
       <div className="px-4 mx-auto max-w-7xl lg:px-6">
         <div className="grid gap-12 space-y-8 lg:grid-cols-2 lg:space-y-0">
           <div>
@@ -15,7 +15,7 @@ export default function Docs() {
               className="inline-flex items-center font-medium sm:text-lg text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
               title="Tìm hiểu thêm về các tài liệu trong ngành IT và ngành Design"
             >
-              Tìm hiểu thêm về các tài liệu trong ngành IT và ngành Design
+              Tìm hiểu thêm về các tài liệu
               <svg
                 className="w-5 h-5 ml-1"
                 fill="currentColor"
@@ -90,7 +90,7 @@ export default function Docs() {
                   Tài liệu này dành cho các bạn HR đang tuyển dụng về System.
                 </span>
                 <span className="text-lg font-semibold text-blue-600 dark:text-blue-500">
-                  Linux
+                  Linux và Server
                 </span>
               </div>
               <svg
