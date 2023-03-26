@@ -17,10 +17,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="space-y-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-800 dark:text-slate-200">
-              Welcome to HR Documentation
+              Chào mừng bạn đến với HR Documentation!
             </h1>
             <p className="sm:text-xl">
-              HR Documentation là một nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back
+              Đây là một nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back
               End, Linux và Design dành cho những bạn HR mới bước chân vào nghề tuyển dụng.
             </p>
             <ul className="space-y-2 sm:text-xl text-slate-700 dark:text-slate-300">
