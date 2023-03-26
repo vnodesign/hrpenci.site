@@ -20,7 +20,7 @@ export default function Hero() {
               Chào mừng bạn đến với HR Documentation!
             </h1>
             <p className="sm:text-xl">
-               Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho những bạn HR mới bước chân vào nghề tuyển dụng.
+              Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho những bạn HR mới bước chân vào nghề tuyển dụng.
             </p>
             <ul className="space-y-2 sm:text-xl text-slate-700 dark:text-slate-300">
               {heroContent.featured.map((value, index) => (
