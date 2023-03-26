@@ -18,7 +18,7 @@ function HeaderLogo() {
         strokeLinejoin="round"
         strokeWidth="1.5"
         viewBox="0 0 24 24"
-        className="ml-2 text-gray-500 dark:text-gray-400"
+        className="hidden md:block md:ml-2 text-gray-500 dark:text-gray-400"
       >
         <path d="M16.88 3.549L7.12 20.451" />
       </svg>
