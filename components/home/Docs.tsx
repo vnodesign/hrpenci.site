@@ -62,7 +62,7 @@ export default function Docs() {
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho các bạn HR đang tuyển dụng về Back End
+                  Tài liệu này dành cho các bạn HR đang tuyển dụng về Back End.
                 </span>
                 <span className="text-lg font-semibold text-sky-600 dark:text-sky-500">
                   Back End
