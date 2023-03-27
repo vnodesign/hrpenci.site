@@ -1,9 +1,8 @@
 import { SSRProvider } from '@react-aria/ssr'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import Router from 'next/router'
 import type { ReactNode } from 'react'
 import type { AppProps } from 'next/app'
-import NProgress from 'nprogress'
+import ProgressBar from '@badrap/bar-of-progress'
 import { Scripts } from './Scripts'
 import CopyLink from './CopyLink'
 
@@ -13,25 +12,25 @@ type NextraAppProps = AppProps & {
   }
 }
 
+const progress = new ProgressBar({
+  size: 2,
+  color: '#38bdf8',
+  className: 'bar-of-progress',
+  delay: 100,
+})
+
+// this fixes safari jumping to the bottom of the page
+// when closing the search modal using the `esc` key
+if (typeof window !== 'undefined') {
+  progress.start()
+  progress.finish()
+}
+
+Router.events.on('routeChangeStart', () => progress.start())
+Router.events.on('routeChangeComplete', () => progress.finish())
+Router.events.on('routeChangeError', () => progress.finish())
+
 export default function Nextra({ Component, pageProps }: NextraAppProps) {
-  const router = useRouter()
-  NProgress.configure({ showSpinner: false })
-  useEffect(() => {
-    const handleRouteStart = () => NProgress.start()
-    const handleRouteDone = () => NProgress.done()
-
-    router.events.on('routeChangeStart', handleRouteStart)
-    router.events.on('routeChangeComplete', handleRouteDone)
-    router.events.on('routeChangeError', handleRouteDone)
-
-    return () => {
-      // Make sure to remove the event handler on unmount!
-      router.events.off('routeChangeStart', handleRouteStart)
-      router.events.off('routeChangeComplete', handleRouteDone)
-      router.events.off('routeChangeError', handleRouteDone)
-    }
-  }, [router.events])
-
   return (
     <SSRProvider>
       <div className="flex flex-col min-h-screen">
