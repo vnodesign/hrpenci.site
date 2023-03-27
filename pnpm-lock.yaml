@@ -6,6 +6,7 @@ specifiers:
   '@svgr/webpack': ^7.0.0
   '@types/node': ^18.15.8
   '@types/react': ^18.0.29
+  '@vercel/analytics': ^0.1.11
   autoprefixer: ^10.4.14
   clsx: ^1.2.1
   eslint: ^8.36.0
@@ -34,6 +35,7 @@ dependencies:
   '@badrap/bar-of-progress': 0.2.2
   '@react-aria/ssr': 3.5.0_react@18.2.0
   '@svgr/webpack': 7.0.0
+  '@vercel/analytics': 0.1.11_react@18.2.0
   clsx: 1.2.1
   next: 13.2.4_5y7qh6ykubtj2qr2evk3di7hpa
   next-pwa: 5.6.0_next@13.2.4
@@ -3084,6 +3086,14 @@ packages:
       '@typescript-eslint/types': 5.54.1
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
