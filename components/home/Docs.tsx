@@ -1,4 +1,6 @@
 import Link from '../Link'
+import { ArrowRightShort } from '../Icons/ArrowRightShort'
+import { ArrowRight } from '../Icons/ArrowRight'
 
 export default function Docs() {
   return (
@@ -16,18 +18,7 @@ export default function Docs() {
               title="Tìm hiểu thêm về các tài liệu trong ngành IT và ngành Design"
             >
               Tìm hiểu thêm về các tài liệu
-              <svg
-                className="w-5 h-5 ml-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRightShort className="w-5 h-5 ml-1" />
             </Link>
           </div>
           <div>
@@ -43,18 +34,7 @@ export default function Docs() {
                   Front End
                 </span>
               </div>
-              <svg
-                className="w-6 h-6 text-primary-600 dark:text-primary-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRight className="w-6 h-6 text-primary-600 dark:text-primary-500" />
             </Link>
             <Link
               href="/docs/back-end"
@@ -68,18 +48,7 @@ export default function Docs() {
                   Back End
                 </span>
               </div>
-              <svg
-                className="w-6 h-6 text-sky-600 dark:text-sky-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRight className="w-6 h-6 text-sky-600 dark:text-sky-500" />
             </Link>
             <Link
               href="/docs/linux"
@@ -93,18 +62,7 @@ export default function Docs() {
                   Linux và Server
                 </span>
               </div>
-              <svg
-                className="w-6 h-6 text-blue-600 dark:text-blue-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRight className="w-6 h-6 text-blue-600 dark:text-blue-500" />
             </Link>
             <Link
               href="/docs/design"
@@ -118,18 +76,7 @@ export default function Docs() {
                   Design
                 </span>
               </div>
-              <svg
-                className="w-6 h-6 text-pink-600 dark:text-pink-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRight className="w-6 h-6 text-pink-600 dark:text-pink-500" />
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 import ProgressBar from '@badrap/bar-of-progress'
 import { Scripts } from './Scripts'
 import CopyLink from './CopyLink'
+import { TailwindIndicator } from './tailwind-indicator'
 
 type NextraAppProps = AppProps & {
   Component: AppProps['Component'] & {
@@ -33,13 +34,10 @@ Router.events.on('routeChangeError', () => progress.finish())
 export default function Nextra({ Component, pageProps }: NextraAppProps) {
   return (
     <SSRProvider>
-      <div className="flex flex-col min-h-screen">
-        <main className="grow">
-          <Component {...pageProps} />
-        </main>
-      </div>
+      <Component {...pageProps} />
       <Scripts />
       <CopyLink />
+      <TailwindIndicator />
     </SSRProvider>
   )
 }

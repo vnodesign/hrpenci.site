@@ -46,7 +46,18 @@ const nextConfig = withNextra({
       },
     ]
   },
-  webpack(config) {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...(config.resolve.fallback || {}),
+        fs: false,
+        module: false,
+        path: false,
+        os: false,
+        crypto: false,
+      }
+    }
+
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],

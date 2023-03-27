@@ -1,6 +1,9 @@
 import { ReactNode, ReactElement } from 'react'
 import Link from '../Link'
-import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { Facebook } from '../Icons/Facebook'
+import { Twitter } from '../Icons/Twitter'
+import { GitHub } from '../Icons/GitHub'
+import { Linkedin } from '../Icons/Linkedin'
 import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 
 function FooterLink({
@@ -161,28 +164,28 @@ export function FooterContent() {
             title="Facebook Group"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <FaFacebook className="w-5 h-5" />
+            <Facebook className="w-5 h-5" />
           </Link>
           <Link
             href="https://twitter.com/tuanducdesigner"
             title="Twitter Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <FaTwitter className="w-5 h-5" />
+            <Twitter className="w-5 h-5" />
           </Link>
           <Link
             href="https://github.com/vnodesign/hr-document"
             title="GitHub Repository"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <FaGithub className="w-5 h-5" />
+            <GitHub className="w-5 h-5" />
           </Link>
           <Link
             href="https://linkedin.com/in/tuanductran"
             title="Linkedin Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <FaLinkedin className="w-5 h-5" />
+            <Linkedin className="w-5 h-5" />
           </Link>
         </div>
       </div>

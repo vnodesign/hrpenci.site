@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="vi" prefix="og: https://ogp.me/ns#" className="dark">
+      <Html lang="vi" prefix="og: https://ogp.me/ns#">
         <InlineStylesHead>
           <script
             type="application/ld+json"
@@ -55,19 +55,6 @@ export default class MyDocument extends Document {
                 }
               }]
             }`,
-            }}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.remove('light')
-                  document.documentElement.classList.add('dark')
-                } else {
-                  document.documentElement.classList.remove('dark')
-                  document.documentElement.classList.add('light')
-                }
-              `,
             }}
           />
         </InlineStylesHead>

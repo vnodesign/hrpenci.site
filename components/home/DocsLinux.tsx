@@ -2,6 +2,7 @@ import React from 'react'
 import { getPagesUnderRoute } from 'nextra/context'
 import Link from '../Link'
 import Image from '../Image'
+import { ArrowRightShort } from '../Icons/ArrowRightShort'
 
 type Page = {
   route: string
@@ -52,19 +53,7 @@ function LatestDocs() {
           className="inline-flex items-center text-base font-semibold leading-5 text-slate-800 dark:text-slate-200"
         >
           Đọc thêm
-          <svg
-            aria-hidden="true"
-            className="w-4 h-4 ml-2"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <ArrowRightShort className="w-5 h-5 ml-2" />
         </Link>
       </div>
     </article>
@@ -97,19 +86,7 @@ function OldDocs() {
                   className="inline-flex items-center text-base font-semibold leading-5 text-slate-800 dark:text-slate-200"
                 >
                   Đọc thêm
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <ArrowRightShort className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </article>
@@ -122,7 +99,7 @@ function OldDocs() {
 
 export default function DocsLinux() {
   return (
-    <section className="py-16 lg:pt-24 lg:pb-28 bg-gray-100 dark:bg-black">
+    <section className="py-16 bg-gray-100 lg:pt-24 lg:pb-28 dark:bg-black">
       <div className="px-4 mx-auto max-w-7xl">
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu về Linux

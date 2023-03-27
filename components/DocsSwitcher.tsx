@@ -1,4 +1,4 @@
-import cn from 'clsx'
+import { cn } from '@lib/cn'
 import { useRouter } from 'next/router'
 import Link from './Link'
 
@@ -37,7 +37,7 @@ function DocsSwitcher() {
   const currentSite = useDocsSite()
 
   return (
-    <div className="relative flex items-center justify-between p-2 text-xl group">
+    <div className="relative flex items-center justify-between p-2 text-xl">
       <span
         className={cn(
           'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-lg border border-neutral-200/70 dark:border-primary-100/10 p-1 duration-300 ease-in-out',

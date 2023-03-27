@@ -1,12 +1,12 @@
 import Link from '../Link'
 import Image from '../Image'
-import { BiCheck } from 'react-icons/bi'
+import { Check } from '../Icons/Check'
 
 const heroContent = {
   featured: [
-    { name: 'Dễ tiếp cận và dễ hiểu với những bạn HR mới vào nghề.', icon: BiCheck },
-    { name: 'Tài liệu đa dạng về các chủ đề liên quan đến IT và Design.', icon: BiCheck },
-    { name: 'Các bài chia sẻ chi tiết và chuyên sâu về IT và Design.', icon: BiCheck },
+    { name: 'Dễ tiếp cận và dễ hiểu với những bạn HR mới vào nghề.', icon: Check },
+    { name: 'Tài liệu đa dạng về các chủ đề liên quan đến IT và Design.', icon: Check },
+    { name: 'Các bài chia sẻ chi tiết và chuyên sâu về IT và Design.', icon: Check },
   ],
 }
 

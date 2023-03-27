@@ -1,6 +1,7 @@
-import cn from 'clsx'
+import { cn } from '@lib/cn'
 import { Callout } from '../Callout'
 import Link from '../Link'
+import Image from '../Image'
 
 export const MDXComponents = {
   Callout: (props) => <Callout {...props} />,
@@ -19,10 +20,9 @@ export const MDXComponents = {
       {...props}
     />
   ),
-  p: (props) => (
-    <p
-      {...props}
-      className="sm:my-[1.1428571429em] my-[1.25em] lg:my-[1.3333333333em] xl:my-[1.2em] 2xl:my-[1.3333333333em] last:my-0"
-    />
-  ),
+  p: (props) => <p {...props} className="leading-7 [&:not(:first-child)]:mt-6" />,
+  ul: (props) => <ul className="my-6 ml-6 list-disc" {...props} />,
+  ol: (props) => <ol className="my-6 ml-6 list-decimal" {...props} />,
+  li: (props) => <li className="mt-2" {...props} />,
+  Image,
 }
