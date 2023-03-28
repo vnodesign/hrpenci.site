@@ -32,6 +32,9 @@ function LatestDocs() {
           width={1200}
           height={600}
           alt={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
+          placeholder="blur"
+          blurDataURL={latestPage.frontMatter?.image}
+          sizes="(max-width 1200px) 80vw, 50vw"
           priority
         />
       </Link>
