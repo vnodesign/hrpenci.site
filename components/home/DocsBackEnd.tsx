@@ -26,7 +26,7 @@ function LatestDocs() {
         href={latestPage.route}
         title={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
       >
-        <Image<Image
+        <Image
           className="object-cover w-full max-w-full rounded-lg aspect-video"
           src={latestPage.frontMatter?.image}
           width={1200}
