@@ -1,26 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import type { DocumentInitialProps, DocumentContext } from 'next/document'
 
-import * as fs from 'fs'
-import * as path from 'path'
-
-class InlineStylesHead extends Head {
-  getCssLinks(files) {
-    return files.sharedFiles
-      .filter((file) => /\.css$/.test(file))
-      .filter((file) => fs.existsSync(path.join(process.cwd(), '.next', file)))
-      .map((file) => (
-        <style
-          key={file}
-          nonce={this.props.nonce}
-          dangerouslySetInnerHTML={{
-            __html: fs.readFileSync(path.join(process.cwd(), '.next', file), 'utf-8'),
-          }}
-        />
-      ))
-  }
-}
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
@@ -30,7 +10,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <InlineStylesHead>
+        <Head>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -55,7 +35,7 @@ export default class MyDocument extends Document {
             }`,
             }}
           />
-        </InlineStylesHead>
+        </Head>
         <body>
           <Main />
           <NextScript />
