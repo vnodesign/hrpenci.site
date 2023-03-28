@@ -26,12 +26,15 @@ function LatestDocs() {
         href={latestPage.route}
         title={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
       >
-        <Image
+        <Image<Image
           className="object-cover w-full max-w-full rounded-lg aspect-video"
           src={latestPage.frontMatter?.image}
           width={1200}
           height={600}
           alt={latestPage.meta?.title || latestPage.frontMatter?.title || latestPage.name}
+          placeholder="blur"
+          blurDataURL={latestPage.frontMatter?.image}
+          sizes="(max-width 1200px) 80vw, 50vw"
           priority
         />
       </Link>
