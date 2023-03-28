@@ -2,14 +2,16 @@ import { ReactElement, ReactNode } from 'react'
 import cn from 'clsx'
 
 const DEFAULT_CLASS = cn(
-  'bg-orange-100 border-orange-500 text-orange-700 dark:bg-orange-200 dark:text-orange-800'
+  'border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300'
 )
-const ERROR_CLASS = cn('bg-red-100 border-red-500 text-red-700 dark:bg-red-200 dark:text-red-800')
+const ERROR_CLASS = cn(
+  'border-red-200 bg-red-100 text-red-900 dark:border-red-200/30 dark:bg-red-900/30 dark:text-red-200'
+)
 const INFO_CLASS = cn(
-  'bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-200 dark:text-blue-800'
+  'border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200'
 )
 const WARNING_CLASS = cn(
-  'bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-200 dark:text-yellow-800'
+  'border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200'
 )
 
 const TypeToEmoji = {
@@ -40,11 +42,16 @@ export function Callout({
   }
 
   return (
-    <div
-      className={cn('my-6 flex items-start rounded-md p-4 border border-b-4', classByType[type])}
-    >
-      <div className="mr-4 text-2xl">{emoji}</div>
-      <div>{children}</div>
+    <div className={cn('my-6 px-4 py-2 flex items-start rounded-lg border-b-4', classByType[type])}>
+      <div
+        className="my-auto mr-4 text-2xl"
+        style={{
+          fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+        }}
+      >
+        {emoji}
+      </div>
+      <div className="w-full min-w-0 leading-7">{children}</div>
     </div>
   )
 }

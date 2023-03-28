@@ -1,4 +1,4 @@
-import { cn } from '@lib/cn'
+import cn from 'clsx'
 import { useRouter } from 'next/router'
 import Link from './Link'
 
@@ -19,15 +19,15 @@ export function useDocsSite(): DocSite | undefined {
 }
 
 function DocsSiteSwitcherLink({ href, text, isActive }) {
-  const classes =
-    'py-1 font-semibold transition-colors duration-300 inline-block w-[50px] cursor-pointer'
-
-  const conditionalClasses = {
-    'text-primary-600': !!isActive,
-  }
-
   return (
-    <Link href={href} className={cn(classes, conditionalClasses)}>
+    <Link
+      href={href}
+      className={cn(
+        'py-1 font-semibold transition-colors duration-300 inline-block w-[50px] cursor-pointer',
+        isActive && 'text-primary-600'
+      )}
+      title={text}
+    >
       {text}
     </Link>
   )

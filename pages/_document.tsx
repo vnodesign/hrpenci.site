@@ -13,7 +13,6 @@ class InlineStylesHead extends Head {
         <style
           key={file}
           nonce={this.props.nonce}
-          data-href={`${this.context.assetPrefix}/_next/${file}`}
           dangerouslySetInnerHTML={{
             __html: fs.readFileSync(path.join(process.cwd(), '.next', file), 'utf-8'),
           }}
@@ -25,8 +24,7 @@ class InlineStylesHead extends Head {
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
-
-    return initialProps
+    return { ...initialProps }
   }
 
   render() {

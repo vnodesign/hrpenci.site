@@ -1,4 +1,4 @@
-import { cn } from '@lib/cn'
+import cn from 'clsx'
 import { Callout } from '../Callout'
 import Link from '../Link'
 import Image from '../Image'
