@@ -20,7 +20,7 @@ img {
 }
 
 .nextra-nav-container {
-  @apply backdrop-blur supports-backdrop-blur:bg-white/95 supports-backdrop-blur:dark:bg-dark/75 border-b border-neutral-200/10 dark:border-primary-100/[0.06] bg-white dark:bg-dark;
+  @apply border-b border-neutral-200/10 dark:border-primary-100/[0.06] bg-white dark:bg-dark;
 
   .nextra-nav-container-blur {
     @apply hidden;
