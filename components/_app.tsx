@@ -1,4 +1,3 @@
-import { SSRProvider } from '@react-aria/ssr'
 import Router from 'next/router'
 import type { ReactNode } from 'react'
 import type { AppProps } from 'next/app'
@@ -33,11 +32,11 @@ Router.events.on('routeChangeError', () => progress.finish())
 
 export default function Nextra({ Component, pageProps }: NextraAppProps) {
   return (
-    <SSRProvider>
+    <>
       <Component {...pageProps} />
       <Scripts />
       <CopyLink />
       <TailwindIndicator />
-    </SSRProvider>
+    </>
   )
 }
