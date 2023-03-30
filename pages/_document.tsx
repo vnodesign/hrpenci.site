@@ -1,6 +1,26 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import type { DocumentInitialProps, DocumentContext } from 'next/document'
 
+import * as fs from 'fs'
+import * as path from 'path'
+
+class InlineStylesHead extends Head {
+  getCssLinks(files) {
+    return files.sharedFiles
+      .filter((file) => /\.css$/.test(file))
+      .filter((file) => fs.existsSync(path.join(process.cwd(), '.next', file)))
+      .map((file) => (
+        <style
+          key={file}
+          nonce={this.props.nonce}
+          dangerouslySetInnerHTML={{
+            __html: fs.readFileSync(path.join(process.cwd(), '.next', file), 'utf-8'),
+          }}
+        />
+      ))
+  }
+}
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
@@ -9,8 +29,8 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="vi" prefix="og: https://ogp.me/ns#">
-        <Head>
+      <Html lang="vi" prefix="og: https://ogp.me/ns#" className="dark">
+        <InlineStylesHead>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -35,7 +55,20 @@ export default class MyDocument extends Document {
             }`,
             }}
           />
-        </Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.remove('light')
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.remove('dark')
+                  document.documentElement.classList.add('light')
+                }
+              `,
+            }}
+          />
+        </InlineStylesHead>
         <body>
           <Main />
           <NextScript />
