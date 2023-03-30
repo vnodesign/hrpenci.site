@@ -1,5 +1,4 @@
 import '../scss/style.scss'
-import { SSRProvider } from '@react-aria/ssr'
 import { Scripts } from '@components/Scripts'
 import { TailwindIndicator } from '@components/tailwind-indicator'
 import CopyLink from '@components/CopyLink'
@@ -7,12 +6,10 @@ import CopyLink from '@components/CopyLink'
 export default function Nextra({ Component, pageProps }) {
   return (
     <>
-      <SSRProvider>
-        <Component {...pageProps} />
-        <Scripts />
-        <CopyLink />
-        <TailwindIndicator />
-      </SSRProvider>
+      <Component {...pageProps} />
+      <Scripts />
+      <CopyLink />
+      <TailwindIndicator />
     </>
   )
 }
