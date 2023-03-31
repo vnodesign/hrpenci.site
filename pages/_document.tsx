@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import type { DocumentInitialProps, DocumentContext } from 'next/document'
+import { SkipNavLink } from 'nextra-theme-docs'
 
 import * as fs from 'fs'
 import * as path from 'path'
@@ -57,6 +58,7 @@ export default class MyDocument extends Document {
           />
         </InlineStylesHead>
         <body>
+          <SkipNavLink styled />
           <Main />
           <NextScript />
         </body>
