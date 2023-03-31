@@ -1,6 +1,7 @@
 import cn from 'clsx'
 import { Callout } from '../Callout'
 import Link from '../Link'
+import { Tab, Tabs } from '../Tabs'
 
 export const MDXComponents = {
   Callout: (props) => <Callout {...props} />,
@@ -23,4 +24,6 @@ export const MDXComponents = {
   ul: (props) => <ul className="my-6 ml-6 list-disc" {...props} />,
   ol: (props) => <ol className="my-6 ml-6 list-decimal" {...props} />,
   li: (props) => <li className="mt-2" {...props} />,
+  Tab: (props) => <Tab {...props} />,
+  Tabs: (props) => <Tabs {...props} />,
 }
