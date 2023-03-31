@@ -21,6 +21,7 @@
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
+    "@react-aria/ssr": "^3.5.0",
     "@svgr/webpack": "^7.0.0",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.1",
