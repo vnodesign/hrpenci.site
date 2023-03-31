@@ -7,9 +7,9 @@ export default function Nextra({ Component, pageProps }) {
   return (
     <>
       <SSRProvider>
-        <Scripts />
         <Component {...pageProps} />
       </SSRProvider>
+      <Scripts />
       <CopyLink />
       <TailwindIndicator />
     </>
