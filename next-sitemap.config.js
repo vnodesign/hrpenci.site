@@ -1,5 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+const config = {
   siteUrl: 'https://hr.penci.me',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
+  sitemapSize: 1000,
 }
+
+export default config

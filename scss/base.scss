@@ -1,0 +1,20 @@
+@tailwind base;
+
+html {
+  font-feature-settings: unset !important;
+  font-family: sans-serif;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  content-visibility: auto;
+}

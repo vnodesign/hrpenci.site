@@ -1,0 +1,63 @@
+@tailwind utilities;
+
+.nextra-nav-container {
+  @apply border-b border-neutral-200/10 dark:border-primary-100/[0.06] bg-white dark:bg-dark;
+
+  .nextra-nav-container-blur {
+    @apply hidden;
+  }
+
+  a {
+    &[aria-current] {
+      @apply text-sm leading-6 font-semibold hover:text-primary-600;
+    }
+
+    &[aria-current^='true'] {
+      @apply text-primary-600 antialiased;
+    }
+  }
+}
+
+.nextra-content {
+
+  .nextra-body-typesetting-article,
+  .nextra-body-typesetting-article p,
+  .nextra-body-typesetting-article h1,
+  .nextra-body-typesetting-article h2,
+  .nextra-body-typesetting-article h3,
+  .nextra-body-typesetting-article h4 {
+    line-height: 1.75 !important;
+  }
+
+  .subheading-anchor {
+    @apply sr-only;
+  }
+
+  img {
+    @apply rounded-md mx-auto w-full;
+  }
+}
+
+code {
+  @apply text-sm;
+}
+
+.nextra-nav-container a,
+.nextra-sidebar-container a,
+.nextra-toc a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk Bold', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, monaco, Consolas, Lucida Console, monospace;
+}

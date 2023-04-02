@@ -2,6 +2,7 @@ import cn from 'clsx'
 import { Callout } from '../Callout'
 import Link from '../Link'
 import { Tab, Tabs } from '../Tabs'
+import { Steps } from '../Steps'
 
 export const MDXComponents = {
   Callout: (props) => <Callout {...props} />,
@@ -11,6 +12,9 @@ export const MDXComponents = {
       className="font-semibold !no-underline !border-b-[1px] !border-b-primary-600 hover:!border-b-2 !rounded-none"
     />
   ),
+  Tab: (props) => <Tab {...props} />,
+  Tabs: (props) => <Tabs {...props} />,
+  Steps: (props) => <Steps {...props} />,
   blockquote: (props) => (
     <blockquote
       className={cn(
@@ -24,6 +28,4 @@ export const MDXComponents = {
   ul: (props) => <ul className="my-6 ml-6 list-disc" {...props} />,
   ol: (props) => <ol className="my-6 ml-6 list-decimal" {...props} />,
   li: (props) => <li className="mt-2" {...props} />,
-  Tab: (props) => <Tab {...props} />,
-  Tabs: (props) => <Tabs {...props} />,
 }

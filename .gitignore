@@ -16,6 +16,5 @@ cloudflared
 **/public/worker-*.js.map
 # Auto Generated when build production
 **/public/feed.xml
-**/public/robots.txt
 **/public/sitemap-0.xml
 **/public/sitemap.xml
