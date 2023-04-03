@@ -27,4 +27,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.DOCUMENT_ROOT }} && pnpm && pnpm build
+          script: cd ${{ secrets.DOCUMENT_ROOT }} && yarn && yarn build

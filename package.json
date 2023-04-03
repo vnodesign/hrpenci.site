@@ -12,10 +12,10 @@
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
-      "pnpm lint"
+      "yarn lint"
     ],
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "pnpm prettier"
+      "yarn prettier"
     ]
   },
   "author": "Tuan Duc Design",
