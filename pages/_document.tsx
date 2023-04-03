@@ -56,8 +56,6 @@ export default class MyDocument extends Document {
             }`,
             }}
           />
-          {/* Netlify Widget */}
-          <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </InlineStylesHead>
         <body>
           <SkipNavLink styled />
