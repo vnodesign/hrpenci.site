@@ -147,7 +147,8 @@ collections:
     label: "Câu hỏi phỏng vấn Front-end"
     folder: "pages/interview/front-end"
     identifier_field: title
-    extension: mdx
+    extension: "mdx"
+    format: "frontmatter"
     widget: "list"
     create: true
     slug: "{{slug}}"
