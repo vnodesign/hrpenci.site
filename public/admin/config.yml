@@ -10,7 +10,7 @@ collections:
     label: "Docs"
     folder: "pages/docs"
     identifier_field: title
-    extension: mdx
+    extension: "mdx"
     widget: "list"
     create: true
     slug: "{{slug}}"
@@ -19,15 +19,12 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
-    files:
-      - { label: 'Markdown', name: 'markdown', extension: 'md' }
-      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
 
   - name: "interview"
     label: "Interview"
     folder: "pages/interview"
     identifier_field: title
-    extension: mdx
+    extension: "mdx"
     widget: "list"
     create: true
     slug: "{{slug}}"
@@ -36,15 +33,12 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
-    files:
-      - { label: 'Markdown', name: 'markdown', extension: 'md' }
-      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
 
   - name: "blog"
     label: "Blog"
     folder: "pages/blog"
     identifier_field: title
-    extension: mdx
+    extension: "mdx"
     widget: "list"
     create: true
     slug: "{{slug}}"
@@ -54,6 +48,3 @@ collections:
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "image", label: "Image", widget: "image" }
-    files:
-      - { label: 'Markdown', name: 'markdown', extension: 'md' }
-      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
