@@ -19,6 +19,9 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
+    files:
+      - { label: 'Markdown', name: 'markdown', extension: 'md' }
+      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
 
   - name: "interview"
     label: "Interview"
@@ -33,6 +36,9 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
+    files:
+      - { label: 'Markdown', name: 'markdown', extension: 'md' }
+      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
 
   - name: "blog"
     label: "Blog"
@@ -48,3 +54,6 @@ collections:
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "image", label: "Image", widget: "image" }
+    files:
+      - { label: 'Markdown', name: 'markdown', extension: 'md' }
+      - { label: 'MDX', name: 'mdx', extension: 'mdx' }
