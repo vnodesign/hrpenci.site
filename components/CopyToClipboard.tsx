@@ -9,7 +9,7 @@ export const CopyToClipboard = ({
   getValue,
   ...props
 }: {
-  getValue: () => string;
+  getValue: () => string
 } & ComponentProps<'button'>): ReactElement => {
   const [isCopied, setCopied] = useState(false)
 
@@ -29,7 +29,7 @@ export const CopyToClipboard = ({
     let timeout: ReturnType<typeof setTimeout>
     if (isCopied) {
       timeout = setTimeout(() => {
-        setCopied(false);
+        setCopied(false)
       }, 2000)
     }
 

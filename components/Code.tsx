@@ -1,7 +1,7 @@
 import type { ComponentProps, ReactElement } from 'react'
 
 interface CodeProps extends ComponentProps<'code'> {
-  hasLineNumbers?: boolean;
+  hasLineNumbers?: boolean
 }
 
 export const Code = ({
