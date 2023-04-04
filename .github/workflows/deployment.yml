@@ -31,4 +31,6 @@ jobs:
             cd ${{ secrets.DOCUMENT_ROOT }}
             git pull
             yarn
-            yarn build
+            pm2 reload ecosystem.config.js
+            pm2 restart all
+            echo "\nDeploy done."
