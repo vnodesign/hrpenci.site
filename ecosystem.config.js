@@ -15,7 +15,7 @@ module.exports = {
     staging: {
       user: 'root',
       key: '~/.ssh/tuanducdesign',
-      host: '14.225.204.116:22663',
+      host: '14.225.204.116',
       ref: 'origin/production',
       repo: 'git@github.com:tuanducdesign/hr.penci.me.git',
       path: '/www/wwwroot/hr.penci.me',
