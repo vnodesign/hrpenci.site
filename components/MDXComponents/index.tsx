@@ -3,6 +3,8 @@ import { Callout } from '../Callout'
 import Link from '../Link'
 import { Tab, Tabs } from '../Tabs'
 import { Steps } from '../Steps'
+import { Code } from '../Code'
+import { Pre } from '../Pre'
 
 export const MDXComponents = {
   Callout: (props) => <Callout {...props} />,
@@ -15,6 +17,8 @@ export const MDXComponents = {
   Tab: (props) => <Tab {...props} />,
   Tabs: (props) => <Tabs {...props} />,
   Steps: (props) => <Steps {...props} />,
+  pre: Pre,
+  code: Code,
   blockquote: (props) => (
     <blockquote
       className={cn(
