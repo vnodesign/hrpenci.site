@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="space-y-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-800 dark:text-slate-200">
-              Chào mừng bạn đến với <span className="text-primary-600">HR Documentation!</span>
+              Chào mừng bạn đến với HR Documentation!
             </h1>
             <p className="sm:text-xl">
               Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design

@@ -105,6 +105,7 @@ const theme = {
   },
   sidebar: {
     defaultMenuCollapseLevel: 1,
+    toggleButton: true,
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks

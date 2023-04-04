@@ -12,16 +12,16 @@
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
-      "pnpm lint"
+      "yarn lint"
     ],
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "pnpm prettier"
+      "yarn prettier"
     ]
   },
   "author": "Tuan Duc Design",
   "license": "MIT",
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2",
+    "@headlessui/react": "^1.7.13",
     "@react-aria/ssr": "^3.5.0",
     "@svgr/webpack": "^7.0.0",
     "@vercel/analytics": "^0.1.11",
@@ -29,8 +29,8 @@
     "next": "^13.2.4",
     "next-pwa": "^5.6.0",
     "next-sitemap": "^4.0.5",
-    "nextra": ">=2.2.19",
-    "nextra-theme-docs": ">=2.2.19",
+    "nextra": "^2.3.0",
+    "nextra-theme-docs": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.0"
@@ -46,6 +46,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
+    "postcss-focus-visible": "^8.0.2",
+    "postcss-import": "^15.1.0",
     "prettier": "^2.8.7",
     "sass": "^1.60.0",
     "tailwindcss": "^3.2.7",
