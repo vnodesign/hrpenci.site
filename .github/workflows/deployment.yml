@@ -2,9 +2,9 @@ name: Deploy to VPS
 
 on:
   push:
-    branches: [master]
+    branches: [production]
   pull_request:
-    branches: [master]
+    branches: [production]
 jobs:
   next-ci:
     runs-on: ubuntu-latest
