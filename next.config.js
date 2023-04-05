@@ -17,9 +17,6 @@ const withNextra = require('nextra')({
 
 const nextConfig = withNextra({
   swcMinify: true,
-  optimization: {
-   mergeDuplicateChunks: true,
-  },
   async redirects() {
     return [
       {
