@@ -4,8 +4,10 @@ import { Scripts } from './Scripts'
 import CopyLink from './CopyLink'
 import { TailwindIndicator } from './tailwind-indicator'
 
-interface Window {
-  gtag?: (name: string, action: string, options: any) => void;
+declare global {
+  interface Window { 
+    gtag: any;
+  }
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
