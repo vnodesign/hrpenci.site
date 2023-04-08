@@ -4,6 +4,10 @@ import { Scripts } from './Scripts'
 import CopyLink from './CopyLink'
 import { TailwindIndicator } from './tailwind-indicator'
 
+interface Window {
+  gtag?: (name: string, action: string, options: any) => void;
+}
+
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   if (typeof window !== 'undefined' && metric.label === 'web-vital') {
     window.gtag('event', metric.name, {
