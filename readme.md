@@ -2,7 +2,7 @@
 
 ```bash
 
-git clone https://github.com/vnodesign/hr.penci.me && cd hr.penci.me
+git clone https://github.com/vnodesign/hrpenci.site && cd hrpenci.site
 yarn
 yarn dev
 

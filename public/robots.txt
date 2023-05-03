@@ -3,4 +3,4 @@ disallow: /admin/
 disallow: /cdn-cgi/
 
 # Sitemaps
-Sitemap: https://hr.penci.me/sitemap.xml
+Sitemap: https://hrpenci.site/sitemap.xml

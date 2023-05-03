@@ -6,7 +6,7 @@ import HeaderLogo from '@components/HeaderLogo'
 import { Footer } from '@components/Footer'
 import { MDXComponents } from '@components/MDXComponents'
 
-const siteUrl = 'https://hr.penci.me'
+const siteUrl = 'https://hrpenci.site'
 
 const theme = {
   project: {
