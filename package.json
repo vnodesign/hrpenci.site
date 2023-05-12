@@ -23,7 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@react-aria/ssr": "^3.5.0",
-    "@svgr/webpack": "^7.0.0",
+    "@svgr/webpack": "^8.0.0",
     "@vercel/analytics": "^1.0.0",
     "clsx": "^1.2.1",
     "next": "^13.2.4",
