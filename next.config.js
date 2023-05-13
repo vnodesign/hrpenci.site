@@ -17,6 +17,10 @@ const withNextra = require('nextra')({
 
 const nextConfig = withNextra({
   swcMinify: true,
+  images: {
+    loader: 'custom',
+    loaderFile: './cfImageLoader.js'
+  },
   async redirects() {
     return [
       {
