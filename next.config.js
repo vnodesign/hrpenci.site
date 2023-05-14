@@ -21,7 +21,9 @@ const nextConfig = withNextra({
     runtime: 'edge',
   },
   images: {
-    unoptimized: true,
+    domains: ['ik.imagekit.io'],
+    loader: 'custom',
+    loaderFile: './imagekitLoader.js'
   },
   async redirects() {
     return [
