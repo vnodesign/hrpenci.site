@@ -12,7 +12,7 @@ const theme = {
   project: {
     link: 'https://github.com/vnodesign/hr-document',
   },
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/blob/master/',
+  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/edit/master/',
   useNextSeoProps: function SEO() {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
