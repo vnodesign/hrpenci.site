@@ -17,6 +17,9 @@ const withNextra = require('nextra')({
 
 const nextConfig = withNextra({
   swcMinify: true,
+  experimental: {
+    runtime: 'edge',
+  },
   async redirects() {
     return [
       {
