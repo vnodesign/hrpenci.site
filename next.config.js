@@ -21,8 +21,7 @@ const nextConfig = withNextra({
     runtime: 'edge',
   },
   images: {
-    loader: 'custom',
-    loaderFile: './cfImageLoader.js'
+    unoptimized: true,
   },
   async redirects() {
     return [
