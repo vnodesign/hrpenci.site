@@ -37,28 +37,30 @@ function DocsSwitcher() {
   const currentSite = useDocsSite()
 
   return (
-    <div className="relative flex items-center justify-between p-2 text-xl">
-      <span
-        className={cn(
-          'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-lg border border-neutral-200/70 dark:border-primary-100/10 p-1 duration-300 ease-in-out',
-          'after:h-[24px] after:w-[44px] after:rounded-md after:duration-300 after:bg-primary-50 after:dark:bg-primary-500/10',
-          'indeterminate:after:hidden',
-          {
-            'after:hidden': !currentSite,
-            'after:translate-x-[46px]': currentSite === 'blog',
-          }
-        )}
-      />
+    <div className="absolute left-1/2 [transform:translateX(-50%)] md:ml-3 md:relative md:left-0 md:[transform:none]">
+      <div className="relative flex items-center justify-between p-2 text-xl">
+        <span
+          className={cn(
+            'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-lg border border-neutral-200/70 dark:border-primary-100/10 p-1 duration-300 ease-in-out',
+            'after:h-[24px] after:w-[44px] after:rounded-md after:duration-300 after:bg-primary-50 after:dark:bg-primary-500/10',
+            'indeterminate:after:hidden',
+            {
+              'after:hidden': !currentSite,
+              'after:translate-x-[46px]': currentSite === 'blog',
+            }
+          )}
+        />
 
-      <span
-        className={cn(
-          'z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-gray-500 dark:text-gray-400',
-          { 'hover:text-gray-900 dark:hover:text-gray-300': currentSite }
-        )}
-      >
-        <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={currentSite === 'docs'} />
-        <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={currentSite === 'blog'} />
-      </span>
+        <span
+          className={cn(
+            'z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-gray-500 dark:text-gray-400',
+            { 'hover:text-gray-900 dark:hover:text-gray-300': currentSite }
+          )}
+        >
+          <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={currentSite === 'docs'} />
+          <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={currentSite === 'blog'} />
+        </span>
+      </div>
     </div>
   )
 }

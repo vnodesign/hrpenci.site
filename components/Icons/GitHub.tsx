@@ -1,4 +1,4 @@
-export function GitHub({ ...props }) {
+function GitHub({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,3 +12,5 @@ export function GitHub({ ...props }) {
     </svg>
   )
 }
+
+export default GitHub

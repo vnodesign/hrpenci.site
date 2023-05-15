@@ -17,8 +17,11 @@ const withNextra = require('nextra')({
 
 const nextConfig = withNextra({
   swcMinify: true,
-  productionBrowserSourceMaps: true,
-  trailingSlash: true,
+  images: {
+    domains: ['ik.imagekit.io'],
+    loader: 'custom',
+    loaderFile: './imagekitLoader.js',
+  },
   async redirects() {
     return [
       {

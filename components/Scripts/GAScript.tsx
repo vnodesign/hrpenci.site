@@ -3,7 +3,10 @@ import Script from 'next/script'
 export function GAScript() {
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-RCV263F7H7" />
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-RCV263F7H7"
+      />
 
       <Script id="gtag-script">
         {`

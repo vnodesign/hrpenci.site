@@ -1,6 +1,7 @@
+import dynamic from 'next/dynamic'
 import Link from '../Link'
-import { ArrowRightShort } from '../Icons/ArrowRightShort'
-import { ArrowRight } from '../Icons/ArrowRight'
+const ArrowRightShort = dynamic(() => import('../Icons/ArrowRightShort'))
+const ArrowRight = dynamic(() => import('../Icons/ArrowRight'))
 
 export default function Docs() {
   return (

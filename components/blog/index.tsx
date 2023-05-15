@@ -1,19 +1,7 @@
 import React from 'react'
 import { getPagesUnderRoute } from 'nextra/context'
 import Link from '../Link'
-
-type Page = {
-  route: string
-  name: string
-  meta?: {
-    title?: string
-  }
-  frontMatter?: {
-    title?: string
-    description?: string
-    date?: string
-  }
-}
+import { Page } from '../Page'
 
 export default function Blog() {
   const pages = getPagesUnderRoute('/blog')

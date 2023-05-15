@@ -1,21 +1,10 @@
+import dynamic from 'next/dynamic'
 import React from 'react'
 import { getPagesUnderRoute } from 'nextra/context'
 import Link from '../Link'
 import Image from '../Image'
-import { ArrowRightShort } from '../Icons/ArrowRightShort'
-
-type Page = {
-  route: string
-  name: string
-  meta?: {
-    title?: string
-  }
-  frontMatter?: {
-    title?: string
-    description?: string
-    image?: string
-  }
-}
+const ArrowRightShort = dynamic(() => import('../Icons/ArrowRightShort'))
+import { Page } from '../Page'
 
 function LatestDocs() {
   const page = getPagesUnderRoute('/docs/back-end')

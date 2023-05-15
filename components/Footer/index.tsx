@@ -1,9 +1,10 @@
+import dynamic from 'next/dynamic'
 import { ReactNode, ReactElement } from 'react'
 import Link from '../Link'
-import { Facebook } from '../Icons/Facebook'
-import { Twitter } from '../Icons/Twitter'
-import { GitHub } from '../Icons/GitHub'
-import { Linkedin } from '../Icons/Linkedin'
+const Facebook = dynamic(() => import('../Icons/Facebook'))
+const Twitter = dynamic(() => import('../Icons/Twitter'))
+const GitHub = dynamic(() => import('../Icons/GitHub'))
+const Linkedin = dynamic(() => import('../Icons/Linkedin'))
 import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 
 function FooterLink({

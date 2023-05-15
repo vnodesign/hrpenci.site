@@ -1,6 +1,7 @@
+import dynamic from 'next/dynamic'
 import Link from '../Link'
 import Image from '../Image'
-import { Check } from '../Icons/Check'
+const Check = dynamic(() => import('../Icons/Check'))
 
 const heroContent = {
   featured: [

@@ -1,4 +1,4 @@
-export function ArrowRightShort({ ...props }) {
+function ArrowRightShort({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,3 +15,5 @@ export function ArrowRightShort({ ...props }) {
     </svg>
   )
 }
+
+export default ArrowRightShort
