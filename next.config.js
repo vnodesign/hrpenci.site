@@ -17,9 +17,6 @@ const withNextra = require('nextra')({
 
 const nextConfig = withNextra({
   swcMinify: true,
-  experimental: {
-    runtime: 'edge',
-  },
   images: {
     domains: ['ik.imagekit.io'],
     loader: 'custom',
@@ -53,25 +50,6 @@ const nextConfig = withNextra({
         permanent: true,
       },
     ]
-  },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...(config.resolve.fallback || {}),
-        fs: false,
-        module: false,
-        path: false,
-        os: false,
-        crypto: false,
-      }
-    }
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
-
-    return config
   },
 })
 
