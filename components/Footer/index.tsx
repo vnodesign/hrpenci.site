@@ -163,6 +163,7 @@ export function FooterContent() {
           <Link
             href="https://www.facebook.com/groups/xomhr"
             title="Facebook Group"
+            aria-label="Facebook Group"
             className="hover:text-gray-700 hover:dark:text-white"
           >
             <Facebook className="w-5 h-5" />
@@ -170,6 +171,7 @@ export function FooterContent() {
           <Link
             href="https://twitter.com/tuanducdesigner"
             title="Twitter Profile"
+            aria-label="Twitter Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
             <Twitter className="w-5 h-5" />
@@ -177,6 +179,7 @@ export function FooterContent() {
           <Link
             href="https://github.com/vnodesign/hr-document"
             title="GitHub Repository"
+            aria-label="GitHub Repository"
             className="hover:text-gray-700 hover:dark:text-white"
           >
             <GitHub className="w-5 h-5" />
@@ -184,6 +187,7 @@ export function FooterContent() {
           <Link
             href="https://linkedin.com/in/tuanductran"
             title="Linkedin Profile"
+            aria-label="Linkedin Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
             <Linkedin className="w-5 h-5" />
