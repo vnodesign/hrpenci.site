@@ -1,9 +1,10 @@
+import dynamic from 'next/dynamic'
 import Hero from '@components/home/Hero'
 import Docs from '@components/home/Docs'
-import DocsFrontEnd from '@components/home/DocsFrontEnd'
-import DocsBackEnd from '@components/home/DocsBackEnd'
-import DocsLinux from '@components/home/DocsLinux'
-import DocsDesign from '@components/home/DocsDesign'
+const DocsFrontEnd = dynamic(() => import('@components/home/DocsFrontEnd'))
+const DocsBackEnd = dynamic(() => import('@components/home/DocsBackEnd'))
+const DocsLinux = dynamic(() => import('@components/home/DocsLinux'))
+const DocsDesign = dynamic(() => import('@components/home/DocsDesign'))
 
 export default function Home() {
   return (
