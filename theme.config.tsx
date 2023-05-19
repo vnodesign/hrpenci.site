@@ -153,7 +153,6 @@ const theme: DocsThemeConfig = {
   footer: {
     component: Footer,
   },
-  primaryHue: 200,
   components: MDXComponents,
 }
 
