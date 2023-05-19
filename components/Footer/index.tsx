@@ -28,7 +28,7 @@ function FooterLink({
 }
 
 function FooterHeader({ children }: { children: ReactNode }) {
-  return <h3 className="mb-4 text-sm font-bold tracking-widest uppercase">{children}</h3>
+  return <h3 className="mb-4 font-semibold">{children}</h3>
 }
 
 const navigation = {
