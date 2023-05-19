@@ -1,6 +1,6 @@
-import { useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { useConfig } from 'nextra-theme-docs'
+import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
 import Navigation from '@components/Navigation'
 import HeaderLogo from '@components/HeaderLogo'
 import { Footer } from '@components/Footer'
@@ -8,7 +8,7 @@ import { MDXComponents } from '@components/MDXComponents'
 
 const siteUrl = 'https://hrpenci.site'
 
-const theme = {
+const theme: DocsThemeConfig = {
   project: {
     link: 'https://github.com/vnodesign/hr-document',
   },
@@ -34,7 +34,7 @@ const theme = {
     const fullUrl = asPath === '/' ? siteUrl : `${siteUrl}${asPath}`
 
     return {
-      titleTemplate: ogTitle,
+      titleTemplate: `${ogTitle}`,
       description: ogDescription,
       canonical: `${fullUrl}`,
       openGraph: {
@@ -45,8 +45,8 @@ const theme = {
           {
             url: ogImage,
             alt: title,
-            width: '1200',
-            height: '630',
+            width: 1200,
+            height: 630,
           },
         ],
         siteName: 'HR Documentation',
@@ -85,7 +85,7 @@ const theme = {
         </span>
       </>
     ),
-    placeholder: 'Tìm kiếm tài liệu...',
+    placeholder: 'Tìm kiếm...',
   },
   head: function Head() {
     return (
@@ -109,26 +109,32 @@ const theme = {
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const dateString = useMemo(() => {
-      const locale = navigator.language || 'vi-VN'
-      const options = { day: 'numeric', month: 'short', year: 'numeric' }
-      return timestamp.toLocaleDateString(locale, options)
-    }, [timestamp])
+    const [dateString, setDateString] = useState(timestamp.toISOString())
+    const locale = navigator.language || 'vi-VN'
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+      try {
+        setDateString(
+          timestamp.toLocaleDateString(locale, {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+          })
+        )
+      } catch (e) {
+        // Ignore errors here; they get the ISO string.
+        // At least one person out there has manually misconfigured navigator.language.
+      }
+    }, [locale, timestamp])
 
     return <>Cập nhật lần cuối lúc: {dateString}</>
   },
-  themeSwitch: {
-    useOptions() {
-      return {
-        light: 'Sáng',
-        dark: 'Tối',
-        system: 'Hệ thống',
-      }
-    },
-  },
   toc: {
+    float: true,
     title: 'Mục lục tài liệu',
   },
+  i18n: [],
   editLink: {
     text: 'Đóng góp nội dung cho tài liệu này',
   },

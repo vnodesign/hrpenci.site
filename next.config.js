@@ -1,22 +1,16 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
-})
-
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
+  flexsearch: true,
   staticImage: true,
-  flexsearch: {
-    codeblocks: false,
-  },
   defaultShowCopyCode: true,
 })
 
 const nextConfig = withNextra({
-  swcMinify: true,
+  reactStrictMode: true,
+  experimental: {
+    legacyBrowsers: false,
+  },
   images: {
     domains: ['ik.imagekit.io'],
     loader: 'custom',
@@ -51,25 +45,6 @@ const nextConfig = withNextra({
       },
     ]
   },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...(config.resolve.fallback || {}),
-        fs: false,
-        module: false,
-        path: false,
-        os: false,
-        crypto: false,
-      }
-    }
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
-
-    return config
-  },
 })
 
-module.exports = withPWA(nextConfig)
+module.exports = nextConfig

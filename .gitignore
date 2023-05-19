@@ -18,3 +18,5 @@ cloudflared
 **/public/feed.xml
 **/public/sitemap-0.xml
 **/public/sitemap.xml
+# Backup any configuration
+**/*.bak*

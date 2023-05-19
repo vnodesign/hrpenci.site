@@ -1,11 +1,11 @@
 import dynamic from 'next/dynamic'
-import { ReactNode, ReactElement } from 'react'
+import { ReactNode } from 'react'
 import Link from '../Link'
+import Image from '../Image'
 const Facebook = dynamic(() => import('../Icons/Facebook'))
 const Twitter = dynamic(() => import('../Icons/Twitter'))
 const GitHub = dynamic(() => import('../Icons/GitHub'))
 const Linkedin = dynamic(() => import('../Icons/Linkedin'))
-import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 
 function FooterLink({
   href,
@@ -28,7 +28,7 @@ function FooterLink({
 }
 
 function FooterHeader({ children }: { children: ReactNode }) {
-  return <h3 className="mb-6 text-sm font-semibold">{children}</h3>
+  return <h3 className="mb-4 text-sm font-bold tracking-widest uppercase">{children}</h3>
 }
 
 const navigation = {
@@ -41,20 +41,6 @@ const navigation = {
     { name: 'Design là gì', href: '/docs/design' },
     { name: 'Microsoft Designer là gì', href: '/docs/design/microsoft-designer' },
     { name: 'Figma là gì', href: '/docs/design/figma' },
-  ],
-  interview: [
-    {
-      name: 'Danh sách câu hỏi phỏng vấn',
-      href: '/interview',
-    },
-    {
-      name: 'Câu hỏi phỏng vấn Front End',
-      href: '/interview/front-end',
-    },
-    {
-      name: 'Câu hỏi phỏng vấn Git',
-      href: '/interview/git',
-    },
   ],
   help: [
     { name: 'Liên hệ', href: '/lien-he' },
@@ -80,134 +66,124 @@ const navigation = {
 export function FooterContent() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 md:grid-cols-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 lg:gap-8 pt-10 lg:pt-12 mb-16">
+        <div className="col-span-full lg:col-span-2">
+          <div className="lg:-mt-2 mb-4">
+            <Link
+              className="inline-flex items-center text-xl md:text-2xl font-bold gap-2"
+              href="/"
+              title="HR Documentation"
+            >
+              <Image
+                src="/static/favicon.png"
+                alt="HR Documentation"
+                width={95}
+                height={94}
+                className="w-5 h-auto"
+                priority
+              />
+              <span className="ml-1">HR Documentation</span>
+            </Link>
+          </div>
+          <p className="sm:pr-8 mb-6">
+            Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành
+            cho HR.
+          </p>
+          <div className="flex space-x-6">
+            <Link
+              href="https://www.facebook.com/groups/xomhr"
+              title="Facebook Group"
+              aria-label="Facebook Group"
+              className="hover:text-gray-700 hover:dark:text-white"
+            >
+              <Facebook className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://twitter.com/tuanducdesigner"
+              title="Twitter Profile"
+              aria-label="Twitter Profile"
+              className="hover:text-gray-700 hover:dark:text-white"
+            >
+              <Twitter className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://github.com/vnodesign/hr-document"
+              title="GitHub Repository"
+              aria-label="GitHub Repository"
+              className="hover:text-gray-700 hover:dark:text-white"
+            >
+              <GitHub className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/tuanductran"
+              title="Linkedin Profile"
+              aria-label="Linkedin Profile"
+              className="hover:text-gray-700 hover:dark:text-white"
+            >
+              <Linkedin className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
         <div>
           <FooterHeader>Tài liệu IT</FooterHeader>
-          <ul>
+          <nav className="flex flex-col gap-4">
             {navigation.it.map((item) => (
-              <li key={item.name} className="mb-4">
+              <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
                 </FooterLink>
-              </li>
+              </div>
             ))}
-          </ul>
+          </nav>
         </div>
         <div>
           <FooterHeader>Tài liệu Design</FooterHeader>
-          <ul>
+          <nav className="flex flex-col gap-4">
             {navigation.design.map((item) => (
-              <li key={item.name} className="mb-4">
+              <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
                 </FooterLink>
-              </li>
+              </div>
             ))}
-          </ul>
-        </div>
-        <div>
-          <FooterHeader>Câu hỏi phỏng vấn</FooterHeader>
-          <ul>
-            {navigation.interview.map((item) => (
-              <li key={item.name} className="mb-4">
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <FooterHeader>Giúp đỡ & Hỗ trợ</FooterHeader>
-          <ul>
-            {navigation.help.map((item) => (
-              <li key={item.name} className="mb-4">
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </li>
-            ))}
-          </ul>
+          </nav>
         </div>
         <div>
           <FooterHeader>Liên kết</FooterHeader>
-          <ul>
+          <nav className="flex flex-col gap-4">
             {navigation.links.map((item) => (
-              <li key={item.name} className="mb-4">
+              <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
                 </FooterLink>
-              </li>
+              </div>
             ))}
-          </ul>
+          </nav>
         </div>
         <div>
           <FooterHeader>Phần mềm quản lý nhân sự</FooterHeader>
-          <ul>
+          <nav className="flex flex-col gap-4">
             {navigation.software.map((item) => (
-              <li key={item.name} className="mb-4">
+              <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
                 </FooterLink>
-              </li>
+              </div>
             ))}
-          </ul>
+          </nav>
         </div>
       </div>
       <hr className="my-6 lg:my-8 sm:mx-auto dark:border-neutral-800" />
-      <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm sm:text-center">
-          © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
-        </span>
-        <div className="flex justify-center mt-4 space-x-6 sm:mt-0">
-          <Link
-            href="https://www.facebook.com/groups/xomhr"
-            title="Facebook Group"
-            aria-label="Facebook Group"
-            className="hover:text-gray-700 hover:dark:text-white"
-          >
-            <Facebook className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://twitter.com/tuanducdesigner"
-            title="Twitter Profile"
-            aria-label="Twitter Profile"
-            className="hover:text-gray-700 hover:dark:text-white"
-          >
-            <Twitter className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://github.com/vnodesign/hr-document"
-            title="GitHub Repository"
-            aria-label="GitHub Repository"
-            className="hover:text-gray-700 hover:dark:text-white"
-          >
-            <GitHub className="w-5 h-5" />
-          </Link>
-          <Link
-            href="https://linkedin.com/in/tuanductran"
-            title="Linkedin Profile"
-            aria-label="Linkedin Profile"
-            className="hover:text-gray-700 hover:dark:text-white"
-          >
-            <Linkedin className="w-5 h-5" />
-          </Link>
-        </div>
+      <div className="text-sm text-center">
+        © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
       </div>
     </>
   )
 }
 
-export function Footer({ menu }: { menu?: boolean }): ReactElement {
-  const config = useConfig()
+export function Footer() {
   return (
     <footer className="bg-gray-100 justify-self-end dark:bg-neutral-900">
-      {menu && (
-        <div className="max-w-[90rem] mx-auto py-2 px-4 flex gap-2">
-          {config.darkMode && <ThemeSwitch />}
-        </div>
-      )}
-      <hr className="dark:border-neutral-800" />
       <div className="max-w-[90rem] mx-auto py-6 md:py-8 lg:py-10 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400">
         <FooterContent />
       </div>

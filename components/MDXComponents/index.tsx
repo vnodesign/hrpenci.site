@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import cn from 'clsx'
 import { Callout } from '../Callout'
 import Link from '../Link'

@@ -1,6 +1,16 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://hrpenci.site',
-  generateRobotsTxt: false,
-  sitemapSize: 1000,
+  generateRobotsTxt: true,
+  exclude: ['/admin', '/cdn-cgi'],
+  generateIndexSitemap: true,
+  sitemapSize: 500,
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+  },
 }

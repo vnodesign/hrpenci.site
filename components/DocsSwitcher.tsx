@@ -1,67 +1,121 @@
+import { Menu as HeadlessMenu } from '@headlessui/react'
 import cn from 'clsx'
-import { useRouter } from 'next/router'
 import Link from './Link'
 
-export type DocSite = 'blog' | 'docs'
-
-export function useDocsSite(): DocSite | undefined {
-  const { pathname } = useRouter()
-
-  if (pathname.startsWith('/docs')) {
-    return 'docs'
-  }
-
-  if (pathname.startsWith('/blog')) {
-    return 'blog'
-  }
-
-  return null
-}
-
-function DocsSiteSwitcherLink({ href, text, isActive }) {
-  return (
-    <Link
-      href={href}
-      className={cn(
-        'py-1 font-semibold transition-colors duration-300 inline-block w-[50px] cursor-pointer',
-        isActive && 'text-primary-600'
-      )}
-      title={text}
-    >
-      {text}
-    </Link>
-  )
-}
-
 function DocsSwitcher() {
-  const currentSite = useDocsSite()
-
   return (
-    <div className="absolute left-1/2 [transform:translateX(-50%)] md:ml-3 md:relative md:left-0 md:[transform:none]">
-      <div className="relative flex items-center justify-between p-2 text-xl">
-        <span
-          className={cn(
-            'flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-lg border border-neutral-200/70 dark:border-primary-100/10 p-1 duration-300 ease-in-out',
-            'after:h-[24px] after:w-[44px] after:rounded-md after:duration-300 after:bg-primary-50 after:dark:bg-primary-500/10',
-            'indeterminate:after:hidden',
-            {
-              'after:hidden': !currentSite,
-              'after:translate-x-[46px]': currentSite === 'blog',
-            }
+    <HeadlessMenu as="div" className="mx-3 relative">
+      <HeadlessMenu.Button className="text-xs leading-5 font-semibold rounded-full py-1 px-3 flex items-center space-x-2 bg-gray-200 text-gray-900 dark:bg-primary-100/10 dark:text-gray-50 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50">
+        Tài liệu phổ biến
+        <svg width="6" height="3" className="ml-2 overflow-visible" aria-hidden="true">
+          <path
+            d="M0 0L3 3L6 0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      </HeadlessMenu.Button>
+      <HeadlessMenu.Items className="absolute top-full mt-1 py-2 w-40 rounded-lg bg-white shadow-lg ring-1 ring-black/5 text-sm leading-6 font-semibold dark:bg-neutral-800 dark:ring-white/20">
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/front-end"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về Frontend"
+            >
+              Tài liệu Frontend
+            </Link>
           )}
-        />
-
-        <span
-          className={cn(
-            'z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-gray-500 dark:text-gray-400',
-            { 'hover:text-gray-900 dark:hover:text-gray-300': currentSite }
+        </HeadlessMenu.Item>
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/front-end/reactjs"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về ReactJS"
+            >
+              Tài liệu ReactJS
+            </Link>
           )}
-        >
-          <DocsSiteSwitcherLink href="/docs" text="Docs" isActive={currentSite === 'docs'} />
-          <DocsSiteSwitcherLink href="/blog" text="Blog" isActive={currentSite === 'blog'} />
-        </span>
-      </div>
-    </div>
+        </HeadlessMenu.Item>
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/front-end/vuejs"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về VueJS"
+            >
+              Tài liệu VueJS
+            </Link>
+          )}
+        </HeadlessMenu.Item>
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/back-end"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về Backend"
+            >
+              Tài liệu Backend
+            </Link>
+          )}
+        </HeadlessMenu.Item>
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/back-end/nodejs"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về NodeJS"
+            >
+              Tài liệu NodeJS
+            </Link>
+          )}
+        </HeadlessMenu.Item>
+        <HeadlessMenu.Item>
+          {({ active }) => (
+            <Link
+              href="/docs/back-end/laravel"
+              className={cn(
+                'block px-3 py-1.5 transition-colors',
+                active
+                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                  : 'text-gray-800 dark:text-gray-100'
+              )}
+              title="Đọc tài liệu về Laravel"
+            >
+              Tài liệu Laravel
+            </Link>
+          )}
+        </HeadlessMenu.Item>
+      </HeadlessMenu.Items>
+    </HeadlessMenu>
   )
 }
 
