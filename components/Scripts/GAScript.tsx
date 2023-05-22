@@ -4,7 +4,6 @@ export function GAScript() {
   return (
     <>
       <Script
-        strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-RCV263F7H7"
       />
 
