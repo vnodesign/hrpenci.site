@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import type { DocumentInitialProps, DocumentContext } from 'next/document'
-import { SkipNavLink } from 'nextra-theme-docs'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -36,14 +35,8 @@ export default class MyDocument extends Document {
             }`,
             }}
           />
-          <script
-            async
-            src="https://analytics.umami.is/script.js"
-            data-website-id="b391f518-ab8a-47bc-b914-d00bb7f23386"
-          />
         </Head>
         <body>
-          <SkipNavLink styled />
           <Main />
           <NextScript />
         </body>
