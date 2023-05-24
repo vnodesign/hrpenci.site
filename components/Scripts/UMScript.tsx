@@ -4,10 +4,9 @@ export function UMScript() {
   return (
     <>
       <Script
-        src="https://analytics.umami.is/script.js"
-        data-website-id="b391f518-ab8a-47bc-b914-d00bb7f23386"
         async
-        defer
+        src="https://analytics.umami.is/script.js"
+        data-website-id="10a41acb-6612-4211-964b-1b1407debbf1"
       />
     </>
   )
