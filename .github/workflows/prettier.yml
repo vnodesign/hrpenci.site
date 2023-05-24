@@ -2,7 +2,7 @@ name: Prettier source code
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   prettier:
@@ -13,6 +13,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Prettier check
-        run: npx prettier --check "**/*.{tsx,jsx,ts,md,mdx}"
+        run: npx prettier --check "**/*"
       - name: Prettier format
-        run: npx prettier --write "**/*.{tsx,jsx,ts,md,mdx}"
+        run: npx prettier --write "**/*"
