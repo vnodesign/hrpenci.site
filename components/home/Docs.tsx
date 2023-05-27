@@ -15,7 +15,7 @@ export default function Docs() {
             </p>
             <Link
               href="/docs"
-              className="inline-flex items-center font-medium sm:text-lg text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400"
+              className="inline-flex items-center font-medium sm:text-lg"
               title="Tìm hiểu thêm về các tài liệu trong ngành IT và ngành Design"
             >
               Tìm hiểu thêm về các tài liệu
@@ -29,55 +29,55 @@ export default function Docs() {
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho các bạn HR đang tuyển dụng về Front End.
+                  Tài liệu này dành cho những người đang tuyển dụng về Front End.
                 </span>
-                <span className="text-lg font-semibold text-primary-600 dark:text-primary-500">
+                <span className="text-lg font-semibold">
                   Front End
                 </span>
               </div>
-              <ArrowRight className="w-6 h-6 text-primary-600 dark:text-primary-500" />
+              <ArrowRight className="w-6 h-6" />
             </Link>
             <Link
               href="/docs/back-end"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-sky-600 dark:border-sky-500"
+              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho các bạn HR đang tuyển dụng về Back End.
+                  Tài liệu này dành cho những người đang tuyển dụng về Back End.
                 </span>
-                <span className="text-lg font-semibold text-sky-600 dark:text-sky-500">
+                <span className="text-lg font-semibold">
                   Back End
                 </span>
               </div>
-              <ArrowRight className="w-6 h-6 text-sky-600 dark:text-sky-500" />
+              <ArrowRight className="w-6 h-6" />
             </Link>
             <Link
               href="/docs/linux"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 border-blue-600 rounded shadow dark:bg-black dark:border-blue-500"
+              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho các bạn HR đang tuyển dụng về System.
+                  Tài liệu này dành cho những người đang tuyển dụng về System.
                 </span>
-                <span className="text-lg font-semibold text-blue-600 dark:text-blue-500">
+                <span className="text-lg font-semibold">
                   Linux và Server
                 </span>
               </div>
-              <ArrowRight className="w-6 h-6 text-blue-600 dark:text-blue-500" />
+              <ArrowRight className="w-6 h-6" />
             </Link>
             <Link
               href="/docs/design"
-              className="flex items-center justify-between p-4 bg-gray-100 border-l-8 border-pink-600 rounded shadow dark:bg-black dark:border-pink-500"
+              className="flex items-center justify-between p-4 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho các bạn HR đang tuyển dụng về Design.
+                  Tài liệu này dành cho những người đang tuyển dụng về Design.
                 </span>
-                <span className="text-lg font-semibold text-pink-600 dark:text-pink-500">
+                <span className="text-lg font-semibold">
                   Design
                 </span>
               </div>
-              <ArrowRight className="w-6 h-6 text-pink-600 dark:text-pink-500" />
+              <ArrowRight className="w-6 h-6" />
             </Link>
           </div>
         </div>
