@@ -31,9 +31,7 @@ export default function Docs() {
                 <span className="block mb-1 text-xs font-medium uppercase">
                   Tài liệu này dành cho những người đang tuyển dụng về Front End.
                 </span>
-                <span className="text-lg font-semibold">
-                  Front End
-                </span>
+                <span className="text-lg font-semibold">Front End</span>
               </div>
               <ArrowRight className="w-6 h-6" />
             </Link>
@@ -45,9 +43,7 @@ export default function Docs() {
                 <span className="block mb-1 text-xs font-medium uppercase">
                   Tài liệu này dành cho những người đang tuyển dụng về Back End.
                 </span>
-                <span className="text-lg font-semibold">
-                  Back End
-                </span>
+                <span className="text-lg font-semibold">Back End</span>
               </div>
               <ArrowRight className="w-6 h-6" />
             </Link>
@@ -59,9 +55,7 @@ export default function Docs() {
                 <span className="block mb-1 text-xs font-medium uppercase">
                   Tài liệu này dành cho những người đang tuyển dụng về System.
                 </span>
-                <span className="text-lg font-semibold">
-                  Linux và Server
-                </span>
+                <span className="text-lg font-semibold">Linux và Server</span>
               </div>
               <ArrowRight className="w-6 h-6" />
             </Link>
@@ -73,9 +67,7 @@ export default function Docs() {
                 <span className="block mb-1 text-xs font-medium uppercase">
                   Tài liệu này dành cho những người đang tuyển dụng về Design.
                 </span>
-                <span className="text-lg font-semibold">
-                  Design
-                </span>
+                <span className="text-lg font-semibold">Design</span>
               </div>
               <ArrowRight className="w-6 h-6" />
             </Link>
