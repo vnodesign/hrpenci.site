@@ -11,11 +11,6 @@ const nextConfig = withNextra({
   experimental: {
     legacyBrowsers: false,
   },
-  images: {
-    domains: ['ik.imagekit.io'],
-    loader: 'custom',
-    loaderFile: './imagekitLoader.js',
-  },
   async redirects() {
     return [
       {
