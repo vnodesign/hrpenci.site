@@ -37,7 +37,7 @@ export default function Docs() {
             </Link>
             <Link
               href="/docs/back-end"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
+              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
@@ -49,7 +49,7 @@ export default function Docs() {
             </Link>
             <Link
               href="/docs/linux"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
+              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
@@ -61,7 +61,7 @@ export default function Docs() {
             </Link>
             <Link
               href="/docs/design"
-              className="flex items-center justify-between p-4 bg-gray-100 border-l-8 border-primary-600 rounded dark:bg-black"
+              className="flex items-center justify-between p-4 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
             >
               <div>
                 <span className="block mb-1 text-xs font-medium uppercase">
