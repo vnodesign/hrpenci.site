@@ -2,7 +2,6 @@ import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
 import Navigation from '@components/Navigation'
-import { ThemeToggle } from '@components/ThemeToggle'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
 import { useEffect, useState } from 'react'
@@ -155,8 +154,7 @@ const theme: DocsThemeConfig = {
     content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
   navbar: {
-    component: Navigation,
-    extraContent: ThemeToggle
+    component: Navigation
   },
   footer: {
     component: Footer
