@@ -38,7 +38,6 @@ export default function Hero() {
           width={830}
           height={450}
           sizes="(max-width 830px) 80vw, 50vw"
-          decoding="async"
           priority
         />
       </div>
