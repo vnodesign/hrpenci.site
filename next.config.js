@@ -20,6 +20,11 @@ const nextConfig = withNextra(
     experimental: {
       legacyBrowsers: false
     },
+    images: {
+      domains: ['ik.imagekit.io'],
+      loader: 'custom',
+      loaderFile: './imagekitLoader.js',
+    },
     webpack: (config, { dev, isServer }) => {
       if (!dev && !isServer) {
         Object.assign(config.resolve.alias, {
