@@ -13,7 +13,6 @@ function HeaderLogo() {
           alt="HR Documentation"
           width={28}
           height={28}
-          decoding="async"
           priority
         />
       </Link>
