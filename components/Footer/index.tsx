@@ -1,16 +1,13 @@
-import dynamic from 'next/dynamic'
-import { ReactNode } from 'react'
-import Link from '../Link'
+import { navigation } from 'data/data'
+import type { ReactNode } from 'react'
+import { ComponentIcon } from '../Icons'
 import Image from '../Image'
-const Facebook = dynamic(() => import('../Icons/Facebook'))
-const Twitter = dynamic(() => import('../Icons/Twitter'))
-const GitHub = dynamic(() => import('../Icons/GitHub'))
-const Linkedin = dynamic(() => import('../Icons/Linkedin'))
+import Link from '../Link'
 
 function FooterLink({
   href,
   title,
-  children,
+  children
 }: {
   href: string
   title: string
@@ -31,46 +28,14 @@ function FooterHeader({ children }: { children: ReactNode }) {
   return <h3 className="mb-4 font-semibold">{children}</h3>
 }
 
-const navigation = {
-  it: [
-    { name: 'Front End là gì', href: '/docs/front-end' },
-    { name: 'Back End là gì', href: '/docs/back-end' },
-    { name: 'Linux là gì', href: '/docs/linux' },
-  ],
-  design: [
-    { name: 'Design là gì', href: '/docs/design' },
-    { name: 'Microsoft Designer là gì', href: '/docs/design/microsoft-designer' },
-    { name: 'Figma là gì', href: '/docs/design/figma' },
-  ],
-  help: [
-    { name: 'Liên hệ', href: '/lien-he' },
-    {
-      name: 'GitHub issues',
-      href: 'https://github.com/vnodesign/hr-document/issues',
-    },
-  ],
-  links: [
-    { name: 'Giới thiệu', href: '/gioi-thieu' },
-    { name: 'Bản quyền', href: '/ban-quyen' },
-    { name: 'Chính sách bảo mật', href: '/chinh-sach-bao-mat' },
-    { name: 'Điều khoản', href: '/dieu-khoan' },
-  ],
-  software: [
-    { name: '1Office', href: 'https://1office.vn' },
-    { name: 'MISA AMIS', href: 'https://amis.misa.vn' },
-    { name: 'HappyTime', href: 'https://happytime.vn' },
-    { name: 'CoffeeHR', href: 'https://coffeehr.com.vn' },
-  ],
-}
-
 export function FooterContent() {
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 lg:gap-8 pt-10 lg:pt-12 mb-16">
+      <div className="grid grid-cols-2 gap-12 pt-10 mb-16 md:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:pt-12">
         <div className="col-span-full lg:col-span-2">
-          <div className="lg:-mt-2 mb-4">
+          <div className="mb-4 lg:-mt-2">
             <Link
-              className="inline-flex items-center text-xl md:text-2xl font-bold gap-2"
+              className="inline-flex items-center gap-2 text-xl font-bold md:text-2xl"
               href="/"
               title="HR Documentation"
             >
@@ -80,14 +45,15 @@ export function FooterContent() {
                 width={95}
                 height={94}
                 className="w-5 h-auto"
-                priority
+                decoding="async"
+                loading="lazy"
               />
               <span className="ml-1">HR Documentation</span>
             </Link>
           </div>
-          <p className="sm:pr-8 mb-6">
-            Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành
-            cho HR.
+          <p className="mb-6 sm:pr-8">
+            Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End,
+            Linux và Design dành cho HR.
           </p>
           <div className="flex space-x-6">
             <Link
@@ -96,7 +62,7 @@ export function FooterContent() {
               aria-label="Facebook Group"
               className="hover:text-gray-700 hover:dark:text-white"
             >
-              <Facebook className="w-5 h-5" />
+              <ComponentIcon icon="Facebook" className="w-5 h-5" />
             </Link>
             <Link
               href="https://twitter.com/tuanducdesigner"
@@ -104,7 +70,7 @@ export function FooterContent() {
               aria-label="Twitter Profile"
               className="hover:text-gray-700 hover:dark:text-white"
             >
-              <Twitter className="w-5 h-5" />
+              <ComponentIcon icon="Twitter" className="w-5 h-5" />
             </Link>
             <Link
               href="https://github.com/vnodesign/hr-document"
@@ -112,7 +78,7 @@ export function FooterContent() {
               aria-label="GitHub Repository"
               className="hover:text-gray-700 hover:dark:text-white"
             >
-              <GitHub className="w-5 h-5" />
+              <ComponentIcon icon="GitHub" className="w-5 h-5" />
             </Link>
             <Link
               href="https://linkedin.com/in/tuanductran"
@@ -120,26 +86,14 @@ export function FooterContent() {
               aria-label="Linkedin Profile"
               className="hover:text-gray-700 hover:dark:text-white"
             >
-              <Linkedin className="w-5 h-5" />
+              <ComponentIcon icon="Linkedin" className="w-5 h-5" />
             </Link>
           </div>
         </div>
         <div>
-          <FooterHeader>Tài liệu IT</FooterHeader>
+          <FooterHeader>Trợ giúp & Hỗ trợ</FooterHeader>
           <nav className="flex flex-col gap-4">
-            {navigation.it.map((item) => (
-              <div key={item.name}>
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </div>
-            ))}
-          </nav>
-        </div>
-        <div>
-          <FooterHeader>Tài liệu Design</FooterHeader>
-          <nav className="flex flex-col gap-4">
-            {navigation.design.map((item) => (
+            {navigation.help.map(item => (
               <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
@@ -151,7 +105,7 @@ export function FooterContent() {
         <div>
           <FooterHeader>Liên kết</FooterHeader>
           <nav className="flex flex-col gap-4">
-            {navigation.links.map((item) => (
+            {navigation.links.map(item => (
               <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}
@@ -163,7 +117,7 @@ export function FooterContent() {
         <div>
           <FooterHeader>Phần mềm quản lý nhân sự</FooterHeader>
           <nav className="flex flex-col gap-4">
-            {navigation.software.map((item) => (
+            {navigation.software.map(item => (
               <div key={item.name}>
                 <FooterLink href={item.href} title={item.name}>
                   {item.name}

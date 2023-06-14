@@ -1,66 +1,47 @@
-import dynamic from 'next/dynamic'
-import Link from '../Link'
+import { ComponentIcon } from '../Icons'
 import Image from '../Image'
-const Check = dynamic(() => import('../Icons/Check'))
-
-const heroContent = {
-  featured: [
-    { name: 'Dễ tiếp cận và dễ hiểu với những bạn HR mới vào nghề.', icon: Check },
-    { name: 'Tài liệu đa dạng về các chủ đề liên quan đến IT và Design.', icon: Check },
-    { name: 'Các bài chia sẻ chi tiết và chuyên sâu về IT và Design.', icon: Check },
-  ],
-}
+import Link from '../Link'
 
 export default function Hero() {
   return (
-    <div className="py-10 bg-gray-100 dark:bg-black">
-      <div className="w-full max-w-screen-xl px-4 mx-auto md:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          <div className="space-y-8">
-            <h1 className="text-4xl font-extrabold tracking-tight text-slate-800 dark:text-slate-200">
-              Chào mừng bạn đến với HR Documentation!
-            </h1>
-            <p className="sm:text-xl">
-              Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân vào nghề tuyển
-              dụng hiểu rõ hơn về các khái niệm trong lĩnh vực IT và Design.
-            </p>
-            <ul className="space-y-2 sm:text-xl text-slate-700 dark:text-slate-300">
-              {heroContent.featured.map((value, index) => (
-                <li key={index} className="flex space-x-3">
-                  <div className="pt-1">
-                    <value.icon className="w-5 h-5 text-green-800 dark:text-green-400" />
-                  </div>
-                  <span>{value.name}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row">
-              <Link
-                href="/docs"
-                className="flex items-center justify-center px-6 py-3 font-medium text-white rounded-full bg-primary-600"
-                title="Bắt đầu đọc tài liệu về IT và Design"
-              >
-                Bắt đầu đọc tài liệu về IT và Design
-                <span className="ml-1">→</span>
-              </Link>
-            </div>
-          </div>
-          <div className="relative flex items-center w-full">
-            <div className="overflow-hidden border border-gray-100 shadow-lg rounded-2xl bg-gray-50 dark:border-gray-800 dark:bg-gray-900 shadow-gray-100 dark:shadow-gray-900">
-              <Image
-                src="/static/documentation-card.png"
-                alt="Documentation Card"
-                width={830}
-                height={450}
-                placeholder="blur"
-                blurDataURL="/static/documentation-card.png"
-                sizes="(max-width 830px) 80vw, 50vw"
-                priority
-              />
-            </div>
-          </div>
+    <section className="py-8 bg-gray-100 dark:bg-black lg:pt-12 lg:pb-16">
+      <div className="max-w-screen-xl px-4 mx-auto lg:text-center">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:text-center xl:px-36 lg:mb-7 text-slate-800 dark:text-slate-200">
+          Chào mừng bạn đến với HR Documentation!
+        </h1>
+        <p className="mb-10 text-lg font-normal lg:text-center lg:text-xl xl:px-60">
+          Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân
+          vào nghề tuyển dụng hiểu rõ hơn về các khái niệm trong lĩnh vực IT và
+          Design.
+        </p>
+        <div className="flex flex-col mb-8 md:flex-row lg:justify-center">
+          <Link
+            href="/docs"
+            className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800 font-medium rounded-lg text-base px-6 py-2.5 text-center md:mr-5 mb-3 md:mb-0 inline-flex items-center justify-center"
+            title="Bắt đầu"
+          >
+            Bắt đầu
+          </Link>
+          <Link
+            href="https://www.facebook.com/groups/xomhr"
+            className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800 font-medium rounded-lg text-base px-6 py-2.5 text-center inline-flex justify-center items-center"
+            title="Group đăng tin tuyển dụng"
+          >
+            <ComponentIcon icon="Facebook" className="w-5 h-5 mr-3" />
+            Group đăng tin tuyển dụng
+          </Link>
         </div>
+        <Image
+          className="relative w-full max-w-4xl mx-auto mt-12 border border-gray-100 shadow-lg shadow-gray-100 dark:shadow-gray-900 rounded-2xl lg:mt-20 dark:border-gray-800"
+          src="/static/documentation-card.png"
+          alt="Documentation Card"
+          width={830}
+          height={450}
+          sizes="(max-width 830px) 80vw, 50vw"
+          decoding="async"
+          priority
+        />
       </div>
-    </div>
+    </section>
   )
 }

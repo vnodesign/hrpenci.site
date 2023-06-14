@@ -1,4 +1,4 @@
-import { GAScript } from './GAScript'
+import GTMScript from './GTMScript'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -7,7 +7,7 @@ export function Scripts() {
     <>
       {isProduction && (
         <>
-          <GAScript />
+          <GTMScript />
         </>
       )}
     </>

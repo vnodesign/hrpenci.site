@@ -1,13 +1,21 @@
 import dynamic from 'next/dynamic'
-const DocsSwitcher = dynamic(() => import('./DocsSwitcher'))
-import Link from './Link'
 import Image from './Image'
+import Link from './Link'
+
+const DocsSwitcher = dynamic(() => import('./DocsSwitcher'))
 
 function HeaderLogo() {
   return (
     <>
       <Link href="/" title="HR Documentation">
-        <Image src="/static/favicon.png" alt="HR Documentation" width={28} height={28} priority />
+        <Image
+          src="/static/favicon.png"
+          alt="HR Documentation"
+          width={28}
+          height={28}
+          decoding="async"
+          priority
+        />
       </Link>
       <DocsSwitcher />
     </>

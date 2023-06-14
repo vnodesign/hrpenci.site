@@ -1,13 +1,14 @@
 module.exports = {
   semi: false,
   singleQuote: true,
-  printWidth: 100,
-  trailingComma: 'es5',
-  arrowParens: 'always',
-  tabWidth: 2,
-  useTabs: false,
-  quoteProps: 'as-needed',
-  jsxSingleQuote: false,
-  bracketSpacing: true,
-  bracketSameLine: false,
+  trailingComma: 'none',
+  arrowParens: 'avoid',
+  plugins: [
+    require('prettier-plugin-tailwindcss'),
+    // for sort fields in package.json
+    require('prettier-plugin-pkg'),
+    // for sorting imports
+    require('@ianvs/prettier-plugin-sort-imports')
+  ],
+  proseWrap: 'always' // printWidth line breaks in md/mdx
 }

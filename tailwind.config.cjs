@@ -1,5 +1,5 @@
 const makePrimaryColor =
-  (l) =>
+  l =>
   ({ opacityValue }) => {
     if (opacityValue === undefined) {
       return `hsl(var(--nextra-primary-hue) 100% ${l}%)`
@@ -9,7 +9,11 @@ const makePrimaryColor =
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./components/**/*.{js,tsx}', './pages/**/*.{md,mdx,tsx}', './theme.config.tsx'],
+  content: [
+    './components/**/*.{js,tsx}',
+    './pages/**/*.{md,mdx,tsx}',
+    './theme.config.tsx'
+  ],
   theme: {
     extend: {
       colors: {
@@ -27,7 +31,7 @@ module.exports = {
           600: '#4B5563',
           700: '#374151',
           800: '#1F2937',
-          900: '#111827',
+          900: '#111827'
         },
         red: {
           50: '#FDF2F2',
@@ -39,7 +43,7 @@ module.exports = {
           600: '#E02424',
           700: '#C81E1E',
           800: '#9B1C1C',
-          900: '#771D1D',
+          900: '#771D1D'
         },
         orange: {
           50: '#FFF8F1',
@@ -51,7 +55,7 @@ module.exports = {
           600: '#D03801',
           700: '#B43403',
           800: '#8A2C0D',
-          900: '#771D1D',
+          900: '#771D1D'
         },
         yellow: {
           50: '#FDFDEA',
@@ -63,7 +67,7 @@ module.exports = {
           600: '#9F580A',
           700: '#8E4B10',
           800: '#723B13',
-          900: '#633112',
+          900: '#633112'
         },
         green: {
           50: '#F3FAF7',
@@ -75,7 +79,7 @@ module.exports = {
           600: '#057A55',
           700: '#046C4E',
           800: '#03543F',
-          900: '#014737',
+          900: '#014737'
         },
         teal: {
           50: '#EDFAFA',
@@ -87,7 +91,7 @@ module.exports = {
           600: '#047481',
           700: '#036672',
           800: '#05505C',
-          900: '#014451',
+          900: '#014451'
         },
         blue: {
           50: '#EBF5FF',
@@ -99,7 +103,7 @@ module.exports = {
           600: '#1C64F2',
           700: '#1A56DB',
           800: '#1E429F',
-          900: '#233876',
+          900: '#233876'
         },
         indigo: {
           50: '#F0F5FF',
@@ -111,7 +115,7 @@ module.exports = {
           600: '#5850EC',
           700: '#5145CD',
           800: '#42389D',
-          900: '#362F78',
+          900: '#362F78'
         },
         purple: {
           50: '#F6F5FF',
@@ -123,7 +127,7 @@ module.exports = {
           600: '#7E3AF2',
           700: '#6C2BD9',
           800: '#5521B5',
-          900: '#4A1D96',
+          900: '#4A1D96'
         },
         pink: {
           50: '#FDF2F8',
@@ -135,7 +139,7 @@ module.exports = {
           600: '#D61F69',
           700: '#BF125D',
           800: '#99154B',
-          900: '#751A3D',
+          900: '#751A3D'
         },
         primary: {
           50: makePrimaryColor(97),
@@ -148,10 +152,10 @@ module.exports = {
           700: makePrimaryColor(39),
           750: makePrimaryColor(35),
           800: makePrimaryColor(32),
-          900: makePrimaryColor(24),
-        },
-      },
-    },
+          900: makePrimaryColor(24)
+        }
+      }
+    }
   },
   plugins: [
     function ({ addVariant }) {
@@ -159,7 +163,28 @@ module.exports = {
         'supports-backdrop-blur',
         '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
       )
-    },
+    }
   ],
-  darkMode: ['class'],
+  safelist: [
+    'm-0',
+    'my-0.5',
+    'ml-8',
+    'ml-12',
+    'ml-16',
+    'w-7',
+    'h-6',
+    'h-7',
+    'h-8',
+    'h-32',
+    'h-80',
+    'h-96',
+    'w-10',
+    'w-6/12',
+    'space-x-1',
+    'flex-wrap',
+    'border-none',
+    'aspect-video',
+    'dark:bg-white'
+  ],
+  darkMode: ['class', 'html[class~="dark"]']
 }

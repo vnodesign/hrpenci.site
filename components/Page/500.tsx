@@ -9,7 +9,9 @@ export default function ServerError() {
           <p className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
             Internal Server Error
           </p>
-          <p className="mb-4 text-lg font-light">Chúng tôi đang làm việc để giải quyết vấn đề</p>
+          <p className="mb-4 text-lg font-light">
+            Chúng tôi đang làm việc để giải quyết vấn đề
+          </p>
         </div>
       </div>
     </div>

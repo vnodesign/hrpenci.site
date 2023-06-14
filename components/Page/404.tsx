@@ -8,9 +8,12 @@ export default function PageError() {
           <h1 className="mb-4 font-extrabold tracking-tight text-7xl lg:text-9xl text-primary-600 dark:text-primary-500">
             404
           </h1>
-          <p className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Không tìm thấy trang</p>
+          <p className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+            Không tìm thấy trang
+          </p>
           <p className="mb-4 text-lg font-light">
-            Rất tiếc, trang bạn yêu cầu không khả dụng. Xin vui lòng thử lại hoặc trở về trang chủ
+            Rất tiếc, trang bạn yêu cầu không khả dụng. Xin vui lòng thử lại
+            hoặc trở về trang chủ
           </p>
           <Link
             href="/"

@@ -1,7 +1,7 @@
 @tailwind utilities;
 
 .nextra-nav-container {
-  @apply border-b border-neutral-200/10 dark:border-primary-100/[0.06] bg-white dark:bg-dark;
+  @apply border-b border-neutral-200/10 bg-white dark:border-primary-100/[0.06] dark:bg-dark;
 
   .nextra-nav-container-blur {
     @apply hidden;
@@ -9,7 +9,7 @@
 
   a {
     &[aria-current] {
-      @apply text-sm leading-6 font-semibold hover:text-primary-600;
+      @apply text-sm font-semibold leading-6 hover:text-primary-600;
     }
 
     &[aria-current^='true'] {
@@ -33,7 +33,7 @@
   }
 
   img {
-    @apply rounded-md mx-auto w-full;
+    @apply mx-auto w-full rounded-md;
   }
 }
 
@@ -50,8 +50,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Space Grotesk Bold', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Space Grotesk Bold', -apple-system, BlinkMacSystemFont, Roboto,
+    'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 code,

@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react'
+import { Footer } from '@components/Footer'
+import HeaderLogo from '@components/HeaderLogo'
+import { MDXComponents } from '@components/MDXComponents'
+import Navigation from '@components/Navigation'
+import { ThemeToggle } from '@components/ThemeToggle'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
-import Navigation from '@components/Navigation'
-import HeaderLogo from '@components/HeaderLogo'
-import { Footer } from '@components/Footer'
-import { MDXComponents } from '@components/MDXComponents'
+import { useEffect, useState } from 'react'
 
 const siteUrl = 'https://hrpenci.site'
 
 const theme: DocsThemeConfig = {
   project: {
-    link: 'https://github.com/vnodesign/hr-document',
+    link: 'https://github.com/vnodesign/hr-document'
   },
   docsRepositoryBase: 'https://github.com/vnodesign/hr-document/edit/master/',
   useNextSeoProps: function SEO() {
@@ -46,33 +47,33 @@ const theme: DocsThemeConfig = {
             url: ogImage,
             alt: title,
             width: 1200,
-            height: 630,
-          },
+            height: 630
+          }
         ],
         siteName: 'HR Documentation',
         type: asPath === '/' ? 'website' : 'article',
-        locale: 'vi_VN',
+        locale: 'vi_VN'
       },
       facebook: {
-        appId: '1031926270674334',
+        appId: '1031926270674334'
       },
       twitter: {
         handle: '@tuanducdesigner',
         site: '@tuanducdesigner',
-        cardType: 'summary_large_image',
+        cardType: 'summary_large_image'
       },
       additionalMetaTags: [
         { content: '100005485267478', property: 'fb:admins' },
         {
           content: title,
-          name: 'twitter:title',
+          name: 'twitter:title'
         },
         {
           content: ogDescription,
-          name: 'twitter:description',
+          name: 'twitter:description'
         },
-        { content: ogImage, name: 'twitter:image' },
-      ],
+        { content: ogImage, name: 'twitter:image' }
+      ]
     }
   },
   logo: HeaderLogo,
@@ -85,7 +86,7 @@ const theme: DocsThemeConfig = {
         </span>
       </>
     ),
-    placeholder: 'Tìm kiếm...',
+    placeholder: 'Tìm kiếm...'
   },
   head: function Head() {
     return (
@@ -93,10 +94,17 @@ const theme: DocsThemeConfig = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="apple-mobile-web-app-title" content="HR Documentation" />
         <meta name="application-name" content="HR Documentation" />
-        <meta name="msapplication-TileImage" content="/static/apple-touch-icon-144x144.png" />
+        <meta
+          name="msapplication-TileImage"
+          content="/static/apple-touch-icon-144x144.png"
+        />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="shortcut icon" href="/static/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon-180x180.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/static/apple-touch-icon-180x180.png"
+        />
         <link rel="prefetch" href="/docs" as="document" />
         <link rel="prefetch" href="/blog" as="document" />
         <link rel="prefetch" href="/interview" as="document" />
@@ -104,8 +112,7 @@ const theme: DocsThemeConfig = {
     )
   },
   sidebar: {
-    defaultMenuCollapseLevel: 1,
-    toggleButton: true,
+    defaultMenuCollapseLevel: 1
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -119,7 +126,7 @@ const theme: DocsThemeConfig = {
           timestamp.toLocaleDateString(locale, {
             day: 'numeric',
             month: 'long',
-            year: 'numeric',
+            year: 'numeric'
           })
         )
       } catch (e) {
@@ -132,28 +139,29 @@ const theme: DocsThemeConfig = {
   },
   toc: {
     float: true,
-    title: 'Mục lục tài liệu',
+    title: 'Mục lục tài liệu'
   },
   i18n: [],
   editLink: {
-    text: 'Đóng góp nội dung cho tài liệu này',
+    text: 'Đóng góp nội dung cho tài liệu này'
   },
   feedback: {
-    content: 'Đặt câu hỏi cho tài liệu này',
+    content: 'Đặt câu hỏi cho tài liệu này'
   },
   notFound: {
-    content: 'Gửi vấn đề về liên kết bị hỏng \u2192',
+    content: 'Gửi vấn đề về liên kết bị hỏng \u2192'
   },
   serverSideError: {
-    content: 'Gửi vấn đề về lỗi trong url \u2192',
+    content: 'Gửi vấn đề về lỗi trong url \u2192'
   },
   navbar: {
     component: Navigation,
+    extraContent: ThemeToggle
   },
   footer: {
-    component: Footer,
+    component: Footer
   },
-  components: MDXComponents,
+  components: MDXComponents
 }
 
 export default theme

@@ -1,77 +1,35 @@
-import dynamic from 'next/dynamic'
+import { DocsLink } from 'data/data'
+import { ComponentIcon } from '../Icons'
 import Link from '../Link'
-const ArrowRightShort = dynamic(() => import('../Icons/ArrowRightShort'))
-const ArrowRight = dynamic(() => import('../Icons/ArrowRight'))
 
 export default function Docs() {
   return (
     <section className="py-16 lg:pt-24 lg:pb-28">
-      <div className="px-4 mx-auto max-w-7xl lg:px-6">
-        <div className="grid gap-12 space-y-8 lg:grid-cols-2 lg:space-y-0">
-          <div>
-            <h2 className="mb-4 text-4xl font-extrabold tracking-tight">Tài liệu chi tiết</h2>
-            <p className="mb-4 sm:text-xl dark:text-neutral-300">
-              Tài liệu chi tiết và dễ hiểu, dễ tiếp cận với những bạn HR mới vào nghề.
-            </p>
+      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] mx-auto text-center max-w-[90rem]">
+        <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
+          Tài liệu chi tiết
+        </h2>
+        <p className="mb-10 text-lg font-normal lg:text-center lg:text-xl lg:px-64 lg:mb-16 dark:text-neutral-300">
+          Tài liệu chi tiết và dễ hiểu, dễ tiếp cận với những bạn HR mới vào
+          nghề.
+        </p>
+        <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
+          {DocsLink.map(item => (
             <Link
-              href="/docs"
-              className="inline-flex items-center font-medium sm:text-lg"
-              title="Tìm hiểu thêm về các tài liệu trong ngành IT và ngành Design"
+              key={item.href}
+              href={item.href}
+              className="block px-8 py-12 text-center bg-black/[.05] dark:bg-gray-50/10 rounded-lg"
+              title={item.name}
             >
-              Tìm hiểu thêm về các tài liệu
-              <ArrowRightShort className="w-5 h-5 ml-1" />
+              <ComponentIcon
+                icon={item.icon}
+                className="w-12 h-12 mx-auto fill-primary-500"
+              />
+              <h3 className="font-semibold text-xl mt-3.5 text-gray-900 dark:text-gray-300">
+                {item.name}
+              </h3>
             </Link>
-          </div>
-          <div>
-            <Link
-              href="/docs/front-end"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
-            >
-              <div>
-                <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho những người đang tuyển dụng về Front End.
-                </span>
-                <span className="text-lg font-semibold">Front End</span>
-              </div>
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-            <Link
-              href="/docs/back-end"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
-            >
-              <div>
-                <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho những người đang tuyển dụng về Back End.
-                </span>
-                <span className="text-lg font-semibold">Back End</span>
-              </div>
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-            <Link
-              href="/docs/linux"
-              className="flex items-center justify-between p-4 mb-6 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
-            >
-              <div>
-                <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho những người đang tuyển dụng về System.
-                </span>
-                <span className="text-lg font-semibold">Linux và Server</span>
-              </div>
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-            <Link
-              href="/docs/design"
-              className="flex items-center justify-between p-4 bg-gray-100 border-l-8 rounded shadow dark:bg-black border-primary-600 dark:border-primary-500"
-            >
-              <div>
-                <span className="block mb-1 text-xs font-medium uppercase">
-                  Tài liệu này dành cho những người đang tuyển dụng về Design.
-                </span>
-                <span className="text-lg font-semibold">Design</span>
-              </div>
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-          </div>
+          ))}
         </div>
       </div>
     </section>

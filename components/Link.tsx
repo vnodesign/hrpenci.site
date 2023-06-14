@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-import React from 'react'
 import Link from 'next/link'
+import type React from 'react'
 
 interface CustomLinkProps {
   href: string
@@ -8,8 +7,8 @@ interface CustomLinkProps {
 }
 
 const CustomLink: React.FC<CustomLinkProps> = ({ href, ...rest }) => {
-  const isInternalLink = href && href.startsWith('/')
-  const isAnchorLink = href && href.startsWith('#')
+  const isInternalLink = href?.startsWith('/')
+  const isAnchorLink = href?.startsWith('#')
 
   if (isInternalLink) {
     return <Link href={href} {...rest} />

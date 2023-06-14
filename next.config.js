@@ -3,43 +3,35 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
   flexsearch: true,
   staticImage: true,
-  defaultShowCopyCode: true,
+  defaultShowCopyCode: true
 })
 
-const nextConfig = withNextra({
-  reactStrictMode: true,
-  experimental: {
-    legacyBrowsers: false,
-  },
-  async redirects() {
-    return [
-      {
-        source: '/front-end/:path*',
-        destination: '/docs/front-end/:path*',
-        permanent: true,
-      },
-      {
-        source: '/back-end/:path*',
-        destination: '/docs/back-end/:path*',
-        permanent: true,
-      },
-      {
-        source: '/linux/:path*',
-        destination: '/docs/linux/:path*',
-        permanent: true,
-      },
-      {
-        source: '/design/:path*',
-        destination: '/docs/design/:path*',
-        permanent: true,
-      },
-      {
-        source: '/nang-cao/:path*',
-        destination: '/docs/nang-cao/:path*',
-        permanent: true,
-      },
-    ]
-  },
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development'
 })
+
+const nextConfig = withNextra(
+  withPWA({
+    reactStrictMode: true,
+    swcMinify: true,
+    experimental: {
+      legacyBrowsers: false
+    },
+    webpack: (config, { dev, isServer }) => {
+      if (!dev && !isServer) {
+        Object.assign(config.resolve.alias, {
+          'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+          react: 'preact/compat',
+          'react-dom/test-utils': 'preact/test-utils',
+          'react-dom': 'preact/compat'
+        })
+      }
+      return config
+    }
+  })
+)
 
 module.exports = nextConfig

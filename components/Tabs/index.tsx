@@ -1,83 +1,57 @@
-import type { ReactElement, ReactNode } from 'react'
 import cn from 'clsx'
-import { Tab as HeadlessTab } from '@headlessui/react'
+import type { ReactElement, ReactNode } from 'react'
+import { Children, useState } from 'react'
 
-type TabItem = {
-  label: ReactElement
-  disabled?: boolean
-}
-
-function isTabItem(item: unknown): item is TabItem {
-  if (item && typeof item === 'object' && 'label' in item) return true
-  return false
-}
-
-const renderTab = (item: ReactNode | TabItem) => {
-  if (isTabItem(item)) {
-    return item.label
-  }
-  return item
-}
-
-export function Tabs({
-  items,
-  selectedIndex,
-  defaultIndex,
-  onChange,
-  children,
+function Tab({
+  title,
+  isActive = true,
+  children
 }: {
-  items: ReactNode[] | ReadonlyArray<ReactNode> | TabItem[]
-  selectedIndex?: number
-  defaultIndex?: number
-  onChange?: (index: number) => void
-  children: ReactNode
-}): ReactElement {
+  title: string
+  isActive?: boolean
+  children?: ReactNode
+}) {
   return (
-    <HeadlessTab.Group
-      selectedIndex={selectedIndex}
-      defaultIndex={defaultIndex}
-      onChange={onChange}
-    >
-      <div className="overflow-x-auto overflow-y-hidden nextra-scrollbar overscroll-x-contain">
-        <HeadlessTab.List className="flex min-w-full pb-px mt-4 border-b border-gray-200 w-max dark:border-neutral-800">
-          {items.map((item, index) => {
-            const disabled = !!(
-              item &&
-              typeof item === 'object' &&
-              'disabled' in item &&
-              item.disabled
-            )
-
-            return (
-              <HeadlessTab
-                key={index}
-                disabled={disabled}
-                className={({ selected }) =>
-                  cn(
-                    'mr-2 rounded-t p-2 font-medium leading-5 transition-colors',
-                    '-mb-0.5 select-none border-b-2',
-                    selected
-                      ? 'border-primary-500 text-primary-600'
-                      : 'border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white',
-                    disabled && 'pointer-events-none text-gray-400 dark:text-neutral-600'
-                  )
-                }
-              >
-                {renderTab(item)}
-              </HeadlessTab>
-            )
-          })}
-        </HeadlessTab.List>
-      </div>
-      <HeadlessTab.Panels>{children}</HeadlessTab.Panels>
-    </HeadlessTab.Group>
+    <>
+      <h2
+        className={cn(
+          'flex text-sm leading-6 font-semibold whitespace-nowrap pt-3 pb-2.5 -mb-px max-w-max border-b',
+          isActive
+            ? 'text-primary-500 dark:text-primary-400 border-current'
+            : 'text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700'
+        )}
+      >
+        {title}
+      </h2>
+      {children ? <div>{children}</div> : null}
+    </>
   )
 }
 
-export function Tab({ children, ...props }): ReactElement {
+function Tabs({ children }: { children: ReactElement[] }) {
+  const [activeTabIndex, setActiveTabIndex] = useState(0)
+  const arrayChildren = Children.toArray(children) as ReactElement[]
+  const activeTabContent = arrayChildren[activeTabIndex]?.props?.children
+
   return (
-    <HeadlessTab.Panel {...props} className="pt-6 rounded">
-      {children}
-    </HeadlessTab.Panel>
+    <>
+      <ul className="mb-6 pb-[1px] flex-none min-w-full overflow-auto border-b border-zinc-200 space-x-6 flex dark:border-zinc-200/10">
+        {arrayChildren.map((child: ReactElement, i: number) => (
+          <li
+            className="cursor-pointer"
+            onClick={() => setActiveTabIndex(i)}
+            key={i}
+          >
+            <Tab
+              title={child?.props?.title ?? 'Tab Title'}
+              isActive={i === activeTabIndex}
+            />
+          </li>
+        ))}
+      </ul>
+      <div>{activeTabContent}</div>
+    </>
   )
 }
+
+export { Tab, Tabs }

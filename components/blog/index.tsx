@@ -1,7 +1,6 @@
-import React from 'react'
 import { getPagesUnderRoute } from 'nextra/context'
+import type { Page } from 'Type'
 import Link from '../Link'
-import { Page } from '../Page'
 
 export default function Blog() {
   const pages = getPagesUnderRoute('/blog')
@@ -11,9 +10,11 @@ export default function Blog() {
 
   return (
     <>
-      <div className="max-w-screen-lg pt-4 pb-8 mx-auto mb-16 border-b border-gray-400 border-opacity-20">
+      <div className="max-w-screen-lg pt-4 pb-8 mx-auto mb-16 border-b border-gray-400/20">
         <h1 className="font-bold leading-tight lg:text-5xl">{pageTitle}</h1>
-        <p className="text-center text-gray-500 dark:text-gray-400">{pageDescription}</p>
+        <p className="text-center text-gray-500 dark:text-gray-400">
+          {pageDescription}
+        </p>
       </div>
       {pages.map(({ route, name, meta, frontMatter }: Page) => (
         <div key={route} className="my-10 last:my-0">

@@ -15,7 +15,8 @@ export default function Navigation(props) {
           >
             Hãy đọc bài viết này nhé!
           </Link>{' '}
-          (Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa Back End và Front End).
+          (Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa Back
+          End và Front End).
         </div>
       </div>
     </>
