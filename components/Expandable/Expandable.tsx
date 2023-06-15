@@ -42,7 +42,7 @@ function GenericExpandable({
   description?: string
   defaultOpen?: boolean
   onChange?: (open: boolean) => void
-  children: React.ReactNode
+  children: ReactNode
 }) {
   const [open, setOpen] = useState<boolean>(defaultOpen)
 
@@ -54,7 +54,7 @@ function GenericExpandable({
   }
 
   return (
-    <div key={title} role="listitem" className="">
+    <div key={title} role="listitem">
       <ExpandableCover
         title={title}
         description={description}
@@ -62,7 +62,7 @@ function GenericExpandable({
         setOpen={onClickOpen}
       />
       <div
-        id={title + 'Children'}
+        id={title}
         className={cn(
           'mt-2 pt-2 mb-4 mx-[6px] px-4 border-l border-zinc-100 dark:border-zinc-800',
           !open && 'hidden'
