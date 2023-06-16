@@ -15,6 +15,12 @@ export const DocsLink = [
 ]
 
 export const navigation = {
+  docs: [
+    { name: 'Front End', href: '/docs/front-end' },
+    { name: 'Back End', href: '/docs/back-end' },
+    { name: 'Linux', href: '/docs/linux' },
+    { name: 'Design', href: '/docs/design' }
+  ],
   help: [
     { name: 'Liên hệ', href: '/lien-he' },
     {

@@ -136,6 +136,15 @@ const theme: DocsThemeConfig = {
 
     return <>Cập nhật lần cuối lúc: {dateString}</>
   },
+  themeSwitch: {
+    useOptions() {
+      return {
+        light: 'Sáng',
+        dark: 'Tối',
+        system: 'Hệ thống'
+      }
+    }
+  },
   toc: {
     float: true,
     title: 'Mục lục tài liệu'

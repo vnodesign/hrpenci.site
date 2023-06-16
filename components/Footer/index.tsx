@@ -25,13 +25,13 @@ function FooterLink({
 }
 
 function FooterHeader({ children }: { children: ReactNode }) {
-  return <h3 className="mb-4 font-semibold">{children}</h3>
+  return <h3 className="mb-4 text-sm font-semibold">{children}</h3>
 }
 
 export function FooterContent() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-12 pt-10 mb-16 md:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:pt-12">
+      <div className="grid grid-cols-2 gap-12 pt-10 mb-16 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 lg:pt-12">
         <div className="col-span-full lg:col-span-2">
           <div className="mb-4 lg:-mt-2">
             <Link
@@ -89,6 +89,18 @@ export function FooterContent() {
               <ComponentIcon icon="Linkedin" className="w-5 h-5" />
             </Link>
           </div>
+        </div>
+        <div>
+          <FooterHeader>Tài liệu</FooterHeader>
+          <nav className="flex flex-col gap-4">
+            {navigation.docs.map(item => (
+              <div key={item.name}>
+                <FooterLink href={item.href} title={item.name}>
+                  {item.name}
+                </FooterLink>
+              </div>
+            ))}
+          </nav>
         </div>
         <div>
           <FooterHeader>Trợ giúp & Hỗ trợ</FooterHeader>

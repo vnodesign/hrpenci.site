@@ -42,7 +42,8 @@ function Docs() {
                 height={600}
                 alt={page.meta?.title || page.frontMatter?.title || page.name}
                 sizes="(max-width 1200px) 80vw, 50vw"
-                priority
+                decoding="async"
+                loading="lazy"
               />
               <div className="w-full">
                 <h3 className="text-xl font-bold leading-5 tracking-tight">

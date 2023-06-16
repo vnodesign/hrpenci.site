@@ -1,6 +1,6 @@
-import { DocsSwitcherSite } from 'data/data'
 import { Menu } from '@headlessui/react'
 import cn from 'clsx'
+import { DocsSwitcherSite } from 'data/data'
 import Link from 'next/link'
 
 function DocsSwitcher() {

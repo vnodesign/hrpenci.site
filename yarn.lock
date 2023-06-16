@@ -966,6 +966,11 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
+"@badrap/bar-of-progress@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@badrap/bar-of-progress/-/bar-of-progress-0.2.2.tgz#4eb1a197f9727748cd9c9f5269339dd0bf6c1b0c"
+  integrity sha512-Ig7MdFQM3OA7Ror5UB1ZutXNZFwxh6YExZvcd6EZloOgcXUR8PKNLH2wUVoeh92NMPnPWr6J/l9Mp+f3z7O7MQ==
+
 "@braintree/sanitize-url@^6.0.2":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-6.0.2.tgz#6110f918d273fe2af8ea1c4398a88774bb9fc12f"
@@ -5347,11 +5352,6 @@ next@^13.4.3:
     "@next/swc-win32-arm64-msvc" "13.4.6"
     "@next/swc-win32-ia32-msvc" "13.4.6"
     "@next/swc-win32-x64-msvc" "13.4.6"
-
-nextjs@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/nextjs/-/nextjs-0.0.3.tgz#4f4d1d6a257be920d9b9649d4d9522c724a4e543"
-  integrity sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w==
 
 nextra-theme-docs@^2.6.0:
   version "2.7.1"
