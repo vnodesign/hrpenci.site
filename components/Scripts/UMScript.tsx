@@ -1,6 +1,6 @@
 import Script from 'next/script'
 
-export function UMScript() {
+export default function UMScript() {
   return (
     <>
       <Script
