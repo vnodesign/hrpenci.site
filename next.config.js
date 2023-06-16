@@ -23,7 +23,7 @@ const nextConfig = withNextra(
     images: {
       domains: ['ik.imagekit.io'],
       loader: 'custom',
-      loaderFile: './imagekitLoader.js',
+      loaderFile: './imagekitLoader.js'
     },
     webpack: (config, { dev, isServer }) => {
       if (!dev && !isServer) {
