@@ -28,26 +28,6 @@ export type CalloutProps = {
 
 export type CalloutContent = { children: ReactNode }
 
-export const iconTypes = [
-  'brands',
-  'duotone',
-  'light',
-  'regular',
-  'sharp-solid',
-  'solid',
-  'thin'
-] as const
-
-export type IconType = (typeof iconTypes)[number]
-
-export type IconProps = {
-  icon: string
-  iconType?: IconType
-  className?: string
-  color?: string
-  overrideColor?: boolean
-}
-
 export interface CardPropsBase<T> {
   /**
    * Large title above children.
