@@ -32,7 +32,7 @@ function Docs() {
             key={page.route}
             href={page.route}
             title={page.meta?.title || page.frontMatter?.title || page.name}
-            className="block h-full p-5 rounded-none text-center overflow-hidden"
+            className="block h-full rounded-none text-center overflow-hidden"
           >
             <div className="w-full flex flex-col gap-6">
               <Image
