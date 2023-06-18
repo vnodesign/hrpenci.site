@@ -8,9 +8,9 @@
     "build": "NODE_ENV=production next build && next-sitemap",
     "dev": "NODE_ENV=development next dev",
     "lint": "next lint",
-    "rss": "node scripts/generate-rss.js",
     "prepare": "husky install",
     "prettier": "prettier --write .",
+    "rss": "node scripts/generate-rss.js",
     "start": "next start"
   },
   "dependencies": {
