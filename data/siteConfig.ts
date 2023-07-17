@@ -1,7 +1,5 @@
 import type { siteConfigProps } from 'Type'
 
-export const DocsSwitcherTitle = 'Tài liệu phổ biến'
-
 export const siteConfig: siteConfigProps = {
   language: 'vi-VN',
   locale: 'vi_VN',
