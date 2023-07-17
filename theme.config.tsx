@@ -2,11 +2,10 @@ import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
 import Navigation from '@components/Navigation'
+import { siteConfig } from '@data/siteConfig'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
-import { useEffect, useState } from 'react'
-
-const siteUrl = 'https://hrpenci.site'
+import { useEffect, useState } from 'preact/hooks'
 
 const theme: DocsThemeConfig = {
   project: {
@@ -18,20 +17,19 @@ const theme: DocsThemeConfig = {
     const { frontMatter } = useConfig()
 
     const ogTitle = frontMatter?.title
-      ? `${frontMatter.title} - HR Documentation`
-      : 'HR Documentation - Nền tảng chia sẻ các kiến thức và tài liệu'
+      ? `${frontMatter.title} - ${siteConfig.siteTitle}`
+      : `${siteConfig.siteTitle} - ${siteConfig.siteSubTitle}`
 
     const ogImage = frontMatter?.image
-      ? `${siteUrl}${frontMatter.image}`
-      : `${siteUrl}/static/documentation-card.png`
+      ? `${siteConfig.siteUrl}${frontMatter.image}`
+      : `${siteConfig.siteUrl}${siteConfig.siteImage}`
 
-    const ogDescription =
-      frontMatter?.description ||
-      'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.'
+    const ogDescription = frontMatter?.description || siteConfig.siteDescription
 
-    const title = frontMatter?.title || 'HR Documentation'
+    const title = frontMatter?.title || siteConfig.siteTitle
 
-    const fullUrl = asPath === '/' ? siteUrl : `${siteUrl}${asPath}`
+    const fullUrl =
+      asPath === '/' ? siteConfig.siteUrl : `${siteConfig.siteUrl}${asPath}`
 
     return {
       titleTemplate: `${ogTitle}`,
@@ -49,20 +47,20 @@ const theme: DocsThemeConfig = {
             height: 630
           }
         ],
-        siteName: 'HR Documentation',
+        siteName: siteConfig.siteTitle,
         type: asPath === '/' ? 'website' : 'article',
-        locale: 'vi_VN'
+        locale: siteConfig.locale
       },
       facebook: {
-        appId: '1031926270674334'
+        appId: siteConfig.fbAppId
       },
       twitter: {
-        handle: '@tuanducdesigner',
-        site: '@tuanducdesigner',
+        handle: `@${siteConfig.twitterHandle}`,
+        site: `@${siteConfig.twitterSite}`,
         cardType: 'summary_large_image'
       },
       additionalMetaTags: [
-        { content: '100005485267478', property: 'fb:admins' },
+        { content: siteConfig.fbAdmnId, property: 'fb:admins' },
         {
           content: title,
           name: 'twitter:title'
@@ -91,14 +89,17 @@ const theme: DocsThemeConfig = {
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="apple-mobile-web-app-title" content="HR Documentation" />
-        <meta name="application-name" content="HR Documentation" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content={siteConfig.siteTitle}
+        />
+        <meta name="application-name" content={siteConfig.siteTitle} />
         <meta
           name="msapplication-TileImage"
           content="/static/apple-touch-icon-144x144.png"
         />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="shortcut icon" href="/static/favicon.png" />
+        <link rel="shortcut icon" href={siteConfig.siteLogo} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -116,7 +117,7 @@ const theme: DocsThemeConfig = {
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [dateString, setDateString] = useState(timestamp.toISOString())
-    const locale = navigator.language || 'vi-VN'
+    const locale = navigator.language || siteConfig.locale
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {

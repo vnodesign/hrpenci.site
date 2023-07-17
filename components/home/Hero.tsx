@@ -1,6 +1,6 @@
-import { ComponentIcon } from '../Icons'
-import Image from '../Image'
-import Link from '../Link'
+import { ComponentIcon } from '@components/Icons'
+import Image from '@components/Image'
+import Link from '@components/Link'
 
 export default function Hero() {
   return (

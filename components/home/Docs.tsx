@@ -1,6 +1,6 @@
-import { DocsLink } from 'data/data'
-import { ComponentIcon } from '../Icons'
-import Link from '../Link'
+import { ComponentIcon } from '@components/Icons'
+import Link from '@components/Link'
+import { siteConfig } from 'data/siteConfig'
 
 export default function Docs() {
   return (
@@ -14,7 +14,7 @@ export default function Docs() {
           nghề.
         </p>
         <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 xl:gap-8 sm:space-y-0 md:mt-12">
-          {DocsLink.map(item => (
+          {siteConfig.docsLink.map(item => (
             <Link
               key={item.href}
               href={item.href}

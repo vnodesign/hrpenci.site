@@ -5,6 +5,44 @@ import type {
   Ref
 } from 'react'
 
+type SwitcherItem = {
+  name: string
+  href: string
+}
+
+type DocsLinkItem = {
+  name: string
+  icon: string
+  href: string
+}
+
+type FooterNavItem = {
+  title: string
+  items: {
+    name: string
+    href: string
+  }[]
+}
+
+export type siteConfigProps = {
+  language: string
+  locale: string
+  siteTitle: string
+  siteSubTitle: string
+  siteDescription: string
+  siteUrl: string
+  siteImage: string
+  siteLogo: string
+  twitterHandle: string
+  twitterSite: string
+  fbAppId: string
+  fbAdmnId: string
+  docsSwitcherTitle: string
+  docsSwitcherSite: SwitcherItem[]
+  docsLink: DocsLinkItem[]
+  navigation: FooterNavItem[]
+}
+
 export type Page = {
   route: string
   name: string

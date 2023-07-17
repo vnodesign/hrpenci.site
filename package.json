@@ -8,14 +8,14 @@
     "build": "NODE_ENV=production next build && next-sitemap",
     "dev": "NODE_ENV=development next dev",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "prepare": "husky install",
-    "prettier": "prettier --write .",
-    "rss": "node scripts/generate-rss.js",
     "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
-    "@react-aria/ssr": "^3.6.0",
     "clsx": "^1.2.1",
     "is-absolute-url": "^4.0.1",
     "next": "^13.4.3",
@@ -27,14 +27,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.1"
-  },
-  "dependenciesMeta": {
-    "nextra": {
-      "injected": true
-    },
-    "nextra-theme-docs": {
-      "injected": true
-    }
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",

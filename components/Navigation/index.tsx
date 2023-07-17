@@ -1,5 +1,5 @@
+import Link from '@components/Link'
 import { Navbar } from 'nextra-theme-docs'
-import Link from '../Link'
 
 export default function Navigation(props) {
   return (

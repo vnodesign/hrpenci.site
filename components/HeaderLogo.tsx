@@ -1,3 +1,4 @@
+import { siteConfig } from 'data/siteConfig'
 import dynamic from 'next/dynamic'
 import Image from './Image'
 import Link from './Link'
@@ -7,10 +8,10 @@ const DocsSwitcher = dynamic(() => import('./DocsSwitcher'))
 function HeaderLogo() {
   return (
     <>
-      <Link href="/" title="HR Documentation">
+      <Link href="/" title={siteConfig.siteTitle}>
         <Image
-          src="/static/favicon.png"
-          alt="HR Documentation"
+          src={siteConfig.siteLogo}
+          alt={siteConfig.siteTitle}
           width={28}
           height={28}
           priority

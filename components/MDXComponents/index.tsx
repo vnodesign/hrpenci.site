@@ -1,9 +1,9 @@
-import { Accordion, AccordionGroup } from '../Accordion'
-import { Check, Info, Note, Tip, Warning } from '../Callout'
-import { Card, CardGroup } from '../Card'
-import Link from '../Link'
-import { Steps } from '../Steps'
-import { Tab, Tabs } from '../Tabs'
+import { Accordion, AccordionGroup } from '@components/Accordion'
+import { Check, Info, Note, Tip, Warning } from '@components/Callout'
+import { Card, CardGroup } from '@components/Card'
+import Link from '@components/Link'
+import { Steps } from '@components/Steps'
+import { Tab, Tabs } from '@components/Tabs'
 
 export const MDXComponents = {
   Accordion: props => <Accordion {...props} />,

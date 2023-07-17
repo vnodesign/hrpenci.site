@@ -1,6 +1,6 @@
+import Link from '@components/Link'
 import { getPagesUnderRoute } from 'nextra/context'
 import type { Page } from 'Type'
-import Link from '../Link'
 
 export default function Blog() {
   const pages = getPagesUnderRoute('/blog')

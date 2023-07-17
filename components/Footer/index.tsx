@@ -1,8 +1,8 @@
-import { navigation } from 'data/data'
+import { ComponentIcon } from '@components/Icons'
+import Image from '@components/Image'
+import Link from '@components/Link'
+import { siteConfig } from 'data/siteConfig'
 import type { ReactNode } from 'react'
-import { ComponentIcon } from '../Icons'
-import Image from '../Image'
-import Link from '../Link'
 
 function FooterLink({
   href,
@@ -37,24 +37,21 @@ export function FooterContent() {
             <Link
               className="inline-flex items-center gap-2 text-xl font-bold md:text-2xl"
               href="/"
-              title="HR Documentation"
+              title={siteConfig.siteTitle}
             >
               <Image
-                src="/static/favicon.png"
-                alt="HR Documentation"
+                src={siteConfig.siteLogo}
+                alt={siteConfig.siteTitle}
                 width={95}
                 height={94}
                 className="w-5 h-auto"
                 decoding="async"
                 loading="lazy"
               />
-              <span className="ml-1">HR Documentation</span>
+              <span className="ml-1">{siteConfig.siteTitle}</span>
             </Link>
           </div>
-          <p className="mb-6 sm:pr-8">
-            Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End,
-            Linux và Design dành cho HR.
-          </p>
+          <p className="mb-6 sm:pr-8">{siteConfig.siteDescription}</p>
           <div className="flex space-x-6">
             <Link
               href="https://www.facebook.com/groups/xomhr"
@@ -90,58 +87,27 @@ export function FooterContent() {
             </Link>
           </div>
         </div>
-        <div>
-          <FooterHeader>Tài liệu</FooterHeader>
-          <nav className="flex flex-col gap-4">
-            {navigation.docs.map(item => (
-              <div key={item.name}>
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </div>
-            ))}
-          </nav>
-        </div>
-        <div>
-          <FooterHeader>Trợ giúp & Hỗ trợ</FooterHeader>
-          <nav className="flex flex-col gap-4">
-            {navigation.help.map(item => (
-              <div key={item.name}>
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </div>
-            ))}
-          </nav>
-        </div>
-        <div>
-          <FooterHeader>Liên kết</FooterHeader>
-          <nav className="flex flex-col gap-4">
-            {navigation.links.map(item => (
-              <div key={item.name}>
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </div>
-            ))}
-          </nav>
-        </div>
-        <div>
-          <FooterHeader>Phần mềm quản lý nhân sự</FooterHeader>
-          <nav className="flex flex-col gap-4">
-            {navigation.software.map(item => (
-              <div key={item.name}>
-                <FooterLink href={item.href} title={item.name}>
-                  {item.name}
-                </FooterLink>
-              </div>
-            ))}
-          </nav>
-        </div>
+        {siteConfig.navigation.map((section, sectionIndex) => {
+          return (
+            <div key={`footer-${sectionIndex}`}>
+              <FooterHeader>{section.title}</FooterHeader>
+              <nav className="flex flex-col gap-4">
+                {section.items.map((item, itemIndex) => (
+                  <div key={`footer-item-${itemIndex}`}>
+                    <FooterLink href={item.href} title={item.name}>
+                      {item.name}
+                    </FooterLink>
+                  </div>
+                ))}
+              </nav>
+            </div>
+          )
+        })}
       </div>
       <hr className="my-6 lg:my-8 sm:mx-auto dark:border-neutral-800" />
       <div className="text-sm text-center">
-        © 2022-{new Date().getFullYear()} HR Documentation. All Rights Reserved.
+        © 2022-{new Date().getFullYear()} {siteConfig.siteTitle}. All Rights
+        Reserved.
       </div>
     </>
   )

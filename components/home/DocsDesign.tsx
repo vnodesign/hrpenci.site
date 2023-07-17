@@ -1,7 +1,7 @@
+import Image from '@components/Image'
+import Link from '@components/Link'
 import { getPagesUnderRoute } from 'nextra/context'
 import type { Page } from 'Type'
-import Image from '../Image'
-import Link from '../Link'
 
 export default function DocsDesign() {
   return (

@@ -1,13 +1,15 @@
 import { Menu } from '@headlessui/react'
 import cn from 'clsx'
-import { DocsSwitcherSite } from 'data/data'
+import { siteConfig } from 'data/siteConfig'
 import Link from 'next/link'
 
 function DocsSwitcher() {
+  const { docsSwitcherTitle, docsSwitcherSite } = siteConfig
+
   return (
     <Menu as="div" className="relative mx-3">
       <Menu.Button className="flex items-center px-3 py-1 space-x-2 text-xs font-semibold leading-5 text-gray-900 bg-gray-200 rounded-full dark:bg-primary-100/10 dark:text-gray-50 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50">
-        Tài liệu phổ biến
+        {docsSwitcherTitle}
         <svg
           width="6"
           height="3"
@@ -24,7 +26,7 @@ function DocsSwitcher() {
         </svg>
       </Menu.Button>
       <Menu.Items className="absolute w-40 py-2 mt-1 text-sm font-semibold leading-6 bg-white rounded-lg shadow-lg top-full ring-1 ring-black/5 dark:bg-neutral-800 dark:ring-white/20">
-        {DocsSwitcherSite.map(option => (
+        {docsSwitcherSite.map(option => (
           <Menu.Item key={option.href}>
             {({ active }) => (
               <Link
