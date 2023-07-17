@@ -5,7 +5,7 @@ import Navigation from '@components/Navigation'
 import { siteConfig } from '@data/siteConfig'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
-import { useEffect, useState } from 'preact/hooks'
+import { useEffect, useState } from 'react'
 
 const theme: DocsThemeConfig = {
   project: {
