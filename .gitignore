@@ -21,3 +21,4 @@ cloudflared
 **/public/robots.txt
 # Backup any configuration
 **/*.bak*
+.vercel
