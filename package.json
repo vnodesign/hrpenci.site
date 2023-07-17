@@ -46,7 +46,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.12.0",
     "eslint-plugin-typescript-sort-keys": "^2.3.0",
-    "eslint-plugin-unicorn": "^47.0.0",
+    "eslint-plugin-unicorn": "^48.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.22",
@@ -62,10 +62,10 @@
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
-      "yarn lint"
+      "yarn lint && yarn lint:fix"
     ],
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "yarn prettier"
+      "yarn prettier:check && yarn prettier:write"
     ]
   }
 }
