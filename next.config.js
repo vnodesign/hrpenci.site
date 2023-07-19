@@ -21,6 +21,7 @@ const nextConfig = withNextra(
       legacyBrowsers: false
     },
     images: {
+      formats: ['image/webp'],
       domains: ['ik.imagekit.io'],
       loader: 'custom',
       loaderFile: './imagekitLoader.js'
