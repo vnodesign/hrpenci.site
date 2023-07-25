@@ -27,6 +27,10 @@
       "typesetting": "article"
     }
   },
+  "bookmarks": {
+    "title": "Bookmarks",
+    "type": "page"
+  },
   "ban-quyen": {
     "display": "hidden",
     "type": "page",
