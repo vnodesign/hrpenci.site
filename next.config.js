@@ -20,6 +20,14 @@ const nextConfig = withNextra(
     experimental: {
       legacyBrowsers: false
     },
+    async redirects() {
+    return [
+      {
+        source: '/join',
+        destination: 'https://www.facebook.com/groups/xomhr?rel=hrpenci.site',
+        permanent: true,
+      },
+    ]}, 
     images: {
       formats: ['image/webp'],
       domains: ['ik.imagekit.io'],
