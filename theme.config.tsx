@@ -157,12 +157,6 @@ const theme: DocsThemeConfig = {
   feedback: {
     content: 'Đặt câu hỏi cho tài liệu này'
   },
-  notFound: {
-    content: 'Gửi vấn đề về liên kết bị hỏng \u2192'
-  },
-  serverSideError: {
-    content: 'Gửi vấn đề về lỗi trong url \u2192'
-  },
   navbar: {
     component: Navigation
   },

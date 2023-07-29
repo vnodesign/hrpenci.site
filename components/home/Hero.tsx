@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="py-8 bg-gray-100 dark:bg-black lg:pt-12 lg:pb-16">
       <div className="max-w-screen-xl px-4 mx-auto lg:text-center">
         <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:text-center xl:px-36 lg:mb-7 text-slate-800 dark:text-slate-200">
-          Chào mừng bạn đến với HR Documentation!
+          Nền tảng chia sẻ kiến thức, tài liệu về IT và Design
         </h1>
         <p className="mb-10 text-lg font-normal lg:text-center lg:text-xl xl:px-60">
           Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân

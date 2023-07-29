@@ -41,6 +41,12 @@ export type siteConfigProps = {
   docsSwitcherSite: SwitcherItem[]
   docsLink: DocsLinkItem[]
   navigation: FooterNavItem[]
+  navigationBanner?: boolean
+  navigationBannerTitle?: string
+  navigationBannerText?: string
+  navigationBannerLink?: string
+  navigationBannerLinkTitle?: string
+  navigationBannerLinkText?: string
 }
 
 export type Page = {

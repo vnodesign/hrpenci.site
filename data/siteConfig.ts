@@ -4,7 +4,7 @@ export const siteConfig: siteConfigProps = {
   language: 'vi-VN',
   locale: 'vi_VN',
   siteTitle: 'HR Documentation',
-  siteSubTitle: 'Nền tảng chia sẻ các kiến thức và tài liệu',
+  siteSubTitle: 'Nền tảng chia sẻ kiến thức, tài liệu về IT và Design',
   siteDescription:
     'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
   siteUrl: 'https://hrpenci.site',
@@ -67,5 +67,12 @@ export const siteConfig: siteConfigProps = {
         { name: 'CoffeeHR', href: 'https://coffeehr.com.vn' }
       ]
     }
-  ]
+  ],
+  navigationBanner: true,
+  navigationBannerTitle: 'Chào bạn, bạn mới tuyển dụng về IT?',
+  navigationBannerText:
+    '(Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa Back End và Front End).',
+  navigationBannerLink: '/blog/khai-niem-giua-back-end-va-front-end',
+  navigationBannerLinkTitle: 'Khái niệm giữa Back End và Front End',
+  navigationBannerLinkText: 'Hãy đọc bài viết này nhé!'
 }
