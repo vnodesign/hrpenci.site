@@ -4,6 +4,7 @@
   "description": "",
   "author": "Tuan Duc Design",
   "license": "MIT",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "build": "NODE_ENV=production next build && next-sitemap",
     "dev": "NODE_ENV=development next dev",
