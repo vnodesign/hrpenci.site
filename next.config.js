@@ -32,11 +32,12 @@ const nextConfig = withNextra(
         destination: 'https://www.facebook.com/groups/2827248757496356?rel=hrpenci.site',
         permanent: true,
       },
+      {
         source: '/group-design',
-        destination: 'https://www.facebook.com/groups/1868252066694465?rel=hrpe$
+        destination: 'https://www.facebook.com/groups/1868252066694465?rel=hrpenci.site',
         permanent: true,
       },
-    ]}, 
+    ]},
     images: {
       formats: ['image/webp'],
       domains: ['ik.imagekit.io'],
