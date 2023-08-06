@@ -23,8 +23,17 @@ const nextConfig = withNextra(
     async redirects() {
     return [
       {
-        source: '/join',
+        source: '/group-hr',
         destination: 'https://www.facebook.com/groups/xomhr?rel=hrpenci.site',
+        permanent: true,
+      },
+      {
+        source: '/group-dev',
+        destination: 'https://www.facebook.com/groups/2827248757496356?rel=hrpenci.site',
+        permanent: true,
+      },
+        source: '/group-design',
+        destination: 'https://www.facebook.com/groups/1868252066694465?rel=hrpe$
         permanent: true,
       },
     ]}, 
