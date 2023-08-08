@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { Scripts } from './Scripts'
 
-export default function Nextra({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
