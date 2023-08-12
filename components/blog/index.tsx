@@ -1,3 +1,4 @@
+import gtagTrack from '@/utils/gtag'
 import Link from '@components/Link'
 import { getPagesUnderRoute } from 'nextra/context'
 import type { Page } from 'Type'
@@ -58,8 +59,15 @@ export default function Blog() {
               </div>
               <Link
                 href={route}
-                className="flex items-center text-sm text-primary-500 font-medium !no-underline"
+                className="flex items-center text-sm text-vnodesign-500 font-medium no-underline"
                 title={meta?.title || frontMatter?.title || name}
+                onClick={() =>
+                  gtagTrack(
+                    'blogReadMoreLink',
+                    route,
+                    meta?.title || frontMatter?.title || name
+                  )
+                }
               >
                 <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl" />
                 <span className="relative">
@@ -69,7 +77,7 @@ export default function Blog() {
                   </span>
                 </span>
                 <svg
-                  className="relative mt-px overflow-visible ml-2.5 text-primary-300 dark:text-primary-700"
+                  className="relative mt-px overflow-visible ml-2.5 text-vnodesign-300 dark:text-vnodesign-700"
                   width="3"
                   height="6"
                   viewBox="0 0 3 6"

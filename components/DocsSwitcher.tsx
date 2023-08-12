@@ -1,3 +1,4 @@
+import gtagTrack from '@/utils/gtag'
 import { Menu } from '@headlessui/react'
 import cn from 'clsx'
 import { siteConfig } from 'data/siteConfig'
@@ -8,7 +9,7 @@ function DocsSwitcher() {
 
   return (
     <Menu as="div" className="relative mx-3">
-      <Menu.Button className="flex items-center px-3 py-1 space-x-2 text-xs font-semibold leading-5 text-gray-900 bg-gray-200 rounded-full dark:bg-primary-100/10 dark:text-gray-50 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50">
+      <Menu.Button className="flex items-center px-3 py-1 space-x-2 text-xs font-semibold leading-5 text-gray-900 bg-gray-200 rounded-full dark:bg-vnodesign-100/10 dark:text-gray-50 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-vnodesign-100/5 dark:hover:text-gray-50">
         {docsSwitcherTitle}
         <svg
           width="6"
@@ -34,10 +35,13 @@ function DocsSwitcher() {
                 className={cn(
                   'flex items-center justify-between px-3 py-1 cursor-pointer',
                   active
-                    ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/10'
+                    ? 'bg-vnodesign-50 text-vnodesign-600 dark:bg-vnodesign-500/10'
                     : 'text-gray-800 dark:text-gray-100'
                 )}
                 title={option.name}
+                onClick={() =>
+                  gtagTrack('docsSwitcherLink', option.href, option.name)
+                }
               >
                 {option.name}
               </Link>

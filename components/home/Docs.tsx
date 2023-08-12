@@ -1,3 +1,4 @@
+import gtagTrack from '@/utils/gtag'
 import { ComponentIcon } from '@components/Icons'
 import Link from '@components/Link'
 import { siteConfig } from 'data/siteConfig'
@@ -18,12 +19,13 @@ export default function Docs() {
             <Link
               key={item.href}
               href={item.href}
-              className="block px-8 py-12 text-center bg-black/[.05] dark:bg-gray-50/10 rounded-lg"
+              className="block px-8 py-12 text-center bg-black/[.05] dark:bg-gray-50/10 rounded-2xl"
               title={item.name}
+              onClick={() => gtagTrack('docsLink', item.href, item.name)}
             >
               <ComponentIcon
                 icon={item.icon}
-                className="w-12 h-12 mx-auto fill-primary-500"
+                className="w-12 h-12 mx-auto fill-vnodesign-500"
               />
               <h3 className="font-semibold text-xl mt-3.5 text-gray-900 dark:text-gray-300">
                 {item.name}

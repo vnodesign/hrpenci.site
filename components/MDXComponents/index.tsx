@@ -6,21 +6,21 @@ import { Steps } from '@components/Steps'
 import { Tab, Tabs } from '@components/Tabs'
 
 export const MDXComponents = {
-  Accordion: props => <Accordion {...props} />,
-  AccordionGroup: props => <AccordionGroup {...props} />,
-  Check: props => <Check {...props} />,
-  Info: props => <Info {...props} />,
-  Note: props => <Note {...props} />,
-  Tip: props => <Tip {...props} />,
-  Warning: props => <Warning {...props} />,
-  Tab: props => <Tab {...props} />,
-  Tabs: props => <Tabs {...props} />,
-  Steps: props => <Steps {...props} />,
-  Card: props => <Card {...props} />,
-  CardGroup: props => <CardGroup {...props} />,
-  a: props => (
+  Accordion: (props: any) => <Accordion {...props} />,
+  AccordionGroup: (props: any) => <AccordionGroup {...props} />,
+  Check: (props: any) => <Check {...props} />,
+  Info: (props: any) => <Info {...props} />,
+  Note: (props: any) => <Note {...props} />,
+  Tip: (props: any) => <Tip {...props} />,
+  Warning: (props: any) => <Warning {...props} />,
+  Tab: (props: any) => <Tab {...props} />,
+  Tabs: (props: any) => <Tabs {...props} />,
+  Steps: (props: any) => <Steps {...props} />,
+  Card: (props: any) => <Card {...props} />,
+  CardGroup: (props: any) => <CardGroup {...props} />,
+  a: (props: any) => (
     <Link
-      className="no-underline border-b border-primary-500 dark:border-primary-600 hover:border-b-2"
+      className="font-semibold no-underline border-b border-vnodesign-500 dark:border-vnodesign-600 hover:border-b-2"
       {...props}
     />
   )

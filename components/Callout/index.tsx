@@ -80,7 +80,7 @@ function Note({ children }: CalloutContent) {
           viewBox="0 0 14 14"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 text-sky-500"
+          className="w-4 h-4 text-vnodesign-500"
           aria-label="Note"
         >
           <path

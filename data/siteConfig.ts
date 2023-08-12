@@ -12,6 +12,11 @@ export const siteConfig: siteConfigProps = {
   siteLogo: '/static/favicon.png',
   twitterHandle: 'tuanducdesigner',
   twitterSite: 'tuanducdesigner',
+  githubRepoFullName: 'vnodesign/hr-document',
+  heroTitle: 'Nền tảng chia sẻ kiến thức, tài liệu về IT và Design',
+  heroSubTitle:
+    'Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân vào nghề tuyển dụng hiểu rõ hơn về các khái niệm trong lĩnh vực IT và Design.',
+  heroImage: '/static/favicon.png',
   fbAppId: '1031926270674334',
   fbAdmnId: '100005485267478',
   docsSwitcherTitle: 'Tài liệu phổ biến',

@@ -17,7 +17,7 @@ function Tab({
         className={cn(
           'flex text-sm leading-6 font-semibold whitespace-nowrap pt-3 pb-2.5 -mb-px max-w-max border-b',
           isActive
-            ? 'text-primary-500 dark:text-primary-400 border-current'
+            ? 'text-vnodesign-500 dark:text-vnodesign-400 border-current'
             : 'text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700'
         )}
       >

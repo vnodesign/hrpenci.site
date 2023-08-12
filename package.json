@@ -1,51 +1,44 @@
 {
-  "name": "hrpenci.site",
-  "version": "2.0.5",
-  "description": "",
   "author": "Tuan Duc Design <tuanductran.dev@hotmail.com>",
-  "license": "MIT",
-  "packageManager": "pnpm@8.6.12",
-  "scripts": {
-    "build": "NODE_ENV=production next build && next-sitemap",
-    "dev": "NODE_ENV=development next dev",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "prepare": "husky install",
-    "start": "next start"
-  },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
+    "@react-spring/web": "^9.7.3",
+    "axios": "^1.4.0",
     "clsx": "^2.0.0",
     "is-absolute-url": "^4.0.1",
     "next": "^13.4.13",
     "next-pwa": "^5.6.0",
-    "next-sitemap": "^4.1.8",
+    "next-sitemap": "^4.2.2",
     "nextra": "^2.10.0",
     "nextra-theme-docs": "^2.10.0",
     "preact": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.4"
+    "sharp": "^0.32.4",
+    "swr": "^2.2.1"
   },
+  "description": "",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "@next/bundle-analyzer": "^13.4.13",
     "@next/env": "^13.4.13",
     "@next/eslint-plugin-next": "^13.4.13",
-    "@types/node": "^20.4.8",
-    "@types/react": "^18.2.18",
+    "@svgr/webpack": "^8.0.1",
+    "@types/node": "^20.4.10",
+    "@types/react": "^18.2.20",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.46.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.47.0",
     "eslint-config-next": "^13.4.13",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
@@ -55,11 +48,12 @@
     "prettier": "^3.0.1",
     "prettier-plugin-pkg": "^0.18.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "sass": "^1.64.2",
+    "sass": "^1.65.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
     "webpack": "^5.88.2"
   },
+  "license": "MIT",
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
       "pnpm lint && pnpm lint:fix"
@@ -67,5 +61,19 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "pnpm prettier:check && pnpm prettier:write"
     ]
-  }
+  },
+  "name": "hrpenci.site",
+  "packageManager": "pnpm@8.6.12",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=true next build",
+    "build": "NODE_ENV=production next build && next-sitemap",
+    "dev": "NODE_ENV=development next dev",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prepare": "husky install",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "start": "next start"
+  },
+  "version": "2.0.5"
 }

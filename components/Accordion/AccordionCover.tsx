@@ -23,7 +23,7 @@ function AccordionCover({
       className={cn(
         'flex flex-row items-center content-center w-full',
         coverClass,
-        `${open && '!bg-gray-100 dark:!bg-primary-100/5'}`
+        `${open && '!bg-gray-100 dark:bg-vnodesign-100/5'}`
       )}
       aria-controls={title}
       aria-expanded={open}

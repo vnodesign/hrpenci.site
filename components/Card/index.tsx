@@ -19,14 +19,14 @@ function Card({
   children?: ReactNode
 }) {
   const Icon = (
-    <ComponentIcon icon={icon} className="h-6 w-6 fill-primary-600" />
+    <ComponentIcon icon={icon} className="h-6 w-6 fill-vnodesign-600" />
   )
 
   // Using 'a' because href is passed, which makes the card an anchor element.
   const props: CardProps<'a'> = {
     as: 'a',
     className: cn(
-      href && 'hover:!border-primary-500 dark:hover:!border-primary-400'
+      href && 'hover:border-vnodesign-500 dark:hover:border-vnodesign-400'
     ),
     title,
     icon: Icon,
@@ -163,7 +163,6 @@ function CardGroup({ children, cols = 2, className }: CardGroupProps) {
       break
     default:
       CardGroupComponent = CardGroupTwo
-      break
   }
 
   return (

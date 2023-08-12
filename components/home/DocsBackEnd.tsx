@@ -1,3 +1,4 @@
+import gtagTrack from '@/utils/gtag'
 import Image from '@components/Image'
 import Link from '@components/Link'
 import { getPagesUnderRoute } from 'nextra/context'
@@ -14,7 +15,7 @@ export default function DocsBackEnd() {
           Tổng hợp các tài liệu về Back End dành cho những bạn HR mới tuyển dụng
           về IT.
         </p>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 xl:gap-8 sm:space-y-0">
           <Docs />
         </div>
       </div>
@@ -26,17 +27,24 @@ function Docs() {
   const page = getPagesUnderRoute('/docs/back-end')
   return (
     <>
-      {page.slice(0, 6).map((page: Page) => {
+      {page.slice(0, 4).map((page: Page) => {
         return (
           <Link
             key={page.route}
             href={page.route}
             title={page.meta?.title || page.frontMatter?.title || page.name}
             className="block h-full rounded-none text-center overflow-hidden"
+            onClick={() =>
+              gtagTrack(
+                'docsBackEndLink',
+                page.route,
+                page.meta?.title || page.frontMatter?.title || page.name
+              )
+            }
           >
             <div className="w-full flex flex-col gap-6">
               <Image
-                className="w-full h-full object-cover rounded-xl aspect-video"
+                className="w-full h-full object-cover rounded-2xl aspect-video"
                 src={page.frontMatter?.image}
                 width={1200}
                 height={600}

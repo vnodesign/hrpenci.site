@@ -1,3 +1,7 @@
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
@@ -53,9 +57,13 @@ const nextConfig = withNextra(
           'react-dom': 'preact/compat'
         })
       }
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      })
       return config
     }
   })
 )
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)

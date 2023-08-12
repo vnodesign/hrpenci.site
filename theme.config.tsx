@@ -2,6 +2,7 @@ import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
 import Navigation from '@components/Navigation'
+import RepositoryStarsCounter from '@components/RepositoryStarsCounter'
 import { siteConfig } from '@data/siteConfig'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
@@ -9,9 +10,9 @@ import { useEffect, useState } from 'react'
 
 const theme: DocsThemeConfig = {
   project: {
-    link: 'https://github.com/vnodesign/hr-document'
+    link: `https://github.com/${siteConfig.githubRepoFullName}`
   },
-  docsRepositoryBase: 'https://github.com/vnodesign/hr-document/edit/master/',
+  docsRepositoryBase: `https://github.com/${siteConfig.githubRepoFullName}/edit/master/`,
   useNextSeoProps: function SEO() {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
@@ -148,7 +149,8 @@ const theme: DocsThemeConfig = {
   },
   toc: {
     float: true,
-    title: 'Mục lục tài liệu'
+    title: 'Mục lục tài liệu',
+    extraContent: RepositoryStarsCounter
   },
   i18n: [],
   editLink: {

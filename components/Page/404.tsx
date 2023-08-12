@@ -1,3 +1,4 @@
+import gtagTrack from '@/utils/gtag'
 import Link from '@components/Link'
 
 export default function PageError() {
@@ -5,7 +6,7 @@ export default function PageError() {
     <div className="w-full">
       <div className="py-8 px-4 mx-auto max-w-[90rem] lg:py-16 lg:px-6">
         <div className="max-w-screen-sm mx-auto text-center">
-          <h1 className="mb-4 font-extrabold tracking-tight text-7xl lg:text-9xl text-primary-600 dark:text-primary-500">
+          <h1 className="mb-4 font-extrabold tracking-tight text-7xl lg:text-9xl text-vnodesign-600 dark:text-vnodesign-500">
             404
           </h1>
           <p className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
@@ -17,7 +18,9 @@ export default function PageError() {
           </p>
           <Link
             href="/"
-            className="inline-flex text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-sm px-5 py-2.5 dark:focus:ring-primary-900 my-4"
+            className="inline-flex text-white bg-vnodesign-600 hover:bg-vnodesign-800 focus:ring-4 focus:outline-none focus:ring-vnodesign-300 font-medium rounded-full text-sm px-5 py-2.5 dark:focus:ring-vnodesign-900 my-4"
+            title="Về trang chủ"
+            onClick={() => gtagTrack('backToHomeLink', '/', 'Về trang chủ')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

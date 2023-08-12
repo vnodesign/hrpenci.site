@@ -5,15 +5,10 @@ import type {
   Ref
 } from 'react'
 
-type SwitcherItem = {
+type LinkItem = {
   name: string
   href: string
-}
-
-type DocsLinkItem = {
-  name: string
-  icon: string
-  href: string
+  icon?: string
 }
 
 type FooterNavItem = {
@@ -35,11 +30,15 @@ export type siteConfigProps = {
   siteLogo: string
   twitterHandle: string
   twitterSite: string
+  githubRepoFullName: string
+  heroImage?: string
+  heroTitle: string
+  heroSubTitle: string
   fbAppId: string
   fbAdmnId: string
   docsSwitcherTitle: string
-  docsSwitcherSite: SwitcherItem[]
-  docsLink: DocsLinkItem[]
+  docsSwitcherSite: LinkItem[]
+  docsLink: LinkItem[]
   navigation: FooterNavItem[]
   navigationBanner?: boolean
   navigationBannerTitle?: string

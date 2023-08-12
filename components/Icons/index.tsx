@@ -4,6 +4,8 @@ const ArrowLeft = dynamic(() => import('./ArrowLeft'))
 const ArrowLeftShort = dynamic(() => import('./ArrowLeftShort'))
 const ArrowRight = dynamic(() => import('./ArrowRight'))
 const ArrowRightShort = dynamic(() => import('./ArrowRightShort'))
+const CaretDown = dynamic(() => import('./CaretDown'))
+const CaretUp = dynamic(() => import('./CaretUp'))
 const Check = dynamic(() => import('./Check'))
 const Facebook = dynamic(() => import('./Facebook'))
 const FileCode = dynamic(() => import('./FileCode'))
@@ -21,6 +23,8 @@ export function ComponentIcon({ icon, className }) {
     ArrowLeftShort,
     ArrowRight,
     ArrowRightShort,
+    CaretDown,
+    CaretUp,
     Check,
     Facebook,
     GitHub,
