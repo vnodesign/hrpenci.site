@@ -1,7 +1,7 @@
-import { siteConfig } from '@data/siteConfig'
-import { Head, Html, Main, NextScript } from 'next/document'
 import fs from 'fs'
 import path from 'path'
+import { siteConfig } from '@data/siteConfig'
+import { Head, Html, Main, NextScript } from 'next/document'
 
 type DocumentFiles = {
   sharedFiles: readonly string[]
@@ -10,11 +10,9 @@ type DocumentFiles = {
 class InlineStylesHead extends Head {
   getCssLinks(files: DocumentFiles) {
     return files.sharedFiles
-      .filter((file) => /\.css$/.test(file))
-      .filter((file) =>
-        fs.existsSync(path.join(process.cwd(), '.next', file))
-      )
-      .map((file) => (
+      .filter(file => /\.css$/.test(file))
+      .filter(file => fs.existsSync(path.join(process.cwd(), '.next', file)))
+      .map(file => (
         <style
           key={file}
           nonce={this.props.nonce}
@@ -23,10 +21,10 @@ class InlineStylesHead extends Head {
             __html: fs.readFileSync(
               path.join(process.cwd(), '.next', file),
               'utf-8'
-            ),
+            )
           }}
         />
-      ));
+      ))
   }
 }
 
