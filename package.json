@@ -1,6 +1,7 @@
 {
   "author": "Tuan Duc Design <tuanductran.dev@hotmail.com>",
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
     "@headlessui/react": "^1.7.16",
     "@react-spring/web": "^9.7.3",
     "axios": "^1.4.0",
@@ -11,9 +12,10 @@
     "next-sitemap": "^4.2.2",
     "nextra": "^2.11.0",
     "nextra-theme-docs": "^2.11.0",
-    "preact": "^10.16.0",
+    "preact": "^10.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-preset-minify": "^6.0.0",
     "sharp": "^0.32.4",
     "swr": "^2.2.1"
   },
@@ -71,8 +73,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prepare": "husky install",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "prettier:check": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx,css,scss}\" --cache",
+    "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,css,scss}\" --cache",
     "start": "next start"
   },
   "version": "2.0.5"

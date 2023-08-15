@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './components/**/*.{js,tsx}',
@@ -26,6 +28,10 @@ module.exports = {
           900: '#03283A',
           950: '#02141D'
         }
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+        mono: ['var(--font-fira-code)', ...defaultTheme.fontFamily.mono],
       }
     }
   },
@@ -36,6 +42,27 @@ module.exports = {
         '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
       )
     }
+  ],
+  safelist: [
+    'm-0',
+    'my-0.5',
+    'ml-8',
+    'ml-12',
+    'ml-16',
+    'w-7',
+    'h-6',
+    'h-7',
+    'h-8',
+    'h-32',
+    'h-80',
+    'h-96',
+    'w-10',
+    'w-6/12',
+    'space-x-1',
+    'flex-wrap',
+    'border-none',
+    'aspect-video',
+    'dark:bg-white',
   ],
   darkMode: ['class', 'html[class~="dark"]']
 }

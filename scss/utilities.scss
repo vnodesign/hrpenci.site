@@ -2,20 +2,20 @@
 
 .nextra-nav-container {
   .nextra-nav-container-blur {
-    @apply backdrop-blur
+    @apply backdrop-blur;
   }
   a {
     &[aria-current],
     &[aria-current^='true'] {
-      @apply leading-6 font-semibold antialiased
+      @apply font-semibold leading-6 antialiased;
     }
 
     &[aria-current] {
-      @apply hover:text-vnodesign-500 dark:hover:text-vnodesign-400 dark:text-slate-200
+      @apply hover:text-vnodesign-500 dark:text-slate-200 dark:hover:text-vnodesign-400;
     }
 
     &[aria-current^='true'] {
-      @apply text-vnodesign-500 dark:text-vnodesign-400
+      @apply text-vnodesign-500 dark:text-vnodesign-400;
     }
   }
 }
@@ -23,7 +23,7 @@
 .nextra-toc {
   ul {
     a {
-      @apply antialiased
+      @apply antialiased;
     }
   }
 }

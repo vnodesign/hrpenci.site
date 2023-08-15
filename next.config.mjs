@@ -1,16 +1,26 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+import nextra from 'nextra'
+import withBundleAnalyzer from '@next/bundle-analyzer'
+import withPWAInit from 'next-pwa'
+
+const bundleAnalyzer = withBundleAnalyzer({
+	enabled: process.env.ANALYZE === 'true'
 })
 
-const withNextra = require('nextra')({
+import rehypePresetMinify from 'rehype-preset-minify'
+
+const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
   flexsearch: true,
   staticImage: true,
-  defaultShowCopyCode: true
+  defaultShowCopyCode: true,
+  readingTime: true,
+  mdxOptions: {
+    rehypePlugins: [rehypePresetMinify]
+  }
 })
 
-const withPWA = require('next-pwa')({
+const withPWA = withPWAInit({
   dest: 'public',
   register: true,
   skipWaiting: true,
@@ -66,4 +76,4 @@ const nextConfig = withNextra(
   })
 )
 
-module.exports = withBundleAnalyzer(nextConfig)
+export default bundleAnalyzer(nextConfig)

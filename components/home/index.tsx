@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
+import Docs from './Docs'
+import Hero from './Hero'
 
-const Hero = dynamic(() => import('./Hero'))
-const Docs = dynamic(() => import('./Docs'))
 const DocsFrontEnd = dynamic(() => import('./DocsFrontEnd'))
 const DocsBackEnd = dynamic(() => import('./DocsBackEnd'))
 const DocsLinux = dynamic(() => import('./DocsLinux'))
