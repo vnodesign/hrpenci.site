@@ -46,9 +46,14 @@
   @apply text-vnodesign-500;
 }
 
+@media (prefers-contrast: more) {
+  .contrast-more\:\!nx-text-primary-600 {
+    @apply text-vnodesign-600;
+  }
+}
+
 .nx-text-primary-600,
-.hover\:nx-text-primary-600:hover,
-.contrast-more\:\!nx-text-primary-600 {
+.hover\:nx-text-primary-600:hover {
   @apply text-vnodesign-600;
 }
 
@@ -62,10 +67,6 @@
 
 .nx-text-primary-900 {
   @apply text-vnodesign-900;
-}
-
-.nx-text-primary-950 {
-  @apply text-vnodesign-950;
 }
 
 .nx-bg-primary-50 {
