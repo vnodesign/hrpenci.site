@@ -1,5 +1,6 @@
 @import 'base.scss';
 @import 'utilities.scss';
+@import 'nprogress/nprogress.css';
 
 :is(html[class~='dark']) {
   .dark\:nx-bg-primary-100\/10 {
