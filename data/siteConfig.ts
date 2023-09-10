@@ -95,7 +95,8 @@ export const siteConfig: siteConfigProps = {
   navigationBanner: true,
   navigationBannerTitle: 'Chào bạn, bạn mới tuyển dụng về IT?',
   navigationBannerText: 'Hot',
-  navigationBannerLink: 'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
+  navigationBannerLink:
+    'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
   navigationBannerLinkTitle: 'Khái niệm giữa Back End và Front End',
   navigationBannerLinkText: 'Hãy đọc bài viết này nhé!'
 }

@@ -163,7 +163,8 @@ const theme: DocsThemeConfig = {
     const { resolvedTheme } = useTheme()
     const { frontMatter } = useConfig()
 
-    const categoryName = frontMatter?.type ? `${frontMatter.type}` : 'Q&A'
+    const categoryName = frontMatter?.type ? frontMatter.type : 'Q&A'
+    const categoryId = frontMatter?.id ? frontMatter.id : 'DIC_kwDOIY5iDc4CTSr9'
 
     const comments = route !== '/' && (
       <Giscus
@@ -171,7 +172,7 @@ const theme: DocsThemeConfig = {
         repo={`${siteConfig.githubUserName}/${siteConfig.githubRepoName}`}
         repoId="R_kgDOIY5iDQ"
         category={categoryName}
-        categoryId="DIC_kwDOIY5iDc4CTSr9"
+        categoryId={categoryId}
         mapping="pathname"
         theme={resolvedTheme}
         inputPosition="top"
