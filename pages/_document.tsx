@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang={siteConfig.language} prefix="og: https://ogp.me/ns#">
       <Head />
-      <body>
+      <body className="antialiased">
         <Main />
         <NextScript />
       </body>
