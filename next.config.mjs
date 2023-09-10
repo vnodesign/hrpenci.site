@@ -1,22 +1,23 @@
 import nextra from 'nextra'
 import withBundleAnalyzer from '@next/bundle-analyzer'
 import withPWAInit from 'next-pwa'
+import emoji from 'remark-emoji'
 
 const bundleAnalyzer = withBundleAnalyzer({
 	enabled: process.env.ANALYZE === 'true'
 })
 
-import rehypePresetMinify from 'rehype-preset-minify'
-
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
   flexsearch: true,
-  staticImage: true,
   defaultShowCopyCode: true,
-  readingTime: true,
   mdxOptions: {
-    rehypePlugins: [rehypePresetMinify]
+    remarkPlugins: [
+      emoji, {
+        emoticon: true
+      }
+    ]
   }
 })
 
@@ -31,26 +32,33 @@ const nextConfig = withNextra(
   withPWA({
     reactStrictMode: true,
     swcMinify: true,
-    experimental: {
-      legacyBrowsers: false
-    },
     async redirects() {
     return [
       {
         source: '/group-hr',
-        destination: 'https://www.facebook.com/groups/xomhr?rel=hrpenci.site',
-        permanent: true,
+        destination: 'https://www.facebook.com/groups/xomhr',
+        permanent: true
       },
       {
         source: '/group-dev',
-        destination: 'https://www.facebook.com/groups/2827248757496356?rel=hrpenci.site',
-        permanent: true,
+        destination: 'https://www.facebook.com/groups/2827248757496356',
+        permanent: true
       },
       {
         source: '/group-design',
-        destination: 'https://www.facebook.com/groups/1868252066694465?rel=hrpenci.site',
-        permanent: true,
+        destination: 'https://www.facebook.com/groups/1868252066694465',
+        permanent: true
       },
+      {
+        source: '/blog',
+        destination: 'https://hrpenci.site',
+        permanent: true
+      },
+      {
+        source: '/blog/khai-niem-giua-back-end-va-front-end',
+        destination: 'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
+        permanent: true
+      }
     ]},
     images: {
       formats: ['image/webp'],

@@ -1,18 +1,19 @@
 import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
-import Navigation from '@components/Navigation'
+import PostJob from '@components/PostJob'
 import RepositoryStarsCounter from '@components/RepositoryStarsCounter'
 import { siteConfig } from '@data/siteConfig'
+import Giscus from '@giscus/react'
 import { useRouter } from 'next/router'
-import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
+import { useConfig, useTheme, type DocsThemeConfig } from 'nextra-theme-docs'
 import { useEffect, useState } from 'react'
 
 const theme: DocsThemeConfig = {
-  project: {
-    link: `https://github.com/${siteConfig.githubRepoFullName}`
-  },
-  docsRepositoryBase: `https://github.com/${siteConfig.githubRepoFullName}/edit/master/`,
+  // project: {
+  //   link: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}`
+  // },
+  docsRepositoryBase: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}/edit/master/`,
   useNextSeoProps: function SEO() {
     const { asPath } = useRouter()
     const { frontMatter } = useConfig()
@@ -84,6 +85,8 @@ const theme: DocsThemeConfig = {
         </span>
       </>
     ),
+    error: 'Không tải được chỉ mục tìm kiếm.',
+    loading: 'Đang tải...',
     placeholder: 'Tìm kiếm...'
   },
   head: function Head() {
@@ -149,24 +152,54 @@ const theme: DocsThemeConfig = {
   },
   toc: {
     float: true,
-    title: 'Mục lục tài liệu',
+    title: 'Mục lục nội dung',
     extraContent: RepositoryStarsCounter
   },
-  i18n: [],
+  navbar: {
+    extraContent: PostJob
+  },
+  main: function Main({ children }) {
+    const { route } = useRouter()
+    const { resolvedTheme } = useTheme()
+
+    const comments = route !== '/' && (
+      <Giscus
+        key={route}
+        repo={`${siteConfig.githubUserName}/${siteConfig.githubRepoName}`}
+        repoId="R_kgDOIY5iDQ"
+        category="Q&A"
+        categoryId="DIC_kwDOIY5iDc4CTSr9"
+        mapping="pathname"
+        theme={resolvedTheme}
+        inputPosition="top"
+        lang="vi"
+        loading="lazy"
+      />
+    )
+
+    return (
+      <>
+        {children}
+        {comments}
+      </>
+    )
+  },
+  notFound: {
+    content: 'Gửi vấn đề về liên kết bị hỏng →'
+  },
+  serverSideError: {
+    content: 'Gửi vấn đề về lỗi trong url →'
+  },
   editLink: {
-    text: 'Đóng góp nội dung cho tài liệu này'
+    text: 'Đóng góp nội dung cho chủ đề này'
   },
   feedback: {
-    content: 'Đặt câu hỏi cho tài liệu này'
-  },
-  navbar: {
-    component: Navigation
+    content: 'Đặt câu hỏi cho chủ đề này'
   },
   footer: {
     component: Footer
   },
-  components: MDXComponents,
-  primaryHue: 200
+  components: MDXComponents
 }
 
 export default theme

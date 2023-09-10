@@ -39,7 +39,6 @@ export async function middleware(request) {
     'telegrambot',
     'integration-test' // Integration testing
   ]
-
   const IGNORE_EXTENSIONS = [
     '.js',
     '.css',
@@ -89,7 +88,6 @@ export async function middleware(request) {
   const isPrerender = request.headers.get('X-Prerender')
   const pathname = new URL(request.url).pathname
   const extension = pathname.slice(((pathname.lastIndexOf('.') - 1) >>> 0) + 1)
-
   if (
     isPrerender ||
     !isBot ||

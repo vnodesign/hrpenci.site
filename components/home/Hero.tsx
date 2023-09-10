@@ -7,7 +7,31 @@ import { siteConfig } from 'data/siteConfig'
 export default function Hero() {
   return (
     <section className="py-8 bg-gray-100 dark:bg-black lg:pt-12 lg:pb-16">
-      <div className="max-w-screen-xl px-4 mx-auto lg:text-center">
+      <div className="max-w-[90rem] px-4 mx-auto lg:text-center">
+        {siteConfig.navigationBanner && siteConfig.navigationBannerLink && (
+          <Link
+            title={siteConfig.navigationBannerLinkTitle}
+            className="inline-flex items-center justify-between p-1 pr-4 mb-5 text-sm bg-white rounded-full dark:bg-neutral-800 text-gray-800 dark:text-gray-100"
+            role="alert"
+            href={siteConfig.navigationBannerLink}
+            onClick={() =>
+              gtagTrack(
+                'navigationBannerLink',
+                siteConfig.navigationBannerLink,
+                siteConfig.navigationBannerLinkTitle
+              )
+            }
+          >
+            <span className="text-xs text-vnodesign-600 bg-vnodesign-50 dark:bg-vnodesign-500/10 font-semibold rounded-full px-4 py-1.5 mr-3">
+              {siteConfig.navigationBannerText}
+            </span>
+            <span className="mr-2 text-sm font-medium">
+              {siteConfig.navigationBannerTitle}{' '}
+              {siteConfig.navigationBannerLinkText}
+            </span>
+            <ComponentIcon icon="ArrowRightShort" className="w-5 h-5" />
+          </Link>
+        )}
         <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:text-center xl:px-36 lg:mb-7 text-slate-800 dark:text-slate-200">
           {siteConfig.heroTitle}
         </h1>
