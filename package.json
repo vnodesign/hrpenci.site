@@ -1,7 +1,6 @@
 {
   "author": "Tuan Duc Design <tuanductran.dev@hotmail.com>",
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2",
     "@giscus/react": "^2.3.0",
     "@headlessui/react": "^1.7.17",
     "@react-spring/web": "^9.7.3",
