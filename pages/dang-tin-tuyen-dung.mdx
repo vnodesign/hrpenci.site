@@ -1,5 +1,6 @@
 ---
 title: 'Đăng tin tuyển dụng'
+type: 'Recruitment'
 ---
 
 # Đăng tin tuyển dụng
@@ -20,7 +21,7 @@ một số cú pháp Markdown sau đây.
 bạn. Số lượng `#` bạn sử dụng sẽ xác định cấp độ phân cấp và kích thước kiểu chữ
 của tiêu đề.
 
-```markdown
+```
 # Tiêu đề thứ nhất
 
 ## Tiêu đề thứ hai
@@ -40,21 +41,123 @@ Bạn có thể biểu thị sự nhấn mạnh bằng văn bản in đậm, in 
 chỉ số dưới hoặc chỉ số trên trong các trường nhận xét và các tệp như `.md` và
 `.mdx`.
 
-| Kiểu                            | Cú pháp               | Phím tắt bàn phím                                       | Ví dụ                                            | Kết quả                                        |
-| ------------------------------- | --------------------- | ------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
-| In đậm                          | `** **` hoặc `__ __`  | `Command` + `B` (Mac) hoặc `Ctrl` + `B` (Windows/Linux) | `**Đây là chữ in đậm**`                          | **Đây là chữ in đậm**                          |
-| In nghiêng                      | `* *` hoặc `_ _`      | `Command` + `I` (Mac) hoặc `Ctrl` + `I` (Windows/Linux) | `_Đây là chữ in nghiêng_`                        | _Đây là chữ in nghiêng_                        |
-| Gạch ngang                      | `~~ ~~`               | Không có phím tắt                                       | `~~Đây là chữ gạch ngang~~`                      | ~~Đây là chữ gạch ngang~~                      |
-| Đậm và in nghiêng lồng nhau     | `** **` và `_ _`      | Không có phím tắt                                       | `**Đây là chữ _đậm và in nghiêng lồng nhau_**`   | **Đây là chữ _đậm và in nghiêng lồng nhau_**   |
-| Tất cả đều in đậm và in nghiêng | `*** ***`             | Không có phím tắt                                       | `***Đây là chữ in đậm và in nghiêng***`          | **_Đây là chữ in đậm và in nghiêng_**          |
-| Chỉ số dưới                     | `<sub> </sub>`        | Không có phím tắt                                       | `Đây là <sub>chỉ số dưới</sub> của một nội dung` | Đây là <sub>chỉ số dưới</sub> của một nội dung |
-| Chỉ số trên                     | `<sup> </sup>`        | Không có phím tắt                                       | `Đây là <sup>chỉ số trên</sup> của một nội dung` | Đây là <sup>chỉ số trên</sup> của một nội dung |
+#### In đậm
+
+Cú pháp:
+
+```
+**Đây là chữ in đậm**
+```
+
+Kết quả:
+
+**Đây là chữ in đậm**
+
+Phím tắt bàn phím:
+
+`Command` + `B` (Mac) hoặc `Ctrl` + `B` (Windows/Linux)
+
+#### In nghiêng
+
+Cú pháp:
+
+```
+_Đây là chữ in nghiêng_
+```
+
+Kết quả:
+
+_Đây là chữ in nghiêng_
+
+Phím tắt bàn phím:
+
+`Command` + `I` (Mac) hoặc `Ctrl` + `I` (Windows/Linux)
+
+#### Gạch ngang
+
+Cú pháp:
+
+```
+~~Đây là chữ gạch ngang~~
+```
+
+Kết quả:
+
+~~Đây là chữ gạch ngang~~
+
+Phím tắt bàn phím:
+
+Không có phím tắt
+
+#### Đậm và in nghiêng lồng nhau
+
+Cú pháp:
+
+```
+**Đây là chữ _đậm và in nghiêng lồng nhau_**
+```
+
+Kết quả:
+
+**Đây là chữ _đậm và in nghiêng lồng nhau_**
+
+Phím tắt bàn phím:
+
+Không có phím tắt
+
+#### Tất cả đều in đậm và in nghiêng
+
+Cú pháp:
+
+```
+**_Đây là chữ in đậm và in nghiêng_**
+```
+
+Kết quả:
+
+**_Đây là chữ in đậm và in nghiêng_**
+
+Phím tắt bàn phím:
+
+Không có phím tắt
+
+#### Chỉ số dưới
+
+Cú pháp:
+
+```
+Đây là <sub>chỉ số dưới</sub> của một nội dung
+```
+
+Kết quả:
+
+Đây là <sub>chỉ số dưới</sub> của một nội dung
+
+Phím tắt bàn phím:
+
+Không có phím tắt
+
+#### Chỉ số trên
+
+Cú pháp:
+
+```
+Đây là <sup>chỉ số trên</sup> của một nội dung
+```
+
+Kết quả:
+
+Đây là <sup>chỉ số trên</sup> của một nội dung
+
+Phím tắt bàn phím:
+
+Không có phím tắt
 
 ### Trích dẫn văn bản
 
 Bạn có thể trích dẫn văn bản bằng cách sử dụng một dấu `>`.
 
-```markdown
+```
 Đây là đoạn văn bản không sử dụng trích dẫn
 
 > Đây là đoạn văn bản sử dụng trích dẫn
@@ -69,11 +172,13 @@ Văn bản được trích dẫn thường được thụt vào và có màu s�
 ### Trích dẫn code
 
 Bạn có thể gọi mã code hoặc một lệnh trong một câu với dấu ngoặc đơn ngược. Văn
-bản trong dấu ngoặc đơn ngược sẽ không được định dạng. Bạn cũng có thể nhấn tổ
-hợp phím `Command` + `E` (trên Mac) hoặc `Ctrl` + `E` (trên Windows/Linux) để
-chèn dấu ngoặc đơn ngược cho một khối mã code trong một dòng của Markdown.
+bản trong dấu ngoặc đơn ngược sẽ không được định dạng.
 
-```markdown
+Bạn cũng có thể nhấn tổ hợp phím `Command` + `E` (trên Mac) hoặc `Ctrl` + `E`
+(trên Windows/Linux) để chèn dấu ngoặc đơn ngược cho một khối mã code trong một
+dòng của Markdown.
+
+```
 Sử dụng `git status` để liệt kê tất cả các tệp mới hoặc đã sửa đổi mà chưa được
 thực hiện commit.
 ```
@@ -86,7 +191,7 @@ thực hiện commit.
 Bạn có thể tạo một liên kết nội dung bằng cách bọc văn bản liên kết trong dấu
 ngoặc vuông `[ ]`, sau đó bọc URL trong dấu ngoặc đơn `( )`.
 
-```markdown
+```
 Bạn đang có nhu cầu đăng tin tuyển dụng về IT và Design? Hãy
 [bấm vào đây](https://www.facebook.com/groups/xomhr/) để tham gia.
 ```
@@ -99,7 +204,7 @@ Bạn đang có nhu cầu đăng tin tuyển dụng về IT và Design? Hãy
 Bạn có thể tạo một danh sách không thứ tự bằng cách đặt trước một hoặc nhiều
 dòng văn bản bằng `-`, `\*`, hoặc `+`.
 
-```markdown
+```
 - Group HR Community
 
 * Group Design Talks
@@ -115,7 +220,7 @@ dòng văn bản bằng `-`, `\*`, hoặc `+`.
 
 Để sắp xếp danh sách của bạn, hãy đặt trước mỗi dòng bằng một số.
 
-```markdown
+```
 1. Group HR Community
 2. Group Design Talks
 3. Group Dev Community
@@ -132,12 +237,12 @@ và khoảng trắng, sau đó là `[ ]`. Để đánh dấu một công việc 
 dụng `[x]`.
 
 ```
-- [x] Xây dựng thành công group HR Community :tada:
+- [x] Xây dựng thành công group HR Community
 - [ ] Xây dựng thành công group Design Talks
 - [ ] Xây dựng thành công group Dev Community
 ```
 
-- [x] Xây dựng thành công group HR Community :tada:
+- [x] Xây dựng thành công group HR Community
 - [ ] Xây dựng thành công group Design Talks
 - [ ] Xây dựng thành công group Dev Community
 
@@ -154,7 +259,7 @@ nó bằng cách sử dụng `\`:
 Bạn có thể thêm emoji vào văn bản bằng cách gõ `:EMOJICODE:`, một dấu hai chấm
 tiếp theo là tên của emoji.
 
-```markdown
+```
 @tuanductran: Tài liệu này trông rất tốt, đã sẵn sàng để chia sẻ! :smile:
 ```
 
@@ -173,7 +278,7 @@ khảo
 Bạn có thể tạo một đoạn văn mới bằng cách để trống một dòng giữa các dòng văn
 bản.
 
-```markdown
+```
 Đây là văn bản thứ nhất
 
 Đây là văn bản thứ hai
