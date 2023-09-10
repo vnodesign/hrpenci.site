@@ -2,12 +2,12 @@
 
 .nextra-nav-container {
   .nextra-nav-container-blur {
-    @apply backdrop-blur;
+    @apply backdrop-blur
   }
   a {
     &[aria-current],
     &[aria-current^='true'] {
-      @apply font-semibold leading-6 antialiased;
+      @apply font-semibold leading-6 antialiased
     }
   }
 }
@@ -15,7 +15,7 @@
 .nextra-toc {
   ul {
     a {
-      @apply antialiased;
+      @apply antialiased
     }
   }
 }

@@ -19,6 +19,12 @@ export const MDXComponents = {
   Card: (props: any) => <Card {...props} />,
   CardGroup: (props: any) => <CardGroup {...props} />,
   p: (props: any) => <p className="my-6 leading-7 first:my-0" {...props} />,
+  blockquote: (props: any) => (
+    <blockquote
+      className="p-4 my-4 border-gray-300 bg-vnodesign-50 italic text-gray-900 dark:border-gray-700 dark:text-white dark:bg-vnodesign-800 first:my-0 ltr:border-l-4 rtl:border-r-4"
+      {...props}
+    />
+  ),
   a: (props: any) => (
     <Link
       className="font-semibold no-underline border-b border-vnodesign-500 dark:border-vnodesign-600 hover:border-b-2 rounded-none"
