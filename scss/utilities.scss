@@ -2,20 +2,12 @@
 
 .nextra-nav-container {
   .nextra-nav-container-blur {
-    @apply backdrop-blur;
+    @apply backdrop-blur
   }
   a {
     &[aria-current],
     &[aria-current^='true'] {
-      @apply font-semibold leading-6 antialiased;
-    }
-
-    &[aria-current] {
-      @apply hover:text-vnodesign-500 dark:text-slate-200 dark:hover:text-vnodesign-400;
-    }
-
-    &[aria-current^='true'] {
-      @apply text-vnodesign-500 dark:text-vnodesign-400;
+      @apply font-semibold leading-6 antialiased
     }
   }
 }
@@ -23,7 +15,13 @@
 .nextra-toc {
   ul {
     a {
-      @apply antialiased;
+      @apply antialiased
     }
+  }
+}
+
+.nextra-search {
+  input {
+    @apply focus:bg-black/[.05] dark:focus:bg-gray-50/10
   }
 }

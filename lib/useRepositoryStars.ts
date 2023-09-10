@@ -8,7 +8,7 @@ interface RepositoryData {
 
 const fetcher = (url: string) =>
   axios.get<RepositoryData>(url).then(res => res.data)
-const repositoryUrl = `https://api.github.com/repos/${siteConfig.githubRepoFullName}`
+const repositoryUrl = `https://api.github.com/repos/${siteConfig.githubUserName}/${siteConfig.githubRepoName}`
 const REFRESH_INTERVAL_IN_MS = 3500
 const useRepositoryStars = (): number | undefined => {
   const { data } = useSWR<RepositoryData>(repositoryUrl, fetcher, {

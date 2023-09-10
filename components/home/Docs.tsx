@@ -6,7 +6,7 @@ import { siteConfig } from 'data/siteConfig'
 export default function Docs() {
   return (
     <section className="py-16 lg:pt-24 lg:pb-28">
-      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] mx-auto text-center max-w-[90rem]">
+      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] mx-auto text-center max-w-screen-xl">
         <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight lg:text-center md:text-4xl">
           Tài liệu chi tiết
         </h2>

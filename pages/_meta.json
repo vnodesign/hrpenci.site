@@ -14,8 +14,12 @@
     "title": "Câu hỏi phỏng vấn",
     "type": "page"
   },
-  "blog": {
-    "title": "Blog",
+  "bookmarks": {
+    "title": "Bookmarks",
+    "type": "page"
+  },
+  "dang-tin-tuyen-dung": {
+    "display": "hidden",
     "type": "page",
     "theme": {
       "breadcrumb": false,
@@ -26,10 +30,6 @@
       "timestamp": false,
       "typesetting": "article"
     }
-  },
-  "bookmarks": {
-    "title": "Bookmarks",
-    "type": "page"
   },
   "ban-quyen": {
     "display": "hidden",
@@ -93,17 +93,10 @@
     }
   },
   "404": {
-    "title": "404",
-    "display": "hidden",
+    "type": "page",
     "theme": {
-      "layout": "raw"
-    }
-  },
-  "500": {
-    "title": "500",
-    "display": "hidden",
-    "theme": {
-      "layout": "raw"
+      "timestamp": false,
+      "typesetting": "article"
     }
   }
 }

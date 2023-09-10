@@ -1,38 +1,31 @@
-import fs from 'fs'
-import path from 'path'
+import ProgressBar from '@badrap/bar-of-progress'
 import { siteConfig } from '@data/siteConfig'
 import { Head, Html, Main, NextScript } from 'next/document'
+import Router from 'next/router'
 
-type DocumentFiles = {
-  sharedFiles: readonly string[]
+const progress = new ProgressBar({
+  size: 2,
+  color: '#38bdf8',
+  className: 'bar-of-progress',
+  delay: 100
+})
+
+// this fixes safari jumping to the bottom of the page
+// when closing the search modal using the `esc` key
+if (typeof window !== 'undefined') {
+  progress.start()
+  progress.finish()
 }
 
-class InlineStylesHead extends Head {
-  getCssLinks(files: DocumentFiles) {
-    return files.sharedFiles
-      .filter(file => /\.css$/.test(file))
-      .filter(file => fs.existsSync(path.join(process.cwd(), '.next', file)))
-      .map(file => (
-        <style
-          key={file}
-          nonce={this.props.nonce}
-          data-href={`${this.context.assetPrefix}/_next/${file}`}
-          dangerouslySetInnerHTML={{
-            __html: fs.readFileSync(
-              path.join(process.cwd(), '.next', file),
-              'utf-8'
-            )
-          }}
-        />
-      ))
-  }
-}
+Router.events.on('routeChangeStart', () => progress.start())
+Router.events.on('routeChangeComplete', () => progress.finish())
+Router.events.on('routeChangeError', () => progress.finish())
 
 export default function Document() {
   return (
     <Html lang={siteConfig.language} prefix="og: https://ogp.me/ns#">
-      <InlineStylesHead />
-      <body>
+      <Head />
+      <body className="antialiased">
         <Main />
         <NextScript />
       </body>

@@ -122,7 +122,7 @@ module.exports = {
         'prettier.config.cjs',
         'postcss.config.cjs',
         'tailwind.config.cjs',
-        'next.config.js',
+        'next.config.mjs',
         '.eslintrc.cjs'
       ],
       env: {

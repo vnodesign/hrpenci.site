@@ -12,22 +12,14 @@ export const siteConfig: siteConfigProps = {
   siteLogo: '/static/favicon.png',
   twitterHandle: 'tuanducdesigner',
   twitterSite: 'tuanducdesigner',
-  githubRepoFullName: 'vnodesign/hr-document',
+  githubUserName: 'vnodesign',
+  githubRepoName: 'hr-document',
   heroTitle: 'Nền tảng chia sẻ kiến thức, tài liệu về IT và Design',
   heroSubTitle:
     'Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân vào nghề tuyển dụng hiểu rõ hơn về các khái niệm trong lĩnh vực IT và Design.',
   heroImage: '/static/favicon.png',
   fbAppId: '1031926270674334',
   fbAdmnId: '100005485267478',
-  docsSwitcherTitle: 'Tài liệu phổ biến',
-  docsSwitcherSite: [
-    { name: 'Tài liệu Frontend', href: '/docs/front-end' },
-    { name: 'Tài liệu ReactJS', href: '/docs/front-end/reactjs' },
-    { name: 'Tài liệu VueJS', href: '/docs/front-end/vuejs' },
-    { name: 'Tài liệu Backend', href: '/docs/back-end' },
-    { name: 'Tài liệu NodeJS', href: '/docs/back-end/nodejs' },
-    { name: 'Tài liệu Laravel', href: '/docs/back-end/laravel' }
-  ],
   docsLink: [
     { name: 'Frontend', icon: 'TableLayout', href: '/docs/front-end' },
     { name: 'Backend', icon: 'Server', href: '/docs/back-end' },
@@ -36,12 +28,41 @@ export const siteConfig: siteConfigProps = {
   ],
   navigation: [
     {
-      title: 'Tài liệu',
+      title: 'Tài liệu phổ biến',
       items: [
-        { name: 'Front End', href: '/docs/front-end' },
-        { name: 'Back End', href: '/docs/back-end' },
-        { name: 'Linux', href: '/docs/linux' },
-        { name: 'Design', href: '/docs/design' }
+        { name: 'Tài liệu Frontend', href: '/docs/front-end' },
+        { name: 'Tài liệu ReactJS', href: '/docs/front-end/reactjs' },
+        { name: 'Tài liệu VueJS', href: '/docs/front-end/vuejs' },
+        { name: 'Tài liệu Backend', href: '/docs/back-end' },
+        { name: 'Tài liệu NodeJS', href: '/docs/back-end/nodejs' },
+        { name: 'Tài liệu Laravel', href: '/docs/back-end/laravel' }
+      ]
+    },
+    {
+      title: 'Công cụ AI',
+      items: [
+        { name: 'CareerFlow', href: 'https://careerflow.ai/' },
+        {
+          name: 'CareerFlow LinkedIn Review',
+          href: 'https://www.careerflow.ai/linkedin-review'
+        },
+        {
+          name: 'CareerFlow Job Tracker',
+          href: 'https://www.careerflow.ai/job-tracker'
+        },
+        {
+          name: '2000+ Best AI Tools',
+          href: 'https://tuanductran.notion.site/8ef634b11aec4ec399a821261b23dc27?v=5ba68419fb0c4e96b0ad215ff168c000&pvs=4'
+        }
+      ]
+    },
+    {
+      title: 'Liên kết',
+      items: [
+        { name: 'Giới thiệu', href: '/gioi-thieu' },
+        { name: 'Bản quyền', href: '/ban-quyen' },
+        { name: 'Chính sách bảo mật', href: '/chinh-sach-bao-mat' },
+        { name: 'Điều khoản', href: '/dieu-khoan' }
       ]
     },
     {
@@ -55,12 +76,10 @@ export const siteConfig: siteConfigProps = {
       ]
     },
     {
-      title: 'Liên kết',
+      title: 'Cộng đồng',
       items: [
-        { name: 'Giới thiệu', href: '/gioi-thieu' },
-        { name: 'Bản quyền', href: '/ban-quyen' },
-        { name: 'Chính sách bảo mật', href: '/chinh-sach-bao-mat' },
-        { name: 'Điều khoản', href: '/dieu-khoan' }
+        { name: 'HR Community', href: '/group-hr' },
+        { name: 'Design Talks', href: '/group-design' }
       ]
     },
     {
@@ -75,9 +94,8 @@ export const siteConfig: siteConfigProps = {
   ],
   navigationBanner: true,
   navigationBannerTitle: 'Chào bạn, bạn mới tuyển dụng về IT?',
-  navigationBannerText:
-    '(Trong bài viết này mình sẽ nói chi tiết hơn về khái niệm giữa Back End và Front End).',
-  navigationBannerLink: '/blog/khai-niem-giua-back-end-va-front-end',
+  navigationBannerText: 'Hot',
+  navigationBannerLink: 'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
   navigationBannerLinkTitle: 'Khái niệm giữa Back End và Front End',
   navigationBannerLinkText: 'Hãy đọc bài viết này nhé!'
 }

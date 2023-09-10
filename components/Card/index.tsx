@@ -101,7 +101,7 @@ function GenericCard<T extends ElementType = 'div'>({
   return (
     <Component
       className={cn(
-        'block font-normal group relative my-2 ring-2 ring-transparent rounded-xl dark:bg-dark border border-neutral-100 shadow-md bg-white dark:shadow-none shadow-neutral-300/10 dark:border-neutral-800/50 overflow-hidden w-full',
+        'block font-normal relative my-2 ring-2 ring-transparent rounded-xl dark:bg-dark border border-neutral-100 shadow-md bg-white dark:shadow-none shadow-neutral-300/10 dark:border-neutral-800/50 overflow-hidden w-full',
         props.href && 'cursor-pointer',
         className
       )}

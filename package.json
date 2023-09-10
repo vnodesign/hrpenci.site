@@ -2,6 +2,7 @@
   "author": "Tuan Duc Design <tuanductran.dev@hotmail.com>",
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.2",
+    "@giscus/react": "^2.3.0",
     "@headlessui/react": "^1.7.17",
     "@react-spring/web": "^9.7.3",
     "axios": "^1.5.0",
@@ -9,19 +10,19 @@
     "is-absolute-url": "^4.0.1",
     "next": "^13.4.19",
     "next-pwa": "^5.6.0",
-    "next-sitemap": "^4.2.2",
+    "next-sitemap": "^4.2.3",
     "nextra": "^2.12.3",
     "nextra-theme-docs": "^2.12.3",
     "preact": "^10.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rehype-preset-minify": "^7.0.0",
+    "remark-emoji": "^4.0.0",
     "sharp": "^0.32.5",
     "swr": "^2.2.2"
   },
   "description": "",
   "devDependencies": {
-    "@babel/core": "^7.22.11",
+    "@babel/core": "^7.22.15",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@next/bundle-analyzer": "^13.4.19",
     "@next/env": "^13.4.19",
@@ -29,8 +30,8 @@
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.21",
-    "@typescript-eslint/eslint-plugin": "^6.5.0",
-    "@typescript-eslint/parser": "^6.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "autoprefixer": "^10.4.15",
     "cross-env": "^7.0.3",
     "eslint": "^8.48.0",
@@ -77,5 +78,5 @@
     "prettier:write": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,css,scss}\" --cache",
     "start": "next start"
   },
-  "version": "2.0.5"
+  "version": "2.1.0"
 }

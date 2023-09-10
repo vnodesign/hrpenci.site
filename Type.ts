@@ -30,14 +30,13 @@ export type siteConfigProps = {
   siteLogo: string
   twitterHandle: string
   twitterSite: string
-  githubRepoFullName: string
+  githubUserName: string
+  githubRepoName: string
   heroImage?: string
   heroTitle: string
   heroSubTitle: string
   fbAppId: string
   fbAdmnId: string
-  docsSwitcherTitle: string
-  docsSwitcherSite: LinkItem[]
   docsLink: LinkItem[]
   navigation: FooterNavItem[]
   navigationBanner?: boolean

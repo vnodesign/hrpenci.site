@@ -7,7 +7,7 @@ import type { Page } from 'Type'
 export default function DocsFrontEnd() {
   return (
     <section className="py-16 bg-gray-100 lg:pt-24 lg:pb-28 dark:bg-black">
-      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] mx-auto max-w-[90rem] lg:text-center">
+      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] mx-auto max-w-screen-xl lg:text-center">
         <h2 className="mb-4 text-2xl font-bold tracking-tight lg:font-extrabold lg:text-4xl lg:leading-snug lg:text-center 2xl:px-48">
           Tài liệu về Front End
         </h2>
