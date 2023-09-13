@@ -110,7 +110,6 @@ const theme: DocsThemeConfig = {
           href="/static/apple-touch-icon-180x180.png"
         />
         <link rel="prefetch" href="/docs" as="document" />
-        <link rel="prefetch" href="/blog" as="document" />
         <link rel="prefetch" href="/interview" as="document" />
       </>
     )
