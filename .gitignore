@@ -22,3 +22,6 @@ cloudflared
 # Backup any configuration
 **/*.bak*
 .vercel
+
+# Sentry Auth Token
+.sentryclirc
