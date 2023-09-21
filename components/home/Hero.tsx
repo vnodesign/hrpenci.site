@@ -12,7 +12,6 @@ export default function Hero() {
           <Link
             title={siteConfig.navigationBannerLinkTitle}
             className="inline-flex items-center justify-between p-1 pr-4 mb-5 text-sm bg-white rounded-full dark:bg-neutral-800 text-gray-800 dark:text-gray-100"
-            role="alert"
             href={siteConfig.navigationBannerLink}
             onClick={() =>
               gtagTrack(

@@ -25,3 +25,9 @@ cloudflared
 
 # Sentry Auth Token
 .sentryclirc
+
+# Env
+.env
+.env.local
+.env.development
+.env.local

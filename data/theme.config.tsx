@@ -1,18 +1,17 @@
 import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
-import PostJob from '@components/PostJob'
 import RepositoryStarsCounter from '@components/RepositoryStarsCounter'
-import { siteConfig } from '@data/siteConfig'
 import Giscus from '@giscus/react'
 import { useRouter } from 'next/router'
 import { useConfig, useTheme, type DocsThemeConfig } from 'nextra-theme-docs'
 import { useEffect, useState } from 'react'
+import { siteConfig } from './siteConfig'
 
 const theme: DocsThemeConfig = {
-  // project: {
-  //   link: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}`
-  // },
+  project: {
+    link: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}`
+  },
   docsRepositoryBase: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}/edit/master/`,
   useNextSeoProps: function SEO() {
     const { asPath } = useRouter()
@@ -153,9 +152,6 @@ const theme: DocsThemeConfig = {
     float: true,
     title: 'Mục lục nội dung',
     extraContent: RepositoryStarsCounter
-  },
-  navbar: {
-    extraContent: PostJob
   },
   main: function Main({ children }) {
     const { route } = useRouter()
