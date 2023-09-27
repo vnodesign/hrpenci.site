@@ -5,10 +5,16 @@ import type {
   Ref
 } from 'react'
 
-type LinkItem = {
+type DocsItem = {
   name: string
-  href: string
+  desc?: string
+  href?: string
   icon?: string
+}
+
+type FAQItem = {
+  question: string
+  answer: string
 }
 
 type FooterNavItem = {
@@ -37,14 +43,9 @@ export type siteConfigProps = {
   heroSubTitle: string
   fbAppId: string
   fbAdmnId: string
-  docsLink: LinkItem[]
+  docsItem: DocsItem[]
+  faqItem?: FAQItem[]
   navigation: FooterNavItem[]
-  navigationBanner?: boolean
-  navigationBannerTitle?: string
-  navigationBannerText?: string
-  navigationBannerLink?: string
-  navigationBannerLinkTitle?: string
-  navigationBannerLinkText?: string
 }
 
 export type Page = {
@@ -108,4 +109,16 @@ export interface CardGroupProps {
   children: ReactNode
   cols?: 1 | 2 | 3 | 4
   className?: string
+}
+
+export interface ShimmerButtonProps {
+  shimmerColor?: string
+  shimmerSize?: string
+  borderRadius?: string
+  shimmerDuration?: string
+  background?: string
+  className?: string
+  href?: string
+  children?: ReactNode
+  [key: string]: any
 }

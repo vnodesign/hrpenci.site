@@ -3,10 +3,7 @@ html,
   font-feature-settings: unset !important;
 }
 
-html {
-  height: 100%;
-}
-
+html,
 body {
-  min-height: 100%;
+  @apply tabular-nums;
 }

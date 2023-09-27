@@ -1,19 +1,21 @@
+import CTA from './CTA'
 import Docs from './Docs'
-import DocsBackEnd from './DocsBackEnd'
-import DocsDesign from './DocsDesign'
-import DocsFrontEnd from './DocsFrontEnd'
-import DocsLinux from './DocsLinux'
+import FAQ from './FAQ'
 import Hero from './Hero'
+import Target from './Target'
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <div className="mb-20 overflow-hidden sm:mb-32 md:mb-40">
+        <Hero />
+      </div>
       <Docs />
-      <DocsFrontEnd />
-      <DocsBackEnd />
-      <DocsLinux />
-      <DocsDesign />
+      <div className="pt-10 mb-10 flex flex-col gap-y-10 overflow-hidden sm:pt-20 sm:mb-20 sm:gap-y-20 md:pt-28 md:mb-28 md:gap-y-28">
+        <Target />
+        <FAQ />
+        <CTA />
+      </div>
     </>
   )
 }

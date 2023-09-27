@@ -1,4 +1,4 @@
-import { siteConfig } from '@data/siteConfig'
+import { siteConfig } from '@config/siteConfig'
 import useRepositoryStars from '@lib/useRepositoryStars'
 import { animated, config, useSpring } from '@react-spring/web'
 import { useEffect, useState } from 'react'

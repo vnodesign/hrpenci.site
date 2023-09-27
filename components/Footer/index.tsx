@@ -1,9 +1,9 @@
 import gtagTrack from '@/utils/gtag'
 import { ComponentIcon } from '@components/Icons'
 import Link from '@components/Link'
+import { siteConfig } from '@config/siteConfig'
 import cn from 'clsx'
-import { siteConfig } from 'data/siteConfig'
-import { LocaleSwitch, ThemeSwitch, useConfig } from 'nextra-theme-docs'
+import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 import type { ReactElement, ReactNode } from 'react'
 
 function FooterLink({
@@ -119,12 +119,9 @@ export function Footer({ menu }: { menu?: boolean }): ReactElement {
       <div
         className={cn(
           'mx-auto max-w-[90rem] py-2 px-4 flex gap-2',
-          menu && (config.i18n.length > 0 || config.darkMode)
-            ? 'flex'
-            : 'hidden'
+          menu && config.darkMode ? 'flex' : 'hidden'
         )}
       >
-        <LocaleSwitch />
         {config.darkMode && <ThemeSwitch />}
       </div>
       <div className="max-w-[90rem] mx-auto py-12 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400">

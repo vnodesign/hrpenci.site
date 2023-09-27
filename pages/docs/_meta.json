@@ -1,8 +1,35 @@
 {
+  "-- Bắt đầu sử dụng": {
+    "type": "separator",
+    "title": "Bắt đầu sử dụng"
+  },
   "index": "Lời nói đầu",
-  "front-end": "Front End",
-  "back-end": "Back End",
+  "contributions": "Đóng góp",
+  "-- Cơ bản": {
+    "type": "separator",
+    "title": "Cơ bản"
+  },
+  "front-end": "Front-end",
+  "back-end": "Back-end",
   "linux": "Linux",
   "design": "Design",
-  "nang-cao": "Nâng cao"
+  "-- Chuyên sâu": {
+    "type": "separator",
+    "title": "Chuyên sâu"
+  },
+  "nang-cao": "Nâng cao",
+  "-- Cộng đồng": {
+    "type": "separator",
+    "title": "Cộng đồng"
+  },
+  "group-hr": {
+    "title": "Group HR Community",
+    "href": "/group-hr",
+    "newWindow": true
+  },
+  "group-design": {
+    "title": "Group Design Talks",
+    "href": "/group-design",
+    "newWindow": true
+  }
 }

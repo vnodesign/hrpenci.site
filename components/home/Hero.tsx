@@ -1,73 +1,90 @@
 import gtagTrack from '@/utils/gtag'
-import { ComponentIcon } from '@components/Icons'
 import Image from '@components/Image'
 import Link from '@components/Link'
-import { siteConfig } from 'data/siteConfig'
+import { siteConfig } from '@config/siteConfig'
+import cn from 'clsx'
+import styled from './hero.module.css'
+import ShimmerButton from './ShimmerButton'
 
 export default function Hero() {
   return (
-    <section className="py-8 bg-gray-100 dark:bg-black lg:pt-12 lg:pb-16">
-      <div className="max-w-[90rem] px-4 mx-auto lg:text-center">
-        {siteConfig.navigationBanner && siteConfig.navigationBannerLink && (
-          <Link
-            title={siteConfig.navigationBannerLinkTitle}
-            className="inline-flex items-center justify-between p-1 pr-4 mb-5 text-sm bg-white rounded-full dark:bg-neutral-800 text-gray-800 dark:text-gray-100"
-            href={siteConfig.navigationBannerLink}
-            onClick={() =>
-              gtagTrack(
-                'navigationBannerLink',
-                siteConfig.navigationBannerLink,
-                siteConfig.navigationBannerLinkTitle
-              )
-            }
-          >
-            <span className="text-xs text-vnodesign-600 bg-vnodesign-50 dark:bg-vnodesign-500/10 font-semibold rounded-full px-4 py-1.5 mr-3">
-              {siteConfig.navigationBannerText}
-            </span>
-            <span className="mr-2 text-sm font-medium">
-              {siteConfig.navigationBannerTitle}{' '}
-              {siteConfig.navigationBannerLinkText}
-            </span>
-            <ComponentIcon icon="ArrowRightShort" className="w-5 h-5" />
-          </Link>
-        )}
-        <h1 className="mb-4 text-4xl font-bold tracking-tight lg:font-extrabold lg:text-6xl lg:leading-none lg:text-center xl:px-36 lg:mb-7 text-slate-800 dark:text-slate-200">
-          {siteConfig.heroTitle}
-        </h1>
-        <p className="mb-10 text-lg font-normal lg:text-center lg:text-xl xl:px-60">
-          {siteConfig.heroSubTitle}
-        </p>
-        <div className="flex flex-col mb-8 md:flex-row lg:justify-center">
-          <Link
-            href="/docs"
-            className="text-white bg-vnodesign-600 hover:bg-vnodesign-700 focus:ring-4 focus:ring-vnodesign-300 dark:focus:ring-vnodesign-800 font-medium rounded-lg text-base px-6 py-2.5 text-center md:mr-5 mb-3 md:mb-0 inline-flex items-center justify-center"
-            title="Bắt đầu"
-            onClick={() => gtagTrack('heroDocsLink', '/docs', 'Bắt đầu')}
-          >
-            Bắt đầu
-          </Link>
-          <Link
-            href="/group-hr"
-            className="text-white bg-vnodesign-700 hover:bg-vnodesign-800 focus:ring-4 focus:ring-vnodesign-300 dark:focus:ring-vnodesign-800 font-medium rounded-lg text-base px-6 py-2.5 text-center inline-flex justify-center items-center"
-            title="Group đăng tin tuyển dụng"
-            onClick={() =>
-              gtagTrack('heroHRLink', '/group-hr', 'Group đăng tin tuyển dụng')
-            }
-          >
-            <ComponentIcon icon="Facebook" className="w-5 h-5 mr-3" />
-            Group đăng tin tuyển dụng
-          </Link>
+    <div className="relative">
+      <div className="pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
+        <div
+          className={cn(
+            'absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-dark',
+            styled.beams
+          )}
+        >
+          <div
+            className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
+            style={{
+              maskImage: 'linear-gradient(to bottom, transparent, black)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)'
+            }}
+          />
         </div>
-        <Image
-          className="relative w-full max-w-4xl mx-auto mt-12 border border-gray-100 shadow-lg shadow-gray-100 dark:shadow-gray-900 rounded-2xl lg:mt-20 dark:border-gray-800"
-          src="/static/documentation-card.png"
-          alt="Documentation Card"
-          width={830}
-          height={450}
-          sizes="(max-width 830px) 80vw, 50vw"
-          priority
-        />
+        <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+          <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
+            {siteConfig.heroTitle}
+          </h1>
+          <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+            {siteConfig.heroSubTitle}
+          </p>
+          <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
+            <ShimmerButton
+              href="/docs"
+              className="w-full sm:w-auto items-center justify-center"
+              background="linear-gradient(135deg, #34b4f4 0%, #129ee5 100%)"
+              title="Đọc các tài liệu trong lĩnh vực IT và Design"
+              onClick={() =>
+                gtagTrack(
+                  'heroDocsLink',
+                  '/docs',
+                  'Đọc các tài liệu trong lĩnh vực IT và Design'
+                )
+              }
+            >
+              <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-white z-10">
+                Bắt đầu
+              </span>
+            </ShimmerButton>
+            <Link
+              href="/gioi-thieu"
+              className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-vnodesign-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-vnodesign-900 dark:before:bg-vnodesign-950 sm:w-auto"
+              title="Giới thiệu về nền tảng"
+              onClick={() =>
+                gtagTrack(
+                  'heroAboutLink',
+                  '/gioi-thieu',
+                  'Giới thiệu về nền tảng'
+                )
+              }
+            >
+              <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-zinc-800 dark:text-zinc-100">
+                Giới thiệu
+              </span>
+            </Link>
+          </div>
+        </div>
       </div>
-    </section>
+      <HeroMockups />
+    </div>
+  )
+}
+
+function HeroMockups() {
+  return (
+    <div className="mx-auto mt-20 max-w-7xl px-4 sm:mt-24 sm:px-6 md:px-8 lg:mt-32">
+      <Image
+        src="/static/documentation-card.png"
+        width={1200}
+        height={600}
+        alt="Documentation Card"
+        className="relative mx-auto w-full max-w-4xl rounded-3xl border border-gray-300 dark:border-gray-700"
+        sizes="(max-width 1200px) 80vw, 50vw"
+        priority
+      />
+    </div>
   )
 }

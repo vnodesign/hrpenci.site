@@ -1,10 +1,10 @@
-import type { siteConfigProps } from 'Type'
+import type { siteConfigProps } from './Type'
 
 export const siteConfig: siteConfigProps = {
   language: 'vi-VN',
   locale: 'vi_VN',
   siteTitle: 'HR Documentation',
-  siteSubTitle: 'Nền tảng chia sẻ kiến thức, tài liệu về IT và Design',
+  siteSubTitle: 'Nền tảng chia sẻ kiến thức và tài liệu',
   siteDescription:
     'Nền tảng chia sẻ các kiến thức và tài liệu về Front End, Back End, Linux và Design dành cho HR.',
   siteUrl: 'https://hrpenci.site',
@@ -14,17 +14,35 @@ export const siteConfig: siteConfigProps = {
   twitterSite: 'tuanducdesigner',
   githubUserName: 'vnodesign',
   githubRepoName: 'hr-document',
-  heroTitle: 'Nền tảng chia sẻ kiến thức, tài liệu về IT và Design',
+  heroTitle: 'Nền tảng chia sẻ kiến thức và tài liệu về IT và Design',
   heroSubTitle:
     'Nền tảng này được tạo ra với mong muốn giúp những người mới bước chân vào nghề tuyển dụng hiểu rõ hơn về các khái niệm trong lĩnh vực IT và Design.',
   heroImage: '/static/favicon.png',
   fbAppId: '1031926270674334',
   fbAdmnId: '100005485267478',
-  docsLink: [
-    { name: 'Frontend', icon: 'TableLayout', href: '/docs/front-end' },
-    { name: 'Backend', icon: 'Server', href: '/docs/back-end' },
-    { name: 'Linux', icon: 'Server', href: '/docs/linux' },
-    { name: 'Design', icon: 'SwatchBook', href: '/docs/design' }
+  docsItem: [
+    {
+      name: 'Tài liệu về IT',
+      icon: 'FileCode',
+      desc: 'Tài liệu này dành cho các bạn đang tuyển dụng về IT.'
+    },
+    {
+      name: 'Tài liệu về Design',
+      icon: 'SwatchBook',
+      desc: 'Tài liệu này dành cho các bạn đang tuyển dụng về Design.'
+    }
+  ],
+  faqItem: [
+    {
+      question: 'Đâu là lý do để bạn xây dựng lên nền tảng này?',
+      answer:
+        'Mình thấy nhu cầu làm HR của mọi người cũng nhiều mà trang bị kiến thức về ngành IT và ngành Design này còn khá là ít, nên mình muốn chia sẻ một phần nào đó giúp các bạn HR hiểu rõ hơn.'
+    },
+    {
+      question: 'Mục tiêu của nền tảng này là gì?',
+      answer:
+        'Mục tiêu chính của HR Documentation được thành lập ra là để chia sẻ những thông tin mà người sáng lập biết và muốn chia sẻ.'
+    }
   ],
   navigation: [
     {
@@ -91,12 +109,5 @@ export const siteConfig: siteConfigProps = {
         { name: 'CoffeeHR', href: 'https://coffeehr.com.vn' }
       ]
     }
-  ],
-  navigationBanner: true,
-  navigationBannerTitle: 'Chào bạn, bạn mới tuyển dụng về IT?',
-  navigationBannerText: 'Hot',
-  navigationBannerLink:
-    'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
-  navigationBannerLinkTitle: 'Khái niệm giữa Back End và Front End',
-  navigationBannerLinkText: 'Hãy đọc bài viết này nhé!'
+  ]
 }

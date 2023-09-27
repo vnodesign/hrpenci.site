@@ -1,8 +1,8 @@
-import { withSentryConfig } from '@sentry/nextjs'
-import nextra from 'nextra'
+import withPWAInit from '@ducanh2912/next-pwa'
 import withBundleAnalyzer from '@next/bundle-analyzer'
-import withPWAInit from 'next-pwa'
+import { withSentryConfig } from '@sentry/nextjs'
 import million from 'million/compiler'
+import nextra from 'nextra'
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'
@@ -10,7 +10,7 @@ const bundleAnalyzer = withBundleAnalyzer({
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
-  themeConfig: './data/theme.config.tsx',
+  themeConfig: './config/theme.config.tsx',
   flexsearch: true,
   defaultShowCopyCode: true
 })
@@ -19,20 +19,17 @@ const withPWA = withPWAInit({
   dest: 'public',
   register: true,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development'
+  disable: process.env.NODE_ENV === 'development',
+  workboxOptions: {
+    maximumFileSizeToCacheInBytes: 20000000
+  }
 })
 
+/** @type {import("next").NextConfig} */
 const nextConfig = withNextra(
   withPWA({
     swcMinify: true,
     reactStrictMode: true,
-    compress: true,
-    crossOrigin: 'anonymous',
-    compiler: {
-      removeConsole: {
-        exclude: ['error'],
-      },
-    },
     async redirects() {
       return [
         {
@@ -57,21 +54,59 @@ const nextConfig = withNextra(
         },
         {
           source: '/blog/khai-niem-giua-back-end-va-front-end',
-          destination: 'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
+          destination:
+            'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
           permanent: true
         }
       ]
     },
     images: {
       formats: ['image/webp'],
-      domains: ['ik.imagekit.io'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**.amazonaws.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.placeholder.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.unsplash.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.twimg.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.cloudfront.net'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.hashnode.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.craft.do'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.cloudinary.com'
+        },
+        {
+          protocol: 'https',
+          hostname: '**.imagekit.io'
+        }
+      ],
       loader: 'custom',
       loaderFile: './imagekitLoader.js'
     },
     webpack: config => {
       config.module.rules.push({
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack']
       })
       return config
     }
@@ -79,7 +114,7 @@ const nextConfig = withNextra(
 )
 
 const millionConfig = {
-  auto: { rsc: true },
+  auto: { rsc: true }
 }
 
 export default million.next(

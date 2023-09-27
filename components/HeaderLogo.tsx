@@ -1,5 +1,5 @@
 import gtagTrack from '@/utils/gtag'
-import { siteConfig } from 'data/siteConfig'
+import { siteConfig } from '@config/siteConfig'
 import Image from './Image'
 import Link from './Link'
 

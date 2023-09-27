@@ -1,4 +1,4 @@
-import { siteConfig } from '@data/siteConfig'
+import { siteConfig } from '@config/siteConfig'
 import axios from 'axios'
 import useSWR from 'swr'
 

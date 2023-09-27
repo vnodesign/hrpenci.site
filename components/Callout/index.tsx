@@ -1,5 +1,5 @@
+import type { CalloutContent, CalloutProps } from '@config/Type'
 import cn from 'clsx'
-import type { CalloutContent, CalloutProps } from 'Type'
 
 function CalloutTemplate({
   children,

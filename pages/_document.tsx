@@ -1,4 +1,4 @@
-import { siteConfig } from '@data/siteConfig'
+import { siteConfig } from '@config/siteConfig'
 import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {

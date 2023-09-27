@@ -1,9 +1,9 @@
+import type { CardGroupProps, CardProps } from '@config/Type'
 import cn from 'clsx'
 import isAbsoluteUrl from 'is-absolute-url'
 import Link from 'next/link'
 import type { ComponentType, ElementType, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
-import type { CardGroupProps, CardProps } from 'Type'
 import { ComponentIcon } from '../Icons'
 import Image from '../Image'
 

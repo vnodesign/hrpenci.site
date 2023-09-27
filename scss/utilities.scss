@@ -1,9 +1,12 @@
 @tailwind utilities;
 
-.nextra-nav-container {
-  .nextra-nav-container-blur {
-    @apply backdrop-blur;
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
   }
+}
+
+.nextra-nav-container {
   a {
     &[aria-current],
     &[aria-current^='true'] {
@@ -23,5 +26,11 @@
 .nextra-search {
   input {
     @apply focus:bg-black/[.05] dark:focus:bg-gray-50/10;
+  }
+}
+
+.nextra-content {
+  img {
+    @apply w-full object-cover rounded-lg;
   }
 }

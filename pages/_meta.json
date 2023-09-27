@@ -18,19 +18,6 @@
     "title": "Bookmarks",
     "type": "page"
   },
-  "dang-tin-tuyen-dung": {
-    "display": "hidden",
-    "type": "page",
-    "theme": {
-      "breadcrumb": false,
-      "footer": true,
-      "sidebar": false,
-      "toc": false,
-      "pagination": false,
-      "timestamp": false,
-      "typesetting": "article"
-    }
-  },
   "ban-quyen": {
     "display": "hidden",
     "type": "page",

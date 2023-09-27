@@ -2,9 +2,8 @@ import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
 import RepositoryStarsCounter from '@components/RepositoryStarsCounter'
-import Giscus from '@giscus/react'
 import { useRouter } from 'next/router'
-import { useConfig, useTheme, type DocsThemeConfig } from 'nextra-theme-docs'
+import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
 import { useEffect, useState } from 'react'
 import { siteConfig } from './siteConfig'
 
@@ -14,7 +13,7 @@ const theme: DocsThemeConfig = {
   },
   docsRepositoryBase: `https://github.com/${siteConfig.githubUserName}/${siteConfig.githubRepoName}/edit/master/`,
   useNextSeoProps: function SEO() {
-    const { asPath } = useRouter()
+    const { asPath, pathname } = useRouter()
     const { frontMatter } = useConfig()
 
     const ogTitle = frontMatter?.title
@@ -25,19 +24,20 @@ const theme: DocsThemeConfig = {
       ? `${siteConfig.siteUrl}${frontMatter.image}`
       : `${siteConfig.siteUrl}${siteConfig.siteImage}`
 
-    const ogDescription = frontMatter?.description || siteConfig.siteDescription
+    const ogDescription = String(
+      frontMatter.description || siteConfig.siteDescription
+    )
 
     const title = frontMatter?.title || siteConfig.siteTitle
 
-    const fullUrl =
-      asPath === '/' ? siteConfig.siteUrl : `${siteConfig.siteUrl}${asPath}`
+    const canonical = new URL(asPath, siteConfig.siteUrl).toString()
 
     return {
-      titleTemplate: `${ogTitle}`,
+      titleTemplate: ogTitle,
       description: ogDescription,
-      canonical: `${fullUrl}`,
+      canonical,
       openGraph: {
-        url: `${fullUrl}`,
+        url: canonical,
         title: ogTitle,
         description: ogDescription,
         images: [
@@ -49,7 +49,7 @@ const theme: DocsThemeConfig = {
           }
         ],
         siteName: siteConfig.siteTitle,
-        type: asPath === '/' ? 'website' : 'article',
+        type: pathname === '/' ? 'website' : 'article',
         locale: siteConfig.locale
       },
       facebook: {
@@ -114,7 +114,18 @@ const theme: DocsThemeConfig = {
     )
   },
   sidebar: {
-    defaultMenuCollapseLevel: 1
+    titleComponent({ title, type }) {
+      if (type === 'separator') {
+        return (
+          <h5 className="font-semibold text-gray-900 dark:text-gray-200">
+            {title}
+          </h5>
+        )
+      }
+      return title
+    },
+    defaultMenuCollapseLevel: 1,
+    toggleButton: true
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -152,35 +163,6 @@ const theme: DocsThemeConfig = {
     float: true,
     title: 'Mục lục nội dung',
     extraContent: RepositoryStarsCounter
-  },
-  main: function Main({ children }) {
-    const { route } = useRouter()
-    const { resolvedTheme } = useTheme()
-    const { frontMatter } = useConfig()
-
-    const categoryName = frontMatter?.type ? frontMatter.type : 'Q&A'
-    const categoryId = frontMatter?.id ? frontMatter.id : 'DIC_kwDOIY5iDc4CTSr9'
-
-    const comments = route !== '/' && (
-      <Giscus
-        key={route}
-        repo={`${siteConfig.githubUserName}/${siteConfig.githubRepoName}`}
-        repoId="R_kgDOIY5iDQ"
-        category={categoryName}
-        categoryId={categoryId}
-        mapping="og:title"
-        theme={resolvedTheme}
-        inputPosition="top"
-        lang="vi"
-      />
-    )
-
-    return (
-      <>
-        {children}
-        {comments}
-      </>
-    )
   },
   notFound: {
     content: 'Gửi vấn đề về liên kết bị hỏng →'

@@ -15,7 +15,7 @@ export default function getAccordionStyleFromVariant(variant: string) {
     parentClass:
       'border dark:border-neutral-800 rounded-xl mb-3 overflow-hidden dark:bg-vnodesign-100/5',
     coverClass:
-      'py-4 px-5 space-x-2 hover:bg-gray-100 dark:hover:bg-vnodesign-100/5 rounded-t-xl',
+      'py-4 px-5 hover:bg-gray-100 dark:hover:bg-vnodesign-100/5 rounded-t-xl',
     contentClass: 'pt-2 pb-4 px-6'
   }
 }

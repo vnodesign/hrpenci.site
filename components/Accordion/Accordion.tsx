@@ -80,7 +80,7 @@ function GenericAccordion({
     getAccordionStyleFromVariant(variant)
 
   return (
-    <div key={title} role="listitem" className={parentClass}>
+    <div key={title} className={parentClass}>
       <AccordionCover
         title={title}
         description={description}
