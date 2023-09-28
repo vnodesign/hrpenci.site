@@ -21,7 +21,8 @@
   },
   "bookmarks": {
     "title": "Bookmarks",
-    "type": "page"
+    "href": "https://blog.hrpenci.site/posts/bookmarks",
+    "newWindow": true
   },
   "ban-quyen": {
     "display": "hidden",
