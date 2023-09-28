@@ -49,14 +49,18 @@ const nextConfig = withNextra(
         },
         {
           source: '/blog',
-          destination: 'https://hrpenci.site',
+          destination: 'https://blog.hrpenci.site',
           permanent: true
         },
         {
           source: '/blog/khai-niem-giua-back-end-va-front-end',
           destination:
-            'https://redirect.hrpenci.site/khai-niem-giua-back-end-va-front-end',
+            'https://blog.hrpenci.site/posts/khai-niem-giua-back-end-va-front-end-phan-1/',
           permanent: true
+        },
+        {
+          source: '/bookmarks',
+          destination: 'https://blog.hrpenci.site/posts/bookmarks/'
         }
       ]
     },

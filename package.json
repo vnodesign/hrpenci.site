@@ -4,12 +4,12 @@
     "@ducanh2912/next-pwa": "^9.7.1",
     "@headlessui/react": "^1.7.17",
     "@react-spring/web": "^9.7.3",
-    "@sentry/nextjs": "^7.71.0",
+    "@sentry/nextjs": "^7.72.0",
     "@sentry/profiling-node": "^1.2.1",
-    "axios": "^1.5.0",
+    "axios": "^1.5.1",
     "clsx": "^2.0.0",
     "is-absolute-url": "^4.0.1",
-    "million": "^2.6.1",
+    "million": "^2.6.2",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^13.5.3",
     "next-seo": "^6.1.0",
@@ -31,7 +31,7 @@
     "@next/env": "^13.5.3",
     "@next/eslint-plugin-next": "^13.5.3",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20.7.0",
+    "@types/node": "^20.7.1",
     "@types/nprogress": "^0.2.1",
     "@types/react": "^18.2.23",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
@@ -63,14 +63,14 @@
   "license": "MIT",
   "lint-staged": {
     "*.+(js|jsx|ts|tsx|cjs|mjs)": [
-      "pnpm lint && pnpm lint:fix"
+      "bun lint && bun lint:fix"
     ],
     "*.+(js|jsx|ts|tsx|cjs|mjs|json|css|scss|md|mdx)": [
-      "pnpm prettier:check && pnpm prettier:write"
+      "bun prettier:check && bun prettier:write"
     ]
   },
   "name": "hrpenci.site",
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "bun@1.0.3",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "build": "NODE_ENV=production next build && next-sitemap",

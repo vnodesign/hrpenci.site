@@ -56,7 +56,9 @@ Dillinger, Mark Text, hoặc MacDown. Ngoài ra, hãy đảm bảo rằng tất 
 
 Dưới đây là các Components được sử dụng trên tệp MDX.
 
-#### 5.1. Card
+#### 5.1. Card và Card Group
+
+**Với Card:**
 
 <Card title="Front-end là gì?" icon="TableLayout" href="/docs/front-end">
   Đây là cách bạn sử dụng card có biểu tượng và liên kết. Bấm vào card này sẽ
@@ -70,16 +72,7 @@ Dưới đây là các Components được sử dụng trên tệp MDX.
 </Card>
 ```
 
-**Các cấu hình khác trên Card:**
-
-- title
-- icon (`ArrowLeft`, `ArrowLeftShort`, `ArrowRight`, `ArrowRightShort`,
-  `CaretDown`, `CaretUp`, `Chat`, `Check`, `Facebook`, `GitHub`, `Linkedin`,
-  `ReactIcon`, `Twitter`, `TableLayout`, `Server`, `SwatchBook`,
-  `Folder`,`FileCode`)
-- href
-
-#### 5.2. Card Group
+**Với Card Group:**
 
 <CardGroup cols={2}>
   <Card title="Front-end" icon="TableLayout">
@@ -115,12 +108,163 @@ Dưới đây là các Components được sử dụng trên tệp MDX.
 </CardGroup>
 ```
 
-**Các cấu hình khác trên Card Group:**
+**Các cấu hình khác trên Card và Card Group:**
 
-`cols` bên trong `CardGroup` mặc định là 2, bạn có thể tăng nó lên thành 3
-hoặc 4.
+<ResponseField name="title" type="string">
+`title` là tiêu đề mà bạn muốn đặt trong `Card`.
 
-#### 5.3. Tabs
+Ví dụ: `Front-end là gì`
+
+</ResponseField>
+
+<ResponseField name="icon" type="string" default="Folder">
+`icon` là biểu tượng mà bạn muốn đặt trong `Card`.
+
+Ví dụ: `TableLayout`
+
+Danh sách các Icon đang sử dụng trên dự án HR Documentation:
+
+- `ArrowLeft`
+- `ArrowLeftShort`
+- `ArrowRight`
+- `ArrowRightShort`
+- `CaretDown`
+- `CaretUp`
+- `Chat`
+- `Check`
+- `Facebook`
+- `GitHub`
+- `Linkedin`
+- `ReactIcon`
+- `Twitter`
+- `TableLayout`
+- `Server`
+- `SwatchBook`
+- `Folder`
+- `FileCode`
+
+</ResponseField>
+
+<ResponseField name="href" type="string">
+`href` là liên kết mà bạn muốn đặt trong Card.
+
+Ví dụ: `https://hrpenci.site/group-hr`
+
+</ResponseField>
+
+<ResponseField name="cols" type="string" default="2">
+`cols` là số cột mà bạn muốn đặt trong `CardGroup`.
+
+<Tabs>
+  <Tab title="1 cột">
+    Cú pháp:
+
+    ```mdx filename="Ví dụ về Card Group 1 cột"
+    <CardGroup cols={1}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+    ```
+
+    Kết quả:
+
+    <CardGroup cols={1}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+
+  </Tab>
+  <Tab title="2 cột">
+    Cú pháp:
+
+    ```mdx filename="Ví dụ về Card Group 2 cột"
+    <CardGroup cols={2}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+    ```
+
+    Kết quả:
+
+    <CardGroup cols={2}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+
+  </Tab>
+  <Tab title="3 cột">
+    Cú pháp:
+
+    ```mdx filename="Ví dụ về Card Group 3 cột"
+    <CardGroup cols={3}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+    ```
+
+    Kết quả:
+
+    <CardGroup cols={3}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+
+  </Tab>
+  <Tab title="4 cột">
+    Cú pháp:
+
+    ```mdx filename="Ví dụ về Card Group 4 cột"
+    <CardGroup cols={4}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+    ```
+
+    Kết quả:
+
+    <CardGroup cols={4}>
+      <Card title="Front-end" icon="TableLayout">
+        Front-end là giao diện người dùng.
+      </Card>
+      <Card title="Back-end" icon="Server">
+        Back-end là những thứ được xử lý phía sau Front-end.
+      </Card>
+    </CardGroup>
+
+  </Tab>
+</Tabs>
+
+</ResponseField>
+
+#### 5.2. Tabs
 
 <Tabs>
   <Tab title="IT Recruiter">
@@ -144,9 +288,14 @@ hoặc 4.
 
 **Các cấu hình khác trên Tabs:**
 
-- title
+<ResponseField name="title" type="string">
+`title` là tiêu đề mà bạn muốn đặt trong `Tab`.
 
-#### 5.4. Callout
+Ví dụ: `IT Recruiter`
+
+</ResponseField>
+
+#### 5.3. Callout
 
 Sử dụng chú thích để thêm ngữ cảnh bắt mắt vào nội dung của bạn.
 

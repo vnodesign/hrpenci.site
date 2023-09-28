@@ -10,6 +10,11 @@
     "title": "Tài liệu",
     "type": "page"
   },
+  "group-hr": {
+    "title": "Blog",
+    "href": "https://blog.hrpenci.site",
+    "newWindow": true
+  },
   "interview": {
     "title": "Câu hỏi phỏng vấn",
     "type": "page"

@@ -79,10 +79,12 @@ export function GenericParam({
     <div className="pb-5 mb-5 border-b dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400">
       <div className="flex font-mono text-sm">
         {name && (
-          <div className="py-0.5 flex-1 space-x-2.5 truncate">
-            <span className="rounded-md font-semibold text-vnodesign-500 dark:text-vnodesign-400">
-              {name}
-            </span>
+          <div className="flex-1 flex flex-row flex-wrap gap-x-2.5 content-start py-0.5 mr-5">
+            <div className="flex flex-row gap-x-2.5">
+              <div className="font-semibold text-vnodesign-500 dark:text-vnodesign-400">
+                {name}
+              </div>
+            </div>
             {required && (
               <span className="text-slate-700 dark:text-slate-200">
                 bắt buộc
@@ -100,7 +102,11 @@ export function GenericParam({
             )}
           </div>
         )}
-        {type && <div className="text-gray-900 dark:text-gray-200">{type}</div>}
+        {type && (
+          <div className="text-right text-gray-900 dark:text-gray-200">
+            {type}
+          </div>
+        )}
       </div>
       <div className="mt-3">{children}</div>
     </div>

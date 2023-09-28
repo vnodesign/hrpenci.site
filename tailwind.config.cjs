@@ -42,7 +42,7 @@ module.exports = {
         slide: 'slide var(--speed) ease-in-out infinite alternate'
       },
       maxWidth: {
-        '8xl': '90rem'
+        '8xl': '92rem'
       },
       keyframes: {
         spin: {
