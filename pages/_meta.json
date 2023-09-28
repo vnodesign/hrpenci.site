@@ -10,8 +10,9 @@
     "title": "Tài liệu",
     "type": "page"
   },
-  "group-hr": {
+  "blog": {
     "title": "Blog",
+    "type": "page",
     "href": "https://blog.hrpenci.site",
     "newWindow": true
   },
@@ -21,6 +22,7 @@
   },
   "bookmarks": {
     "title": "Bookmarks",
+    "type": "page",
     "href": "https://blog.hrpenci.site/posts/bookmarks",
     "newWindow": true
   },
