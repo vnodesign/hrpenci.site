@@ -60,7 +60,8 @@ const nextConfig = withNextra(
         },
         {
           source: '/bookmarks',
-          destination: 'https://blog.hrpenci.site/posts/bookmarks/'
+          destination: 'https://blog.hrpenci.site/posts/bookmarks/',
+          permanent: true
         }
       ]
     },
