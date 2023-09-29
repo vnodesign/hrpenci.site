@@ -1,6 +1,6 @@
 import Link from '@components/Link'
 import type { ShimmerButtonProps } from '@config/Type'
-import cn from 'clsx'
+import cn from '@lib/cn'
 import type { CSSProperties } from 'react'
 import { Fragment } from 'react'
 
