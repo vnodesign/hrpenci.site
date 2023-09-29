@@ -75,7 +75,7 @@ function FooterContent() {
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <Link
-            href="https://www.facebook.com/vnodesign"
+            href={`https://www.facebook.com/${siteConfig.fbFanpage}`}
             title="Facebook Fanpage"
             aria-label="Facebook Fanpage"
             className="hover:text-gray-700 hover:dark:text-white"
@@ -83,7 +83,7 @@ function FooterContent() {
             <ComponentIcon icon="Facebook" className="w-5 h-5" />
           </Link>
           <Link
-            href="https://twitter.com/tuanducdesigner"
+            href={`https://twitter.com/${siteConfig.twitterSite}`}
             title="Twitter Profile"
             aria-label="Twitter Profile"
             className="hover:text-gray-700 hover:dark:text-white"
@@ -91,7 +91,7 @@ function FooterContent() {
             <ComponentIcon icon="Twitter" className="w-5 h-5" />
           </Link>
           <Link
-            href="https://github.com/vnodesign"
+            href={`https://github.com/${siteConfig.githubUserName}`}
             title="GitHub Profile"
             aria-label="GitHub Profile"
             className="hover:text-gray-700 hover:dark:text-white"
@@ -99,7 +99,7 @@ function FooterContent() {
             <ComponentIcon icon="GitHub" className="w-5 h-5" />
           </Link>
           <Link
-            href="https://linkedin.com/in/tuanductran"
+            href={`https://linkedin.com/in/${siteConfig.linkedIn}`}
             title="Linkedin Profile"
             aria-label="Linkedin Profile"
             className="hover:text-gray-700 hover:dark:text-white"

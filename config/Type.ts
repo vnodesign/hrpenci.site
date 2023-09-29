@@ -43,6 +43,8 @@ export type siteConfigProps = {
   heroSubTitle: string
   fbAppId: string
   fbAdmnId: string
+  fbFanpage: string
+  linkedIn: string
   docsItem: DocsItem[]
   faqItem?: FAQItem[]
   navigation: FooterNavItem[]

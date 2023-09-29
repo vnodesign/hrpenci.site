@@ -20,6 +20,8 @@ export const siteConfig: siteConfigProps = {
   heroImage: '/static/favicon.png',
   fbAppId: '1031926270674334',
   fbAdmnId: '100005485267478',
+  fbFanpage: 'vnodesign',
+  linkedIn: 'tuanductran',
   docsItem: [
     {
       name: 'Tài liệu về IT',
