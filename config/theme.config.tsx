@@ -1,7 +1,6 @@
 import { Footer } from '@components/Footer'
 import HeaderLogo from '@components/HeaderLogo'
 import { MDXComponents } from '@components/MDXComponents'
-import RepositoryStarsCounter from '@components/RepositoryStarsCounter'
 import { useRouter } from 'next/router'
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs'
 import { useEffect, useState } from 'react'
@@ -159,10 +158,14 @@ const theme: DocsThemeConfig = {
       }
     }
   },
+  primaryHue: 200,
+  primarySaturation: {
+    dark: 85,
+    light: 90
+  },
   toc: {
     float: true,
-    title: 'Mục lục nội dung',
-    extraContent: RepositoryStarsCounter
+    title: 'Mục lục nội dung'
   },
   notFound: {
     content: 'Gửi vấn đề về liên kết bị hỏng →'

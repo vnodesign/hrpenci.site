@@ -70,38 +70,6 @@ const nextConfig = withNextra(
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: '**.amazonaws.com'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.placeholder.com'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.unsplash.com'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.twimg.com'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.cloudfront.net'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.hashnode.com'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.craft.do'
-        },
-        {
-          protocol: 'https',
-          hostname: '**.cloudinary.com'
-        },
-        {
-          protocol: 'https',
           hostname: '**.imagekit.io'
         }
       ],

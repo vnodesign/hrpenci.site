@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ResponseFieldProps } from '@config/Type'
 import { GenericParam } from './Param'
 
 // The API playground detects all Params to generate the playground fields,
@@ -9,15 +9,9 @@ export function ResponseField({
   hidden,
   default: defaultValue,
   required,
+  optional,
   children
-}: {
-  name: string
-  type: string
-  hidden?: boolean
-  default?: string
-  required?: boolean
-  children: ReactNode
-}) {
+}: ResponseFieldProps) {
   return (
     <GenericParam
       name={name}
@@ -25,6 +19,7 @@ export function ResponseField({
       hidden={hidden}
       defaultValue={defaultValue}
       required={required}
+      optional={optional}
     >
       {children}
     </GenericParam>

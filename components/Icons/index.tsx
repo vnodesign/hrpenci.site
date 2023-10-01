@@ -24,6 +24,14 @@ type IconProps = {
   className?: string
 }
 
+/**
+ * The `ComponentIcon` function takes in an `icon` and `className` as props and returns the corresponding icon component
+ * based on the `icon` prop, or a default icon component if no matching icon is found.
+ * @param {IconProps}  - - `icon`: The name of the icon component to render. It should be one of the keys in the `icons`
+ * object.
+ * @returns the component specified by the `icon` prop, or the `DefaultIcon` component if the `icon` prop does not match
+ * any of the icons in the `icons` object. The returned component will have the `className` prop passed to it.
+ */
 export function ComponentIcon({ icon, className }: IconProps) {
   const icons = {
     ArrowLeft,

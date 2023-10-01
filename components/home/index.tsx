@@ -1,3 +1,4 @@
+import cn from '@lib/cn'
 import CTA from './CTA'
 import Docs from './Docs'
 import FAQ from './FAQ'
@@ -11,7 +12,12 @@ export default function Home() {
         <Hero />
       </div>
       <Docs />
-      <div className="pt-10 mb-10 flex flex-col gap-y-10 overflow-hidden sm:pt-20 sm:mb-20 sm:gap-y-20 md:pt-28 md:mb-28 md:gap-y-28">
+      <div
+        className={cn(
+          'pt-10 mb-10 flex flex-col gap-y-10 overflow-hidden',
+          'sm:pt-20 sm:mb-20 sm:gap-y-20 md:pt-20 md:mb-20 md:gap-y-20'
+        )}
+      >
         <Target />
         <FAQ />
         <CTA />

@@ -1,5 +1,5 @@
+import type { ExpandableProps, GenericExpandableProps } from '@config/Type'
 import cn from 'clsx'
-import type { ReactNode } from 'react'
 import { useState } from 'react'
 import ExpandableCover from './ExpandableCover'
 
@@ -8,12 +8,7 @@ export function Expandable({
   defaultOpen = false,
   onChange: onChangeProp,
   children
-}: {
-  title: string
-  defaultOpen?: boolean
-  onChange?: (open: boolean) => void
-  children: ReactNode
-}) {
+}: ExpandableProps) {
   const onChange = (open: boolean) => {
     if (onChangeProp) {
       onChangeProp(open)
@@ -37,13 +32,7 @@ function GenericExpandable({
   defaultOpen = false,
   onChange,
   children
-}: {
-  title: string
-  description?: string
-  defaultOpen?: boolean
-  onChange?: (open: boolean) => void
-  children: ReactNode
-}) {
+}: GenericExpandableProps) {
   const [open, setOpen] = useState<boolean>(defaultOpen)
 
   const onClickOpen = (open: boolean) => {

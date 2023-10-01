@@ -1,3 +1,4 @@
+import type { ExpandableCoverProps } from '@config/Type'
 import cn from 'clsx'
 
 function ExpandableCover({
@@ -5,12 +6,7 @@ function ExpandableCover({
   description,
   open,
   setOpen
-}: {
-  title: string
-  description?: string
-  open: boolean
-  setOpen: (open: boolean) => any
-}) {
+}: ExpandableCoverProps) {
   return (
     <button
       onClick={() => setOpen(!open)}

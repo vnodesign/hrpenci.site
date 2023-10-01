@@ -4,6 +4,15 @@ const {
   default: flattenColorPalette
 } = require('tailwindcss/lib/util/flattenColorPalette')
 
+const makePrimaryColor =
+  l =>
+  ({ opacityValue }) => {
+    return (
+      `hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) ${l}%` +
+      (opacityValue ? ` / ${opacityValue})` : ')')
+    )
+  }
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -20,17 +29,18 @@ module.exports = {
         black: '#000000',
         dark: '#111111',
         vnodesign: {
-          50: 'hsl(204, 100%, 97%)', // #f0f9ff
-          100: 'hsl(206, 88%, 94%)', // #e1f1fd
-          200: 'hsl(202, 92%, 86%)', // #bbe4fc
-          300: 'hsl(201, 92%, 74%)', // #7fcffa
-          400: 'hsl(200, 90%, 58%)', // #34b4f4
-          500: 'hsl(200, 85%, 48%)', // #129ee5
-          600: 'hsl(202, 94%, 39%)', // #067ec3
-          700: 'hsl(203, 93%, 32%)', // #06649e
-          800: 'hsl(203, 87%, 27%)', // #095583
-          900: 'hsl(203, 77%, 24%)', // #0e486c
-          950: 'hsl(206, 78%, 16%)' // #092d48
+          50: makePrimaryColor(97),
+          100: makePrimaryColor(94),
+          200: makePrimaryColor(86),
+          300: makePrimaryColor(77),
+          400: makePrimaryColor(66),
+          500: makePrimaryColor(50),
+          600: makePrimaryColor(45),
+          700: makePrimaryColor(39),
+          750: makePrimaryColor(35),
+          800: makePrimaryColor(32),
+          900: makePrimaryColor(24),
+          950: makePrimaryColor(16)
         }
       },
       fontFamily: {

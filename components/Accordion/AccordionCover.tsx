@@ -1,5 +1,5 @@
+import type { AccordionCoverProps } from '@config/Type'
 import cn from 'clsx'
-import type { ReactNode } from 'react'
 import { ExpandableItemCoverIcon } from '../Expandable/ExpandableCover'
 
 function AccordionCover({
@@ -9,14 +9,7 @@ function AccordionCover({
   setOpen,
   icon,
   coverClass
-}: {
-  title: string
-  description?: string
-  open: boolean
-  setOpen: (open: boolean) => any
-  icon?: ReactNode
-  coverClass: string
-}) {
+}: AccordionCoverProps) {
   return (
     <button
       onClick={() => setOpen(!open)}

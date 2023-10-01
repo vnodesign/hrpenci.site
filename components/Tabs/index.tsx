@@ -1,24 +1,17 @@
+import type { TabProps } from '@config/Type'
 import cn from 'clsx'
-import type { ReactElement, ReactNode } from 'react'
+import type { ReactElement } from 'react'
 import { Children, useState } from 'react'
 
-function Tab({
-  title,
-  isActive = true,
-  children
-}: {
-  title: string
-  isActive?: boolean
-  children?: ReactNode
-}) {
+function Tab({ title, isActive = true, children }: TabProps) {
   return (
     <>
       <h2
         className={cn(
           'flex text-sm leading-6 font-semibold whitespace-nowrap pt-3 pb-2.5 -mb-px max-w-max border-b',
           isActive
-            ? 'text-vnodesign-500 dark:text-vnodesign-400 border-current'
-            : 'text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700'
+            ? 'border-vnodesign-500 text-vnodesign-600'
+            : 'border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white'
         )}
       >
         {title}
@@ -35,7 +28,7 @@ function Tabs({ children }: { children: ReactElement[] }) {
 
   return (
     <>
-      <ul className="mb-6 pb-[1px] flex-none min-w-full overflow-auto border-b border-zinc-200 space-x-6 flex dark:border-zinc-200/10">
+      <ul className="mb-6 pb-[1px] flex-none min-w-full overflow-auto border-b border-gray-200 space-x-6 flex dark:border-neutral-800">
         {arrayChildren.map((child: ReactElement, i: number) => (
           <li
             className="cursor-pointer"
@@ -43,7 +36,7 @@ function Tabs({ children }: { children: ReactElement[] }) {
             key={i}
           >
             <Tab
-              title={child?.props?.title ?? 'Tab Title'}
+              title={child?.props?.title ?? 'Không có tiêu đề'}
               isActive={i === activeTabIndex}
             />
           </li>

@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <div>
       <Container>
-        <div className="mt-48 m-auto space-y-6 md:w-8/12 lg:w-7/12">
+        <div className="mt-32 m-auto space-y-6 md:w-8/12 lg:w-7/12">
           <h1 className="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
             Tham gia vào cộng đồng
           </h1>

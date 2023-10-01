@@ -1,5 +1,5 @@
-import Container from '@components/home/Container'
 import { siteConfig } from '@config/siteConfig'
+import Container from './Container'
 
 export default function FAQ() {
   return (
