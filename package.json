@@ -60,14 +60,14 @@
   "license": "MIT",
   "lint-staged": {
     "*.+(js|jsx|ts|tsx|cjs|mjs)": [
-      "pnpm lint && pnpm lint:fix"
+      "bun lint && bun lint:fix"
     ],
     "*.+(js|jsx|ts|tsx|cjs|mjs|json|css|scss|md|mdx)": [
-      "pnpm prettier:check && pnpm prettier:write"
+      "bun prettier:check && bun prettier:write"
     ]
   },
   "name": "hrpenci.site",
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "bun@1.0.4",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "build": "NODE_ENV=production next build && next-sitemap",
