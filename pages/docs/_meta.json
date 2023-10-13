@@ -4,32 +4,21 @@
     "title": "Bắt đầu sử dụng"
   },
   "index": "Lời nói đầu",
+  "api": "API Documentation",
   "contributions": "Đóng góp",
-  "-- Cơ bản": {
+  "-- HR": {
     "type": "separator",
-    "title": "Cơ bản"
+    "title": "Dành cho HR"
   },
-  "front-end": "Front-end",
-  "back-end": "Back-end",
-  "linux": "Linux",
-  "design": "Design",
-  "-- Chuyên sâu": {
+  "hr": "Tài liệu HR",
+  "-- Dev": {
     "type": "separator",
-    "title": "Chuyên sâu"
+    "title": "Dành cho Dev"
   },
-  "nang-cao": "Nâng cao",
-  "-- Cộng đồng": {
+  "dev": "Tài liệu Developer",
+  "-- Designer": {
     "type": "separator",
-    "title": "Cộng đồng"
+    "title": "Dành cho Designer"
   },
-  "group-hr": {
-    "title": "Group HR Community",
-    "href": "/group-hr",
-    "newWindow": true
-  },
-  "group-design": {
-    "title": "Group Design Talks",
-    "href": "/group-design",
-    "newWindow": true
-  }
+  "designer": "Tài liệu Designer"
 }
