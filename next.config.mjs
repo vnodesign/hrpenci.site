@@ -1,7 +1,6 @@
 import withPWAInit from '@ducanh2912/next-pwa'
 import withBundleAnalyzer from '@next/bundle-analyzer'
 import { withSentryConfig } from '@sentry/nextjs'
-import million from 'million/compiler'
 import nextra from 'nextra'
 
 const bundleAnalyzer = withBundleAnalyzer({
@@ -62,6 +61,31 @@ const nextConfig = withNextra(
           source: '/bookmarks',
           destination: 'https://blog.hrpenci.site/posts/bookmarks/',
           permanent: true
+        },
+        {
+          source: '/docs/front-end/:slug*',
+          destination: '/docs/hr/front-end/:slug*',
+          permanent: true
+        },
+        {
+          source: '/docs/back-end/:slug*',
+          destination: '/docs/hr/back-end/:slug*',
+          permanent: true
+        },
+        {
+          source: '/docs/linux/:slug*',
+          destination: '/docs/hr/linux/:slug*',
+          permanent: true
+        },
+        {
+          source: '/docs/design/:slug*',
+          destination: '/docs/hr/design/:slug*',
+          permanent: true
+        },
+        {
+          source: '/docs/nang-cao/:slug*',
+          destination: 'https://hrpenci.site',
+          permanent: true
         }
       ]
     },
@@ -76,7 +100,15 @@ const nextConfig = withNextra(
       loader: 'custom',
       loaderFile: './imagekitLoader.js'
     },
-    webpack: config => {
+    webpack: (config, { dev, isServer }) => {
+      if (!dev && !isServer) {
+        Object.assign(config.resolve.alias, {
+          'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+          react: 'preact/compat',
+          'react-dom/test-utils': 'preact/test-utils',
+          'react-dom': 'preact/compat'
+        })
+      }
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack']
@@ -86,24 +118,17 @@ const nextConfig = withNextra(
   })
 )
 
-const millionConfig = {
-  auto: { rsc: true }
-}
-
-export default million.next(
-  withSentryConfig(
-    bundleAnalyzer(nextConfig),
-    {
-      org: process.env.SENTRY_ORG,
-      project: process.env.SENTRY_PROJECT,
-      dist: '1'
-    },
-    {
-      widenClientFileUpload: true,
-      transpileClientSDK: true,
-      hideSourceMaps: true,
-      disableLogger: true
-    }
-  ),
-  millionConfig
+export default withSentryConfig(
+  bundleAnalyzer(nextConfig),
+  {
+    org: process.env.SENTRY_ORG,
+    project: process.env.SENTRY_PROJECT,
+    dist: '1'
+  },
+  {
+    widenClientFileUpload: true,
+    transpileClientSDK: true,
+    hideSourceMaps: true,
+    disableLogger: true
+  }
 )
