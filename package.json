@@ -24,7 +24,6 @@
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
-    "@next/bundle-analyzer": "^13.5.4",
     "@next/env": "^13.5.4",
     "@next/eslint-plugin-next": "^13.5.4",
     "@svgr/webpack": "^8.1.0",

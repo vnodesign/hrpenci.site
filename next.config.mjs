@@ -1,11 +1,6 @@
 import withPWAInit from '@ducanh2912/next-pwa'
-import withBundleAnalyzer from '@next/bundle-analyzer'
 import { withSentryConfig } from '@sentry/nextjs'
 import nextra from 'nextra'
-
-const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true'
-})
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
@@ -119,7 +114,7 @@ const nextConfig = withNextra(
 )
 
 export default withSentryConfig(
-  bundleAnalyzer(nextConfig),
+  nextConfig,
   {
     org: process.env.SENTRY_ORG,
     project: process.env.SENTRY_PROJECT,

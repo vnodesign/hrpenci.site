@@ -18,6 +18,7 @@ const Server = dynamic(() => import('./Server'))
 const SwatchBook = dynamic(() => import('./SwatchBook'))
 const TableLayout = dynamic(() => import('./TableLayout'))
 const Twitter = dynamic(() => import('./Twitter'))
+const User = dynamic(() => import('./User'))
 
 type IconProps = {
   icon?: any
@@ -47,6 +48,7 @@ export function ComponentIcon({ icon, className }: IconProps) {
     Linkedin,
     ReactIcon,
     Twitter,
+    User,
     TableLayout,
     Server,
     SwatchBook,

@@ -23,7 +23,7 @@ export function GenericParam({
             </div>
             {required && (
               <span className="text-slate-700 dark:text-slate-200">
-                bắt buộc
+                Bắt buộc
               </span>
             )}
             {optional && (
@@ -33,7 +33,7 @@ export function GenericParam({
             )}
             {defaultValue && (
               <span className="text-slate-700 dark:text-slate-200">
-                mặc định: {defaultValue}
+                Mặc định: {defaultValue}
               </span>
             )}
           </div>

@@ -16,7 +16,7 @@ function Tab({ title, isActive = true, children }: TabProps) {
       >
         {title}
       </h2>
-      {children ? <div>{children}</div> : null}
+      {children && <div>{children}</div>}
     </>
   )
 }
