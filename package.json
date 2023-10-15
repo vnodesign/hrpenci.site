@@ -44,7 +44,7 @@
     "eslint-plugin-typescript-sort-keys": "^3.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.0",
     "postcss": "^8.4.31",
     "postcss-focus-visible": "^9.0.0",
     "postcss-import": "^15.1.0",
