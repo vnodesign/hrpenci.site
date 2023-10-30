@@ -25,7 +25,7 @@
     "@babel/core": "^7.23.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@next/env": "^13.5.6",
-    "@next/eslint-plugin-next": "^13.5.6",
+    "@next/eslint-plugin-next": "^14.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.8.7",
     "@types/nprogress": "^0.2.2",
@@ -42,7 +42,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-typescript-sort-keys": "^3.1.0",
-    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unicorn": "^49.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
@@ -66,7 +66,7 @@
     ]
   },
   "name": "hrpenci.site",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.0",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "build": "NODE_ENV=production next build && next-sitemap",
