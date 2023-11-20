@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^14.0.1
     version: 14.0.1
   '@next/eslint-plugin-next':
-    specifier: ^14.0.1
-    version: 14.0.1
+    specifier: ^14.0.3
+    version: 14.0.3
   '@svgr/webpack':
     specifier: ^8.1.0
     version: 8.1.0(typescript@5.2.2)
@@ -1734,6 +1734,12 @@ packages:
 
   /@next/eslint-plugin-next@14.0.1:
     resolution: {integrity: sha512-bLjJMwXdzvhnQOnxvHoTTUh/+PYk6FF/DCgHi4BXwXCINer+o1ZYfL9aVeezj/oI7wqGJOqwGIXrlBvPbAId3w==}
+    dependencies:
+      glob: 7.1.7
+    dev: true
+
+  /@next/eslint-plugin-next@14.0.3:
+    resolution: {integrity: sha512-j4K0n+DcmQYCVnSAM+UByTVfIHnYQy2ODozfQP+4RdwtRDfobrIvKq1K4Exb2koJ79HSSa7s6B2SA8T/1YR3RA==}
     dependencies:
       glob: 7.1.7
     dev: true
