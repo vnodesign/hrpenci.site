@@ -2,7 +2,7 @@
   "author": "Tuan Duc Design <tuanductran.dev@hotmail.com>",
   "dependencies": {
     "@ducanh2912/next-pwa": "^9.7.2",
-    "@sentry/nextjs": "^7.83.0",
+    "@sentry/nextjs": "^7.84.0",
     "@sentry/profiling-node": "^1.2.6",
     "clsx": "^2.0.0",
     "is-absolute-url": "^4.0.1",
