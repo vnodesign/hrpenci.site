@@ -13,7 +13,7 @@ dependencies:
     version: 7.91.0(next@14.0.4)(react@18.2.0)(webpack@5.89.0)
   '@sentry/profiling-node':
     specifier: ^1.3.2
-    version: 1.3.2(@sentry/node@7.87.0)
+    version: 1.3.2(@sentry/node@7.91.0)
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)
   eslint-plugin-unicorn:
-    specifier: ^49.0.0
-    version: 49.0.0(eslint@8.56.0)
+    specifier: ^50.0.0
+    version: 50.0.1(eslint@8.56.0)
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -2082,15 +2082,6 @@ packages:
       '@sentry/utils': 7.91.0
     dev: false
 
-  /@sentry-internal/tracing@7.87.0:
-    resolution: {integrity: sha512-HYa0+rfFmYQ/DadXoiuarTSxrcnYDCd/fm0pFuOHjICtfja8IcLegVYP2/r3CgwB+IjquCtJ5kDcqS/NTgUcpA==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@sentry/core': 7.87.0
-      '@sentry/types': 7.87.0
-      '@sentry/utils': 7.87.0
-    dev: false
-
   /@sentry-internal/tracing@7.91.0:
     resolution: {integrity: sha512-JH5y6gs6BS0its7WF2DhySu7nkhPDfZcdpAXldxzIlJpqFkuwQKLU5nkYJpiIyZz1NHYYtW5aum2bV2oCOdDRA==}
     engines: {node: '>=8'}
@@ -2127,14 +2118,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: false
-
-  /@sentry/core@7.87.0:
-    resolution: {integrity: sha512-jkoXqK/nuYh8DYS+n7uaSuSIdw4HJemyRkXsWjAEPtEgD7taGMafZGbP5pl+XE38SE59jTBxmKnkUEZOFMgZGA==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@sentry/types': 7.87.0
-      '@sentry/utils': 7.87.0
     dev: false
 
   /@sentry/core@7.91.0:
@@ -2187,19 +2170,6 @@ packages:
       - supports-color
     dev: false
 
-  /@sentry/node@7.87.0:
-    resolution: {integrity: sha512-mGcZMCL3/IMTLIRcWLF+H9z2Bb2d34gKmg2rhXqI8BqhhUA551jMRlZv/y4za2Osjy550KwVoNsA1qtEe5mYyQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@sentry-internal/tracing': 7.87.0
-      '@sentry/core': 7.87.0
-      '@sentry/types': 7.87.0
-      '@sentry/utils': 7.87.0
-      https-proxy-agent: 5.0.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /@sentry/node@7.91.0:
     resolution: {integrity: sha512-hTIfSQxD7L+AKIqyjoq8CWBRkEQrrMZmA3GSZgPI5JFWBHgO0HBo5TH/8TU81oEJh6kqqHAl2ObMhmcnaFqlzg==}
     engines: {node: '>=8'}
@@ -2213,7 +2183,7 @@ packages:
       - supports-color
     dev: false
 
-  /@sentry/profiling-node@1.3.2(@sentry/node@7.87.0):
+  /@sentry/profiling-node@1.3.2(@sentry/node@7.91.0):
     resolution: {integrity: sha512-Dm2FmR0+BYrTm3YSmbCxjeklAsXZecOwWarZQdrCQniPYlxS9GPgWv1P+J78+CrHZ4IpoIvnlRppGPMrJwPXkw==}
     engines: {node: '>=8.0.0'}
     hasBin: true
@@ -2221,7 +2191,7 @@ packages:
     peerDependencies:
       '@sentry/node': ^7.44.1
     dependencies:
-      '@sentry/node': 7.87.0
+      '@sentry/node': 7.91.0
       detect-libc: 2.0.2
       node-abi: 3.52.0
     dev: false
@@ -2249,21 +2219,9 @@ packages:
       '@sentry/utils': 7.91.0
     dev: false
 
-  /@sentry/types@7.87.0:
-    resolution: {integrity: sha512-w8jKFHq/Llupmr2FezmFgQsnm3y/CnqLjb7s6PstI78E409wrhH7p7oqX/OEuzccH1qNCNwes/3QKvPTRQDB4Q==}
-    engines: {node: '>=8'}
-    dev: false
-
   /@sentry/types@7.91.0:
     resolution: {integrity: sha512-bcQnb7J3P3equbCUc+sPuHog2Y47yGD2sCkzmnZBjvBT0Z1B4f36fI/5WjyZhTjLSiOdg3F2otwvikbMjmBDew==}
     engines: {node: '>=8'}
-    dev: false
-
-  /@sentry/utils@7.87.0:
-    resolution: {integrity: sha512-7xgtPTnTNP/4IznFMFXxltuaXfLvzznrYCDMv9ny8EeUjJqlLX3CVA8Qq3YALsLCQCKcrGRARbAcd/EGG//w2w==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@sentry/types': 7.87.0
     dev: false
 
   /@sentry/utils@7.91.0:
@@ -3413,8 +3371,8 @@ packages:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
     engines: {node: '>=6.0'}
 
-  /ci-info@3.9.0:
-    resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
+  /ci-info@4.0.0:
+    resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
     engines: {node: '>=8'}
     dev: true
 
@@ -4494,16 +4452,18 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-unicorn@49.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-0fHEa/8Pih5cmzFW5L7xMEfUTvI9WKeQtjmKpTUmY+BiFCDxkxrTdnURJOHKykhtwIeyYsxnecbGvDCml++z4Q==}
+  /eslint-plugin-unicorn@50.0.1(eslint@8.56.0):
+    resolution: {integrity: sha512-KxenCZxqSYW0GWHH18okDlOQcpezcitm5aOSz6EnobyJ6BIByiPDviQRjJIUAjG/tMN11958MxaQ+qCoU6lfDA==}
     engines: {node: '>=16'}
     peerDependencies:
-      eslint: '>=8.52.0'
+      eslint: '>=8.56.0'
     dependencies:
       '@babel/helper-validator-identifier': 7.22.20
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      ci-info: 3.9.0
+      '@eslint/eslintrc': 2.1.4
+      ci-info: 4.0.0
       clean-regexp: 1.0.0
+      core-js-compat: 3.34.0
       eslint: 8.56.0
       esquery: 1.5.0
       indent-string: 4.0.0
@@ -4515,6 +4475,8 @@ packages:
       regjsparser: 0.10.0
       semver: 7.5.4
       strip-indent: 3.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-scope@5.1.1:
