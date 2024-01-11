@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-export async function middleware(request) {
+export async function middleware(request: NextRequest) {
   const userAgent = request.headers.get('user-agent')
   const bots = [
     'googlebot',
@@ -86,7 +87,7 @@ export async function middleware(request) {
   const isBot =
     userAgent && bots.some(bot => userAgent.toLowerCase().includes(bot))
   const isPrerender = request.headers.get('X-Prerender')
-  const pathname = new URL(request.url).pathname
+  const { pathname } = new URL(request.url)
   const extension = pathname.slice(((pathname.lastIndexOf('.') - 1) >>> 0) + 1)
   if (
     isPrerender ||
@@ -94,31 +95,30 @@ export async function middleware(request) {
     (extension.length && IGNORE_EXTENSIONS.includes(extension))
   ) {
     return NextResponse.next()
-  } else {
-    // Check if request is coming from a bot
-    if (isBot) {
-      const newURL = `https://service.prerender.io/${request.url}`
-      const newHeaders = new Headers(request.headers)
-      //Do not forget to add your Prerender token as an environment variable
-      newHeaders.set('X-Prerender-Token', process.env.PRERENDER_TOKEN)
-
-      const res = await fetch(
-        new Request(newURL, {
-          headers: newHeaders,
-          redirect: 'manual'
-        })
-      )
-
-      const responseHeaders = new Headers(res.headers)
-      responseHeaders.set('X-Redirected-From', request.url)
-
-      return new Response(res.body, {
-        status: res.status,
-        statusText: res.statusText,
-        headers: responseHeaders
-      })
-    }
-
-    return NextResponse.next()
   }
+  // Check if request is coming from a bot
+  if (isBot) {
+    const newURL = `https://service.prerender.io/${request.url}`
+    const newHeaders = new Headers(request.headers)
+    //Do not forget to add your Prerender token as an environment variable
+    newHeaders.set('X-Prerender-Token', process.env.PRERENDER_TOKEN || '')
+
+    const res = await fetch(
+      new Request(newURL, {
+        headers: newHeaders,
+        redirect: 'manual'
+      })
+    )
+
+    const responseHeaders = new Headers(res.headers)
+    responseHeaders.set('X-Redirected-From', request.url)
+
+    return new Response(res.body, {
+      status: res.status,
+      statusText: res.statusText,
+      headers: responseHeaders
+    })
+  }
+
+  return NextResponse.next()
 }
