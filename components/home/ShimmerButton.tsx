@@ -22,7 +22,7 @@ export default function ShimmerButton({
             } as CSSProperties
           }
           className={cn(
-            'flex text-white dark:text-black group relative cursor-pointer overflow-hidden whitespace-nowrap h-11 px-10 [background:var(--bg)] rounded-lg transition-all hover:scale-105 duration-300',
+            'flex text-white dark:text-black group relative cursor-pointer overflow-hidden whitespace-nowrap h-12 px-6 [background:var(--bg)] rounded-lg transition-all hover:scale-105 duration-300',
             className
           )}
           {...props}
@@ -37,7 +37,7 @@ export default function ShimmerButton({
             } as CSSProperties
           }
           className={cn(
-            'flex text-white dark:text-black group relative cursor-pointer overflow-hidden whitespace-nowrap h-11 px-10 [background:var(--bg)] rounded-lg transition-all hover:scale-105 duration-300',
+            'flex text-white dark:text-black group relative cursor-pointer overflow-hidden whitespace-nowrap h-12 px-6 [background:var(--bg)] rounded-lg transition-all hover:scale-105 duration-300',
             className
           )}
           {...props}
