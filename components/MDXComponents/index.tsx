@@ -1,3 +1,4 @@
+import Image from '@components/Image'
 import { Accordion, AccordionGroup } from '@components/Accordion'
 import { Check, Info, Note, Tip, Warning } from '@components/Callout'
 import { Card, CardGroup } from '@components/Card'
@@ -6,6 +7,7 @@ import { Steps } from '@components/Steps'
 import { Tab, Tabs } from '@components/Tabs'
 
 export const MDXComponents = {
+  Image: (props: any) => <Image {...props} />,
   Accordion: (props: any) => <Accordion {...props} />,
   AccordionGroup: (props: any) => <AccordionGroup {...props} />,
   Check: (props: any) => <Check {...props} />,
