@@ -168,14 +168,10 @@ export type TabProps = {
 }
 
 export interface ShimmerButtonProps {
-  shimmerColor?: string
-  shimmerSize?: string
-  borderRadius?: string
-  shimmerDuration?: string
   background?: string
   className?: string
   href?: string
-  children?: ReactNode
+  children: ReactNode
   [key: string]: any
 }
 
