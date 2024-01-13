@@ -20,7 +20,7 @@
     "sharp": "^0.33.1",
     "tailwind-merge": "^2.2.0"
   },
-  "description": "",
+  "description": "HR Documentation is a document sharing platform build from nextra",
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
@@ -68,7 +68,6 @@
   "name": "hrpenci.site",
   "packageManager": "pnpm@8.14.1",
   "scripts": {
-    "analyze": "cross-env ANALYZE=true next build",
     "build": "NODE_ENV=production next build && next-sitemap",
     "dev": "NODE_ENV=development next dev",
     "lint": "next lint",
