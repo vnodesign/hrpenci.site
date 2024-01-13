@@ -1,19 +1,28 @@
 import { siteConfig } from '@config/siteConfig'
 import { BrandJsonLd, LogoJsonLd, SocialProfileJsonLd } from 'next-seo'
 import type { AppProps } from 'next/app'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
 import { useEffect } from 'react'
 import { Scripts } from './Scripts'
 
 export default function App({ Component, pageProps }: AppProps) {
-  NProgress.configure({ showSpinner: false })
+  const router = useRouter()
 
   useEffect(() => {
-    Router.events.on('routeChangeStart', () => NProgress.start())
-    Router.events.on('routeChangeComplete', () => NProgress.done())
-    Router.events.on('routeChangeError', () => NProgress.done())
-  })
+    const handleStart = () => NProgress.start()
+    const handleStop = () => NProgress.done()
+
+    router.events.on('routeChangeStart', handleStart)
+    router.events.on('routeChangeComplete', handleStop)
+    router.events.on('routeChangeError', handleStop)
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart)
+      router.events.off('routeChangeComplete', handleStop)
+      router.events.off('routeChangeError', handleStop)
+    }
+  }, [router.events])
 
   return (
     <>
