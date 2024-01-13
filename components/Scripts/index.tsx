@@ -1,4 +1,3 @@
-import FBPixel from './FBPixel'
 import GTMScript from './GTMScript'
 import UMScript from './UMScript'
 
@@ -9,7 +8,6 @@ export function Scripts() {
     <>
       {isProduction && (
         <>
-          <FBPixel />
           <GTMScript />
           <UMScript />
         </>
