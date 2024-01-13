@@ -18,7 +18,7 @@ module.exports = {
   content: [
     './components/**/*.{js,tsx}',
     './pages/**/*.{md,mdx,tsx}',
-    './theme.config.tsx'
+    './config/theme.config.tsx'
   ],
   important: true,
   theme: {
