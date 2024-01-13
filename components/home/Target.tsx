@@ -4,9 +4,9 @@ import Card from './Card'
 import styled from './target.module.css'
 
 const overhangs = {
-  sm: 'top-0 xl:top-8',
-  md: 'top-0 xl:top-14',
-  lg: 'top-0 xl:top-18'
+  sm: cn('top-0 xl:top-8'),
+  md: cn('top-0 xl:top-14'),
+  lg: cn('top-0 xl:top-16')
 }
 
 export default function Target() {
