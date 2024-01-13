@@ -51,7 +51,7 @@ export default function Hero() {
             </ShimmerButton>
             <Link
               href="/gioi-thieu"
-              className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-vnodesign-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-vnodesign-900 dark:before:bg-vnodesign-950 sm:w-auto"
+              className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-lg before:border before:border-transparent before:bg-vnodesign-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-vnodesign-900 dark:before:bg-vnodesign-950 sm:w-auto"
               title="Giới thiệu về nền tảng"
               onClick={() =>
                 gtagTrack(
