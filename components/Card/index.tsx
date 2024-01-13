@@ -82,7 +82,7 @@ function GenericCard<T extends ElementType = 'div'>({
         isImageSrc ? (
           <Image
             src={icon as string}
-            alt={title}
+            alt={title as string}
             className="h-6 w-6 object-cover object-center"
             width="26"
             height="26"
