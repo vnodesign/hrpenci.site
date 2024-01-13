@@ -111,7 +111,7 @@ function GenericCard<T extends ElementType = 'div'>({
     >
       {image && (
         <Image
-          src={icon}
+          src={image}
           alt={title}
           className="w-full h-64 object-cover object-center"
           width="1200"
