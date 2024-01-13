@@ -51,7 +51,7 @@ export default function Hero() {
             </ShimmerButton>
             <Link
               href="/gioi-thieu"
-              className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-lg before:border before:border-transparent before:bg-vnodesign-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-vnodesign-900 dark:before:bg-vnodesign-950 sm:w-auto"
+              className="relative hidden sm:flex h-12 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-lg before:border before:border-transparent before:bg-vnodesign-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-vnodesign-900 dark:before:bg-vnodesign-950 sm:w-auto"
               title="Giới thiệu về nền tảng"
               onClick={() =>
                 gtagTrack(
@@ -62,7 +62,7 @@ export default function Hero() {
               }
             >
               <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-zinc-800 dark:text-zinc-100">
-                Giới thiệu
+                Giới thiệu về nền tảng
               </span>
             </Link>
           </div>
@@ -81,7 +81,7 @@ function HeroMockups() {
         width={1200}
         height={600}
         alt="Documentation Card"
-        className="relative mx-auto w-full max-w-4xl rounded-3xl border border-gray-300 dark:border-gray-700"
+        className="relative mx-auto w-full rounded-lg shadow-xl"
         sizes="(max-width 1200px) 80vw, 50vw"
         priority
       />
