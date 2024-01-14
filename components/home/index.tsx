@@ -1,4 +1,4 @@
-import cn from '@lib/cn'
+import cn from 'clsx'
 import CTA from './CTA'
 import Docs from './Docs'
 import FAQ from './FAQ'
