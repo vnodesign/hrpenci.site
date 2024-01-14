@@ -1,8 +1,4 @@
-export default function imageKitLoader({
-  src,
-  width,
-  quality = 75
-}) {
+export default function imageKitLoader({ src, width, quality = 75 }) {
   if (src[0] === '/') src = src.slice(1)
   const params = [`w-${width}`, `q-${quality}`]
   const paramsString = params.join(',')

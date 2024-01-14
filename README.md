@@ -31,7 +31,6 @@ List of packages used in the project:
 
 - **[@ducanh2912/next-pwa](https://www.npmjs.com/package/@ducanh2912/next-pwa)**: Adds Progressive Web App (PWA) support to Next.js.
 - **[@sentry/nextjs](https://www.npmjs.com/package/@sentry/nextjs)**: Integrates Sentry error tracking with Next.js.
-- **[@sentry/profiling-node](https://www.npmjs.com/package/@sentry/profiling-node)**: Adds Node.js profiling to Sentry.
 - **[clsx](https://www.npmjs.com/package/clsx)**: A utility for constructing className strings.
 - **[is-absolute-url](https://www.npmjs.com/package/is-absolute-url)**: Checks if a URL is absolute.
 - **[mini-svg-data-uri](https://www.npmjs.com/package/mini-svg-data-uri)**: Converts SVG to data URI.
@@ -41,7 +40,6 @@ List of packages used in the project:
 - **[preact](https://www.npmjs.com/package/preact)**: Fast 3kB alternative to React.
 - **[react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt)**: Implements a parallax tilt effect for React.
 - **[sharp](https://www.npmjs.com/package/sharp)**: High-performance image processing in Node.js.
-- **[tailwind-merge](https://www.npmjs.com/package/tailwind-merge)**: Facilitates the merging of Tailwind CSS classes.
 
 ## License
 

@@ -1,7 +1,7 @@
-import Image from '@components/Image'
 import { Accordion, AccordionGroup } from '@components/Accordion'
 import { Check, Info, Note, Tip, Warning } from '@components/Callout'
 import { Card, CardGroup } from '@components/Card'
+import Image from '@components/Image'
 import { ResponseField } from '@components/ResponseField'
 import { Steps } from '@components/Steps'
 import { Tab, Tabs } from '@components/Tabs'
