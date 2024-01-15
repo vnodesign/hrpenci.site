@@ -15,7 +15,7 @@
     "preact": "^10.19.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-parallax-tilt": "^1.7.177",
+    "react-parallax-tilt": "1.7.177",
     "sharp": "^0.33.2",
     "tailwind-merge": "^2.2.0"
   },

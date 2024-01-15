@@ -1,4 +1,3 @@
-import type { ComponentType, SVGProps } from 'react'
 import ArrowLeft from './ArrowLeft'
 import ArrowLeftShort from './ArrowLeftShort'
 import ArrowRight from './ArrowRight'
@@ -20,12 +19,8 @@ import Twitter from './Twitter'
 import User from './User'
 
 type IconProps = {
-  icon: string
+  icon?: any
   className?: string
-}
-
-type Icons = {
-  [key: string]: ComponentType<SVGProps<SVGSVGElement>>
 }
 
 /**
@@ -37,7 +32,7 @@ type Icons = {
  * any of the icons in the `icons` object. The returned component will have the `className` prop passed to it.
  */
 export function ComponentIcon({ icon, className }: IconProps) {
-  const icons: Icons = {
+  const icons = {
     ArrowLeft,
     ArrowLeftShort,
     ArrowRight,
@@ -58,7 +53,12 @@ export function ComponentIcon({ icon, className }: IconProps) {
     Folder,
     FileCode
   }
-  const IconComponent = icons[icon] || <Folder />
+
+  const IconComponent = icons[icon] || DefaultIcon
 
   return <IconComponent className={className} />
+}
+
+function DefaultIcon() {
+  return <Folder />
 }
