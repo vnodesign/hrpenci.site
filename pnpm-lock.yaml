@@ -6,10 +6,10 @@ settings:
 
 dependencies:
   '@ducanh2912/next-pwa':
-    specifier: ^10.2.2
+    specifier: ^10.0.0
     version: 10.2.2(next@14.0.4)(webpack@5.89.0)
   '@sentry/nextjs':
-    specifier: ^7.93.0
+    specifier: ^7.91.0
     version: 7.93.0(next@14.0.4)(react@18.2.0)(webpack@5.89.0)
   clsx:
     specifier: ^2.1.0
@@ -48,10 +48,10 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-parallax-tilt:
-    specifier: 1.7.177
+    specifier: ^1.7.177
     version: 1.7.177(react-dom@18.2.0)(react@18.2.0)
   sharp:
-    specifier: ^0.33.2
+    specifier: ^0.33.1
     version: 0.33.2
   tailwind-merge:
     specifier: ^2.2.0
@@ -74,19 +74,19 @@ devDependencies:
     specifier: ^8.1.0
     version: 8.1.0(typescript@5.3.3)
   '@types/node':
-    specifier: ^20.11.1
+    specifier: ^20.10.8
     version: 20.11.1
   '@types/nprogress':
     specifier: ^0.2.3
     version: 0.2.3
   '@types/react':
-    specifier: ^18.2.48
+    specifier: ^18.2.45
     version: 18.2.48
   '@typescript-eslint/eslint-plugin':
-    specifier: ^6.18.1
+    specifier: ^6.14.0
     version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
   '@typescript-eslint/parser':
-    specifier: ^6.18.1
+    specifier: ^6.17.0
     version: 6.18.1(eslint@8.56.0)(typescript@5.3.3)
   autoprefixer:
     specifier: ^10.4.16
@@ -113,13 +113,13 @@ devDependencies:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.56.0)
   eslint-plugin-tailwindcss:
-    specifier: ^3.14.0
+    specifier: ^3.13.1
     version: 3.14.0(tailwindcss@3.4.1)
   eslint-plugin-typescript-sort-keys:
     specifier: ^3.1.0
     version: 3.1.0(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
   eslint-plugin-unicorn:
-    specifier: ^50.0.1
+    specifier: ^50.0.0
     version: 50.0.1(eslint@8.56.0)
   husky:
     specifier: ^8.0.3
@@ -128,7 +128,7 @@ devDependencies:
     specifier: ^15.2.0
     version: 15.2.0
   postcss:
-    specifier: ^8.4.33
+    specifier: ^8.4.32
     version: 8.4.33
   postcss-focus-visible:
     specifier: ^9.0.1
@@ -137,19 +137,19 @@ devDependencies:
     specifier: ^16.0.0
     version: 16.0.0(postcss@8.4.33)
   prettier:
-    specifier: ^3.2.2
+    specifier: ^3.1.1
     version: 3.2.2
   prettier-plugin-pkg:
     specifier: ^0.18.0
     version: 0.18.0(prettier@3.2.2)
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.11
+    specifier: ^0.5.9
     version: 0.5.11(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.2.2)
   sass:
     specifier: ^1.69.6
     version: 1.69.7
   tailwindcss:
-    specifier: ^3.4.1
+    specifier: ^3.4.0
     version: 3.4.1
   typescript:
     specifier: ^5.3.3
