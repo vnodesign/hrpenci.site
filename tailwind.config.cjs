@@ -20,7 +20,6 @@ module.exports = {
     './pages/**/*.{md,mdx,tsx}',
     './config/theme.config.tsx'
   ],
-  important: true,
   theme: {
     extend: {
       colors: {
@@ -44,8 +43,10 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
-        mono: ['var(--font-fira-code)', ...defaultTheme.fontFamily.mono]
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        mono: ['Fira Code VF', ...defaultTheme.fontFamily.mono],
+        source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+        'ubuntu-mono': ['Ubuntu Mono', ...defaultTheme.fontFamily.mono]
       },
       animation: {
         spin: 'spin calc(var(--speed) * 2) infinite linear',
