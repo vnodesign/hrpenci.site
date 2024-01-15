@@ -50,7 +50,7 @@
     "prettier": "^3.2.2",
     "prettier-plugin-pkg": "^0.18.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "sass": "^1.69.7",
+    "sass": "^1.69.6",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0"
