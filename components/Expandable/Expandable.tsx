@@ -1,5 +1,5 @@
 import type { ExpandableProps, GenericExpandableProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import { useState } from 'react'
 import ExpandableCover from './ExpandableCover'
 

@@ -1,5 +1,5 @@
 import type { AccordionCoverProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import { ExpandableItemCoverIcon } from '../Expandable/ExpandableCover'
 
 function AccordionCover({
@@ -16,7 +16,7 @@ function AccordionCover({
       className={cn(
         'flex flex-row items-center content-center w-full',
         coverClass,
-        `${open && '!bg-gray-100 dark:bg-vnodesign-100/5'}`
+        open && '!bg-gray-100 dark:bg-vnodesign-100/5'
       )}
       aria-controls={title}
       aria-expanded={open}
@@ -25,7 +25,7 @@ function AccordionCover({
         <ExpandableItemCoverIcon open={open} />
       </div>
       {icon ? (
-        <div className="h-4 w-4 fill-gray-800 dark:fill-gray-100 text-gray-800 dark:text-gray-100">
+        <div className="size-4 fill-gray-800 dark:fill-gray-100 text-gray-800 dark:text-gray-100">
           {icon}
         </div>
       ) : null}

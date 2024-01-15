@@ -2,7 +2,7 @@ import gtagTrack from '@/utils/gtag'
 import Image from '@components/Image'
 import Link from '@components/Link'
 import { siteConfig } from '@config/siteConfig'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import styled from './hero.module.css'
 import ShimmerButton from './ShimmerButton'
 

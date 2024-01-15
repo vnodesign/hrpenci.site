@@ -1,5 +1,5 @@
 import type { TabProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import type { ReactElement } from 'react'
 import { Children, useState } from 'react'
 

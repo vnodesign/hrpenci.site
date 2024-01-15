@@ -1,5 +1,5 @@
 import { ComponentIcon } from '@components/Icons'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import Card from './Card'
 import styled from './target.module.css'
 
@@ -51,7 +51,7 @@ export default function Target() {
               icon={
                 <ComponentIcon
                   icon="FileCode"
-                  className="w-6 h-6 fill-vnodesign-400 hover:animate-spin"
+                  className="size-6 fill-vnodesign-400 hover:animate-spin"
                 />
               }
             />
@@ -61,7 +61,7 @@ export default function Target() {
               icon={
                 <ComponentIcon
                   icon="SwatchBook"
-                  className="w-6 h-6 fill-vnodesign-400 hover:animate-spin"
+                  className="size-6 fill-vnodesign-400 hover:animate-spin"
                 />
               }
             />
@@ -71,7 +71,7 @@ export default function Target() {
               icon={
                 <ComponentIcon
                   icon="Folder"
-                  className="w-6 h-6 fill-vnodesign-400 hover:animate-spin"
+                  className="size-6 fill-vnodesign-400 hover:animate-spin"
                 />
               }
             />

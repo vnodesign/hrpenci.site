@@ -1,4 +1,4 @@
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import CTA from './CTA'
 import Docs from './Docs'
 import FAQ from './FAQ'

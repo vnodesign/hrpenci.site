@@ -1,5 +1,5 @@
 import type { AccordionProps, GenericAccordionProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import { useState } from 'react'
 import { ComponentIcon } from '../Icons'
 import AccordionCover from './AccordionCover'
@@ -14,7 +14,7 @@ function Accordion({
 }: AccordionProps) {
   const Icon =
     typeof icon === 'string' ? (
-      <ComponentIcon icon={icon} className="w-4 h-4" />
+      <ComponentIcon icon={icon} className="size-4" />
     ) : (
       icon
     )

@@ -26,7 +26,7 @@ export default function FAQ() {
 function Disclosures() {
   return (
     <dl className="space-y-6">
-      {siteConfig.faqItem.map((item, index) => (
+      {siteConfig.faqItem?.map((item, index) => (
         <div key={`faq-item-${index}`}>
           <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
             {item.question}

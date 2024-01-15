@@ -1,6 +1,14 @@
 import Tilt from 'react-parallax-tilt'
 
-export default function Card({ title, description, icon }) {
+export default function Card({
+  title,
+  description,
+  icon
+}: {
+  title: string
+  description: string
+  icon: any
+}) {
   return (
     <Tilt
       tiltMaxAngleX={2.5}

@@ -38,10 +38,10 @@ export default function Docs() {
                 key={`docs-item-${index}`}
                 className="pt-8 flex gap-4 md:items-center"
               >
-                <div className="w-12 h-12 flex gap-4 rounded-full bg-vnodesign-100 dark:bg-vnodesign-400/10">
+                <div className="size-12 flex gap-4 rounded-full bg-vnodesign-100 dark:bg-vnodesign-400/10">
                   <ComponentIcon
                     icon={item.icon}
-                    className="w-6 h-6 m-auto fill-vnodesign-800 dark:fill-vnodesign-600 hover:animate-spin"
+                    className="size-6 m-auto fill-vnodesign-800 dark:fill-vnodesign-600 hover:animate-spin"
                   />
                 </div>
                 <div className="w-5/6">
@@ -157,7 +157,7 @@ rounded-2xl text-center bg-white dark:bg-[#202020] p-px"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="size-6"
           >
             <path
               strokeLinecap="round"

@@ -1,5 +1,5 @@
 import type { CardGroupProps, CardProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import isAbsoluteUrl from 'is-absolute-url'
 import Link from 'next/link'
 import type { ComponentType, ElementType, ReactNode, Ref } from 'react'
@@ -19,7 +19,7 @@ function Card({
   children?: ReactNode
 }) {
   const Icon = (
-    <ComponentIcon icon={icon} className="h-6 w-6 fill-vnodesign-600" />
+    <ComponentIcon icon={icon} className="size-6 fill-vnodesign-600" />
   )
 
   // Using 'a' because href is passed, which makes the card an anchor element.
@@ -82,15 +82,15 @@ function GenericCard<T extends ElementType = 'div'>({
         isImageSrc ? (
           <Image
             src={icon as string}
-            alt={title}
-            className="h-6 w-6 object-cover object-center"
+            alt={title || 'Cover'}
+            className="size-6 object-cover object-center"
             width="26"
             height="26"
             decoding="async"
             loading="lazy"
           />
         ) : (
-          <div className="h-6 w-6 fill-gray-800 dark:fill-gray-100 text-gray-800 dark:text-gray-100">
+          <div className="size-6 fill-gray-800 dark:fill-gray-100 text-gray-800 dark:text-gray-100">
             {icon}
           </div>
         )
@@ -112,7 +112,7 @@ function GenericCard<T extends ElementType = 'div'>({
       {image && (
         <Image
           src={image}
-          alt={title}
+          alt={title || 'Cover'}
           className="w-full h-64 object-cover object-center"
           width="1200"
           height="256"

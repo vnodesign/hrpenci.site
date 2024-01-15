@@ -1,5 +1,5 @@
 import type { ExpandableCoverProps } from '@config/Type'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 
 function ExpandableCover({
   title,
@@ -34,7 +34,7 @@ export function ExpandableItemCoverIcon({ open }: { open: boolean }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={cn(
-        'h-3 w-3 transition',
+        'size-3 transition',
         open && 'duration-200 rotate-90 -mt-1',
         !open && 'duration-75'
       )}

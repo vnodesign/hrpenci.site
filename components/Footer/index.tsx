@@ -2,7 +2,7 @@ import gtagTrack from '@/utils/gtag'
 import { ComponentIcon } from '@components/Icons'
 import Link from '@components/Link'
 import { siteConfig } from '@config/siteConfig'
-import cn from 'clsx'
+import { cn } from '@utils/cn'
 import { ThemeSwitch, useConfig } from 'nextra-theme-docs'
 import type { ReactElement, ReactNode } from 'react'
 
@@ -80,7 +80,7 @@ function FooterContent() {
             aria-label="Facebook Fanpage"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <ComponentIcon icon="Facebook" className="w-5 h-5" />
+            <ComponentIcon icon="Facebook" className="size-6" />
           </Link>
           <Link
             href={`https://twitter.com/${siteConfig.twitterSite}`}
@@ -88,7 +88,7 @@ function FooterContent() {
             aria-label="Twitter Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <ComponentIcon icon="Twitter" className="w-5 h-5" />
+            <ComponentIcon icon="Twitter" className="size-6" />
           </Link>
           <Link
             href={`https://github.com/${siteConfig.githubUserName}`}
@@ -96,7 +96,7 @@ function FooterContent() {
             aria-label="GitHub Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <ComponentIcon icon="GitHub" className="w-5 h-5" />
+            <ComponentIcon icon="GitHub" className="size-6" />
           </Link>
           <Link
             href={`https://linkedin.com/in/${siteConfig.linkedIn}`}
@@ -104,7 +104,7 @@ function FooterContent() {
             aria-label="Linkedin Profile"
             className="hover:text-gray-700 hover:dark:text-white"
           >
-            <ComponentIcon icon="Linkedin" className="w-5 h-5" />
+            <ComponentIcon icon="Linkedin" className="size-6" />
           </Link>
         </div>
       </div>
