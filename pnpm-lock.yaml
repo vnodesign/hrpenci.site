@@ -53,6 +53,9 @@ dependencies:
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
+  tailwind-merge:
+    specifier: ^2.2.0
+    version: 2.2.0
 
 devDependencies:
   '@babel/core':
@@ -8333,6 +8336,12 @@ packages:
       csso: 5.0.5
       picocolors: 1.0.0
     dev: true
+
+  /tailwind-merge@2.2.0:
+    resolution: {integrity: sha512-SqqhhaL0T06SW59+JVNfAqKdqLs0497esifRrZ7jOaefP3o64fdFNDMrAQWZFMxTLJPiHVjRLUywT8uFz1xNWQ==}
+    dependencies:
+      '@babel/runtime': 7.23.8
+    dev: false
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
