@@ -1,28 +1,31 @@
-import dynamic from 'next/dynamic'
-
-const ArrowLeft = dynamic(() => import('./ArrowLeft'))
-const ArrowLeftShort = dynamic(() => import('./ArrowLeftShort'))
-const ArrowRight = dynamic(() => import('./ArrowRight'))
-const ArrowRightShort = dynamic(() => import('./ArrowRightShort'))
-const CaretDown = dynamic(() => import('./CaretDown'))
-const CaretUp = dynamic(() => import('./CaretUp'))
-const Chat = dynamic(() => import('./Chat'))
-const Check = dynamic(() => import('./Check'))
-const Facebook = dynamic(() => import('./Facebook'))
-const FileCode = dynamic(() => import('./FileCode'))
-const Folder = dynamic(() => import('./Folder'))
-const GitHub = dynamic(() => import('./GitHub'))
-const Linkedin = dynamic(() => import('./Linkedin'))
-const ReactIcon = dynamic(() => import('./React'))
-const Server = dynamic(() => import('./Server'))
-const SwatchBook = dynamic(() => import('./SwatchBook'))
-const TableLayout = dynamic(() => import('./TableLayout'))
-const Twitter = dynamic(() => import('./Twitter'))
-const User = dynamic(() => import('./User'))
+import type { ComponentType, SVGProps } from 'react'
+import ArrowLeft from './ArrowLeft'
+import ArrowLeftShort from './ArrowLeftShort'
+import ArrowRight from './ArrowRight'
+import ArrowRightShort from './ArrowRightShort'
+import CaretDown from './CaretDown'
+import CaretUp from './CaretUp'
+import Chat from './Chat'
+import Check from './Check'
+import Facebook from './Facebook'
+import FileCode from './FileCode'
+import Folder from './Folder'
+import GitHub from './GitHub'
+import Linkedin from './Linkedin'
+import ReactIcon from './React'
+import Server from './Server'
+import SwatchBook from './SwatchBook'
+import TableLayout from './TableLayout'
+import Twitter from './Twitter'
+import User from './User'
 
 type IconProps = {
-  icon?: any
+  icon: string
   className?: string
+}
+
+type Icons = {
+  [key: string]: ComponentType<SVGProps<SVGSVGElement>>
 }
 
 /**
@@ -34,7 +37,7 @@ type IconProps = {
  * any of the icons in the `icons` object. The returned component will have the `className` prop passed to it.
  */
 export function ComponentIcon({ icon, className }: IconProps) {
-  const icons = {
+  const icons: Icons = {
     ArrowLeft,
     ArrowLeftShort,
     ArrowRight,
@@ -55,12 +58,7 @@ export function ComponentIcon({ icon, className }: IconProps) {
     Folder,
     FileCode
   }
-
-  const IconComponent = icons[icon] || DefaultIcon
+  const IconComponent = icons[icon] || <Folder />
 
   return <IconComponent className={className} />
-}
-
-function DefaultIcon() {
-  return <Folder />
 }
