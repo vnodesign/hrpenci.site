@@ -27,7 +27,7 @@
     "@next/env": "^14.0.4",
     "@next/eslint-plugin-next": "^14.0.4",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20.10.8",
+    "@types/node": "^20.11.17",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^18.2.45",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
