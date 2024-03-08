@@ -12,8 +12,8 @@ dependencies:
     specifier: ^7.91.0
     version: 7.91.0(next@14.0.4)(react@18.2.0)(webpack@5.89.0)
   '@sentry/profiling-node':
-    specifier: ^1.3.3
-    version: 1.3.3(@sentry/node@7.91.0)
+    specifier: ^7.0.0
+    version: 7.100.0
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
@@ -2201,15 +2201,12 @@ packages:
       - supports-color
     dev: false
 
-  /@sentry/profiling-node@1.3.3(@sentry/node@7.91.0):
-    resolution: {integrity: sha512-GR/5MvR6rY/MvJNk/5UJs842eMDler3iyRsi/VapZGnuVm/25LRW1jUhjtiBFMpeSbDiQINGGtnEvQT36egQsw==}
+  /@sentry/profiling-node@7.100.0:
+    resolution: {integrity: sha512-48TMIiMtPTeCf9YBw5YkE0zoyJX4TpzcouR+SCMt7ot8QLPX26jVMezgnxeRTu8kYOvNRmeca6iZi73LVuAQxQ==}
     engines: {node: '>=8.0.0'}
     hasBin: true
     requiresBuild: true
-    peerDependencies:
-      '@sentry/node': ^7.44.1
     dependencies:
-      '@sentry/node': 7.91.0
       detect-libc: 2.0.2
       node-abi: 3.52.0
     dev: false
